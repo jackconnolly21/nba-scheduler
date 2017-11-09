@@ -1,14 +1,17 @@
 # Main file for the CSP?
 import util
+from team import Team, Game
 
 class Scheduler:
     """
     Create an object, storing all teams, distances
     """
-    def init(self, csvFile='teams.csv'):
+    def __init__(self, csvFile='teams.csv'):
         self.teams = util.readTeamsCSV(csvFile)
-        self.distances = calculateDistances(self.teams)
+        self.distances = util.calculateDistances(self.teams)
 
+    def getTeams(self):
+        return self.teams
 
     def findSchedule(self, method="SA"):
         """
@@ -19,7 +22,20 @@ class Scheduler:
         """
         pass
 
-
     # Calculate a schedule by SA, minimizing certain factors
     def simulatedAnnealing(self):
         pass
+
+    # Iterate over team.schedule and calculate total travel distance for one team
+    def totalDistanceTeam(team):
+        total = 0
+        for game in team.schedule:
+            total += self.distances[team.name][game.opponent]
+        return total
+
+    # Calculate total travel distance for all teams
+    def totalDistanceAll(teams):
+        total = 0
+        for team in teams:
+            total += self.totalDistanceTeam(team)
+        return total

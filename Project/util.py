@@ -1,6 +1,7 @@
 from math import cos, sin, acos
 import csv
 from collections import defaultdict
+from team import Team
 
 """
 t1 and t2 are (lat, lng) tuples for 2 teams
