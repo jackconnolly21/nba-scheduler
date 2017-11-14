@@ -39,3 +39,9 @@ class Scheduler:
         for team in teams:
             total += self.totalDistanceTeam(team)
         return total
+
+    def isGoalState(self):
+        for team in self.teams:
+            if not team.schedule.isValid():
+                return False
+        return True

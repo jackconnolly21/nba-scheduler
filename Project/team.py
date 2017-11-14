@@ -56,3 +56,24 @@ class Game:
     def __str__(self):
         info = [self.date, self.opponent, self.isHome]
         return ",".join(str(i) for i in info)
+
+class Schedule:
+    def __init__(self):
+        self.schedule = [] # Going to be a list of game objects
+
+    def isValid(self):
+        opponents = []
+        if len(self.schedule) != 82:
+            return False
+        if self.numHomeGames() != 41:
+            return False
+        for game in self.schedule:
+
+        return True
+
+    def numHomeGames(self):
+        homeGames = 0
+        for game in self.schedule:
+            if game.isHome:
+                homeGames += 1
+        return homeGames
