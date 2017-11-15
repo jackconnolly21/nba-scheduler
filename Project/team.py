@@ -6,6 +6,7 @@ class Team:
         self.division = division # one of 6 divisions
         self.location = location # (lat, lng) tuple in radians
         self.schedule = [] # list of 82 game objects (see Game class)
+        self.opponents = util.Counter() # holds counts of games v. each opponent
 
     def getName(self):
         return self.name
@@ -60,16 +61,6 @@ class Game:
 class Schedule:
     def __init__(self):
         self.schedule = [] # Going to be a list of game objects
-
-    def isValid(self):
-        opponents = []
-        if len(self.schedule) != 82:
-            return False
-        if self.numHomeGames() != 41:
-            return False
-        for game in self.schedule:
-
-        return True
 
     def numHomeGames(self):
         homeGames = 0

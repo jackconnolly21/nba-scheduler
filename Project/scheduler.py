@@ -7,7 +7,7 @@ class Scheduler:
     Create an object, storing all teams, distances
     """
     def __init__(self, csvFile='teams.csv'):
-        self.teams = util.readTeamsCSV(csvFile)
+        self.teams, self.conferences, self.divisions = util.readTeamsCSV(csvFile)
         self.distances = util.calculateDistances(self.teams)
 
     def getTeams(self):
@@ -42,6 +42,17 @@ class Scheduler:
 
     def isGoalState(self):
         for team in self.teams:
-            if not team.schedule.isValid():
+            if not self.scheduleIsValid(team):
                 return False
+        return True
+
+
+    def scheduleIsValid(self, team):
+        if len(schedule) != 82:
+            return False
+        if schedule.numHomeGames() != 41:
+            return False
+        for team in self.conferences:
+            # idk we gotta check somehow
+            pass
         return True
