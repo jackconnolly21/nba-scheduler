@@ -13,19 +13,6 @@ class Scheduler:
     def getTeams(self):
         return self.teams
 
-    def findSchedule(self, method="SA"):
-        """
-        Given a schedule object (list of 30 NBA teams)
-        Calculate a (hopefully) optimal schedule, satisfying hard constraints
-
-        Call some method for doing so, default Simulate Annealing?
-        """
-        pass
-
-    # Calculate a schedule by SA, minimizing certain factors
-    def simulatedAnnealing(self):
-        pass
-
     # Iterate over team.schedule and calculate total travel distance for one team
     def totalDistanceTeam(team):
         total = 0
@@ -40,12 +27,11 @@ class Scheduler:
             total += self.totalDistanceTeam(team)
         return total
 
-    def isGoalState(self):
-        for team in self.teams:
+    def isGoalState(teams):
+        for team in teams:
             if not self.scheduleIsValid(team):
                 return False
         return True
-
 
     def scheduleIsValid(self, team):
         if len(schedule) != 82:

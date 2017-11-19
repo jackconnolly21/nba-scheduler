@@ -1,7 +1,8 @@
 from math import cos, sin, acos
 import csv
 from collections import defaultdict
-from team import Team
+from team import *
+from scheduler import *
 
 """
 t1 and t2 are (lat, lng) tuples for 2 teams
@@ -53,6 +54,29 @@ def calculateDistances(teams):
             distances[t1.name][t2.name] = latLongDistance(t1.location, t2.location)
 
     return distances
+
+def totalBackToBacks(teams):
+    btb = 0
+    for team in teams:
+        btb += team.backToBacks()
+    return btb
+
+class Stack:
+    "A container with a last-in-first-out (LIFO) queuing policy."
+    def __init__(self):
+        self.list = []
+
+    def push(self,item):
+        "Push 'item' onto the stack"
+        self.list.append(item)
+
+    def pop(self):
+        "Pop the most recently pushed item from the stack"
+        return self.list.pop()
+
+    def isEmpty(self):
+        "Returns true if the stack is empty"
+        return len(self.list) == 0
 
 """
   Data structures and functions useful for various course projects
