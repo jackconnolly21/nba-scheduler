@@ -15,10 +15,11 @@ class Scheduler:
 
     # Iterate over team.schedule and calculate total travel distance for one team
     def totalDistanceTeam(team):
-        total = 0
-        for game in team.schedule:
-            total += self.distances[team.name][game.opponent]
-        return total
+        # total = 0
+        # for game in team.schedule:
+        #     total += self.distances[team.name][game.opponent]
+        # return total
+        pass
 
     # Calculate total travel distance for all teams
     def totalDistanceAll(teams):
