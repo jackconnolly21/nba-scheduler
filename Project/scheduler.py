@@ -69,7 +69,8 @@ class Team:
         for i in xrange(len(self.schedule) - 1):
             g1 = self.schedule[i]
             g2 = self.schedule[i + 1]
-            if g2.date - g1.date == 1:
+            timeDelta = g2.date - g1.date
+            if timeDelta.days == 1:
                 btb += 1
         return btb
 
