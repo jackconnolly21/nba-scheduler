@@ -1,6 +1,5 @@
 import util
-from scheduler import Scheduler
-from team import Team, Game
+from scheduler import Scheduler, Team, Game
 
 s = Scheduler()
 print "Divisions:", s.divisions
