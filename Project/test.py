@@ -1,6 +1,7 @@
 import util
 from scheduler import Scheduler, Team, Game
 
-s = Scheduler()
-sch = s.teams["Boston Celtics"].schedule
-print "Total btbs:", util.totalBackToBacks(s.teams)
+s = Scheduler(testSchedule=True)
+team = s.teams["Portland Trail Blazers"]
+sch = team.schedule
+print "num homeGames", s.numHomeGames(team)

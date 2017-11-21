@@ -5,14 +5,15 @@ class Scheduler:
     """
     Create an object, storing all teams, distances
     """
-    def __init__(self, csvFile='teams.csv'):
+    def __init__(self, csvFile='teams.csv', testSchedule=False):
         self.teams, self.conferences, self.divisions = util.readTeamsCSV(csvFile)
         self.distances = util.calculateDistances(self.teams)
-        util.readScheduleCSV('schedule.csv', self.teams)
+        if testSchedule:
+            util.readScheduleCSV('schedule.csv', self.teams)
 
     # Iterate over team.schedule and calculate total travel distance for one team
     # Have to account for if home/away and where going to next/from
-    def totalDistanceTeam(team):
+    def totalDistanceTeam(self, team):
         total = 0
         sch = team.schedule
         for i in xrange(len(sch) - 1):
@@ -31,13 +32,13 @@ class Scheduler:
         return total
 
     # Calculate total travel distance for all teams
-    def totalDistanceAll(teams):
+    def totalDistanceAll(self, teams):
         total = 0
         for team in teams.values():
             total += self.totalDistanceTeam(team)
         return total
 
-    def isGoalState(teams):
+    def isGoalState(self, teams):
         for team in teams.values():
             if not self.scheduleIsValid(team):
                 return False
@@ -52,6 +53,13 @@ class Scheduler:
             # idk we gotta check somehow
             pass
         return True
+
+    def numHomeGames(self, team):
+        homeGames = 0
+        for game in team.schedule:
+            if game.isHome:
+                homeGames += 1
+        return homeGames
 
 # Defining a team object
 class Team:
@@ -90,17 +98,6 @@ class Game:
     def __str__(self):
         info = [self.date, self.opponent, self.isHome]
         return ",".join(str(i) for i in info)
-
-class Schedule:
-    def __init__(self):
-        self.schedule = [] # Going to be a list of game objects
-
-    def numHomeGames(self):
-        homeGames = 0
-        for game in self.schedule:
-            if game.isHome:
-                homeGames += 1
-        return homeGames
 
 """
     Finding initialization of a schedule to do local search on
