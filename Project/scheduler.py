@@ -8,6 +8,7 @@ class Scheduler:
     def __init__(self, csvFile='teams.csv'):
         self.teams, self.conferences, self.divisions = util.readTeamsCSV(csvFile)
         self.distances = util.calculateDistances(self.teams)
+        util.readScheduleCSV('schedule.csv', self.teams)
 
     # Iterate over team.schedule and calculate total travel distance for one team
     # Have to account for if home/away and where going to next/from
@@ -32,12 +33,12 @@ class Scheduler:
     # Calculate total travel distance for all teams
     def totalDistanceAll(teams):
         total = 0
-        for team in teams:
+        for team in teams.values():
             total += self.totalDistanceTeam(team)
         return total
 
     def isGoalState(teams):
-        for team in teams:
+        for team in teams.values():
             if not self.scheduleIsValid(team):
                 return False
         return True

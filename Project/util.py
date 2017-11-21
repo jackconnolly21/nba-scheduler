@@ -28,7 +28,7 @@ def latLongDistance(t1, t2):
     return distance
 
 def readTeamsCSV(teamsCSV):
-    teams = list()
+    teams = dict()
     conferences = {"Western": list(), "Eastern": list()}
     divisions = {"Atlantic": list(), "Central": list(),
                 "Southeast": list(), "Southwest": list(),
@@ -41,7 +41,7 @@ def readTeamsCSV(teamsCSV):
             division = row[2]
             lat = float(row[3])
             lng = float(row[4])
-            teams.append(Team(name, conference, division, (lat, lng)))
+            teams[name] = Team(name, conference, division, (lat, lng))
             conferences[conference].append(name)
             divisions[division].append(name)
 
@@ -54,27 +54,32 @@ def readScheduleCSV(scheduleCSV, teams):
     with open(scheduleCSV, 'rb') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         for row in reader:
-            date = row[0]
+            d = row[0]
+            year = int(d[6:])
+            month = int(d[3:5])
+            day = int(d[:2])
+            dateObj = date(year, month, day)
             homeTeam = row[1]
             awayTeam = row[2]
-            # Need to figure out how to index into teams list
+            teams[homeTeam].schedule.append(Game(dateObj, awayTeam, True))
+            teams[awayTeam].schedule.append(Game(dateObj, homeTeam, False))
 
     return True
 
 
 def calculateDistances(teams):
     distances = defaultdict(dict)
-    for t1 in teams:
-        for t2 in teams:
+    for t1 in teams.keys():
+        for t2 in teams.keys():
             if t1 == t2:
-                distances[t1.name][t2.name] = 0
+                distances[t1][t2] = 0
             else:
-                distances[t1.name][t2.name] = latLongDistance(t1.location, t2.location)
+                distances[t1][t2] = latLongDistance(teams[t1].location, teams[t2].location)
     return distances
 
 def totalBackToBacks(teams):
     btb = 0
-    for team in teams:
+    for team in teams.values():
         btb += team.backToBacks()
     return btb
 

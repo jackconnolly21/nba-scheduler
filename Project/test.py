@@ -2,5 +2,5 @@ import util
 from scheduler import Scheduler, Team, Game
 
 s = Scheduler()
-print "Divisions:", s.divisions
-print "Confernces:", s.conferences
+sch = s.teams["Boston Celtics"].schedule
+print "Total btbs:", util.totalBackToBacks(s.teams)
