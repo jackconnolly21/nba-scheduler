@@ -9,5 +9,6 @@ game at a time and move to a different date?)
 Useful stuff:
 1) Find csv of the actual NBA schedule and somehow
 load that in so we can do some testing of helper methods
+(I found a csv, was having trouble loading it)
 2) Test the helper methods
 3) Function that checks if set of schedules is valid
