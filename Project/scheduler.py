@@ -81,7 +81,7 @@ class Team:
 # Defines game object for schedule
 class Game:
     def __init__(self, date, opponent, isHome):
-        self.date = date # Date time object? Idk?
+        self.date = date # Date time object
         self.opponent = opponent # name of opponent
         self.isHome = isHome # boolean whether or not its a home game
 

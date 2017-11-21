@@ -2,6 +2,7 @@ from math import cos, sin, acos
 import csv
 from collections import defaultdict
 from scheduler import Team, Scheduler, Game
+from datetime import date
 
 """
 t1 and t2 are (lat, lng) tuples for 2 teams
@@ -45,6 +46,21 @@ def readTeamsCSV(teamsCSV):
             divisions[division].append(name)
 
     return (teams, conferences, divisions)
+
+"""
+    Reads in a .csv file of the NBA schedule and puts into teams list
+"""
+def readScheduleCSV(scheduleCSV, teams):
+    with open(scheduleCSV, 'rb') as csvfile:
+        reader = csv.reader(csvfile, delimiter=',')
+        for row in reader:
+            date = row[0]
+            homeTeam = row[1]
+            awayTeam = row[2]
+            # Need to figure out how to index into teams list
+
+    return True
+
 
 def calculateDistances(teams):
     distances = defaultdict(dict)
