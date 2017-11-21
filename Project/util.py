@@ -1,8 +1,7 @@
 from math import cos, sin, acos
 import csv
 from collections import defaultdict
-from team import *
-from scheduler import *
+from scheduler import Team, Scheduler, Game
 
 """
 t1 and t2 are (lat, lng) tuples for 2 teams
@@ -51,8 +50,10 @@ def calculateDistances(teams):
     distances = defaultdict(dict)
     for t1 in teams:
         for t2 in teams:
-            distances[t1.name][t2.name] = latLongDistance(t1.location, t2.location)
-
+            if t1 == t2:
+                distances[t1.name][t2.name] = 0
+            else:
+                distances[t1.name][t2.name] = latLongDistance(t1.location, t2.location)
     return distances
 
 def totalBackToBacks(teams):
