@@ -10,6 +10,7 @@ class Scheduler:
         self.teams, self.conferences, self.divisions = util.readTeamsCSV(csvFile)
         self.distances = util.calculateDistances(self.teams)
         self.startDate = date(2017, 10, 17)
+        self.seasonCalendar = util.getCalendarCSV('schedule.csv')
         if testSchedule:
             util.readScheduleCSV('schedule.csv', self.teams)
 
@@ -74,20 +75,20 @@ class Scheduler:
                 --> Like theoretically last team should have full schedule
                     before we even assign it
         """
-        for team in self.teams.values():
+        # for team in self.teams.values():
 
-            if team.conference == "Eastern":
-                otherConf = "Western"
-            else:
-                otherConf = "Eastern"
+        #     if team.conference == "Eastern":
+        #         otherConf = "Western"
+        #     else:
+        #         otherConf = "Eastern"
 
-            for divOpp in self.divisions[team.division]:
-                if team.name != divOpp:
-                    # Randomly choose 2 open dates and assign home games
-            for nonConfOpp in self.conferences[otherConf]:
-                # Randomly choose 1 open date and assign home game
-            for confOpp in self.conferences[team.conference]:
-                # Randomly choose 1 or 2?
+        #     for divOpp in self.divisions[team.division]:
+        #         if team.name != divOpp:
+        #             # Randomly choose 2 open dates and assign home games
+        #     for nonConfOpp in self.conferences[otherConf]:
+        #         # Randomly choose 1 open date and assign home game
+        #     for confOpp in self.conferences[team.conference]:
+        #         # Randomly choose 1 or 2?
 
         # Set self.teams with new schedules
         return True
@@ -102,7 +103,7 @@ class Team:
         self.schedule = [] # list of 82 game objects (see Game class)
         # idk if we'll need this, probably not, but might help
         self.opponents = util.Counter() # holds counts of games v. each opponent
-
+        self.teamCalendar = util.getCalendarCSV('schedule.csv')
     # Iterate over self.schedule and calculate number of back to backToBacks
     def backToBacks(self):
         btb = 0

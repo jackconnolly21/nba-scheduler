@@ -66,6 +66,21 @@ def readScheduleCSV(scheduleCSV, teams):
 
     return True
 
+def getCalendarCSV(scheduleCSV):
+    with open(scheduleCSV, 'rb') as csvfile:
+        reader = csv.reader(csvfile, delimiter=',')
+        calendar = {}
+        for row in reader:
+            d = row[0]
+            year = int(d[6:])
+            month = int(d[3:5])
+            day = int(d[:2])
+            dateObj = date(year, month, day)
+            if dateObj not in calendar:
+                calendar[dateObj] = False
+
+    return calendar
+
 
 def calculateDistances(teams):
     distances = defaultdict(dict)
