@@ -1,5 +1,6 @@
 # Main file for the CSP?
 import util
+from datetime import date
 
 class Scheduler:
     """
@@ -8,6 +9,7 @@ class Scheduler:
     def __init__(self, csvFile='teams.csv', testSchedule=False):
         self.teams, self.conferences, self.divisions = util.readTeamsCSV(csvFile)
         self.distances = util.calculateDistances(self.teams)
+        self.startDate = date(2017, 10, 17)
         if testSchedule:
             util.readScheduleCSV('schedule.csv', self.teams)
 
@@ -60,6 +62,35 @@ class Scheduler:
             if game.isHome:
                 homeGames += 1
         return homeGames
+
+    """
+        Create a random initial schedule satisfying constraints
+    """
+    def randomStart(self):
+        """
+            Maybe keep track of a list of open dates for each team?
+            Also maybe keep track of a list of teams that we already assigned schedules to
+                --> So we don't assign more games to them
+                --> Like theoretically last team should have full schedule
+                    before we even assign it
+        """
+        for team in self.teams.values():
+
+            if team.conference == "Eastern":
+                otherConf = "Western"
+            else:
+                otherConf = "Eastern"
+
+            for divOpp in self.divisions[team.division]:
+                if team.name != divOpp:
+                    # Randomly choose 2 open dates and assign home games
+            for nonConfOpp in self.conferences[otherConf]:
+                # Randomly choose 1 open date and assign home game
+            for confOpp in self.conferences[team.conference]:
+                # Randomly choose 1 or 2?
+
+        # Set self.teams with new schedules
+        return True
 
 # Defining a team object
 class Team:
