@@ -8,5 +8,7 @@ game at a time and move to a different date?)
 
 Useful stuff:
 3) Function that checks if set of schedules is valid
+--> Hopefully don't need if our initialization and swap functions
+are guaranteed to keep a valid schedule, or just ingrain it in a cost functions
 
 ## I think all the helper methods work, but definitely check ##
