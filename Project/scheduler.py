@@ -172,7 +172,7 @@ class Scheduler:
                         # increment i
                         i += 1
        
-            for rareNonDivOpp in team.commonNonDivOpps:
+            # for rareNonDivOpp in team.commonNonDivOpps:
 
         # Set self.teams with new schedules     
         return True
@@ -193,7 +193,7 @@ class Scheduler:
                 if t not in cndo:
                     frontier.append(t)
             for tm2 in frontier:
-                if len(cndo) < 6:
+                if len(cndo) < 6 and len(tm2.commonNonDivOpps) < 6:
                     cndo.append(tm2)
                     tm2.commonNonDivOpps.append(team)
                 else:

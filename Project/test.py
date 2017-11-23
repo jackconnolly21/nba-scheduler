@@ -18,4 +18,9 @@ print len(cavs.schedule)
 dubs = s1.teams["Golden State Warriors"]
 print s1.numHomeGames(dubs)
 print len(dubs.schedule)
-
+jazz = s1.teams["Utah Jazz"]
+print s1.numHomeGames(jazz)
+print len(jazz.schedule)
+celts = s1.teams["Boston Celtics"]
+print s1.numHomeGames(celts)
+print len(celts.schedule)
