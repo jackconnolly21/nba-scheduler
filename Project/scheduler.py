@@ -145,29 +145,25 @@ class Scheduler:
 
             # randomly pick 6 confOpps to play 4 times
             # play the other 4 3 times,
-            nonDivOpps = []
-            for confOpp in self.conferences[team.conference]:
-                if confOpp not in self.divisions[team.division]:
-                    nonDivOpps.append(confOpp)
 
-            # getting stuck in this loop
-            while len(team.commonNonDivOpps) < 6:
-                print len(team.commonNonDivOpps)
-                randIndex = random.randint(0, 9)
-                randNonDivOpp = nonDivOpps[randIndex]
-                # getting stuck at this if statement
-                # this part is a CSP in itself. Need to find better way to solve this
-                if randNonDivOpp not in team.commonNonDivOpps and len(randNonDivOpp.commonNonDivOpps) < 6:
-                    team.commonNonDivOpps.append(randNonDivOpp)
-                    randNonDivOpp.commonNonDivOpps.append(team)
-                    print
-                    for t in team.commonNonDivOpps:
-                        print t.name
 
+            # # getting stuck in this loop
+            # while len(team.commonNonDivOpps) < 6:
+            #     print len(team.commonNonDivOpps)
+            #     randIndex = random.randint(0, 9)
+            #     randNonDivOpp = nonDivOpps[randIndex]
+            #     # getting stuck at this if statement
+            #     # this part is a CSP in itself. Need to find better way to solve this
+            #     if randNonDivOpp not in team.commonNonDivOpps and len(randNonDivOpp.commonNonDivOpps) < 6:
+            #         team.commonNonDivOpps.append(randNonDivOpp)
+            #         randNonDivOpp.commonNonDivOpps.append(team)
+            #         print
+            #         for t in team.commonNonDivOpps:
+            #             print t.name
 
 
             # generates 12 home games
-            for commonNonDivOpp in team.commonNonDivOpps:
+            for commonNonDivOpp in self.backtracking(team):
                 i = 0
                 while i < 2:
                     randomDate = random.choice(team.teamCalendar.keys())
@@ -182,11 +178,53 @@ class Scheduler:
                         # increment i
                         i += 1
 
-
-
+            # for rareNonDivOpp in team.commonNonDivOpps:
 
         # Set self.teams with new schedules
         return True
+
+    def getNonDivOpps(self, team):
+        nonDivOpps = []
+        for confOpp in self.conferences[team.conference]:
+            if confOpp not in self.divisions[team.division]:
+                nonDivOpps.append(confOpp)
+        return nonDivOpps
+
+    def backtracking(self, team):
+        cndo = team.commonNonDivOpps
+        nonDivOpps = self.getNonDivOpps(team)
+        if len(cndo) > 6:
+            rand = random.sample(cndo, 1)[0]
+            cndo.remove(rand)
+            rand.commonNonDivOpps.remove(team)
+            self.backtracking(team)
+            self.backtracking(rand)
+        elif len(cndo) < 6:
+            frontier = []
+            for t in nonDivOpps:
+                if t not in cndo:
+                    frontier.append(t)
+            rand1 = random.sample(frontier, 1)[0]
+            cndo.append(rand1)
+            rand1.commonNonDivOpps.append(team)
+            self.backtracking(team)
+            self.backtracking(rand1)
+
+        # while len(cndo) < 6:
+        #     frontier = []
+        #     for t in nonDivOpps:
+        #         if t not in cndo:
+        #             frontier.append(t)
+        #     for tm2 in frontier:
+        #         if len(cndo) < 6:
+        #             cndo.append(tm2)
+        #             tm2.commonNonDivOpps.append(team)
+        #         else:
+        #             self.backtracking(tm2)
+        return cndo
+
+
+
 
     """
         Move one game to another random date
