@@ -146,16 +146,18 @@ class Scheduler:
 
             # getting stuck in this loop
             while len(team.commonNonDivOpps) < 6:
+                print len(team.commonNonDivOpps)
                 randIndex = random.randint(0, 9)
                 randNonDivOpp = nonDivOpps[randIndex]
                 # getting stuck at this if statement
-                print len(randNonDivOpp.commonNonDivOpps)
+                # this part is a CSP in itself. Need to find better way to solve this
                 if randNonDivOpp not in team.commonNonDivOpps and len(randNonDivOpp.commonNonDivOpps) < 6:
                     team.commonNonDivOpps.append(randNonDivOpp)
                     randNonDivOpp.commonNonDivOpps.append(team)
                     print 
                     for t in team.commonNonDivOpps:
                         print t.name
+
 
 
             # generates 12 home games
