@@ -185,19 +185,36 @@ class Scheduler:
         return nonDivOpps
 
     def backtracking(self, team):
-        nonDivOpps = self.getNonDivOpps(team)
         cndo = team.commonNonDivOpps
-        while len(cndo) < 6:
+        nonDivOpps = self.getNonDivOpps(team)
+        if len(cndo) > 6:
+            rand = random.sample(cndo, 1)[0]
+            cndo.remove(rand)
+            rand.commonNonDivOpps.remove(team)
+            self.backtracking(team)
+            self.backtracking(rand)
+        elif len(cndo) < 6:
             frontier = []
             for t in nonDivOpps:
                 if t not in cndo:
                     frontier.append(t)
-            for tm2 in frontier:
-                if len(cndo) < 6 and len(tm2.commonNonDivOpps) < 6:
-                    cndo.append(tm2)
-                    tm2.commonNonDivOpps.append(team)
-                else:
-                    self.backtracking(tm2)
+            rand1 = random.sample(frontier, 1)[0]
+            cndo.append(rand1)
+            rand1.commonNonDivOpps.append(team)
+            self.backtracking(team)
+            self.backtracking(rand1)
+
+        # while len(cndo) < 6:
+        #     frontier = []
+        #     for t in nonDivOpps:
+        #         if t not in cndo:
+        #             frontier.append(t)
+        #     for tm2 in frontier:
+        #         if len(cndo) < 6:
+        #             cndo.append(tm2)
+        #             tm2.commonNonDivOpps.append(team)
+        #         else:
+        #             self.backtracking(tm2)
         return cndo
 
 
