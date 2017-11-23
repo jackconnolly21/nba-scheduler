@@ -1,6 +1,7 @@
 # Main file for the CSP?
 import util
 from datetime import date
+import random
 
 class Scheduler:
     """
@@ -75,20 +76,66 @@ class Scheduler:
                 --> Like theoretically last team should have full schedule
                     before we even assign it
         """
-        # for team in self.teams.values():
+        for team in self.teams.values():
 
-        #     if team.conference == "Eastern":
-        #         otherConf = "Western"
-        #     else:
-        #         otherConf = "Eastern"
+            if team.conference == "Eastern":
+                otherConf = "Western"
+            else:
+                otherConf = "Eastern"
 
-        #     for divOpp in self.divisions[team.division]:
-        #         if team.name != divOpp:
-        #             # Randomly choose 2 open dates and assign home games
-        #     for nonConfOpp in self.conferences[otherConf]:
-        #         # Randomly choose 1 open date and assign home game
-        #     for confOpp in self.conferences[team.conference]:
-        #         # Randomly choose 1 or 2?
+            # generates 8 home games
+            for divOpp in self.divisions[team.division]:
+                if team.name != divOpp.name:
+                    # Randomly choose 2 open dates and assign home games
+                    i = 0
+                    while i < 2:
+                        randomDate = random.choice(team.teamCalendar.keys())
+                        # make sure game isn't already played on that date
+                        if not team.teamCalendar[randomDate]:
+                            # add game to schedule of both teams
+                            team.schedule.append(Game(randomDate, divOpp, True))
+                            divOpp.schedule.append(Game(randomDate, team, False))
+                            # turn value to True
+                            team.teamCalendar[randomDate] = True
+                            divOpp.teamCalendar[randomDate] = True
+                            # increment i
+                            i += 1
+
+            # generates 15 home games  
+            for nonConfOpp in self.conferences[otherConf]:
+                # Randomly choose 1 open date and assign home game
+                i = 0
+                while i < 1:
+                    randomDate = random.choice(team.teamCalendar.keys())
+                    # make sure game isn't already played on that date
+                    if not team.teamCalendar[randomDate]:
+                        # add game to schedule of both teams
+                        team.schedule.append(Game(randomDate, nonConfOpp, True))
+                        nonConfOpp.schedule.append(Game(randomDate, team, False))
+                        # turn update calendar
+                        team.teamCalendar[randomDate] = True
+                        nonConfOpp.teamCalendar[randomDate] = True
+                        # increment i
+                        i += 1
+
+            # generates 20 home games
+            for confOpp in self.conferences[team.conference]:
+                if confOpp not in self.divisions[team.division]:
+                # Randomly choose 1 or 2?
+                # starting with 2
+                    i = 0
+                    while i < 2:
+                        randomDate = random.choice(team.teamCalendar.keys())
+                        # make sure game isn't already played on that date
+                        if not team.teamCalendar[randomDate]:
+                            # add game to schedule of both teams
+                            team.schedule.append(Game(randomDate, divOpp, True))
+                            divOpp.schedule.append(Game(randomDate, team, False))
+                            # turn value to True
+                            team.teamCalendar[randomDate] = True
+                            divOpp.teamCalendar[randomDate] = True
+                            # increment i
+                            i += 1
 
         # Set self.teams with new schedules
         return True

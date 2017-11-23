@@ -42,8 +42,9 @@ def readTeamsCSV(teamsCSV):
             lat = float(row[3])
             lng = float(row[4])
             teams[name] = Team(name, conference, division, (lat, lng))
-            conferences[conference].append(name)
-            divisions[division].append(name)
+            # changed these to be lists of team objects instead of team names
+            conferences[conference].append(teams[name])
+            divisions[division].append(teams[name])
 
     return (teams, conferences, divisions)
 
