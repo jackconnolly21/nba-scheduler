@@ -129,11 +129,11 @@ class Scheduler:
                         # make sure game isn't already played on that date
                         if not team.teamCalendar[randomDate]:
                             # add game to schedule of both teams
-                            team.schedule.append(Game(randomDate, divOpp, True))
-                            divOpp.schedule.append(Game(randomDate, team, False))
+                            team.schedule.append(Game(randomDate, confOpp, True))
+                            confOpp.schedule.append(Game(randomDate, team, False))
                             # turn value to True
                             team.teamCalendar[randomDate] = True
-                            divOpp.teamCalendar[randomDate] = True
+                            confOpp.teamCalendar[randomDate] = True
                             # increment i
                             i += 1
 

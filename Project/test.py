@@ -12,4 +12,10 @@ s1.randomStart()
 blazers = s1.teams["Portland Trail Blazers"]
 print s1.numHomeGames(blazers)
 print len(blazers.schedule)
+cavs = s1.teams["Cleveland Cavaliers"]
+print s1.numHomeGames(cavs)
+print len(cavs.schedule)
+dubs = s1.teams["Golden State Warriors"]
+print s1.numHomeGames(dubs)
+print len(dubs.schedule)
 
