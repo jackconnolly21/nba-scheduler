@@ -65,6 +65,12 @@ class Scheduler:
                 homeGames += 1
         return homeGames
 
+    def costFn(self, a, b):
+        totalDistance = self.totalDistanceAll(self.teams)
+        totalBTB = util.totalBackToBacks(self.teams)
+        cost = a * totalDistance + b * totalBTB
+        return cost
+
     """
         Create a random initial schedule satisfying constraints
     """
@@ -101,7 +107,7 @@ class Scheduler:
                             # increment i
                             i += 1
 
-            # generates 15 home games  
+            # generates 15 home games
             for nonConfOpp in self.conferences[otherConf]:
                 # Randomly choose 1 open date and assign home game
                 i = 0
@@ -138,7 +144,7 @@ class Scheduler:
             #                 i += 1
 
             # randomly pick 6 confOpps to play 4 times
-            # play the other 4 3 times, 
+            # play the other 4 3 times,
             nonDivOpps = []
             for confOpp in self.conferences[team.conference]:
                 if confOpp not in self.divisions[team.division]:
@@ -154,7 +160,7 @@ class Scheduler:
                 if randNonDivOpp not in team.commonNonDivOpps and len(randNonDivOpp.commonNonDivOpps) < 6:
                     team.commonNonDivOpps.append(randNonDivOpp)
                     randNonDivOpp.commonNonDivOpps.append(team)
-                    print 
+                    print
                     for t in team.commonNonDivOpps:
                         print t.name
 
@@ -181,6 +187,13 @@ class Scheduler:
 
         # Set self.teams with new schedules
         return True
+
+    """
+        Move one game to another random date
+    """
+    def swap(self, teams):
+        randomTeam = random.choice(teams.keys())
+        randomGame = random.choice(randomTeam.schedule)
 
 # Defining a team object
 class Team:
