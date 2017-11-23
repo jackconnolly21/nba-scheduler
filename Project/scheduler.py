@@ -118,24 +118,64 @@ class Scheduler:
                         # increment i
                         i += 1
 
-            # generates 20 home games
+            # # generates 20 home games
+            # for confOpp in self.conferences[team.conference]:
+            #     if confOpp not in self.divisions[team.division]:
+            #     # Randomly choose 1 or 2?
+            #     # starting with 2
+            #         i = 0
+            #         while i < 2:
+            #             randomDate = random.choice(team.teamCalendar.keys())
+            #             # make sure game isn't already played on that date
+            #             if not team.teamCalendar[randomDate]:
+            #                 # add game to schedule of both teams
+            #                 team.schedule.append(Game(randomDate, confOpp, True))
+            #                 confOpp.schedule.append(Game(randomDate, team, False))
+            #                 # turn value to True
+            #                 team.teamCalendar[randomDate] = True
+            #                 confOpp.teamCalendar[randomDate] = True
+            #                 # increment i
+            #                 i += 1
+
+            # randomly pick 6 confOpps to play 4 times
+            # play the other 4 3 times, 
+            nonDivOpps = []
             for confOpp in self.conferences[team.conference]:
                 if confOpp not in self.divisions[team.division]:
-                # Randomly choose 1 or 2?
-                # starting with 2
-                    i = 0
-                    while i < 2:
-                        randomDate = random.choice(team.teamCalendar.keys())
-                        # make sure game isn't already played on that date
-                        if not team.teamCalendar[randomDate]:
-                            # add game to schedule of both teams
-                            team.schedule.append(Game(randomDate, confOpp, True))
-                            confOpp.schedule.append(Game(randomDate, team, False))
-                            # turn value to True
-                            team.teamCalendar[randomDate] = True
-                            confOpp.teamCalendar[randomDate] = True
-                            # increment i
-                            i += 1
+                    nonDivOpps.append(confOpp)
+
+            # getting stuck in this loop
+            while len(team.commonNonDivOpps) < 6:
+                randIndex = random.randint(0, 9)
+                randNonDivOpp = nonDivOpps[randIndex]
+                # getting stuck at this if statement
+                print len(randNonDivOpp.commonNonDivOpps)
+                if randNonDivOpp not in team.commonNonDivOpps and len(randNonDivOpp.commonNonDivOpps) < 6:
+                    team.commonNonDivOpps.append(randNonDivOpp)
+                    randNonDivOpp.commonNonDivOpps.append(team)
+                    print 
+                    for t in team.commonNonDivOpps:
+                        print t.name
+
+
+            # generates 12 home games
+            for commonNonDivOpp in team.commonNonDivOpps:
+                i = 0
+                while i < 2:
+                    randomDate = random.choice(team.teamCalendar.keys())
+                    # make sure game isn't already played on that date
+                    if not team.teamCalendar[randomDate]:
+                        # add game to schedule of both teams
+                        team.schedule.append(Game(randomDate, commonNonDivOpp, True))
+                        commonNonDivOpp.schedule.append(Game(randomDate, team, False))
+                        # turn value to True
+                        team.teamCalendar[randomDate] = True
+                        commonNonDivOpp.teamCalendar[randomDate] = True
+                        # increment i
+                        i += 1
+
+
+
 
         # Set self.teams with new schedules
         return True
@@ -151,6 +191,7 @@ class Team:
         # idk if we'll need this, probably not, but might help
         self.opponents = util.Counter() # holds counts of games v. each opponent
         self.teamCalendar = util.getCalendarCSV('schedule.csv')
+        self.commonNonDivOpps = []
     # Iterate over self.schedule and calculate number of back to backToBacks
     def backToBacks(self):
         btb = 0
