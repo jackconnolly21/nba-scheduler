@@ -209,18 +209,6 @@ class Scheduler:
             rand1.commonNonDivOpps.append(team)
             self.backtracking(team)
             self.backtracking(rand1)
-
-        # while len(cndo) < 6:
-        #     frontier = []
-        #     for t in nonDivOpps:
-        #         if t not in cndo:
-        #             frontier.append(t)
-        #     for tm2 in frontier:
-        #         if len(cndo) < 6:
-        #             cndo.append(tm2)
-        #             tm2.commonNonDivOpps.append(team)
-        #         else:
-        #             self.backtracking(tm2)
         return cndo
 
 
