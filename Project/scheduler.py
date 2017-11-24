@@ -179,12 +179,23 @@ class Scheduler:
                         # increment i
                         i += 1
 
-            rndo = team.rareNonDivOpps
-            team.HA[0] = rndo 
-            team.HA[1] = rndo   
-
-        for team in self.teams.values():
             self.getRareNonDivOppsHT(team)
+            
+            for h in team.HA[0]:
+                i = 0
+                while i < 1:
+                    randomDate = random.choice(team.teamCalendar.keys())
+                    # make sure game isn't already played on that date
+                    if not team.teamCalendar[randomDate]:
+                        # add game to schedule of both teams
+                        team.schedule.append(Game(randomDate, commonNonDivOpp, True))
+                        commonNonDivOpp.schedule.append(Game(randomDate, team, False))
+                        # turn value to True
+                        team.teamCalendar[randomDate] = True
+                        commonNonDivOpp.teamCalendar[randomDate] = True
+                        # increment i
+                        i += 1
+
 
         # Set self.teams with new schedules
         return True
@@ -277,10 +288,12 @@ class Scheduler:
     #         self.getRareNonDivOppsHT(team)
     #         self.getRareNonDivOppsHT(t2)
 
+
+
     def getRareNonDivOppsHT(self, team):
         rndo = team.rareNonDivOpps
-        team.HA[0] = rndo 
-        team.HA[1] = rndo       
+        team.HA[0] = random.sample(rndo, 2) 
+        team.HA[1] = [i for i in rndo if i not in team.HA[0]]
         if len(team.HA[0]) > 2:
             randT = random.choice(team.HA[0])
             team.HA[0].remove(randT)
