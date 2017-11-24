@@ -195,6 +195,7 @@ class Scheduler:
                         # increment i
                         i += 1
 
+            print len(team.commonNonDivOpps)
         # Set self.teams with new schedules
         return True
 
@@ -218,8 +219,14 @@ class Scheduler:
             frontier = []
             for t in nonDivOpps:
                 if t not in cndo:
-                    frontier.append(t)
-            rand1 = random.sample(frontier, 1)[0]
+                    frontier.append((t, len(t.commonNonDivOpps)))
+            minlen = 100
+            minindex = -1
+            for f in xrange(len(frontier)):
+                if frontier[f][1] <= minlen:
+                    minlen = frontier[f][1]
+                    minindex = f
+            rand1 = frontier[minindex][0]
             cndo.append(rand1)
             rand1.commonNonDivOpps.append(team)
             self.getCommonNonDivOpps(team)
@@ -231,8 +238,8 @@ class Scheduler:
         for rareNonDivOpp in self.getNonDivOpps(team):
             if rareNonDivOpp not in cndo:
                 rndo.append(rareNonDivOpp)
-                rareNonDivOpp.rareNonDivOpps.append(team)
-    
+                # rareNonDivOpp.rareNonDivOpps.append(team)
+
 
 
 
