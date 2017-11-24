@@ -294,18 +294,18 @@ class Scheduler:
         rndo = team.rareNonDivOpps
         team.HA[0] = random.sample(rndo, 2) 
         team.HA[1] = [i for i in rndo if i not in team.HA[0]]
-        if len(team.HA[0]) > 2:
-            randT = random.choice(team.HA[0])
-            team.HA[0].remove(randT)
-            randT.HA[1].remove(team)
-            self.getRareNonDivOppsHT(team)
-            self.getRareNonDivOppsHT(randT)
-        elif len(team.HA[0]) < 2:
-            randT = random.choice(team.HA[0])
-            team.HA[0].append(randT)
-            randT.HA[1].append(team)
-            self.getRareNonDivOppsHT(team)
-            self.getRareNonDivOppsHT(randT)
+        # if len(team.HA[0]) > 2:
+        #     randT = random.choice(team.HA[0])
+        #     team.HA[0].remove(randT)
+        #     randT.HA[1].remove(team)
+        #     self.getRareNonDivOppsHT(team)
+        #     self.getRareNonDivOppsHT(randT)
+        # elif len(team.HA[0]) < 2:
+        #     randT = random.choice(team.HA[0])
+        #     team.HA[0].append(randT)
+        #     randT.HA[1].append(team)
+        #     self.getRareNonDivOppsHT(team)
+        #     self.getRareNonDivOppsHT(randT)
 
 
 

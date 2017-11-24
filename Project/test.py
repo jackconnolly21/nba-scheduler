@@ -31,3 +31,9 @@ nets = s1.teams["Brooklyn Nets"]
 print s1.numHomeGames(nets)
 print len(nets.schedule)
 
+print
+
+for team in s1.teams.values():
+	if len(team.schedule) != 82 or s1.numHomeGames(team) != 41:
+		print team, s1.numHomeGames(team), len(team.schedule)
+
