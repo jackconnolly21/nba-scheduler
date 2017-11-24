@@ -179,6 +179,7 @@ class Scheduler:
                         # increment i
                         i += 1
 
+        for team in self.teams.values():
             self.getRareNonDivOppsHT(team)
 
         # Set self.teams with new schedules
@@ -229,14 +230,28 @@ class Scheduler:
     # need to do backtracking here
     def getRareNonDivOppsHT(self, team):
         rndo = team.rareNonDivOpps
-        i = 0
-        while i < 2:
-            minhg = 0
+        if len(team.schedule) > 82 and self.numHomeGames(team) > 41:
+            options = []
+            for game in team.schedule:
+                if game.opponent in rndo and game.isHome:
+                    options.append(game)
+            # maybe able to use random.choice
+            randGame = random.sample(options, 1)[0]
+            # remove game from schedule of both teams
+            team.schedule.remove(randGame)
+            randGame.opponent.schedule.remove(Game(randGame.date, team, False))
+            # set dates equal to false for both teams
+            team.teamCalendar[randGame.date] = False
+            randGame.opponent.teamCalendar[randGame.date] = False
+            self.getRareNonDivOppsHT(team)
+            self.getRareNonDivOppsHT(randGame.opponent)
+        elif len(team.schedule) < 82 and self.numHomeGames(team) < 41:
+            ming = 100
             minindex = -1
             for t in xrange(len(rndo)):
-                nhg = self.numHomeGames(rndo[t])
-                if nhg <= minhg:
-                    minhg = nhg
+                ng = len(rndo[t].schedule)
+                if ng <= ming:
+                    ming = ng
                     minindex = t
             t2 = rndo[minindex]
             randomDate = random.choice(team.teamCalendar.keys())
@@ -248,7 +263,8 @@ class Scheduler:
                 # turn value to True
                 team.teamCalendar[randomDate] = True
                 t2.teamCalendar[randomDate] = True
-                i += 1
+            self.getRareNonDivOppsHT(team)
+            self.getRareNonDivOppsHT(t2)
 
 
 
