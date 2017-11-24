@@ -195,7 +195,8 @@ class Scheduler:
                         # increment i
                         i += 1
 
-            print len(team.commonNonDivOpps)
+            self.getRareNonDivOppsHT(team)
+
         # Set self.teams with new schedules
         return True
 
@@ -222,6 +223,7 @@ class Scheduler:
                     frontier.append((t, len(t.commonNonDivOpps)))
             minlen = 100
             minindex = -1
+            # picking the team with the fewest commonNonDivOpps to add
             for f in xrange(len(frontier)):
                 if frontier[f][1] <= minlen:
                     minlen = frontier[f][1]
@@ -239,6 +241,34 @@ class Scheduler:
             if rareNonDivOpp not in cndo:
                 rndo.append(rareNonDivOpp)
                 # rareNonDivOpp.rareNonDivOpps.append(team)
+
+    # need to do backtracking here
+    def getRareNonDivOppsHT(self, team):
+        rndo = team.rareNonDivOpps
+        i = 0
+        while i < 2:
+            minhg = 0
+            minindex = -1
+            for t in xrange(len(rndo)):
+                nhg = self.numHomeGames(rndo[t])
+                if nhg <= minhg:
+                    minhg = nhg
+                    minindex = t
+            t2 = rndo[minindex]
+            randomDate = random.choice(team.teamCalendar.keys())
+            # make sure game isn't already played on that date
+            if not team.teamCalendar[randomDate]:
+                # add game to schedule of both teams
+                team.schedule.append(Game(randomDate, t2, True))
+                t2.schedule.append(Game(randomDate, team, False))
+                # turn value to True
+                team.teamCalendar[randomDate] = True
+                t2.teamCalendar[randomDate] = True
+                i += 1
+
+
+
+
 
 
 
