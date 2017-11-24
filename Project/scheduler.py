@@ -42,22 +42,6 @@ class Scheduler:
             total += self.totalDistanceTeam(team)
         return total
 
-    def isGoalState(self, teams):
-        for team in teams.values():
-            if not self.scheduleIsValid(team):
-                return False
-        return True
-
-    def scheduleIsValid(self, team):
-        if len(schedule) != 82:
-            return False
-        if schedule.numHomeGames() != 41:
-            return False
-        for team in self.conferences:
-            # idk we gotta check somehow
-            pass
-        return True
-
     def numHomeGames(self, team):
         homeGames = 0
         for game in team.schedule:
@@ -65,7 +49,7 @@ class Scheduler:
                 homeGames += 1
         return homeGames
 
-    def costFn(self, a, b):
+    def costFn(self, a=1, b=3000):
         totalDistance = self.totalDistanceAll(self.teams)
         totalBTB = util.totalBackToBacks(self.teams)
         cost = a * totalDistance + b * totalBTB
@@ -232,10 +216,6 @@ class Scheduler:
             if rareNonDivOpp not in cndo:
                 rndo.append(rareNonDivOpp)
                 rareNonDivOpp.rareNonDivOpps.append(team)
-    
-
-
-
 
     """
         Move one game to another random date
@@ -243,6 +223,7 @@ class Scheduler:
     def swap(self, teams):
         randomTeam = random.choice(teams.keys())
         randomGame = random.choice(randomTeam.schedule)
+        pass
 
 # Defining a team object
 class Team:
