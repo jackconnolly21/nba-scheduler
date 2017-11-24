@@ -24,3 +24,10 @@ print len(jazz.schedule)
 celts = s1.teams["Boston Celtics"]
 print s1.numHomeGames(celts)
 print len(celts.schedule)
+knicks = s1.teams["New York Knicks"]
+print s1.numHomeGames(knicks)
+print len(celts.schedule)
+nets = s1.teams["Brooklyn Nets"]
+print s1.numHomeGames(nets)
+print len(nets.schedule)
+

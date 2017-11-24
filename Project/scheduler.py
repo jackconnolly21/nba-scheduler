@@ -163,7 +163,7 @@ class Scheduler:
 
 
             # generates 12 home games
-            for commonNonDivOpp in self.backtracking(team):
+            for commonNonDivOpp in self.getCommonNonDivOpps(team):
                 i = 0
                 while i < 2:
                     randomDate = random.choice(team.teamCalendar.keys())
@@ -178,7 +178,20 @@ class Scheduler:
                         # increment i
                         i += 1
 
-            # for rareNonDivOpp in team.commonNonDivOpps:
+            for rareNonDivOpp in self.getRareNonDivOpps(team):
+                i = 0
+                while i < 1:
+                    randomDate = random.choice(team.teamCalendar.keys())
+                    # make sure game isn't already played on that date
+                    if not team.teamCalendar[randomDate]:
+                        # add game to schedule of both teams
+                        team.schedule.append(Game(randomDate, commonNonDivOpp, True))
+                        commonNonDivOpp.schedule.append(Game(randomDate, team, False))
+                        # turn value to True
+                        team.teamCalendar[randomDate] = True
+                        commonNonDivOpp.teamCalendar[randomDate] = True
+                        # increment i
+                        i += 1
 
         # Set self.teams with new schedules
         return True
@@ -190,15 +203,15 @@ class Scheduler:
                 nonDivOpps.append(confOpp)
         return nonDivOpps
 
-    def backtracking(self, team):
+    def getCommonNonDivOpps(self, team):
         cndo = team.commonNonDivOpps
         nonDivOpps = self.getNonDivOpps(team)
         if len(cndo) > 6:
             rand = random.sample(cndo, 1)[0]
             cndo.remove(rand)
             rand.commonNonDivOpps.remove(team)
-            self.backtracking(team)
-            self.backtracking(rand)
+            self.getCommonNonDivOpps(team)
+            self.getCommonNonDivOpps(rand)
         elif len(cndo) < 6:
             frontier = []
             for t in nonDivOpps:
@@ -207,9 +220,17 @@ class Scheduler:
             rand1 = random.sample(frontier, 1)[0]
             cndo.append(rand1)
             rand1.commonNonDivOpps.append(team)
-            self.backtracking(team)
-            self.backtracking(rand1)
+            self.getCommonNonDivOpps(team)
+            self.getCommonNonDivOpps(rand1)
         return cndo
+
+    def getRareNonDivOpps(self, team):
+        cndo = team.commonNonDivOpps
+        rndo = []
+        for rareNonDivOpp in self.getNonDivOpps(team):
+            if rareNonDivOpp not in cndo:
+                rndo.append(rareNonDivOpp)
+        return rndo
 
 
 
