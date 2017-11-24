@@ -161,9 +161,9 @@ class Scheduler:
             #         for t in team.commonNonDivOpps:
             #             print t.name
 
-
+            self.getCommonNonDivOpps(team)
             # generates 12 home games
-            for commonNonDivOpp in self.getCommonNonDivOpps(team):
+            for commonNonDivOpp in team.commonNonDivOpps:
                 i = 0
                 while i < 2:
                     randomDate = random.choice(team.teamCalendar.keys())
@@ -178,7 +178,9 @@ class Scheduler:
                         # increment i
                         i += 1
 
-            for rareNonDivOpp in self.getRareNonDivOpps(team):
+            self.getRareNonDivOpps(team)
+
+            for rareNonDivOpp in team.rareNonDivOpps:
                 i = 0
                 while i < 1:
                     randomDate = random.choice(team.teamCalendar.keys())
@@ -222,15 +224,15 @@ class Scheduler:
             rand1.commonNonDivOpps.append(team)
             self.getCommonNonDivOpps(team)
             self.getCommonNonDivOpps(rand1)
-        return cndo
 
     def getRareNonDivOpps(self, team):
         cndo = team.commonNonDivOpps
-        rndo = []
+        rndo = team.rareNonDivOpps
         for rareNonDivOpp in self.getNonDivOpps(team):
             if rareNonDivOpp not in cndo:
                 rndo.append(rareNonDivOpp)
-        return rndo
+                rareNonDivOpp.rareNonDivOpps.append(team)
+    
 
 
 
@@ -254,6 +256,7 @@ class Team:
         self.opponents = util.Counter() # holds counts of games v. each opponent
         self.teamCalendar = util.getCalendarCSV('schedule.csv')
         self.commonNonDivOpps = []
+        self.rareNonDivOpps = []
     # Iterate over self.schedule and calculate number of back to backToBacks
     def backToBacks(self):
         btb = 0
