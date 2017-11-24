@@ -179,6 +179,10 @@ class Scheduler:
                         # increment i
                         i += 1
 
+            rndo = team.rareNonDivOpps
+            team.HA[0] = rndo 
+            team.HA[1] = rndo   
+
         for team in self.teams.values():
             self.getRareNonDivOppsHT(team)
 
@@ -209,6 +213,7 @@ class Scheduler:
             minlen = 100
             minindex = -1
             # picking the team with the fewest commonNonDivOpps to add
+            # need I need to introduce more randomness
             for f in xrange(len(frontier)):
                 if frontier[f][1] <= minlen:
                     minlen = frontier[f][1]
@@ -227,44 +232,67 @@ class Scheduler:
                 rndo.append(rareNonDivOpp)
                 # rareNonDivOpp.rareNonDivOpps.append(team)
 
-    # need to do backtracking here
+    # doesn't work
+    # # need to do backtracking here
+    # def getRareNonDivOppsHT(self, team):
+    #     rndo = team.rareNonDivOpps
+    #     if self.numHomeGames(team) > 41:
+    #         options = []
+    #         for game in team.schedule:
+    #             if game.opponent in rndo and game.isHome:
+    #                 options.append(game)
+    #         # maybe able to use random.choice
+    #         randGame = random.sample(options, 1)[0]
+    #         # remove game from schedule of both teams working
+    #         team.schedule.remove(randGame)
+    #         for g in randGame.opponent.schedule:
+    #             if g.date == randGame.date and g.opponent == team and g.isHome == False:
+    #                 theGame = g
+    #                 break
+    #         # this part is working I think
+    #         randGame.opponent.schedule.remove(theGame)
+    #         # set dates equal to false for both teams
+    #         team.teamCalendar[randGame.date] = False
+    #         randGame.opponent.teamCalendar[randGame.date] = False
+    #         self.getRareNonDivOppsHT(team)
+    #         self.getRareNonDivOppsHT(randGame.opponent)
+    #     elif self.numHomeGames(team) < 41:
+    #         ming = 100
+    #         minindex = -1
+    #         for t in xrange(len(rndo)):
+    #             ng = len(rndo[t].schedule)
+    #             if ng <= ming:
+    #                 ming = ng
+    #                 minindex = t
+    #         t2 = rndo[minindex]
+    #         randomDate = random.choice(team.teamCalendar.keys())
+    #         # make sure game isn't already played on that date
+    #         if not team.teamCalendar[randomDate]:
+    #             # add game to schedule of both teams
+    #             team.schedule.append(Game(randomDate, t2, True))
+    #             t2.schedule.append(Game(randomDate, team, False))
+    #             # turn value to True
+    #             team.teamCalendar[randomDate] = True
+    #             t2.teamCalendar[randomDate] = True
+    #         self.getRareNonDivOppsHT(team)
+    #         self.getRareNonDivOppsHT(t2)
+
     def getRareNonDivOppsHT(self, team):
         rndo = team.rareNonDivOpps
-        if len(team.schedule) > 82 and self.numHomeGames(team) > 41:
-            options = []
-            for game in team.schedule:
-                if game.opponent in rndo and game.isHome:
-                    options.append(game)
-            # maybe able to use random.choice
-            randGame = random.sample(options, 1)[0]
-            # remove game from schedule of both teams
-            team.schedule.remove(randGame)
-            randGame.opponent.schedule.remove(Game(randGame.date, team, False))
-            # set dates equal to false for both teams
-            team.teamCalendar[randGame.date] = False
-            randGame.opponent.teamCalendar[randGame.date] = False
+        team.HA[0] = rndo 
+        team.HA[1] = rndo       
+        if len(team.HA[0]) > 2:
+            randT = random.choice(team.HA[0])
+            team.HA[0].remove(randT)
+            randT.HA[1].remove(team)
             self.getRareNonDivOppsHT(team)
-            self.getRareNonDivOppsHT(randGame.opponent)
-        elif len(team.schedule) < 82 and self.numHomeGames(team) < 41:
-            ming = 100
-            minindex = -1
-            for t in xrange(len(rndo)):
-                ng = len(rndo[t].schedule)
-                if ng <= ming:
-                    ming = ng
-                    minindex = t
-            t2 = rndo[minindex]
-            randomDate = random.choice(team.teamCalendar.keys())
-            # make sure game isn't already played on that date
-            if not team.teamCalendar[randomDate]:
-                # add game to schedule of both teams
-                team.schedule.append(Game(randomDate, t2, True))
-                t2.schedule.append(Game(randomDate, team, False))
-                # turn value to True
-                team.teamCalendar[randomDate] = True
-                t2.teamCalendar[randomDate] = True
+            self.getRareNonDivOppsHT(randT)
+        elif len(team.HA[0]) < 2:
+            randT = random.choice(team.HA[0])
+            team.HA[0].append(randT)
+            randT.HA[1].append(team)
             self.getRareNonDivOppsHT(team)
-            self.getRareNonDivOppsHT(t2)
+            self.getRareNonDivOppsHT(randT)
 
 
 
@@ -295,6 +323,7 @@ class Team:
         self.teamCalendar = util.getCalendarCSV('schedule.csv')
         self.commonNonDivOpps = []
         self.rareNonDivOpps = []
+        self.HA = [[],[]] # ([rareNonDivOpps that will be played extra time at home], [extra on road])
     # Iterate over self.schedule and calculate number of back to backToBacks
     def backToBacks(self):
         btb = 0
