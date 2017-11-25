@@ -29,6 +29,6 @@ print
 
 print 
 
-for team in s1.teams.values():
-	if len(team.schedule) != 78 or s1.numHomeGames(team) != 39:
-		print team, s1.numHomeGames(team), len(team.schedule)
+# for team in s1.teams.values():
+# 	if len(team.schedule) != 78 or s1.numHomeGames(team) != 39:
+# 		print team, s1.numHomeGames(team), len(team.schedule)
