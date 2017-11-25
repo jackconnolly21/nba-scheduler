@@ -166,12 +166,19 @@ class Scheduler:
                         # increment i
                         i += 1
 
-        for team in self.teams.values():
-        # need to get this working
-            self.getRareNonDivOppsHT(team)
         
-        # for team in self.teams.values():
-            
+        # makes all teams have HA lists of rndo
+        for team in self.teams.values():
+            self.initializeHA(team)
+        
+        for team in self.teams.values():
+            self.makeHAConsistent(team)
+
+        for team in self.teams.values():
+            # NEEDS TO PRINT IN TWICE TO BE CORRECT
+            if self.teams["Milwaukee Bucks"] in team.HA[1]:
+                    print "in"
+                
             for h in team.HA[0]:
                 i = 0
                 while i < 1:
@@ -280,7 +287,43 @@ class Scheduler:
         #     team.HA[1].append(rand2)
         #     rand2.HA[0].append(team)
         #     self.getRareNonDivOppsHT(team)
-        #     self.getRareNonDivOppsHT(rand2)
+        #     self.getRareNonDivOppsHT(rand2)   
+
+    
+    def initializeHA(self, team):
+        team.HA[0] = random.sample(team.rareNonDivOpps, 2)
+        team.HA[1] = [i for i in team.rareNonDivOpps if i not in team.HA[0]]
+
+    def swapHA (self, tm1, tm2):
+        # if tm2 is in tm1.HA[0] then tm1 needs to be in tm2.HA[1]
+        while tm2 in tm1.HA[0] and tm1 not in tm2.HA[1]:
+            # swaps position of tm1
+            tm2.HA[1].append(tm1)
+            tm2.HA[0].remove(tm1)
+            # balances sizes of HA[1] and HA[2]
+            r = random.choice(tm2.HA[1])
+            tm2.HA[1].remove(r)
+            tm2.HA[0].append(r)
+        while tm2 in tm1.HA[1] and tm1 not in tm2.HA[0]:
+            tm2.HA[0].append(tm1)
+            tm2.HA[1].remove(tm1)
+            r = random.choice(tm2.HA[0])
+            tm2.HA[0].remove(r)
+            tm2.HA[1].append(r)
+
+
+
+    def makeHAConsistent(self, team):
+        for tm2 in team.HA[0]:
+            self.swapHA(team, tm2)
+        for tm3 in team.HA[1]:
+            self.swapHA(team, tm3)
+        i = 0
+        for tm4 in self.teams.values():
+            if team in tm4.HA[0]:
+                i += 1
+        if i != 2: 
+            print team.name
 
 
 
