@@ -176,8 +176,8 @@ class Scheduler:
 
         for team in self.teams.values():
             # NEEDS TO PRINT IN TWICE TO BE CORRECT
-            if self.teams["Milwaukee Bucks"] in team.HA[1]:
-                    print "in"
+            # if self.teams["Milwaukee Bucks"] in team.HA[1]:
+            #         print "in"
                 
             for h in team.HA[0]:
                 i = 0
@@ -320,10 +320,10 @@ class Scheduler:
             self.swapHA(team, tm3)
         i = 0
         for tm4 in self.teams.values():
-            if team in tm4.HA[0]:
+            if self.teams["Los Angeles Lakers"] in tm4.HA[1]:
                 i += 1
         if i != 2: 
-            print team.name
+            print "prob"
 
 
 
