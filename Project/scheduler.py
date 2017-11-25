@@ -147,6 +147,7 @@ class Scheduler:
 
             self.getCommonNonDivOpps(team)
             # generates 12 home games
+            # this is working
             for commonNonDivOpp in team.commonNonDivOpps:
                 i = 0
                 while i < 2:
@@ -163,7 +164,10 @@ class Scheduler:
                         i += 1
 
             self.getRareNonDivOpps(team)
-
+            # this is not working
+            if self.teams["Detroit Pistons"] in team.rareNonDivOpps:
+                print "hi"
+            #
             for rareNonDivOpp in team.rareNonDivOpps:
                 i = 0
                 while i < 1:
@@ -171,11 +175,11 @@ class Scheduler:
                     # make sure game isn't already played on that date
                     if not team.teamCalendar[randomDate]:
                         # add game to schedule of both teams
-                        team.schedule.append(Game(randomDate, commonNonDivOpp, True))
-                        commonNonDivOpp.schedule.append(Game(randomDate, team, False))
+                        team.schedule.append(Game(randomDate, rareNonDivOpp, True))
+                        rareNonDivOpp.schedule.append(Game(randomDate, team, False))
                         # turn value to True
                         team.teamCalendar[randomDate] = True
-                        commonNonDivOpp.teamCalendar[randomDate] = True
+                        rareNonDivOpp.teamCalendar[randomDate] = True
                         # increment i
                         i += 1
 
@@ -196,6 +200,8 @@ class Scheduler:
                         # increment i
                         i += 1
 
+        # for t in self.teams["Detroit Pistons"].commonNonDivOpps:
+        #     print t.name
 
         # Set self.teams with new schedules
         return True
@@ -207,6 +213,7 @@ class Scheduler:
                 nonDivOpps.append(confOpp)
         return nonDivOpps
 
+    # problem with this function
     def getCommonNonDivOpps(self, team):
         cndo = team.commonNonDivOpps
         nonDivOpps = self.getNonDivOpps(team)
@@ -291,9 +298,26 @@ class Scheduler:
 
 
     def getRareNonDivOppsHT(self, team):
+        pass
         rndo = team.rareNonDivOpps
         team.HA[0] = random.sample(rndo, 2) 
         team.HA[1] = [i for i in rndo if i not in team.HA[0]]
+        # i = 0
+        # for tm2 in self.teams.values():
+        #     if team in tm2.HA[0]:
+        #         print "here"
+        #         i += 1
+        # if i > 2:
+
+
+        #     print team.name
+            # randT = random.choice(team.HA[0])
+            # team.HA[0].remove(randT)
+            # randT.HA[1].remove(team)
+            # self.getRareNonDivOppsHT(team)
+            # self.getRareNonDivOppsHT(randT)
+
+
         # if len(team.HA[0]) > 2:
         #     randT = random.choice(team.HA[0])
         #     team.HA[0].remove(randT)

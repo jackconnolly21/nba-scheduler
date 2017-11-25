@@ -26,14 +26,16 @@ print s1.numHomeGames(celts)
 print len(celts.schedule)
 knicks = s1.teams["New York Knicks"]
 print s1.numHomeGames(knicks)
-print len(celts.schedule)
+print len(knicks.schedule)
 nets = s1.teams["Brooklyn Nets"]
 print s1.numHomeGames(nets)
 print len(nets.schedule)
 
 print
 
+print 
+
 for team in s1.teams.values():
-	if len(team.schedule) != 82 or s1.numHomeGames(team) != 41:
+	if len(team.schedule) != 78 or s1.numHomeGames(team) != 39:
 		print team, s1.numHomeGames(team), len(team.schedule)
 
