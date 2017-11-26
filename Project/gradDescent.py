@@ -5,10 +5,11 @@ from scheduler import Team, Scheduler, Game
 def gradientDescent(s):
     cost = s.costFn()
     i = 0
+    print "Starting Cost:", cost
 
     while i < 1000:
         temp = copy.deepcopy(s)
-        temp.swap(temp.teams)
+        temp.swap()
         newCost = temp.costFn()
         if newCost < cost:
             cost = newCost
@@ -26,4 +27,5 @@ if __name__ == '__main__':
     	if sc.isValidSchedule():
     		s = sc
     		break
-    gradientDescent(s)
+    print "Starting Cost:", s.costFn
+    print "Ending Cost:", gradientDescent(s)

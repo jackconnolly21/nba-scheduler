@@ -62,7 +62,9 @@ class Scheduler:
     def swap(self):
         randomTeam = random.choice(self.teams.keys())
         randomGame = random.choice(randomTeam.schedule)
+        opponent = randomGame.opponent
         newDate = random.choice(randomTeam.teamCalendar.keys())
+        
 
 
     """
@@ -434,10 +436,10 @@ class Team:
     # Iterate over self.schedule and calculate number of back to backToBacks
     def duplicates(self):
         d = 0
-        self.schedule = util.sortSchedule(self.schedule)
-        for i in xrange(len(self.schedule) - 1):
-            g1 = self.schedule[i]
-            g2 = self.schedule[i + 1]
+        s = util.sortSchedule(self.schedule)
+        for i in xrange(len(s) - 1):
+            g1 = s[i].date
+            g2 = s[i + 1].date
             if g1 == g2:
                 d += 1
         return d
