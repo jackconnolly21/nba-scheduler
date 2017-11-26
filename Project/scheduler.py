@@ -37,9 +37,9 @@ class Scheduler:
         return total
 
     # Calculate total travel distance for all teams
-    def totalDistanceAll(self, teams):
+    def totalDistanceAll(self):
         total = 0
-        for team in teams.values():
+        for team in self.teams.values():
             total += self.totalDistanceTeam(team)
         return total
 
@@ -50,8 +50,22 @@ class Scheduler:
                 homeGames += 1
         return homeGames
 
-    def costFn(self, a=1, b=2000):
-        totalDistance = self.totalDistanceAll(self.teams)
+    # Gets random new date that is open for both teams
+    def getRandomDate(self, team1, team2):
+        found = False
+        while not found:
+            newDate = random.choice(team1.teamCalendar.keys())
+            if not team1.teamCalendar[newDate] and not team2.teamCalendar[newDate]:
+                found = True
+        return newDate
+
+    def removeGameAtDate(self, date, team):
+        for game in self.teams[team].schedule:
+            if game.date == date:
+                self.teams[team].schedule.remove(game)
+
+    def costFn(self, a=1, b=3000):
+        totalDistance = self.totalDistanceAll()
         totalBTB = util.totalBackToBacks(self.teams)
         cost = a * totalDistance + b * totalBTB
         return cost
@@ -60,12 +74,17 @@ class Scheduler:
         Move one game to another random date
     """
     def swap(self):
-        randomTeam = random.choice(self.teams.keys())
+        randomTeam = random.choice(self.teams.values())
         randomGame = random.choice(randomTeam.schedule)
         opponent = randomGame.opponent
-        newDate = random.choice(randomTeam.teamCalendar.keys())
-        
-
+        oldDate = randomGame.date
+        newDate = self.getRandomDate(randomTeam, opponent)
+        # Remove the old game in both teams schedules
+        self.removeGameAtDate(oldDate, randomTeam.name)
+        self.removeGameAtDate(oldDate, opponent.name)
+        # Add the game, but on new date
+        self.teams[randomTeam.name].schedule.append(Game(newDate, self.teams[opponent.name], randomGame.isHome))
+        self.teams[opponent.name].schedule.append(Game(newDate, self.teams[randomTeam.name], not randomGame.isHome))
 
     """
         Create a random initial schedule satisfying constraints

@@ -50,6 +50,7 @@ def readTeamsCSV(teamsCSV):
 
 """
     Reads in a .csv file of the NBA schedule and puts into teams list
+    Not working because we need opponent to be a game object
 """
 def readScheduleCSV(scheduleCSV, teams):
     with open(scheduleCSV, 'rb') as csvfile:

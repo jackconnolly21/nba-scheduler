@@ -3,6 +3,7 @@ from scheduler import Scheduler, Team, Game
 from datetime import date
 import pickle
 import copy
+import random
 
 i = 0
 while True:
@@ -13,12 +14,14 @@ while True:
 		break
 	i += 1
 
-d = 0
-for team in s.teams.values():
-    t = team.duplicates()
-    print t
-    d += t
-print d
+t = s.teams["Miami Heat"]
+randomGame = random.choice(t.schedule)
+opp = randomGame.opponent
+
+for game in opp.schedule:
+    print game
+print "First Game:", randomGame
+
 
 # pickleFile = open("obj.txt", "w")
 # pickle.dump(s, pickleFile)
