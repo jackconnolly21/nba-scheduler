@@ -91,7 +91,7 @@ class Scheduler:
                     while i < 2:
                         randomDate = random.choice(team.teamCalendar.keys())
                         # make sure game isn't already played on that date
-                        if not team.teamCalendar[randomDate]:
+                        if not team.teamCalendar[randomDate] and not divOpp.teamCalendar[randomDate]:
                             # add game to schedule of both teams
                             team.schedule.append(Game(randomDate, divOpp, True))
                             divOpp.schedule.append(Game(randomDate, team, False))
@@ -108,7 +108,7 @@ class Scheduler:
                 while i < 1:
                     randomDate = random.choice(team.teamCalendar.keys())
                     # make sure game isn't already played on that date
-                    if not team.teamCalendar[randomDate]:
+                    if not team.teamCalendar[randomDate] and not nonConfOpp.teamCalendar[randomDate]:
                         # add game to schedule of both teams
                         team.schedule.append(Game(randomDate, nonConfOpp, True))
                         nonConfOpp.schedule.append(Game(randomDate, team, False))
@@ -149,7 +149,7 @@ class Scheduler:
                 while i < 2:
                     randomDate = random.choice(team.teamCalendar.keys())
                     # make sure game isn't already played on that date
-                    if not team.teamCalendar[randomDate]:
+                    if not team.teamCalendar[randomDate] and not commonNonDivOpp.teamCalendar[randomDate]:
                         # add game to schedule of both teams
                         team.schedule.append(Game(randomDate, commonNonDivOpp, True))
                         commonNonDivOpp.schedule.append(Game(randomDate, team, False))
@@ -166,7 +166,7 @@ class Scheduler:
                 while i < 1:
                     randomDate = random.choice(team.teamCalendar.keys())
                     # make sure game isn't already played on that date
-                    if not team.teamCalendar[randomDate]:
+                    if not team.teamCalendar[randomDate] and not rareNonDivOpp.teamCalendar[randomDate]:
                         # add game to schedule of both teams
                         team.schedule.append(Game(randomDate, rareNonDivOpp, True))
                         rareNonDivOpp.schedule.append(Game(randomDate, team, False))
@@ -199,7 +199,7 @@ class Scheduler:
                 while i < 1:
                     randomDate = random.choice(team.teamCalendar.keys())
                     # make sure game isn't already played on that date
-                    if not team.teamCalendar[randomDate]:
+                    if not team.teamCalendar[randomDate] and not h.teamCalendar[randomDate]:
                         # add game to schedule of both teams
                         team.schedule.append(Game(randomDate, h, True))
                         h.schedule.append(Game(randomDate, team, False))
