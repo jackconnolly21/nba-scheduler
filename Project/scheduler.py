@@ -175,10 +175,15 @@ class Scheduler:
             self.makeHAConsistent(team)
 
         for team in self.teams.values():
+            i = 0
             # NEEDS TO PRINT IN TWICE TO BE CORRECT
-            # if self.teams["Milwaukee Bucks"] in team.HA[1]:
-            #         print "in"
-                
+            for tm2 in self.teams.values():
+                if team in tm2.HA[1]:
+                    i += 1
+            if i != 2:
+                self.makeHAConsistent(team)
+        
+        for team in self.teams.values():
             for h in team.HA[0]:
                 i = 0
                 while i < 1:
@@ -313,6 +318,7 @@ class Scheduler:
 
 
 
+    # think this is making previous teams' HAs inconsistent
     def makeHAConsistent(self, team):
         for tm2 in team.HA[0]:
             self.swapHA(team, tm2)
@@ -320,12 +326,16 @@ class Scheduler:
             self.swapHA(team, tm3)
         i = 0
         for tm4 in self.teams.values():
-            if self.teams["Los Angeles Lakers"] in tm4.HA[1]:
+            if tm4 in team.HA[0]:
                 i += 1
         if i != 2: 
-            print "prob"
+            print team.name
 
-
+    def isValidSchedule(self):
+        for team in self.teams.values():
+            if len(team.schedule) != 82 or self.numHomeGames(team) != 41:
+                return False
+        return True
 
 
         # elif len(team.HA[1]) > 2:

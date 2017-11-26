@@ -29,6 +29,12 @@ print
 
 print 
 
+# i = 0
+# while not s1.isValidSchedule():
+# 	Scheduler().randomStart()
+# 	i += 1
+# print i
+
 for team in s1.teams.values():
 	if len(team.schedule) != 82 or s1.numHomeGames(team) != 41:
 		print team, s1.numHomeGames(team), len(team.schedule)
