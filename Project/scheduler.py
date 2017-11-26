@@ -43,6 +43,12 @@ class Scheduler:
             total += self.totalDistanceTeam(team)
         return total
 
+    def totalTriples(self):
+        total = 0
+        for team in self.teams.values():
+            total += team.triples()
+        return total
+
     def numHomeGames(self, team):
         homeGames = 0
         for game in team.schedule:
@@ -64,10 +70,11 @@ class Scheduler:
             if game.date == date:
                 self.teams[team].schedule.remove(game)
 
-    def costFn(self, a=1, b=3000):
+    def costFn(self, a=1, b=3000, c=10000):
         totalDistance = self.totalDistanceAll()
         totalBTB = util.totalBackToBacks(self.teams)
-        cost = a * totalDistance + b * totalBTB
+        totalTriples = self.totalTriples()
+        cost = a * totalDistance + b * totalBTB + c * totalTriples
         return cost
 
     """
@@ -85,6 +92,21 @@ class Scheduler:
         # Add the game, but on new date
         self.teams[randomTeam.name].schedule.append(Game(newDate, self.teams[opponent.name], randomGame.isHome))
         self.teams[opponent.name].schedule.append(Game(newDate, self.teams[randomTeam.name], not randomGame.isHome))
+        # Return stuff so the swap can be undone if necessary
+        return (oldDate, newDate, randomTeam.name, opponent.name, randomGame.isHome)
+
+    """
+        Undo the swap done by swap()
+    """
+    def undoSwap(self, info):
+        oldDate, newDate, team1, team2, team1IsHome = info
+        # Remove the new games
+        self.removeGameAtDate(newDate, team1)
+        self.removeGameAtDate(newDate, team2)
+        # Add back the old games
+        self.teams[team1].schedule.append(Game(oldDate, self.teams[team2], team1IsHome))
+        self.teams[team2].schedule.append(Game(oldDate, self.teams[team1], not team1IsHome))
+        return True
 
     """
         Create a random initial schedule satisfying constraints
@@ -453,15 +475,16 @@ class Team:
         return btb
 
     # Iterate over self.schedule and calculate number of back to backToBacks
-    def duplicates(self):
-        d = 0
-        s = util.sortSchedule(self.schedule)
-        for i in xrange(len(s) - 1):
-            g1 = s[i].date
-            g2 = s[i + 1].date
-            if g1 == g2:
-                d += 1
-        return d
+    def triples(self):
+        trip = 0
+        self.schedule = util.sortSchedule(self.schedule)
+        for i in xrange(len(self.schedule) - 2):
+            g1 = self.schedule[i].date
+            g2 = self.schedule[i+2].date
+            timeDelta = g2 - g1
+            if timeDelta.days == 2:
+                trip += 1
+        return trip
 
     def __str__(self):
         info = [self.name, self.conference, self.division, self.location]
@@ -478,35 +501,3 @@ class Game:
     def __str__(self):
         info = [self.date, self.opponent, self.isHome]
         return ",".join(str(i) for i in info)
-
-"""
-    Finding initialization of a schedule to do local search on
-    NOT DONE (I've made changes but definitely not at all working)
-"""
-def dfsSchedule(scheduler):
-    # initialize frontier as stack, visited as dict
-    frontier = util.Stack()
-    # visited = dict()
-    # push start state into frontier with empty list of actions and pathcost of 0
-    frontier.push(scheduler.teams)
-    # while the frontier is not empty, search
-    while not frontier.isEmpty():
-        # get leaf
-        leaf = frontier.pop()
-        # check if state of leaf is goal state
-        if Scheduler.isGoalState(leaf):
-            # if yes, return schedule, backToBacks
-            return leaf
-        # add leaf state to dict mapped to path cost
-        # visited[leaf[0]] = leaf[1]
-        # get children of node
-        successors = Scheduler.getSuccessors(leaf)
-        # iterate through children
-        for successor in successors:
-            # check if succesor is in visited
-            # inVisited = successor[0] in visited
-            # if not, then update child and push to frontier
-            # if not inVisited:
-            frontier.push(teams)
-    # if no solution is found, return none
-    return None

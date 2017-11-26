@@ -1,40 +1,43 @@
 import util
-import copy
+import pickle
 from scheduler import Team, Scheduler, Game
 from timeit import default_timer as timer
+
+infinity = float('inf')
 
 def gradientDescent(s):
     cost = s.costFn()
     i = 0
 
-    while i < 50:
-        # Its the copy that takes almost all of the time 
-        beforeCopy = timer()
-        temp = copy.deepcopy(s)
-        afterCopy = timer()
-        temp.swap()
-        afterSwap = timer()
-        newCost = temp.costFn()
-        afterCostFn = timer()
+    while i < 100:
+
+        info = s.swap()
+
+        newCost = s.costFn()
+
         if newCost < cost:
             cost = newCost
-            s = temp
-        i += 1
-        print "Copy:", afterCopy - beforeCopy
-        print "Swap:", afterSwap - afterCopy
-        print "CostFn:", afterCostFn - afterSwap
-        print
-
+            i = 0
+        else:
+            s.undoSwap(info)
+            i += 1
 
     return cost
 
 if __name__ == '__main__':
-    while True:
-    	sc = Scheduler()
-    	sc.randomStart()
-    	if sc.isValidSchedule():
-    		s = sc
-    		break
-    print "Starting Cost:", s.costFn()
-    new = gradientDescent(s)
-    print "Ending Cost:", new
+    bestCost = infinity
+    for i in xrange(20):
+        print i
+        while True:
+        	sc = Scheduler()
+        	sc.randomStart()
+        	if sc.isValidSchedule():
+        		s = sc
+        		break
+        new = gradientDescent(s)
+        if new < bestCost:
+            print "Ending Cost:", new
+            bestCost = new
+            bestSch = s
+    bestSchFile = open('best.txt', 'wb')
+    pickle.dump(bestSch, bestSchFile)
