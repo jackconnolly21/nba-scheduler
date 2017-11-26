@@ -34,10 +34,11 @@ while True:
 	sched = Scheduler()
 	sched.randomStart()
 	if sched.isValidSchedule():
+		goodSched = sched
 		break
 	i += 1
 print i
 
-# for team in s1.teams.values():
-# 	if len(team.schedule) != 82 or s1.numHomeGames(team) != 41:
-# 		print team, s1.numHomeGames(team), len(team.schedule)
+for team in goodSched.teams.values():
+	if len(team.schedule) != 82 or s1.numHomeGames(team) != 41:
+		print team, s1.numHomeGames(team), len(team.schedule)
