@@ -19,20 +19,21 @@ class Scheduler:
     # Have to account for if home/away and where going to next/from
     def totalDistanceTeam(self, team):
         total = 0
-        sch = team.schedule
+        sch = util.sortSchedule(team.schedule)
+
         for i in xrange(len(sch) - 1):
             # Two home games in a row = no travel
             if sch[i].isHome and sch[i+1].isHome:
                 total += 0
             # Two away games in a row = between opponent cities
             elif not sch[i].isHome and not sch[i+1].isHome:
-                total += self.distances[sch[i].opponent][sch[i+1].opponent]
+                total += self.distances[sch[i].opponent.name][sch[i+1].opponent.name]
             # Away then home = opponent i --> home distance
             elif not sch[i].isHome and sch[i+1].isHome:
-                total += self.distances[sch[i].opponent][team.name]
+                total += self.distances[sch[i].opponent.name][team.name]
             # Otherwise home then away = home --> opponent i+1 distance
             else:
-                total += self.distances[team.name][sch[i+1].opponent]
+                total += self.distances[team.name][sch[i+1].opponent.name]
         return total
 
     # Calculate total travel distance for all teams
@@ -49,11 +50,20 @@ class Scheduler:
                 homeGames += 1
         return homeGames
 
-    def costFn(self, a=1, b=3000):
+    def costFn(self, a=1, b=2000):
         totalDistance = self.totalDistanceAll(self.teams)
         totalBTB = util.totalBackToBacks(self.teams)
         cost = a * totalDistance + b * totalBTB
         return cost
+
+    """
+        Move one game to another random date
+    """
+    def swap(self):
+        randomTeam = random.choice(self.teams.keys())
+        randomGame = random.choice(randomTeam.schedule)
+        newDate = random.choice(randomTeam.teamCalendar.keys())
+
 
     """
         Create a random initial schedule satisfying constraints
@@ -166,11 +176,11 @@ class Scheduler:
                         # increment i
                         i += 1
 
-        
+
         # makes all teams have HA lists of rndo
         for team in self.teams.values():
             self.initializeHA(team)
-        
+
         for team in self.teams.values():
             self.makeHAConsistent(team)
 
@@ -182,7 +192,7 @@ class Scheduler:
                     i += 1
             if i != 2:
                 self.makeHAConsistent(team)
-        
+
         for team in self.teams.values():
             for h in team.HA[0]:
                 i = 0
@@ -250,7 +260,7 @@ class Scheduler:
                 rndo.append(rareNonDivOpp)
                 # rareNonDivOpp.rareNonDivOpps.append(team)
 
-   
+
 
     # not being used
     def getRareNonDivOppsHT(self, team):
@@ -292,9 +302,9 @@ class Scheduler:
         #     team.HA[1].append(rand2)
         #     rand2.HA[0].append(team)
         #     self.getRareNonDivOppsHT(team)
-        #     self.getRareNonDivOppsHT(rand2)   
+        #     self.getRareNonDivOppsHT(rand2)
 
-    
+
     def initializeHA(self, team):
         team.HA[0] = random.sample(team.rareNonDivOpps, 2)
         team.HA[1] = [i for i in team.rareNonDivOpps if i not in team.HA[0]]
@@ -328,7 +338,7 @@ class Scheduler:
         for tm4 in self.teams.values():
             if tm4 in team.HA[0]:
                 i += 1
-        if i != 2: 
+        if i != 2:
             print team.name
 
     def isValidSchedule(self):
@@ -339,7 +349,7 @@ class Scheduler:
 
 
         # elif len(team.HA[1]) > 2:
-        #     randH = random.choice(team.HA[1]) 
+        #     randH = random.choice(team.HA[1])
         #     team.HA[1].remove(randH)
         #     randH.HA[0].remove(team)
         #     self.getRareNonDivOppsHT(team)
@@ -396,22 +406,6 @@ class Scheduler:
         #     self.getRareNonDivOppsHT(team)
         #     self.getRareNonDivOppsHT(randT)
 
-
-
-
-
-
-
-
-
-    """
-        Move one game to another random date
-    """
-    def swap(self, teams):
-        randomTeam = random.choice(teams.keys())
-        randomGame = random.choice(randomTeam.schedule)
-        pass
-
 # Defining a team object
 class Team:
     def __init__(self, name, conference, division, location):
@@ -420,15 +414,15 @@ class Team:
         self.division = division # one of 6 divisions
         self.location = location # (lat, lng) tuple in radians
         self.schedule = [] # list of 82 game objects (see Game class)
-        # idk if we'll need this, probably not, but might help
-        self.opponents = util.Counter() # holds counts of games v. each opponent
         self.teamCalendar = util.getCalendarCSV('schedule.csv')
         self.commonNonDivOpps = []
         self.rareNonDivOpps = []
         self.HA = [[],[]] # ([rareNonDivOpps that will be played extra time at home], [extra on road])
+
     # Iterate over self.schedule and calculate number of back to backToBacks
     def backToBacks(self):
         btb = 0
+        self.schedule = util.sortSchedule(self.schedule)
         for i in xrange(len(self.schedule) - 1):
             g1 = self.schedule[i]
             g2 = self.schedule[i + 1]
@@ -436,6 +430,17 @@ class Team:
             if timeDelta.days == 1:
                 btb += 1
         return btb
+
+    # Iterate over self.schedule and calculate number of back to backToBacks
+    def duplicates(self):
+        d = 0
+        self.schedule = util.sortSchedule(self.schedule)
+        for i in xrange(len(self.schedule) - 1):
+            g1 = self.schedule[i]
+            g2 = self.schedule[i + 1]
+            if g1 == g2:
+                d += 1
+        return d
 
     def __str__(self):
         info = [self.name, self.conference, self.division, self.location]
@@ -446,7 +451,7 @@ class Team:
 class Game:
     def __init__(self, date, opponent, isHome):
         self.date = date # Date time object
-        self.opponent = opponent # name of opponent
+        self.opponent = opponent # object of opponent
         self.isHome = isHome # boolean whether or not its a home game
 
     def __str__(self):

@@ -1,4 +1,5 @@
 import util
+import copy
 from scheduler import Team, Scheduler, Game
 
 def gradientDescent(s):
@@ -6,7 +7,7 @@ def gradientDescent(s):
     i = 0
 
     while i < 1000:
-        temp = s.copy()
+        temp = copy.deepcopy(s)
         temp.swap(temp.teams)
         newCost = temp.costFn()
         if newCost < cost:
@@ -18,9 +19,11 @@ def gradientDescent(s):
 
     return cost
 
-        # elif util.flipCoin()
-
 if __name__ == '__main__':
-    s = Scheduler()
-    s.randomStart()
+    while True:
+    	sc = Scheduler()
+    	sc.randomStart()
+    	if sc.isValidSchedule():
+    		s = sc
+    		break
     gradientDescent(s)
