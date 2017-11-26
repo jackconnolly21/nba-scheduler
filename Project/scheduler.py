@@ -252,7 +252,7 @@ class Scheduler:
 
    
 
-    # this is what I need to get working
+    # not being used
     def getRareNonDivOppsHT(self, team):
         rndo = team.rareNonDivOpps
         if len(team.HA[0]) == 2 and len(team.schedule) > 82:
