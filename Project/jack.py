@@ -6,15 +6,27 @@ import copy
 import random
 from math import e
 
-# i = 0
-# while True:
-# 	sc = Scheduler()
-# 	sc.randomStart()
-# 	if sc.isValidSchedule():
-# 		s = sc
-# 		break
-# 	i += 1
-#
+i = 0
+while True:
+	sc = Scheduler()
+	sc.randomStart()
+	if sc.isValidSchedule():
+		s = sc
+		break
+	i += 1
+
+for i in xrange(1000):
+	info = s.swap()
+
+for team in s.teams.values():
+	sch = util.sortSchedule(team.schedule)
+	for i in xrange(len(sch) - 1):
+		if (sch[i].date - sch[i+1].date).days == 0 and sch[i].opponent.name == sch[i+1].opponent.name:
+			print "Duplicate!", team.name, sch[i].date, sch[i].opponent.name
+
+
+
+
 # t = s.teams["Miami Heat"]
 # randomGame = random.choice(t.schedule)
 # opp = randomGame.opponent
@@ -23,16 +35,16 @@ from math import e
 #     print game
 # print "First Game:", randomGame
 
-temp = 10000
-while True:
-	if temp <= 0:
-		break
-	else:
-		deltaCost = 2000
-		constant = -deltaCost/temp
-		p = e**constant
-		temp -= 0.8
-		print p
+# temp = 10000
+# while True:
+# 	if temp <= 0:
+# 		break
+# 	else:
+# 		deltaCost = 2000
+# 		constant = -deltaCost/temp
+# 		p = e**constant
+# 		temp -= 0.8
+# 		print p
 
 
 # pickleFile = open("obj.txt", "w")

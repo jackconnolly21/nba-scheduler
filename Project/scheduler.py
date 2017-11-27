@@ -65,9 +65,9 @@ class Scheduler:
                 found = True
         return newDate
 
-    def removeGameAtDate(self, date, team):
+    def removeGameAtDate(self, date, team, opponent):
         for game in self.teams[team].schedule:
-            if (game.date - date).days == 0:
+            if (game.date - date).days == 0 and game.opponent.name == opponent:
                 self.teams[team].schedule.remove(game)
 
     def costFn(self, a=1, b=3000, c=10000):
@@ -87,11 +87,18 @@ class Scheduler:
         oldDate = randomGame.date
         newDate = self.getRandomDate(randomTeam, opponent)
         # Remove the old game in both teams schedules
-        self.removeGameAtDate(oldDate, randomTeam.name)
-        self.removeGameAtDate(oldDate, opponent.name)
+        before = len(self.teams[opponent.name].schedule)
+        self.removeGameAtDate(oldDate, randomTeam.name, opponent.name)
+        self.removeGameAtDate(oldDate, opponent.name, randomTeam.name)
+        after = len(self.teams[opponent.name].schedule)
         # Add the game, but on new date
         self.teams[randomTeam.name].schedule.append(Game(newDate, self.teams[opponent.name], randomGame.isHome))
         self.teams[opponent.name].schedule.append(Game(newDate, self.teams[randomTeam.name], not randomGame.isHome))
+        done = len(self.teams[opponent.name].schedule)
+        if after - before != -1:
+            print "Did not remove:", after - before
+        if done - after != 1:
+            print "Did not add:", done - after
         # Return stuff so the swap can be undone if necessary
         return (oldDate, newDate, randomTeam.name, opponent.name, randomGame.isHome)
 
@@ -101,8 +108,8 @@ class Scheduler:
     def undoSwap(self, info):
         oldDate, newDate, team1, team2, team1IsHome = info
         # Remove the new games
-        self.removeGameAtDate(newDate, team1)
-        self.removeGameAtDate(newDate, team2)
+        self.removeGameAtDate(newDate, team1, team2)
+        self.removeGameAtDate(newDate, team2, team1)
         # Add back the old games
         self.teams[team1].schedule.append(Game(oldDate, self.teams[team2], team1IsHome))
         self.teams[team2].schedule.append(Game(oldDate, self.teams[team1], not team1IsHome))
