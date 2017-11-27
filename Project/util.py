@@ -3,6 +3,7 @@ import csv
 from collections import defaultdict
 from scheduler import Team, Scheduler, Game
 from datetime import date
+import random
 
 """
 t1 and t2 are (lat, lng) tuples for 2 teams

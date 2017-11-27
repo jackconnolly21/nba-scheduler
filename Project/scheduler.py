@@ -67,7 +67,7 @@ class Scheduler:
 
     def removeGameAtDate(self, date, team):
         for game in self.teams[team].schedule:
-            if game.date == date:
+            if (game.date - date).days == 0:
                 self.teams[team].schedule.remove(game)
 
     def costFn(self, a=1, b=3000, c=10000):
