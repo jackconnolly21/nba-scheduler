@@ -19,10 +19,13 @@ for i in xrange(1000):
 	info = s.swap()
 
 for team in s.teams.values():
-	sch = util.sortSchedule(team.schedule)
-	for i in xrange(len(sch) - 1):
-		if (sch[i].date - sch[i+1].date).days == 0 and sch[i].opponent.name == sch[i+1].opponent.name:
-			print "Duplicate!", team.name, sch[i].date, sch[i].opponent.name
+	if len(team.schedule) != 82: print len(team.schedule)
+
+# for team in s.teams.values():
+# 	sch = util.sortSchedule(team.schedule)
+# 	for i in xrange(len(sch) - 1):
+# 		if (sch[i].date - sch[i+1].date).days == 0 and sch[i].opponent.name == sch[i+1].opponent.name:
+# 			print "Duplicate!", team.name, sch[i].date, sch[i].opponent.name
 
 
 

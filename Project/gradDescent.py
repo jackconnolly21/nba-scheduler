@@ -30,7 +30,7 @@ def gradientDescent(s):
 
     return cost
 
-def stochasticGradDesc(s, times=3000, alpha=0.8):
+def stochasticGradDesc(s, times=10000, alpha=0.8):
     cost = s.costFn()
     t = 0
 
@@ -51,11 +51,10 @@ def stochasticGradDesc(s, times=3000, alpha=0.8):
         else:
             deltaCost = newCost - cost
             constant = -deltaCost/temp
-            p = e**constant
 
             if newCost < cost:
                 cost = newCost
-            elif util.flipCoin(p):
+            elif util.flipCoin(e**constant):
                 cost = newCost
             else:
                 s.undoSwap(info)
@@ -63,18 +62,21 @@ def stochasticGradDesc(s, times=3000, alpha=0.8):
 
 if __name__ == '__main__':
     bestCost = infinity
-    for i in xrange(1):
+    for i in xrange(3):
+        print i
         while True:
         	sc = Scheduler()
         	sc.randomStart()
         	if sc.isValidSchedule():
         		s = sc
         		break
-        # new = stochasticGradDesc(s)
-        new = gradientDescent(s)
+        new = stochasticGradDesc(s)
+        # new = gradientDescent(s)
+        print "Ending Cost:", new
         if new < bestCost:
-            print "Ending Cost:", new
+            # print "Ending Cost:", new
             bestCost = new
             bestSch = s
+    print "Best Cost:", bestCost
     bestSchFile = open('best.txt', 'wb')
     pickle.dump(bestSch, bestSchFile)

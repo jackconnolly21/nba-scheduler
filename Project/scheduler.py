@@ -61,7 +61,7 @@ class Scheduler:
         found = False
         while not found:
             newDate = random.choice(team1.teamCalendar.keys())
-            if not team1.teamCalendar[newDate] and not team2.teamCalendar[newDate]:
+            if not self.teams[team1.name].teamCalendar[newDate] and not self.teams[team2.name].teamCalendar[newDate]:
                 found = True
         return newDate
 
@@ -69,12 +69,13 @@ class Scheduler:
         for game in self.teams[team].schedule:
             if (game.date - date).days == 0 and game.opponent.name == opponent:
                 self.teams[team].schedule.remove(game)
+                self.teams[team].teamCalendar[date] = False
 
     def costFn(self, a=1, b=3000, c=10000):
         totalDistance = self.totalDistanceAll()
         totalBTB = util.totalBackToBacks(self.teams)
         totalTriples = self.totalTriples()
-        cost = a * totalDistance + b * totalBTB + c * totalTriples
+        cost = a * totalDistance + b * totalBTB + c * (totalTriples**2)
         return cost
 
     """
@@ -86,19 +87,18 @@ class Scheduler:
         opponent = randomGame.opponent
         oldDate = randomGame.date
         newDate = self.getRandomDate(randomTeam, opponent)
+
         # Remove the old game in both teams schedules
-        before = len(self.teams[opponent.name].schedule)
         self.removeGameAtDate(oldDate, randomTeam.name, opponent.name)
         self.removeGameAtDate(oldDate, opponent.name, randomTeam.name)
-        after = len(self.teams[opponent.name].schedule)
+
         # Add the game, but on new date
         self.teams[randomTeam.name].schedule.append(Game(newDate, self.teams[opponent.name], randomGame.isHome))
+        self.teams[randomTeam.name].teamCalendar[newDate] = True
+
         self.teams[opponent.name].schedule.append(Game(newDate, self.teams[randomTeam.name], not randomGame.isHome))
-        done = len(self.teams[opponent.name].schedule)
-        if after - before != -1:
-            print "Did not remove:", after - before
-        if done - after != 1:
-            print "Did not add:", done - after
+        self.teams[opponent.name].teamCalendar[newDate] = True
+
         # Return stuff so the swap can be undone if necessary
         return (oldDate, newDate, randomTeam.name, opponent.name, randomGame.isHome)
 
@@ -112,7 +112,10 @@ class Scheduler:
         self.removeGameAtDate(newDate, team2, team1)
         # Add back the old games
         self.teams[team1].schedule.append(Game(oldDate, self.teams[team2], team1IsHome))
+        self.teams[team1].teamCalendar[oldDate] = True
+
         self.teams[team2].schedule.append(Game(oldDate, self.teams[team1], not team1IsHome))
+        self.teams[team2].teamCalendar[oldDate] = True
         return True
 
     """
