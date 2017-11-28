@@ -6,20 +6,22 @@ import copy
 import random
 from math import e
 
-i = 0
-while True:
-	sc = Scheduler()
-	sc.randomStart()
-	if sc.isValidSchedule():
-		s = sc
-		break
-	i += 1
+# i = 0
+# while True:
+# 	sc = Scheduler()
+# 	sc.randomStart()
+# 	if sc.isValidSchedule():
+# 		s = sc
+# 		break
+# 	i += 1
+#
+# for i in xrange(1000):
+# 	info = s.swap()
 
-for i in xrange(1000):
-	info = s.swap()
+s = Scheduler(testSchedule=True)
+schFile = open('pickles/nba16_17.txt', 'wb')
+pickle.dump(s, schFile)
 
-for team in s.teams.values():
-	if len(team.schedule) != 82: print len(team.schedule)
 
 # for team in s.teams.values():
 # 	sch = util.sortSchedule(team.schedule)
@@ -38,16 +40,16 @@ for team in s.teams.values():
 #     print game
 # print "First Game:", randomGame
 
-temp = 100000
-while True:
-	if temp <= 0:
-		break
-	else:
-		deltaCost = 10000
-		constant = -(deltaCost*0.5)/temp
-		p = e**constant
-		temp -= 0.5
-		if temp % 100 == 0: print p
+# temp = 100000
+# while True:
+# 	if temp <= 0:
+# 		break
+# 	else:
+# 		deltaCost = 10000
+# 		constant = -(deltaCost*0.5)/temp
+# 		p = e**constant
+# 		temp -= 0.5
+# 		if temp % 100 == 0: print p
 
 
 # pickleFile = open("obj.txt", "w")

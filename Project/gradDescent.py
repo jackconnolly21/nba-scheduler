@@ -15,7 +15,7 @@ def gradientDescent(s):
     cost = s.costFn()
     i = 0
 
-    while i < 200:
+    while i < 500:
 
         info = s.swap()
 
@@ -30,7 +30,7 @@ def gradientDescent(s):
 
     return cost
 
-def stochasticGradDesc(s, times=50000, alpha=0.8):
+def stochasticGradDesc(s, times=10000, alpha=0.8):
     cost = s.costFn()
     t = 0
 
@@ -61,22 +61,31 @@ def stochasticGradDesc(s, times=50000, alpha=0.8):
             t += 1
 
 if __name__ == '__main__':
-    bestCost = infinity
-    for i in xrange(1):
-        print i
-        while True:
-        	sc = Scheduler()
-        	sc.randomStart()
-        	if sc.isValidSchedule():
-        		s = sc
-        		break
-        new = stochasticGradDesc(s)
-        # new = gradientDescent(s)
-        print "Ending Cost:", new
-        if new < bestCost:
-            # print "Ending Cost:", new
-            bestCost = new
-            bestSch = s
-    print "Best Cost:", bestCost
-    bestSchFile = open('pickles/best.txt', 'wb')
-    pickle.dump(bestSch, bestSchFile)
+    for j in range(1):
+        bestCost = infinity
+        for i in xrange(5):
+            print i
+            while True:
+            	sc = Scheduler()
+            	sc.randomStart()
+            	if sc.isValidSchedule():
+            		s = sc
+            		break
+            if j == 0:
+                new = stochasticGradDesc(s)
+                method = 'SA'
+            if j == 1:
+                new = gradientDescent(s)
+                method = 'Grad'
+            print "Ending Cost:", new, method
+            if new < bestCost:
+                bestCost = new
+                bestSch = s
+
+        print "Best Cost:", bestCost
+
+        numbtb = util.totalBackToBacks(bestSch.teams)
+        filename = 'pickles/' + str(numbtb) + method + 'btb.txt'
+
+        bestSchFile = open(filename, 'wb')
+        pickle.dump(bestSch, bestSchFile)
