@@ -2,9 +2,24 @@ Some general stuff TODO:
 1) Figure out the best way to make the cost function, that optimizes
 in the proper way we want
   --> Maybe add other factors too such as:
-    > 4 in 5 sets
-    > not sure what else
+  --> 4 in 5 sets
+  --> not sure what else
+  a) Somehow account for variance in the cost function:
+    --> i.e. reward a solution where all teams have equal
+        # of btb vs one team having way more than another
+
 2) Make some cool plots of gradientDescent vs stochasticGradDesc
   --> For different values of stuff? Averages? As it runs?
+  --> Use whatever you used in SA pset, that was cool
+
 3) Let's get another way of optimization --> formulate as linear system
 like Brian said?
+
+4) Time things in the gradientDescent and stochasticGradDesc methods and
+see what's taking a long time and if we can cut that down if possible
+  --> basically used like:
+          from timeit import default_timer as timer
+          start = timer()
+          piece of code you want to time
+          end = timer()
+          print "Total execution time:", end - start

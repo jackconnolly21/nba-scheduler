@@ -30,7 +30,7 @@ def gradientDescent(s):
 
     return cost
 
-def stochasticGradDesc(s, times=10000, alpha=0.8):
+def stochasticGradDesc(s, times=50000, alpha=0.8):
     cost = s.costFn()
     t = 0
 
@@ -50,7 +50,7 @@ def stochasticGradDesc(s, times=10000, alpha=0.8):
             return min(cost, newCost)
         else:
             deltaCost = newCost - cost
-            constant = -deltaCost/temp
+            constant = -(deltaCost*0.8)/temp
 
             if newCost < cost:
                 cost = newCost
@@ -62,7 +62,7 @@ def stochasticGradDesc(s, times=10000, alpha=0.8):
 
 if __name__ == '__main__':
     bestCost = infinity
-    for i in xrange(10):
+    for i in xrange(1):
         print i
         while True:
         	sc = Scheduler()
@@ -70,8 +70,8 @@ if __name__ == '__main__':
         	if sc.isValidSchedule():
         		s = sc
         		break
-        # new = stochasticGradDesc(s)
-        new = gradientDescent(s)
+        new = stochasticGradDesc(s)
+        # new = gradientDescent(s)
         print "Ending Cost:", new
         if new < bestCost:
             # print "Ending Cost:", new
