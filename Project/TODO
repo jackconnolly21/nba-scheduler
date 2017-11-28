@@ -1,14 +1,10 @@
 Some general stuff TODO:
-1) Create an initialize method that gives us random,
-consistent initialization to run local search on
-2) Create some kind of swap function that can take two
-games between teams and move them around (or maybe just one
-game at a time and move to a different date?)
-3) Decide how we do local search
-
-Useful stuff:
-3) Function that checks if set of schedules is valid
---> Hopefully don't need if our initialization and swap functions
-are guaranteed to keep a valid schedule, or just ingrain it in a cost functions
-
-## I think all the helper methods work, but definitely check ##
+1) Figure out the best way to make the cost function, that optimizes
+in the proper way we want
+  --> Maybe add other factors too such as:
+    > 4 in 5 sets
+    > not sure what else
+2) Make some cool plots of gradientDescent vs stochasticGradDesc
+  --> For different values of stuff? Averages? As it runs?
+3) Let's get another way of optimization --> formulate as linear system
+like Brian said?
