@@ -78,5 +78,5 @@ if __name__ == '__main__':
             bestCost = new
             bestSch = s
     print "Best Cost:", bestCost
-    bestSchFile = open('best.txt', 'wb')
+    bestSchFile = open('pickles/best.txt', 'wb')
     pickle.dump(bestSch, bestSchFile)
