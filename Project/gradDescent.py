@@ -66,6 +66,7 @@ def stochasticGradDesc(s, times=10000, alpha=0.8):
             t += 1
 
 def readCommands(argv):
+    
     parser = OptionParser()
     parser.add_option("-m", "--method", dest="method",
                   help="use METHOD to conduct local search (GD or SA)", metavar="METHOD",
@@ -90,7 +91,6 @@ if __name__ == '__main__':
 
     bestCost = infinity
     for i in xrange(numTimes):
-        print i
         while True:
         	sc = Scheduler()
         	sc.randomStart()
@@ -103,7 +103,8 @@ if __name__ == '__main__':
         if method == 'GD':
             g = options.numItersGD
             new = gradientDescent(s, g)
-        print "Ending Cost:", new, method
+        print "Ending Cost:", new
+        print
         if new < bestCost:
             bestCost = new
             bestSch = s

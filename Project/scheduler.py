@@ -7,13 +7,13 @@ class Scheduler:
     """
     Create an object, storing all teams, distances
     """
-    def __init__(self, csvFile='teams.csv', testSchedule=False):
+    def __init__(self, csvFile='data/teams.csv', testSchedule=False):
         self.teams, self.conferences, self.divisions = util.readTeamsCSV(csvFile)
         self.distances = util.calculateDistances(self.teams)
         self.startDate = date(2017, 10, 17)
-        self.seasonCalendar = util.getCalendarCSV('schedule.csv')
+        self.seasonCalendar = util.getCalendarCSV('data/schedule.csv')
         if testSchedule:
-            util.readScheduleCSV('schedule.csv', self.teams)
+            util.readScheduleCSV('data/schedule.csv', self.teams)
 
     # Iterate over team.schedule and calculate total travel distance for one team
     # Have to account for if home/away and where going to next/from
