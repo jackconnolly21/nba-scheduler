@@ -11,6 +11,7 @@ def analyzePickle(fileName):
         s = pickle.load(open(f, 'rb'))
     except IOError:
         print "Could not load file '" + fileName + ".txt'"
+        return 1
 
     for team in s.teams.values():
         if len(team.schedule) != 82: print len(team.schedule)

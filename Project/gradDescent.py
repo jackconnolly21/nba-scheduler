@@ -1,21 +1,23 @@
 import util
 import pickle
+import sys
 from scheduler import Team, Scheduler, Game
 from timeit import default_timer as timer
+from optparse import OptionParser
 from math import e
 
 infinity = float('inf')
 
 """
-    I think the swap or undoSwap methods aren't working
-    The number of games in each schedule is changing from 82 somehow
+    Perform greedy gradientDescent on the schedule
 """
 
-def gradientDescent(s):
+def gradientDescent(s, numIters=200):
     cost = s.costFn()
     i = 0
+    iterations = 0
 
-    while i < 500:
+    while i < numIters:
 
         info = s.swap()
 
@@ -27,9 +29,15 @@ def gradientDescent(s):
         else:
             s.undoSwap(info)
             i += 1
+        iterations += 1
 
+    print "Iterations:", iterations
     return cost
 
+"""
+    Perform simulatedAnnealing on the schedule, accepting
+    worse solutions with probability exp(-deltaCost/temp)
+"""
 def stochasticGradDesc(s, times=10000, alpha=0.8):
     cost = s.costFn()
     t = 0
@@ -39,11 +47,8 @@ def stochasticGradDesc(s, times=10000, alpha=0.8):
         return temp
 
     while True:
-
         info = s.swap()
-
         newCost = s.costFn()
-
         temp = schedule(t)
 
         if temp <= 0:
@@ -60,32 +65,53 @@ def stochasticGradDesc(s, times=10000, alpha=0.8):
                 s.undoSwap(info)
             t += 1
 
+def readCommands(argv):
+    parser = OptionParser()
+    parser.add_option("-m", "--method", dest="method",
+                  help="use METHOD to conduct local search (GD or SA)", metavar="METHOD",
+                  default="GD")
+    parser.add_option("-n", "--numItersSA", dest="numItersSA",
+                    help="specify the number of iterations to run for", type="int",
+                    default=10000)
+    parser.add_option("-g", "--numItersGD", dest="numItersGD",
+                    help="specify the number of iterations to run for", type="int",
+                    default=200)
+    parser.add_option("-t", "--numTimes", dest="numTimes",
+                    help="number of times to run algorithm", type="int",
+                    default=1)
+    (options, args) = parser.parse_args(argv)
+    return options
+
 if __name__ == '__main__':
-    for j in range(1):
-        bestCost = infinity
-        for i in xrange(5):
-            print i
-            while True:
-            	sc = Scheduler()
-            	sc.randomStart()
-            	if sc.isValidSchedule():
-            		s = sc
-            		break
-            if j == 0:
-                new = stochasticGradDesc(s)
-                method = 'SA'
-            if j == 1:
-                new = gradientDescent(s)
-                method = 'Grad'
-            print "Ending Cost:", new, method
-            if new < bestCost:
-                bestCost = new
-                bestSch = s
 
-        print "Best Cost:", bestCost
+    options = readCommands(sys.argv[1:])
+    method = options.method
+    numTimes = options.numTimes
 
-        numbtb = util.totalBackToBacks(bestSch.teams)
-        filename = 'pickles/' + str(numbtb) + method + 'btb.txt'
+    bestCost = infinity
+    for i in xrange(numTimes):
+        print i
+        while True:
+        	sc = Scheduler()
+        	sc.randomStart()
+        	if sc.isValidSchedule():
+        		s = sc
+        		break
+        if method == 'SA':
+            n = options.numItersSA
+            new = stochasticGradDesc(s, times=n)
+        if method == 'GD':
+            g = options.numItersGD
+            new = gradientDescent(s, g)
+        print "Ending Cost:", new, method
+        if new < bestCost:
+            bestCost = new
+            bestSch = s
 
-        bestSchFile = open(filename, 'wb')
-        pickle.dump(bestSch, bestSchFile)
+    print "Best Cost:", bestCost
+
+    numbtb = util.totalBackToBacks(bestSch.teams)
+    filename = 'pickles/' + str(numbtb) + method + '.txt'
+
+    bestSchFile = open(filename, 'wb')
+    pickle.dump(bestSch, bestSchFile)
