@@ -66,17 +66,14 @@ def stochasticGradDesc(s, times=10000, alpha=0.8):
             t += 1
 
 def readCommands(argv):
-    
+
     parser = OptionParser()
     parser.add_option("-m", "--method", dest="method",
-                  help="use METHOD to conduct local search (GD or SA)", metavar="METHOD",
+                  help="use METHOD to conduct local search (GD or SA)",
                   default="GD")
-    parser.add_option("-n", "--numItersSA", dest="numItersSA",
+    parser.add_option("-n", "--numIters", dest="numIters",
                     help="specify the number of iterations to run for", type="int",
-                    default=10000)
-    parser.add_option("-g", "--numItersGD", dest="numItersGD",
-                    help="specify the number of iterations to run for", type="int",
-                    default=200)
+                    default=1000)
     parser.add_option("-t", "--numTimes", dest="numTimes",
                     help="number of times to run algorithm", type="int",
                     default=1)
@@ -87,6 +84,7 @@ if __name__ == '__main__':
 
     options = readCommands(sys.argv[1:])
     method = options.method
+    numIters = options.numIters
     numTimes = options.numTimes
 
     bestCost = infinity
@@ -98,11 +96,9 @@ if __name__ == '__main__':
         		s = sc
         		break
         if method == 'SA':
-            n = options.numItersSA
-            new = stochasticGradDesc(s, times=n)
+            new = stochasticGradDesc(s, times=numIters)
         if method == 'GD':
-            g = options.numItersGD
-            new = gradientDescent(s, g)
+            new = gradientDescent(s, numIters)
         print "Ending Cost:", new
         print
         if new < bestCost:
