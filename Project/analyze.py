@@ -1,17 +1,20 @@
 import pickle
 import util
 import sys
+import os
 from scheduler import Scheduler, Game, Team
 from optparse import OptionParser
 
-
 def analyzePickle(fileName):
     try:
-        f = 'pickles/' + fileName + '.txt'
+        f = 'pickles/' + fileName
         s = pickle.load(open(f, 'rb'))
     except IOError:
-        print "Could not load file '" + fileName + ".txt'"
+        print "Could not load file '" + fileName
         return 1
+
+    print
+    print "File:", fileName
 
     for team in s.teams.values():
         if len(team.schedule) != 82: print len(team.schedule)
@@ -37,4 +40,13 @@ def readCommands(argv):
 
 if __name__ == '__main__':
     options = readCommands(sys.argv[1:])
-    analyzePickle(options.fileName)
+    files = []
+    if options.fileName == 'all':
+        for f in os.listdir(os.getcwd() + '/pickles'):
+            if f.endswith('.txt'):
+                files.append(f)
+    else:
+        files = options.fileName.split(',')
+
+    for f in files:
+        analyzePickle(f)

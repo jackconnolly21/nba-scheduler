@@ -5,6 +5,7 @@ import pickle
 import copy
 import random
 from math import e
+import os
 
 # i = 0
 # while True:
@@ -18,9 +19,11 @@ from math import e
 # for i in xrange(1000):
 # 	info = s.swap()
 
-s = Scheduler(testSchedule=True)
-schFile = open('pickles/nba16_17.txt', 'wb')
-pickle.dump(s, schFile)
+# s = Scheduler(testSchedule=True)
+# schFile = open('pickles/nba16_17.txt', 'wb')
+# pickle.dump(s, schFile)
+
+print os.getcwd()
 
 
 # for team in s.teams.values():
