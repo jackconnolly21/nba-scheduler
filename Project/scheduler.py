@@ -10,8 +10,6 @@ class Scheduler:
     def __init__(self, csvFile='data/teams.csv', testSchedule=False):
         self.teams, self.conferences, self.divisions = util.readTeamsCSV(csvFile)
         self.distances = util.calculateDistances(self.teams)
-        self.startDate = date(2017, 10, 17)
-        self.seasonCalendar = util.getCalendarCSV('data/schedule.csv')
         if testSchedule:
             util.readScheduleCSV('data/schedule.csv', self.teams)
 
@@ -477,7 +475,7 @@ class Team:
         self.division = division # one of 6 divisions
         self.location = location # (lat, lng) tuple in radians
         self.schedule = [] # list of 82 game objects (see Game class)
-        self.teamCalendar = util.getCalendarCSV('schedule.csv')
+        self.teamCalendar = util.getCalendarCSV('data/schedule.csv')
         self.commonNonDivOpps = []
         self.rareNonDivOpps = []
         self.HA = [[],[]] # ([rareNonDivOpps that will be played extra time at home], [extra on road])

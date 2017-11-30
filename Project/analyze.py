@@ -16,6 +16,7 @@ def analyzePickle(fileName):
 
     print
     print "File:", fileName
+    print "Cost:", s.costFn()
 
     # Just in case something messes up, print if any team
     # has something other than 82 games in their schedule
@@ -54,6 +55,8 @@ if __name__ == '__main__':
         for f in os.listdir(os.getcwd() + '/pickles'):
             if f.endswith('.txt'):
                 files.append(f)
+    elif options.fileNames == None:
+        print "Use -f option to pass in pickle file(s) to analyze."
     else:
         files = options.fileNames.split(',')
 

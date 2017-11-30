@@ -20,10 +20,11 @@ def gradientDescent(s, numIters=200):
 
     # Perform gradientDescent until numIters iterations doesn't produce a cost decrease
     while i < numIters:
+
         # Perform random swap (random game to new random date)
         info = s.swap()
         # Cost after swap
-        newCost = s.costFn()
+        newCost = s.costFn(a=3)
         # Check if newCost is better, reset i=0 if so
         if newCost < cost:
             cost = newCost
@@ -41,7 +42,7 @@ def gradientDescent(s, numIters=200):
     Perform simulatedAnnealing on the schedule, accepting
     worse solutions with probability exp(-deltaCost/temp)
 """
-def stochasticGradDesc(s, times=10000, alpha=0.8):
+def simulatedAnnealing(s, times=10000, alpha=0.8):
     # Initialize cost and time
     cost = s.costFn()
     t = 0
@@ -111,7 +112,7 @@ if __name__ == '__main__':
         		break
         # Run chosen method
         if method == 'SA':
-            new = stochasticGradDesc(s, times=numIters)
+            new = simulatedAnnealing(s, times=numIters)
         if method == 'GD':
             new = gradientDescent(s, numIters)
 
