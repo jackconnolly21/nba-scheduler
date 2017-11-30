@@ -33,20 +33,20 @@ def analyzePickle(fileName):
 
 def readCommands(argv):
     parser = OptionParser()
-    parser.add_option("-f", "--file", dest="fileName",
-                  help="write report from FILE", metavar="FILE")
+    parser.add_option("-f", "--files", dest="fileNames",
+                  help="write report from FILES (comma separated list)", metavar="FILES")
     (options, args) = parser.parse_args(argv)
     return options
 
 if __name__ == '__main__':
     options = readCommands(sys.argv[1:])
     files = []
-    if options.fileName == 'all':
+    if options.fileNames == 'all':
         for f in os.listdir(os.getcwd() + '/pickles'):
             if f.endswith('.txt'):
                 files.append(f)
     else:
-        files = options.fileName.split(',')
+        files = options.fileNames.split(',')
 
     for f in files:
         analyzePickle(f)

@@ -11,7 +11,6 @@ infinity = float('inf')
 """
     Perform greedy gradientDescent on the schedule
 """
-
 def gradientDescent(s, numIters=200):
     cost = s.costFn()
     i = 0
