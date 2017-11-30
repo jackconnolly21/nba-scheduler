@@ -84,7 +84,6 @@ def getCalendarCSV(scheduleCSV):
 
     return calendar
 
-
 def calculateDistances(teams):
     distances = defaultdict(dict)
     for t1 in teams.keys():
@@ -105,6 +104,7 @@ def flipCoin(p):
     r = random.random()
     return r < p
 
+# Return a new schedule list sorted by date
 def sortSchedule(schedule):
     s = sorted(schedule, key=lambda game: game.date)
     return s

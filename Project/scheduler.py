@@ -65,11 +65,14 @@ class Scheduler:
                 found = True
         return newDate
 
+    # Remove game in team's schedule on date against opponent
     def removeGameAtDate(self, date, team, opponent):
         for game in self.teams[team].schedule:
             if (game.date - date).days == 0 and game.opponent.name == opponent:
                 self.teams[team].schedule.remove(game)
                 self.teams[team].teamCalendar[date] = False
+                return True
+        return False
 
     def costFn(self, a=1, b=3000, c=10000):
         totalDistance = self.totalDistanceAll()
@@ -82,6 +85,8 @@ class Scheduler:
         Move one game to another random date
     """
     def swap(self):
+
+        # Generate random team, game, newDate
         randomTeam = random.choice(self.teams.values())
         randomGame = random.choice(randomTeam.schedule)
         opponent = randomGame.opponent
@@ -106,16 +111,21 @@ class Scheduler:
         Undo the swap done by swap()
     """
     def undoSwap(self, info):
+
+        # Unpack info returned from swap
         oldDate, newDate, team1, team2, team1IsHome = info
+
         # Remove the new games
         self.removeGameAtDate(newDate, team1, team2)
         self.removeGameAtDate(newDate, team2, team1)
+
         # Add back the old games
         self.teams[team1].schedule.append(Game(oldDate, self.teams[team2], team1IsHome))
         self.teams[team1].teamCalendar[oldDate] = True
 
         self.teams[team2].schedule.append(Game(oldDate, self.teams[team1], not team1IsHome))
         self.teams[team2].teamCalendar[oldDate] = True
+
         return True
 
     """

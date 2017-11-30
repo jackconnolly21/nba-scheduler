@@ -6,6 +6,7 @@ from scheduler import Scheduler, Game, Team
 from optparse import OptionParser
 
 def analyzePickle(fileName):
+    # Try to open the pickle file passed in
     try:
         f = 'pickles/' + fileName
         s = pickle.load(open(f, 'rb'))
@@ -16,13 +17,17 @@ def analyzePickle(fileName):
     print
     print "File:", fileName
 
+    # Just in case something messes up, print if any team
+    # has something other than 82 games in their schedule
     for team in s.teams.values():
         if len(team.schedule) != 82: print len(team.schedule)
 
+    # Print some info that the cost function considers
     print "Total Distance:", s.totalDistanceAll()
     print "Total Back To Backs:", util.totalBackToBacks(s.teams)
     print "Triples:", s.totalTriples()
 
+    # Find most and least back to backs
     most = 0
     least = 100
     for team in s.teams.values():
@@ -32,6 +37,7 @@ def analyzePickle(fileName):
     print "Least Back to Backs:", least
 
 def readCommands(argv):
+    # Allow fileNames to be passed in command line
     parser = OptionParser()
     parser.add_option("-f", "--files", dest="fileNames",
                   help="write report from FILES (comma separated list)", metavar="FILES")
@@ -39,8 +45,11 @@ def readCommands(argv):
     return options
 
 if __name__ == '__main__':
+    # Read command line
     options = readCommands(sys.argv[1:])
     files = []
+
+    # Allow options of "all" files being passed in
     if options.fileNames == 'all':
         for f in os.listdir(os.getcwd() + '/pickles'):
             if f.endswith('.txt'):
@@ -48,5 +57,6 @@ if __name__ == '__main__':
     else:
         files = options.fileNames.split(',')
 
+    # Analyze every file passed in
     for f in files:
         analyzePickle(f)
