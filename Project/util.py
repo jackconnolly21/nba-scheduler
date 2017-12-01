@@ -62,10 +62,10 @@ def readScheduleCSV(scheduleCSV, teams):
             month = int(d[3:5])
             day = int(d[:2])
             dateObj = date(year, month, day)
-            homeTeam = Team(row[1], "", "", (0,0))
-            awayTeam = Team(row[2], "", "", (0,0))
-            teams[homeTeam.name].schedule.append(Game(dateObj, awayTeam, True))
-            teams[awayTeam.name].schedule.append(Game(dateObj, homeTeam, False))
+            homeTeam = row[1]
+            awayTeam = row[2]
+            teams[homeTeam].schedule.append(Game(dateObj, teams[awayTeam], True))
+            teams[awayTeam].schedule.append(Game(dateObj, teams[homeTeam], False))
 
     return True
 

@@ -24,7 +24,7 @@ def gradientDescent(s, numIters=200):
         # Perform random swap (random game to new random date)
         info = s.swap()
         # Cost after swap
-        newCost = s.costFn(a=3)
+        newCost = s.costFn()
         # Check if newCost is better, reset i=0 if so
         if newCost < cost:
             cost = newCost
@@ -42,7 +42,7 @@ def gradientDescent(s, numIters=200):
     Perform simulatedAnnealing on the schedule, accepting
     worse solutions with probability exp(-deltaCost/temp)
 """
-def simulatedAnnealing(s, times=10000, alpha=0.8):
+def simulatedAnnealing(s, times=50000, alpha=0.2):
     # Initialize cost and time
     cost = s.costFn()
     t = 0
@@ -52,6 +52,7 @@ def simulatedAnnealing(s, times=10000, alpha=0.8):
         temp = times - alpha*t
         return temp
 
+    iterations = 0
     # Run until temp <= 0
     while True:
         # Perform swap, update cost and temperature
@@ -66,7 +67,7 @@ def simulatedAnnealing(s, times=10000, alpha=0.8):
         # If worse, accept w/ prob = exp(-deltaCost/temp)
         else:
             deltaCost = newCost - cost
-            constant = -(deltaCost*0.8)/temp
+            constant = -(deltaCost*3)/temp
 
             if newCost < cost:
                 cost = newCost
@@ -75,6 +76,8 @@ def simulatedAnnealing(s, times=10000, alpha=0.8):
             else:
                 s.undoSwap(info)
             t += 1
+        iterations += 1
+    print "Iterations:", iterations
 
 def readCommands(argv):
     # Create OptionParser
@@ -89,6 +92,8 @@ def readCommands(argv):
     parser.add_option("-t", "--numTimes", dest="numTimes",
                     help="number of times to run algorithm", type="int",
                     default=1)
+    parser.add_option("-f", "--fileName", dest="fileName",
+                    help="pickle FILE to run gradientDescent on", default="")
     (options, args) = parser.parse_args(argv)
     return options
 
@@ -99,17 +104,21 @@ if __name__ == '__main__':
     method = options.method
     numIters = options.numIters
     numTimes = options.numTimes
+    fileName = "pickles/" + options.fileName
 
     bestCost = infinity
     # Run chosen method numTimes number of times
     for i in xrange(numTimes):
         # Get a valid initialization
-        while True:
-        	sc = Scheduler()
-        	sc.randomStart()
-        	if sc.isValidSchedule():
-        		s = sc
-        		break
+        if fileName != "":
+            s = pickle.load(open(fileName, 'rb'))
+        else:
+            while True:
+            	sc = Scheduler()
+            	sc.randomStart()
+            	if sc.isValidSchedule():
+            		s = sc
+            		break
         # Run chosen method
         if method == 'SA':
             new = simulatedAnnealing(s, times=numIters)

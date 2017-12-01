@@ -19,11 +19,11 @@ import os
 # for i in xrange(1000):
 # 	info = s.swap()
 
-# s = Scheduler(testSchedule=True)
-# schFile = open('pickles/nba16_17.txt', 'wb')
-# pickle.dump(s, schFile)
+s = Scheduler(testSchedule=True)
+schFile = open('pickles/nba16_17.txt', 'wb')
+pickle.dump(s, schFile)
 
-print os.getcwd()
+# print os.getcwd()
 
 
 # for team in s.teams.values():
@@ -43,16 +43,16 @@ print os.getcwd()
 #     print game
 # print "First Game:", randomGame
 
-# temp = 100000
+# temp = 50000
 # while True:
 # 	if temp <= 0:
 # 		break
 # 	else:
 # 		deltaCost = 10000
-# 		constant = -(deltaCost*0.5)/temp
+# 		constant = -(deltaCost*2)/temp
 # 		p = e**constant
-# 		temp -= 0.5
-# 		if temp % 100 == 0: print p
+# 		temp -= 0.2
+# 		print p
 
 
 # pickleFile = open("obj.txt", "w")
