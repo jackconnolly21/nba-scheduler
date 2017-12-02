@@ -4,6 +4,8 @@ import sys
 import os
 from scheduler import Scheduler, Game, Team
 from optparse import OptionParser
+import numpy as np
+import matplotlib.pyplot as plt
 
 def analyzePickle(fileName):
     # Try to open the pickle file passed in
@@ -36,10 +38,13 @@ def analyzePickle(fileName):
         least = min(least, team.backToBacks())
     print "Most Back to Backs:", most
     print "Least Back to Backs:", least
-    plt.plot(s.trace)
-    # plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
-    #        ncol=2, mode="expand", borderaxespad=0.)
-    plt.show()
+    try:
+        plt.plot(s.trace)
+        # plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
+        #        ncol=2, mode="expand", borderaxespad=0.)
+        plt.show()
+    except:
+        print "This schedule doesn't have a trace."
 
 def readCommands(argv):
     # Allow fileNames to be passed in command line
