@@ -5,6 +5,8 @@ from scheduler import Team, Scheduler, Game
 from timeit import default_timer as timer
 from optparse import OptionParser
 from math import e
+import matplotlib.pyplot as plt
+
 
 infinity = float('inf')
 
@@ -104,14 +106,14 @@ if __name__ == '__main__':
     method = options.method
     numIters = options.numIters
     numTimes = options.numTimes
-    fileName = "pickles/" + options.fileName
+    fileName = options.fileName
 
     bestCost = infinity
     # Run chosen method numTimes number of times
     for i in xrange(numTimes):
         # Get a valid initialization
         if fileName != "":
-            s = pickle.load(open(fileName, 'rb'))
+            s = pickle.load(open("pickles/" + fileName, 'rb'))
         else:
             while True:
             	sc = Scheduler()

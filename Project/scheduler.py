@@ -179,28 +179,6 @@ class Scheduler:
                         # increment i
                         i += 1
 
-            # # generates 20 home games
-            # for confOpp in self.conferences[team.conference]:
-            #     if confOpp not in self.divisions[team.division]:
-            #     # Randomly choose 1 or 2?
-            #     # starting with 2
-            #         i = 0
-            #         while i < 2:
-            #             randomDate = random.choice(team.teamCalendar.keys())
-            #             # make sure game isn't already played on that date
-            #             if not team.teamCalendar[randomDate]:
-            #                 # add game to schedule of both teams
-            #                 team.schedule.append(Game(randomDate, confOpp, True))
-            #                 confOpp.schedule.append(Game(randomDate, team, False))
-            #                 # turn value to True
-            #                 team.teamCalendar[randomDate] = True
-            #                 confOpp.teamCalendar[randomDate] = True
-            #                 # increment i
-            #                 i += 1
-
-            # randomly pick 6 confOpps to play 4 times
-            # play the other 4 3 times,
-
 
             self.getCommonNonDivOpps(team)
             # generates 12 home games
@@ -269,12 +247,6 @@ class Scheduler:
                         h.teamCalendar[randomDate] = True
                         # increment i
                         i += 1
-
-        # for t in self.teams["Boston Celtics"].rareNonDivOpps:
-        #     if self.teams["Milwaukee Bucks"] in t.rareNonDivOpps:
-        #         print t
-
-        # Set self.teams with new schedules
         return True
 
     def getNonDivOpps(self, team):
@@ -327,18 +299,6 @@ class Scheduler:
     def getRareNonDivOppsHT(self, team):
         rndo = team.rareNonDivOpps
         if len(team.HA[0]) == 2 and len(team.schedule) > 82:
-            print "here"
-            # never going in here
-            # frontier = []
-            # for t in team.HA[0]:
-            #     frontier.append((t, len(t.HA[1])))
-            # maxlen = -1
-            # maxindex = -1
-            # for f in xrange(len(frontier)):
-            #     if frontier[f][1] >= maxlen:
-            #         maxlen = frontier[f][1]
-            #         maxindex = f
-            # rand2 = frontier[maxindex][0]
             rand2 = random.choice(team.HA[1])
             team.HA[1].remove(rand2)
             rand2.HA[0].remove(team)
@@ -358,12 +318,6 @@ class Scheduler:
             team.HA[0].append(rand1)
             rand1.HA[1].append(team)
             self.getRareNonDivOppsHT(team)
-        # elif len(team.HA[0]) == 2 and len(team.schedule) < 82:
-        #     rand2 = random.choice(rndo)
-        #     team.HA[1].append(rand2)
-        #     rand2.HA[0].append(team)
-        #     self.getRareNonDivOppsHT(team)
-        #     self.getRareNonDivOppsHT(rand2)
 
 
     def initializeHA(self, team):
@@ -407,65 +361,6 @@ class Scheduler:
             if len(team.schedule) != 82 or self.numHomeGames(team) != 41:
                 return False
         return True
-
-
-        # elif len(team.HA[1]) > 2:
-        #     randH = random.choice(team.HA[1])
-        #     team.HA[1].remove(randH)
-        #     randH.HA[0].remove(team)
-        #     self.getRareNonDivOppsHT(team)
-        #     self.getRareNonDivOppsHT(randH)
-        # elif len(team.HA[1]) < 2:
-        #     frontier = []
-        #     for t in rndo:
-        #         if t not in team.HA[1]:
-        #             frontier.append((t, len(t.HA[0])))
-        #     minlen = 100
-        #     minindex = -1
-        #     # picking the team with the fewest commonNonDivOpps to add
-        #     # need I need to introduce more randomness
-        #     for f in xrange(len(frontier)):
-        #         if frontier[f][1] <= minlen:
-        #             minlen = frontier[f][1]
-        #             minindex = f
-        #     rand1 = frontier[minindex][0]
-        #     team.HA[1].append(rand1)
-        #     rand1.HA[0].append(team)
-        #     self.getRareNonDivOppsHT(team)
-        #     self.getRareNonDivOppsHT(rand1)
-
-            # for tm1 in randH:
-            #     tm1.HA[1].append(team)
-            # randA = [i for i in rndo if i not in team.HA[0]]
-            # team.HA[1] = randA
-            # for tm0 in randA:
-            #     tm0.HA[0].append(team)
-            # i = 0
-            # for tm2 in self.teams.values():
-            #     if team in tm2.HA[0]:
-            #         print "here"
-            #         i += 1
-            # if i > 2:
-            #     print team.name
-            #     randT = random.choice(team.HA[0])
-            #     team.HA[0].remove(randT)
-            #     randT.HA[1].remove(team)
-            #     self.getRareNonDivOppsHT(team)
-            #     self.getRareNonDivOppsHT(randT)
-
-
-        # if len(team.HA[0]) > 2:
-        #     randT = random.choice(team.HA[0])
-        #     team.HA[0].remove(randT)
-        #     randT.HA[1].remove(team)
-        #     self.getRareNonDivOppsHT(team)
-        #     self.getRareNonDivOppsHT(randT)
-        # elif len(team.HA[0]) < 2:
-        #     randT = random.choice(team.HA[0])
-        #     team.HA[0].append(randT)
-        #     randT.HA[1].append(team)
-        #     self.getRareNonDivOppsHT(team)
-        #     self.getRareNonDivOppsHT(randT)
 
 # Defining a team object
 class Team:
