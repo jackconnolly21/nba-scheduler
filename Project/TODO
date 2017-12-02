@@ -1,5 +1,10 @@
-Some general stuff TODO:
-1) Figure out the best way to make the cost function, that optimizes
+Some general stuff TODO: (in this order?)
+
+1) Make some cool plots of gradientDescent vs stochasticGradDesc
+  --> For different values of stuff? Averages? As it runs?
+  --> Use whatever you used in SA pset, that was cool
+
+2) Figure out the best way to make the cost function, that optimizes
 in the proper way we want
   --> Maybe add other factors too such as:
   --> 4 in 5 sets
@@ -7,10 +12,6 @@ in the proper way we want
   a) Somehow account for variance in the cost function:
     --> i.e. reward a solution where all teams have equal
         # of btb vs one team having way more than another
-
-2) Make some cool plots of gradientDescent vs stochasticGradDesc
-  --> For different values of stuff? Averages? As it runs?
-  --> Use whatever you used in SA pset, that was cool
 
 3) Let's get another way of optimization --> formulate as linear system
 like Brian said?
