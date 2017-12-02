@@ -24,3 +24,6 @@ see what's taking a long time and if we can cut that down if possible
           piece of code you want to time
           end = timer()
           print "Total execution time:", end - start
+  (a) Another way to do this would be making some kind of heuristic for
+      which swaps we do, maybe most back to backs/triples, highest travel
+      distance or something, so we have less wasted swaps
