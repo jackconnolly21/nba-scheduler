@@ -1,5 +1,8 @@
 import util
 from scheduler import Scheduler, Team, Game
+import numpy as np
+import matplotlib.pyplot as plt
+
 
 s1 = Scheduler()
 s1.randomStart()
@@ -42,3 +45,18 @@ print i
 for team in goodSched.teams.values():
 	if len(team.schedule) != 82 or s1.numHomeGames(team) != 41:
 		print team, s1.numHomeGames(team), len(team.schedule)
+
+x = np.linspace(0, 2, 100)
+
+plt.plot(x, x, label='linear')
+plt.plot(x, x**2, label='quadratic')
+plt.plot(x, x**3, label='cubic')
+
+plt.xlabel('x label')
+plt.ylabel('y label')
+
+plt.title("Simple Plot")
+
+plt.legend()
+
+plt.show()

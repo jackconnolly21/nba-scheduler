@@ -36,6 +36,10 @@ def analyzePickle(fileName):
         least = min(least, team.backToBacks())
     print "Most Back to Backs:", most
     print "Least Back to Backs:", least
+    plt.plot(s.trace)
+    # plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
+    #        ncol=2, mode="expand", borderaxespad=0.)
+    plt.show()
 
 def readCommands(argv):
     # Allow fileNames to be passed in command line

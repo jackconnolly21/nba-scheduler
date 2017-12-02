@@ -12,6 +12,7 @@ class Scheduler:
         self.distances = util.calculateDistances(self.teams)
         if testSchedule:
             util.readScheduleCSV('data/schedule.csv', self.teams)
+        self.trace = []
 
     # Iterate over team.schedule and calculate total travel distance for one team
     # Have to account for if home/away and where going to next/from

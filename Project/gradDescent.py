@@ -4,7 +4,8 @@ import sys
 from scheduler import Team, Scheduler, Game
 from timeit import default_timer as timer
 from optparse import OptionParser
-from math import e
+from math import e, log10
+import numpy as np
 import matplotlib.pyplot as plt
 
 
@@ -19,6 +20,8 @@ def gradientDescent(s, numIters=200):
     # Track iterations and iterations without improvement (i)
     i = 0
     iterations = 0
+    # store trace for plotting
+    s.trace = []
 
     # Perform gradientDescent until numIters iterations doesn't produce a cost decrease
     while i < numIters:
@@ -35,9 +38,11 @@ def gradientDescent(s, numIters=200):
             s.undoSwap(info)
             i += 1
         iterations += 1
+        s.trace.append(log10(cost))
 
     # Return the cost of the new solution
     print "Iterations:", iterations
+    print "Back to Backs:", util.totalBackToBacks(s.teams)
     return cost
 
 """
@@ -56,6 +61,8 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
 
     iterations = 0
     # Run until temp <= 0
+    # store trace for plotting
+    s.trace = []
     while True:
         # Perform swap, update cost and temperature
         info = s.swap()
@@ -64,6 +71,8 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
 
         # If temp <= 0, return bestCost
         if temp <= 0:
+            print "Iterations:", iterations
+            print "Back to Backs:", util.totalBackToBacks(s.teams)
             return min(cost, newCost)
         # Otherwise accept if better
         # If worse, accept w/ prob = exp(-deltaCost/temp)
@@ -77,9 +86,10 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
                 cost = newCost
             else:
                 s.undoSwap(info)
+            s.trace.append(log10(cost))
             t += 1
         iterations += 1
-    print "Iterations:", iterations
+  
 
 def readCommands(argv):
     # Create OptionParser
@@ -127,8 +137,8 @@ if __name__ == '__main__':
         if method == 'GD':
             new = gradientDescent(s, numIters)
 
+
         print "Ending Cost:", new
-        print
 
         # Update bestCost and schedule if better
         if new < bestCost:
@@ -144,3 +154,9 @@ if __name__ == '__main__':
     # Dump into a pickle file to analyze later
     bestSchFile = open(filename, 'wb')
     pickle.dump(bestSch, bestSchFile)
+
+
+    plt.plot(bestSch.trace, label=method)
+    # plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
+    #        ncol=2, mode="expand", borderaxespad=0.)
+    plt.show()
