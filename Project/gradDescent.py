@@ -89,7 +89,7 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
             s.trace.append(log10(cost))
             t += 1
         iterations += 1
-  
+
 
 def readCommands(argv):
     # Create OptionParser
@@ -155,8 +155,5 @@ if __name__ == '__main__':
     bestSchFile = open(filename, 'wb')
     pickle.dump(bestSch, bestSchFile)
 
-
     plt.plot(bestSch.trace, label=method)
-    # plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
-    #        ncol=2, mode="expand", borderaxespad=0.)
     plt.show()
