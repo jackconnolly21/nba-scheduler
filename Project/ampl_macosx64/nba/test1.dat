@@ -35,7 +35,7 @@ param: 		atlantic 	central 	southeast 	northwest	 pacific 	southwest :=
 	Jazz 		0			0			0			1			 0			0
 	Wizards		0			0			1			0			 0			0;
 
-param :=
+param tdistance :=
 Knicks Knicks 0
 Knicks Lakers 2448.58890746
 Knicks Grizzlies 958.798826744

@@ -7,6 +7,7 @@ param southeast {TEAMS};
 param northwest {TEAMS};
 param pacific {TEAMS};
 param southwest {TEAMS};
+param tdistance {TEAMS, TEAMS};
 
 set ATL {i in TEAMS: atlantic[i] = 1};
 set CENT {i in TEAMS: central[i] = 1};
