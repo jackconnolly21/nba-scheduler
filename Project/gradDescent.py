@@ -14,12 +14,13 @@ infinity = float('inf')
 """
     Perform greedy gradientDescent on the schedule
 """
-def gradientDescent(s, numIters=200):
+def gradientDescent(s, numIters=200, heuristic=False):
     # Intiailize cost
     cost = s.costFn()
     # Track iterations and iterations without improvement (i)
     i = 0
     iterations = 0
+    successes = 0
     # store trace for plotting
     s.trace = []
 
@@ -27,13 +28,14 @@ def gradientDescent(s, numIters=200):
     while i < numIters:
 
         # Perform random swap (random game to new random date)
-        info = s.swap()
+        info = s.swap(heuristic)
         # Cost after swap
         newCost = s.costFn()
         # Check if newCost is better, reset i=0 if so
         if newCost < cost:
             cost = newCost
             i = 0
+            successes += 1
         else:
             s.undoSwap(info)
             i += 1
@@ -43,6 +45,7 @@ def gradientDescent(s, numIters=200):
     # Return the cost of the new solution
     print "Iterations:", iterations
     print "Back to Backs:", util.totalBackToBacks(s.teams)
+    print "Successes Percentage:", successes/float(iterations)
     return cost
 
 """
@@ -106,6 +109,8 @@ def readCommands(argv):
                     default=1)
     parser.add_option("-f", "--fileName", dest="fileName",
                     help="pickle FILE to run gradientDescent on", default="")
+    parser.add_option("--heur", dest="heur", action="store_true",
+                    help="use heuristic? Default to false", default=False)
     (options, args) = parser.parse_args(argv)
     return options
 
@@ -135,10 +140,10 @@ if __name__ == '__main__':
         if method == 'SA':
             new = simulatedAnnealing(s, times=numIters)
         if method == 'GD':
-            new = gradientDescent(s, numIters)
-
+            new = gradientDescent(s, numIters, options.heur)
 
         print "Ending Cost:", new
+        print
 
         # Update bestCost and schedule if better
         if new < bestCost:
@@ -154,6 +159,3 @@ if __name__ == '__main__':
     # Dump into a pickle file to analyze later
     bestSchFile = open(filename, 'wb')
     pickle.dump(bestSch, bestSchFile)
-
-    plt.plot(bestSch.trace, label=method)
-    plt.show()

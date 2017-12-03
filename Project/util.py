@@ -4,6 +4,7 @@ from collections import defaultdict
 from scheduler import Team, Scheduler, Game
 from datetime import date
 import random
+import numpy as np
 
 """
 t1 and t2 are (lat, lng) tuples for 2 teams
@@ -99,6 +100,10 @@ def totalBackToBacks(teams):
     for team in teams.values():
         btb += team.backToBacks()
     return btb
+
+def standardDev(someList):
+    nplist = np.array(someList)
+    return np.std(nplist)
 
 def flipCoin(p):
     r = random.random()

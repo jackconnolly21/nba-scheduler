@@ -19,11 +19,13 @@ import os
 # for i in xrange(1000):
 # 	info = s.swap()
 
-s = Scheduler(testSchedule=True)
-schFile = open('pickles/nba16_17.txt', 'wb')
-pickle.dump(s, schFile)
+# s = Scheduler(testSchedule=True)
+# schFile = open('pickles/nba16_17.txt', 'wb')
+# pickle.dump(s, schFile)
+
 
 # print os.getcwd()
+
 
 
 # for team in s.teams.values():
@@ -32,6 +34,9 @@ pickle.dump(s, schFile)
 # 		if (sch[i].date - sch[i+1].date).days == 0 and sch[i].opponent.name == sch[i+1].opponent.name:
 # 			print "Duplicate!", team.name, sch[i].date, sch[i].opponent.name
 
+sched = pickle.load(open('pickles/321GD.txt', 'rb'))
+stds = sched.getStandardDevs()
+print stds
 
 
 
