@@ -73,20 +73,40 @@ class Scheduler:
                 return True
         return False
 
-    def costFn(self, a=1, b=3000, c=10000):
+    def mostBackToBacks(self):
+        most = 0
+        mostTeam = None
+        for team in self.teams.values():
+            btb = team.backToBacks()
+            if btb > most:
+                most = btb
+                mostTeam = team
+        return mostTeam
+
+    def getStandardDevs(self):
+        btbs = [team.backToBacks() for team in self.teams.values()]
+        dists = [self.totalDistanceTeam(team) for team in self.teams.values()]
+        btbSTD = util.standardDev(btbs)
+        distSTD = util.standardDev(dists)
+        return (btbSTD, distSTD)
+
+    def costFn(self, a=1, b=3000, c=10000, d=100):
         totalDistance = self.totalDistanceAll()
         totalBTB = util.totalBackToBacks(self.teams)
         totalTriples = self.totalTriples()
-        cost = a * totalDistance + b * totalBTB + c * (totalTriples**2)
+        btbSTD, distSTD = self.getStandardDevs()
+        cost = a * totalDistance + b * totalBTB + c * (totalTriples**2) + d * (btbSTD * 4000 + distSTD)
         return cost
 
     """
         Move one game to another random date
     """
-    def swap(self):
-
+    def swap(self, heur=False):
         # Generate random team, game, newDate
-        randomTeam = random.choice(self.teams.values())
+        if heur:
+            randomTeam = self.mostBackToBacks()
+        else:
+            randomTeam = random.choice(self.teams.values())
         randomGame = random.choice(randomTeam.schedule)
         opponent = randomGame.opponent
         oldDate = randomGame.date
