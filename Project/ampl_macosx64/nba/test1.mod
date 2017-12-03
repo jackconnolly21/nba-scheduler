@@ -16,8 +16,8 @@ set NW {i in TEAMS: northwest[i] = 1};
 set PAC {i in TEAMS: pacific[i] = 1};
 set SW {i in TEAMS: southwest[i] = 1};
 
-#set EAST {i in TEAMS: atlantic[i] = 1 or central[i] = 1 or southeast[i] = 1};
-#set WEST {i in TEAMS: northwest[i] = 1 or pacific[i] = 1 or southwest[i] = 1};
+set EAST {i in TEAMS: atlantic[i] = 1 or central[i] = 1 or southeast[i] = 1};
+set WEST {i in TEAMS: northwest[i] = 1 or pacific[i] = 1 or southwest[i] = 1};
 
 # set EAST := ATL union CENT union SE;
 # set WEST := NW union PAC union SW;
