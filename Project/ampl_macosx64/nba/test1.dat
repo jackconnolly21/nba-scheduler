@@ -1,0 +1,37 @@
+data;
+
+set TEAMS :=
+	Hawks Celtics Nets Hornets Bulls Cavaliers Mavericks Nuggets Pistons Warriors Rockets Pacers Clippers Lakers Grizzlies Heat Bucks Timberwolves Pelicans Knicks Thunder Magic Sixers Suns Blazers Kings Spurs Raptors Jazz Wizards;
+
+param: 		atlantic 	central 	southeast 	northwest	 pacific 	southwest :=
+	Hawks		0			0			1			0			 0			0
+	Celtics		1			0			0			0			 0			0
+	Nets		1			0			0			0			 0			0
+	Hornets		0			0			1			0			 0			0
+	Bulls		0			1			0			0			 0			0
+	Cavaliers	0			1			0			0			 0			0
+	Mavericks	0			0			0			0			 0			1
+	Nuggets 	0			0			0			1			 0			0
+	Pistons 	0			1			0			0			 0			0
+	Warriors 	0			0			0			0			 1			0
+	Rockets 	1			0			0			0			 0			0
+	Pacers 		0			1			0			0			 0			0
+	Clippers 	0			0			0			0			 1			0
+	Lakers 		0			0			0			0			 1			0
+	Grizzlies 	0			0			0			0			 0			1
+	Heat 		0			0			1			0			 0			0
+	Bucks 		0			1			0			0			 0			0
+	Timberwolves 0			0			0			1			 0			0
+	Pelicans 	0			0			0			0			 0			1
+	Knicks 		1			0			0			0			 0			0
+	Thunder 	0			0			0			1			 0			0
+	Magic 		0			0			1			0			 0			0
+	Sixers 		1			0			0			0			 0			0
+	Suns 		0			0			0			0			 1			0
+	Blazers 	0			0			0			1			 0			0
+	Kings 		0			0			0			0			 1			0
+	Spurs 		0			0			0			0			 0			1
+	Raptors 	1			0			0			0			 0			0
+	Jazz 		0			0			0			1			 0			0
+	Wizards		0			0			1			0			 0			0;
+
