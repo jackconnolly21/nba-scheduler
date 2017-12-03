@@ -275,7 +275,6 @@ class Scheduler:
             minlen = 100
             minindex = -1
             # picking the team with the fewest commonNonDivOpps to add
-            # need I need to introduce more randomness
             for f in xrange(len(frontier)):
                 if frontier[f][1] <= minlen:
                     minlen = frontier[f][1]
