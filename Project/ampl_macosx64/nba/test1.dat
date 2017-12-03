@@ -1,938 +1,954 @@
 data;
 
-set TEAMS :=
-	Hawks Celtics Nets Hornets Bulls Cavaliers Mavericks Nuggets Pistons Warriors Rockets Pacers Clippers Lakers Grizzlies Heat Bucks Timberwolves Pelicans Knicks Thunder Magic Sixers Suns Blazers Kings Spurs Raptors Jazz Wizards;
+set DIVS := ATL CENT SE NW PAC SW;
 
-param: 		atlantic 	central 	southeast 	northwest	 pacific 	southwest :=
-	Hawks		0			0			1			0			 0			0
-	Celtics		1			0			0			0			 0			0
-	Nets		1			0			0			0			 0			0
-	Hornets		0			0			1			0			 0			0
-	Bulls		0			1			0			0			 0			0
-	Cavaliers	0			1			0			0			 0			0
-	Mavericks	0			0			0			0			 0			1
-	Nuggets 	0			0			0			1			 0			0
-	Pistons 	0			1			0			0			 0			0
-	Warriors 	0			0			0			0			 1			0
-	Rockets 	1			0			0			0			 0			0
-	Pacers 		0			1			0			0			 0			0
-	Clippers 	0			0			0			0			 1			0
-	Lakers 		0			0			0			0			 1			0
-	Grizzlies 	0			0			0			0			 0			1
-	Heat 		0			0			1			0			 0			0
-	Bucks 		0			1			0			0			 0			0
-	Timberwolves 0			0			0			1			 0			0
-	Pelicans 	0			0			0			0			 0			1
-	Knicks 		1			0			0			0			 0			0
-	Thunder 	0			0			0			1			 0			0
-	Magic 		0			0			1			0			 0			0
-	Sixers 		1			0			0			0			 0			0
-	Suns 		0			0			0			0			 1			0
-	Blazers 	0			0			0			1			 0			0
-	Kings 		0			0			0			0			 1			0
-	Spurs 		0			0			0			0			 0			1
-	Raptors 	1			0			0			0			 0			0
-	Jazz 		0			0			0			1			 0			0
-	Wizards		0			0			1			0			 0			0;
+set TEAMS[ATL] := Celtics Nets Knicks Sixers Raptors;
+set TEAMS[CENT] := Bulls Cavaliers Pistons Bucks Pacers;
+set TEAMS[SE] := Hawks Hornets Heat Magic Wizards;
+set TEAMS[NW] := Nuggets Timberwolves Thunder Suns Jazz;
+set TEAMS[PAC] := Warriors Clippers Lakers Sixers Kings;
+set TEAMS[SW] := Mavericks Rockets Grizzlies Pelicans Blazers;
 
-param tdistance :=
-Knicks Knicks 0
-Knicks Lakers 2448.58890746
-Knicks Grizzlies 958.798826744
-Knicks Spurs 1589.36711293
-Knicks 76ers 86.8277827439
-Knicks Pistons 479.791938856
-Knicks Celtics 182.628525032
-Knicks Heat 1097.39356724
-Knicks Magic 944.732706618
-Knicks Blazers 2438.75489695
-Knicks Warriors 2557.96015459
-Knicks Bulls 710.581856052
-Knicks Wizards 207.386695644
-Knicks Jazz 1968.31504186
-Knicks Mavericks 1373.01712294
-Knicks Timberwolves 1013.82162442
-Knicks Clippers 2448.58890746
-Knicks Thunder 1325.83202954
-Knicks Hornets 535.900871319
-Knicks Bucks 731.460330709
-Knicks Raptors 341.562155747
-Knicks Rockets 1421.47100503
-Knicks Suns 2141.47388208
-Knicks Kings 2502.60053454
-Knicks Pelicans 1172.43314498
-Knicks Cavaliers 399.256801039
-Knicks Hawks 751.288577468
-Knicks Nets 0
-Knicks Pacers 646.734650678
-Knicks Nuggets 1630.00868004 
-Lakers Knicks 2448.58890746
-Lakers Lakers 0.0
-Lakers Grizzlies 1600.17138795 
-Lakers Spurs 1199.92207692 
-Lakers 76ers 2389.35609973 
-Lakers Pistons 1982.05097077 
-Lakers Celtics 2590.13885306 
-Lakers Heat 2334.63610223 
-Lakers Magic 2199.74995038 
-Lakers Blazers 825.398379495 
-Lakers Warriors 344.359673854 
-Lakers Bulls 1744.50568053 
-Lakers Wizards 2297.18746847 
-Lakers Jazz 582.779852895 
-Lakers Mavericks 1240.1698324 
-Lakers Timberwolves 1524.98660742 
-Lakers Clippers 0.0 
-Lakers Thunder 1182.84505116 
-Lakers Hornets 2116.08109039 
-Lakers Bucks 1743.45773373 
-Lakers Raptors 2171.4074383 
-Lakers Rockets 1373.90498914 
-Lakers Suns 357.665704839 
-Lakers Kings 361.731847239 
-Lakers Pelicans 1670.16537814 
-Lakers Cavaliers 2051.68621637 
-Lakers Hawks 1933.35893663 
-Lakers Nets 2448.58890746 
-Lakers Pacers 1806.37329624 
-Lakers Nuggets 830.390457657
-Grizzlies Knicks 958.798826744
-Grizzlies Lakers 1600.17138795
-Grizzlies Grizzlies 0.0
-Grizzlies Spurs 633.78048623
-Grizzlies 76ers 880.04613562
-Grizzlies Pistons 626.500217188
-Grizzlies Celtics 1134.02048582
-Grizzlies Heat 871.343150318
-Grizzlies Magic 684.057117184
-Grizzlies Blazers 1845.31453983
-Grizzlies Warriors 1790.04883661
-Grizzlies Bulls 481.933546429
-Grizzlies Wizards 765.800174687
-Grizzlies Jazz 1248.29653524
-Grizzlies Mavericks 417.005003969
-Grizzlies Timberwolves 700.896339678
-Grizzlies Clippers 1600.17138795
-Grizzlies Thunder 417.359927294
-Grizzlies Hornets 520.850964179
-Grizzlies Bucks 558.627187945
-Grizzlies Raptors 818.321840635
-Grizzlies Rockets 482.525924737
-Grizzlies Suns 1258.67609192
-Grizzlies Kings 1746.96915859
-Grizzlies Pelicans 356.31
-Grizzlies Cavaliers 635.428771523
-Grizzlies Hawks 336.877685416
-Grizzlies Nets 958.798826744
-Grizzlies Pacers 385.286857754
-Grizzlies Nuggets 879.463493256
-Spurs Knicks 1589.36711293
-Spurs Lakers 1199.92207692
-Spurs Grizzlies 633.78048623
-Spurs Spurs 0.0
-Spurs 76ers 1508.49854098
-Spurs Pistons 1243.62234371
-Spurs Celtics 1766.51314297
-Spurs Heat 1148.86379195
-Spurs Magic 1039.91566302
-Spurs Blazers 1716.73462675
-Spurs Warriors 1478.57135554
-Spurs Bulls 1054.43500065
-Spurs Wizards 1391.24507288
-Spurs Jazz 1088.49524301
-Spurs Mavericks 256.126465298
-Spurs Timberwolves 1115.42317233
-Spurs Clippers 1199.92207692
-Spurs Thunder 420.508873674
-Spurs Hornets 1107.90791143
-Spurs Bucks 1111.80335381
-Spurs Raptors 1442.78583245
-Spurs Rockets 194.288943727
-Spurs Suns 844.554366468
-Spurs Kings 1455.45981069
-Spurs Pelicans 510.483504042
-Spurs Cavaliers 1264.35982612
-Spurs Hawks 884.863964842
-Spurs Nets 1589.36711293
-Spurs Pacers 1002.6518062
-Spurs Nuggets 805.117563198
-76ers Knicks 86.8277827439
-76ers Lakers 2389.35609973
-76ers Grizzlies 880.04613562
-76ers Spurs 1508.49854098
-76ers 76ers 0.0
-76ers Pistons 440.807737564
-76ers Celtics 269.13407807
-76ers Heat 1020.23557408
-76ers Magic 862.916375914
-76ers Blazers 2406.04959203
-76ers Warriors 2508.18699758
-76ers Bulls 661.92519531
-76ers Wizards 121.059668072
-76ers Jazz 1920.24800849
-76ers Mavericks 1295.68866428
-76ers Timberwolves 981.236485738
-76ers Clippers 2389.35609973
-76ers Thunder 1254.80465867
-76ers Hornets 449.083389814
-76ers Bucks 691.453998444
-76ers Raptors 337.426714213
-76ers Rockets 1338.66059935
-76ers Suns 2077.14073526
-76ers Kings 2453.92021898
-76ers Pelicans 1086.55451224
-76ers Cavaliers 352.604363055
-76ers Hawks 664.942874014
-76ers Nets 86.8277827439
-76ers Pacers 583.327143862
-76ers Nuggets 1576.13770207
-Pistons Knicks 479.791938856
-Pistons Lakers 1982.05097077
-Pistons Grizzlies 626.500217188
-Pistons Spurs 1243.62234371
-Pistons 76ers 440.807737564
-Pistons Pistons 0.0
-Pistons Celtics 608.164305751
-Pistons Heat 1155.1963478
-Pistons Magic 958.637545334
-Pistons Blazers 1965.25915867
-Pistons Warriors 2079.76475911
-Pistons Bulls 237.713446318
-Pistons Wizards 394.768648892
-Pistons Jazz 1489.48771692
-Pistons Mavericks 999.901783985
-Pistons Timberwolves 540.911149164
-Pistons Clippers 1982.05097077
-Pistons Thunder 910.662168994
-Pistons Hornets 504.674783139
-Pistons Bucks 251.850039764
-Pistons Raptors 203.849444407
-Pistons Rockets 1107.58479714
-Pistons Suns 1688.3014161
-Pistons Kings 2023.84050871
-Pistons Pelicans 940.335948907
-Pistons Cavaliers 94.6102375579
-Pistons Hawks 598.520814951
-Pistons Nets 479.791938856
-Pistons Pacers 242.248101168
-Pistons Nuggets 1156.85981084
-Celtics Knicks 182.628525032
-Celtics Lakers 2590.13885306
-Celtics Grizzlies 1134.02048582
-Celtics Spurs 1766.51314297
-Celtics 76ers 269.13407807
-Celtics Pistons 608.164305751
-Celtics Celtics 0.0
-Celtics Heat 1255.5208509
-Celtics Magic 1113.25301048
-Celtics Blazers 2531.54485097
-Celtics Warriors 2682.32723782
-Celtics Bulls 845.633759524
-Celtics Wizards 389.990319488
-Celtics Jazz 2091.33677753
-Celtics Mavericks 1545.59582942
-Celtics Timberwolves 1116.85690527
-Celtics Clippers 2590.13885306
-Celtics Thunder 1489.37664278
-Celtics Hornets 717.567429419
-Celtics Bucks 852.591061949
-Celtics Raptors 429.395071079
-Celtics Rockets 1601.1125647
-Celtics Suns 2292.39119229
-Celtics Kings 2625.10370345
-Celtics Pelicans 1354.94742847
-Celtics Cavaliers 542.060519655
-Celtics Hawks 933.914939672
-Celtics Nets 182.628525032
-Celtics Pacers 803.981427184
-Celtics Nuggets 1764.61589089
-Heat Knicks 1097.39356724
-Heat Lakers 2334.63610223
-Heat Grizzlies 871.343150318
-Heat Spurs 1148.86379195
-Heat 76ers 1020.23557408
-Heat Pistons 1155.1963478
-Heat Celtics 1255.5208509
-Heat Heat 0.0
-Heat Magic 202.666416327
-Heat Blazers 2702.59949988
-Heat Warriors 2581.34551513
-Heat Bulls 1185.77319278
-Heat Wizards 925.573577278
-Heat Jazz 2086.78601026
-Heat Mavericks 1106.88886795
-Heat Timberwolves 1510.7588465
-Heat Clippers 2334.63610223
-Heat Thunder 1219.58588143
-Heat Hornets 654.306598111
-Heat Bucks 1268.08395361
-Heat Raptors 1236.0310945
-Heat Rockets 963.497927841
-Heat Suns 1977.0184541
-Heat Kings 2547.50253111
-Heat Pelicans 667.357388793
-Heat Cavaliers 1087.60480063
-Heat Hawks 604.61796304
-Heat Nets 1097.39356724
-Heat Pacers 1025.48999156
-Heat Nuggets 1725.6387391
-Magic Knicks 944.732706618
-Magic Lakers 2199.74995038
-Magic Grizzlies 684.057117184
-Magic Spurs 1039.91566302
-Magic 76ers 862.916375914
-Magic Pistons 958.637545334
-Magic Celtics 1113.25301048
-Magic Heat 202.666416327
-Magic Magic 5.89936971664e-05
-Magic Blazers 2526.07840692
-Magic Warriors 2430.57536443
-Magic Bulls 983.153484583
-Magic Wizards 758.755428151
-Magic Jazz 1917.9449109
-Magic Mavericks 960.765676397
-Magic Timberwolves 1309.05891608
-Magic Clippers 2199.74995038
-Magic Thunder 1054.68501002
-Magic Hornets 464.18757046
-Magic Bucks 1065.56540754
-Magic Raptors 1050.73468058
-Magic Rockets 847.334379439
-Magic Suns 1843.62716682
-Magic Kings 2393.57113138
-Magic Pelicans 534.145265388
-Magic Cavaliers 894.827021817
-Magic Hawks 402.49009694
-Magic Nets 944.732706618
-Magic Pacers 822.966136371
-Magic Nuggets 1552.69885623
-Blazers Knicks 2438.75489695
-Blazers Lakers 825.398379495
-Blazers Grizzlies 1845.31453983
-Blazers Spurs 1716.73462675
-Blazers 76ers 2406.04959203
-Blazers Pistons 1965.25915867
-Blazers Celtics 2531.54485097
-Blazers Heat 2702.59949988
-Blazers Magic 2526.07840692
-Blazers Blazers 0.0
-Blazers Warriors 530.907903487
-Blazers Bulls 1756.84701846
-Blazers Wizards 2348.76809823
-Blazers Jazz 631.903927115
-Blazers Mavericks 1631.6452825
-Blazers Timberwolves 1425.37802653
-Blazers Clippers 825.398379495
-Blazers Thunder 1488.6725452
-Blazers Hornets 2284.21852285
-Blazers Bucks 1715.89944616
-Blazers Raptors 2107.05513865
-Blazers Rockets 1835.1027286
-Blazers Suns 1003.43031721
-Blazers Kings 482.621299371
-Blazers Pelicans 2058.68257809
-Blazers Cavaliers 2055.27649333
-Blazers Hawks 2167.93363072
-Blazers Nets 2438.75489695
-Blazers Pacers 1880.23401715
-Blazers Nuggets 977.930761184
-Warriors Knicks 2557.96015459
-Warriors Lakers 344.359673854
-Warriors Grizzlies 1790.04883661
-Warriors Spurs 1478.57135554
-Warriors 76ers 2508.18699758
-Warriors Pistons 2079.76475911
-Warriors Celtics 2682.32723782
-Warriors Heat 2581.34551513
-Warriors Magic 2430.57536443
-Warriors Blazers 530.907903487
-Warriors Warriors 0.0
-Warriors Bulls 1847.63691087
-Warriors Wizards 2428.06465376
-Warriors Jazz 591.001214436
-Warriors Mavericks 1474.50898475
-Warriors Timberwolves 1575.05300717
-Warriors Clippers 344.359673854
-Warriors Thunder 1381.91679064
-Warriors Hornets 2288.25823238
-Warriors Bucks 1830.54377125
-Warriors Raptors 2254.18376009
-Warriors Rockets 1637.28508247
-Warriors Suns 646.409490461
-Warriors Kings 65.4613423349
-Warriors Pelicans 1914.2477525
-Warriors Cavaliers 2159.05851686
-Warriors Hawks 2126.90149615
-Warriors Nets 2557.96015459
-Warriors Pacers 1935.60202767
-Warriors Nuggets 937.048888788
-Bulls Knicks 710.581856052
-Bulls Lakers 1744.50568053
-Bulls Grizzlies 481.933546429
-Bulls Spurs 1054.43500065
-Bulls 76ers 661.92519531
-Bulls Pistons 237.713446318
-Bulls Celtics 845.633759524
-Bulls Heat 1185.77319278
-Bulls Magic 983.153484583
-Bulls Blazers 1756.84701846
-Bulls Warriors 1847.63691087
-Bulls Bulls 0.0
-Bulls Wizards 592.961535081
-Bulls Jazz 1258.6940787
-Bulls Mavericks 802.204018848
-Bulls Timberwolves 356.049731456
-Bulls Clippers 1744.50568053
-Bulls Thunder 691.77192237
-Bulls Hornets 583.392634348
-Bulls Bucks 84.4130083274
-Bulls Raptors 434.432427084
-Bulls Rockets 940.169811685
-Bulls Suns 1451.46938746
-Bulls Kings 1792.71442429
-Bulls Pelicans 830.929390298
-Bulls Cavaliers 311.438091047
-Bulls Hawks 584.946209183
-Bulls Nets 710.581856052
-Bulls Pacers 161.013857348
-Bulls Nuggets 920.580353924 
-Wizards Knicks 207.386695644 
-Wizards Lakers 2297.18746847 
-Wizards Grizzlies 765.800174687 
-Wizards Spurs 1391.24507288 
-Wizards 76ers 121.059668072 
-Wizards Pistons 394.768648892 
-Wizards Celtics 389.990319488 
-Wizards Heat 925.573577278 
-Wizards Magic 758.755428151 
-Wizards Blazers 2348.76809823
-Wizards Warriors 2428.06465376 
-Wizards Bulls 592.961535081 
-Wizards Wizards 0.0 
-Wizards Jazz 1843.42094635 
-Wizards Mavericks 1182.48369192 
-Wizards Timberwolves 930.780826172 
-Wizards Clippers 2297.18746847 
-Wizards Thunder 1149.41783435 
-Wizards Hornets 330.068348335 
-Wizards Bucks 634.815713777 
-Wizards Raptors 351.509270395 
-Wizards Rockets 1219.59862495 
-Wizards Suns 1978.88555421 
-Wizards Kings 2375.30267799 
-Wizards Pelicans 965.506089935 
-Wizards Cavaliers 300.378867069 
-Wizards Hawks 543.944204352 
-Wizards Nets 207.386695644 
-Wizards Pacers 493.309654588 
-Wizards Nuggets 1492.46486666
-Jazz Knicks 1968.31504186
-Jazz Lakers 582.779852895
-Jazz Grizzlies 1248.29653524
-Jazz Spurs 1088.49524301
-Jazz 76ers 1920.24800849
-Jazz Pistons 1489.48771692
-Jazz Celtics 2091.33677753
-Jazz Heat 2086.78601026
-Jazz Magic 1917.9449109
-Jazz Blazers 631.903927115
-Jazz Warriors 591.001214436
-Jazz Bulls 1258.6940787
-Jazz Wizards 1843.42094635
-Jazz Jazz 0
-Jazz Mavericks 1001.6864305
-Jazz Timberwolves 986.251593316
-Jazz Clippers 582.779852895
-Jazz Thunder 867.356870054
-Jazz Hornets 1723.97441954
-Jazz Bucks 1239.76951102
-Jazz Raptors 1663.21269071
-Jazz Rockets 1203.20330373
-Jazz Suns 506.840139089
-Jazz Kings 534.352869659
-Jazz Pelicans 1433.46164231
-Jazz Cavaliers 1569.88641259
-Jazz Hawks 1581.07211049
-Jazz Nets 1968.31504186
-Jazz Pacers 1353.14221355
-Jazz Nuggets 369.276241575
-Mavericks Knicks 1373.01712294
-Mavericks Lakers 1240.1698324
-Mavericks Grizzlies 417.005003969
-Mavericks Spurs 256.126465298
-Mavericks 76ers 1295.68866428
-Mavericks Pistons 999.901783985
-Mavericks Celtics 1545.59582942
-Mavericks Heat 1106.88886795
-Mavericks Magic 960.765676397
-Mavericks Blazers 1631.6452825
-Mavericks Warriors 1474.50898475
-Mavericks Bulls 802.204018848
-Mavericks Wizards 1182.48369192
-Mavericks Jazz 1001.6864305
-Mavericks Mavericks 0.0
-Mavericks Timberwolves 864.408862222
-Mavericks Clippers 1240.1698324
-Mavericks Thunder 186.313660515
-Mavericks Hornets 927.060445307
-Mavericks Bucks 857.154809949
-Mavericks Raptors 1201.59180865
-Mavericks Rockets 226.235911829
-Mavericks Suns 885.816217717
-Mavericks Kings 1440.84579198
-Mavericks Pelicans 440.380460402
-Mavericks Cavaliers 1027.927756
-Mavericks Hawks 717.784740962
-Mavericks Nets 1373.01712294
-Mavericks Pacers 761.914174745
-Mavericks Nuggets 666.142182167
-Timberwolves Knicks 1013.82162442
-Timberwolves Lakers 1524.98660742
-Timberwolves Grizzlies 700.896339678
-Timberwolves Spurs 1115.42317233
-Timberwolves 76ers 981.236485738
-Timberwolves Pistons 540.911149164
-Timberwolves Celtics 1116.85690527
-Timberwolves Heat 1510.7588465
-Timberwolves Magic 1309.05891608
-Timberwolves Blazers 1425.37802653
-Timberwolves Warriors 1575.05300717
-Timberwolves Bulls 356.049731456
-Timberwolves Wizards 930.780826172
-Timberwolves Jazz 986.251593316
-Timberwolves Mavericks 864.408862222
-Timberwolves Timberwolves 0.0
-Timberwolves Clippers 1524.98660742
-Timberwolves Thunder 697.731462836
-Timberwolves Hornets 936.39222304
-Timberwolves Bucks 296.997622701
-Timberwolves Raptors 687.830558691
-Timberwolves Rockets 1059.40688734
-Timberwolves Suns 1279.65602837
-Timberwolves Kings 1515.71893044
-Timberwolves Pelicans 1051.32887435
-Timberwolves Cavaliers 632.671306712
-Timberwolves Hawks 906.636600883
-Timberwolves Nets 1013.82162442
-Timberwolves Pacers 508.762370329
-Timberwolves Nuggets 700.987084804 
-Clippers Knicks 2448.58890746 
-Clippers Lakers 0.0 
-Clippers Grizzlies 1600.17138795 
-Clippers Spurs 1199.92207692 
-Clippers 76ers 2389.35609973 
-Clippers Pistons 1982.05097077 
-Clippers Celtics 2590.13885306 
-Clippers Heat 2334.63610223 
-Clippers Magic 2199.74995038 
-Clippers Blazers 825.398379495 
-Clippers Warriors 344.359673854 
-Clippers Bulls 1744.50568053 
-Clippers Wizards 2297.18746847 
-Clippers Jazz 582.779852895 
-Clippers Mavericks 1240.1698324 
-Clippers Timberwolves 1524.98660742 
-Clippers Clippers 0.0 
-Clippers Thunder 1182.84505116 
-Clippers Hornets 2116.08109039 
-Clippers Bucks 1743.45773373 
-Clippers Raptors 2171.4074383 
-Clippers Rockets 1373.90498914 
-Clippers Suns 357.665704839 
-Clippers Kings 361.731847239 
-Clippers Pelicans 1670.16537814 
-Clippers Cavaliers 2051.68621637 
-Clippers Hawks 1933.35893663 
-Clippers Nets 2448.58890746 
-Clippers Pacers 1806.37329624 
-Clippers Nuggets 830.390457657
-Thunder Knicks 1325.83202954
-Thunder Lakers 1182.84505116
-Thunder Grizzlies 417.359927294
-Thunder Spurs 420.508873674
-Thunder 76ers 1254.80465867
-Thunder Pistons 910.662168994
-Thunder Celtics 1489.37664278
-Thunder Heat 1219.58588143
-Thunder Magic 1054.68501002
-Thunder Blazers 1488.6725452
-Thunder Warriors 1381.91679064
-Thunder Bulls 691.77192237
-Thunder Wizards 1149.41783435
-Thunder Jazz 867.356870054
-Thunder Mavericks 186.313660515
-Thunder Timberwolves 697.731462836
-Thunder Clippers 1182.84505116
-Thunder Thunder 0.0
-Thunder Hornets 935.722469581
-Thunder Bucks 733.631092552
-Thunder Raptors 1114.49566017
-Thunder Rockets 410.886386711
-Thunder Suns 842.642449007
-Thunder Kings 1341.98545203
-Thunder Pelicans 570.809421459
-Thunder Cavaliers 953.92574519
-Thunder Hawks 751.441602335
-Thunder Nets 1325.83202954
-Thunder Pacers 686.683562883
-Thunder Nuggets 511.569604494
-Hornets Knicks 535.900871319
-Hornets Lakers 2116.08109039
-Hornets Grizzlies 520.850964179
-Hornets Spurs 1107.90791143
-Hornets 76ers 449.083389814
-Hornets Pistons 504.674783139
-Hornets Celtics 717.567429419
-Hornets Heat 654.306598111
-Hornets Magic 464.18757046
-Hornets Blazers 2284.21852285
-Hornets Warriors 2288.25823238
-Hornets Bulls 583.392634348
-Hornets Wizards 330.068348335
-Hornets Jazz 1723.97441954
-Hornets Mavericks 927.060445307
-Hornets Timberwolves 936.39222304
-Hornets Clippers 2116.08109039
-Hornets Thunder 935.722469581
-Hornets Hornets 0.0
-Hornets Bucks 657.150544551
-Hornets Raptors 586.942789728
-Hornets Rockets 925.184140939
-Hornets Suns 1778.3114586
-Hornets Kings 2241.26484611
-Hornets Pelicans 648.355608797
-Hornets Cavaliers 433.408618379
-Hornets Hawks 226.966979391
-Hornets Nets 535.900871319
-Hornets Pacers 427.78199478
-Hornets Nuggets 1357.33649347
-Bucks Knicks 731.460330709
-Bucks Lakers 1743.45773373
-Bucks Grizzlies 558.627187945
-Bucks Spurs 1111.80335381
-Bucks 76ers 691.453998444
-Bucks Pistons 251.850039764
-Bucks Celtics 852.591061949
-Bucks Heat 1268.08395361
-Bucks Magic 1065.56540754
-Bucks Blazers 1715.89944616
-Bucks Warriors 1830.54377125
-Bucks Bulls 84.4130083274
-Bucks Wizards 634.815713777
-Bucks Jazz 1239.76951102
-Bucks Mavericks 857.154809949
-Bucks Timberwolves 296.997622701
-Bucks Clippers 1743.45773373
-Bucks Thunder 733.631092552
-Bucks Hornets 657.150544551
-Bucks Bucks 0.0
-Bucks Raptors 428.144092428
-Bucks Rockets 1006.57193675
-Bucks Suns 1461.99034437
-Bucks Kings 1774.0024317
-Bucks Pelicans 910.6250897
-Bucks Cavaliers 339.488765866
-Bucks Hawks 668.536485493
-Bucks Nets 731.460330709
-Bucks Pacers 242.599356438
-Bucks Nuggets 914.417239709
-Raptors Knicks 341.562155747
-Raptors Lakers 2171.4074383
-Raptors Grizzlies 818.321840635
-Raptors Spurs 1442.78583245
-Raptors 76ers 337.426714213
-Raptors Pistons 203.849444407
-Raptors Celtics 429.395071079
-Raptors Heat 1236.0310945
-Raptors Magic 1050.73468058
-Raptors Blazers 2107.05513865
-Raptors Warriors 2254.18376009
-Raptors Bulls 434.432427084
-Raptors Wizards 351.509270395
-Raptors Jazz 1663.21269071
-Raptors Mavericks 1201.59180865
-Raptors Timberwolves 687.830558691
-Raptors Clippers 2171.4074383
-Raptors Thunder 1114.49566017
-Raptors Hornets 586.942789728
-Raptors Bucks 428.144092428
-Raptors Raptors 0.0
-Raptors Rockets 1300.84295379
-Raptors Suns 1884.97141713
-Raptors Kings 2196.54948543
-Raptors Pelicans 1112.67433562
-Raptors Cavaliers 186.82007296
-Raptors Hawks 735.392097342
-Raptors Nets 341.562155747
-Raptors Pacers 440.310405726
-Raptors Nuggets 1342.55798445
-Rockets Knicks 1421.47100503
-Rockets Lakers 1373.90498914
-Rockets Grizzlies 482.525924737
-Rockets Spurs 194.288943727
-Rockets 76ers 1338.66059935
-Rockets Pistons 1107.58479714
-Rockets Celtics 1601.1125647
-Rockets Heat 963.497927841
-Rockets Magic 847.334379439
-Rockets Blazers 1835.1027286
-Rockets Warriors 1637.28508247
-Rockets Bulls 940.169811685
-Rockets Wizards 1219.59862495
-Rockets Jazz 1203.20330373
-Rockets Mavericks 226.235911829
-Rockets Timberwolves 1059.40688734
-Rockets Clippers 1373.90498914
-Rockets Thunder 410.886386711
-Rockets Hornets 925.184140939
-Rockets Bucks 1006.57193675
-Rockets Raptors 1300.84295379
-Rockets Rockets 0.0
-Rockets Suns 1016.41303023
-Rockets Kings 1609.55414442
-Rockets Pelicans 316.271581236
-Rockets Cavaliers 1117.64284356
-Rockets Hawks 699.731230146
-Rockets Nets 1421.47100503
-Rockets Pacers 865.453185017
-Rockets Nuggets 883.232021159
-Suns Knicks 2141.47388208
-Suns Lakers 357.665704839
-Suns Grizzlies 1258.67609192
-Suns Spurs 844.554366468
-Suns 76ers 2077.14073526
-Suns Pistons 1688.3014161
-Suns Celtics 2292.39119229
-Suns Heat 1977.0184541
-Suns Magic 1843.62716682
-Suns Blazers 1003.43031721
-Suns Warriors 646.409490461
-Suns Bulls 1451.46938746
-Suns Wizards 1978.88555421
-Suns Jazz 506.840139089
-Suns Mavericks 885.816217717
-Suns Timberwolves 1279.65602837
-Suns Clippers 357.665704839
-Suns Thunder 842.642449007
-Suns Hornets 1778.3114586
-Suns Bucks 1461.99034437
-Suns Raptors 1884.97141713
-Suns Rockets 1016.41303023
-Suns Suns 0.0
-Suns Kings 634.563462735
-Suns Pelicans 1313.01640163
-Suns Cavaliers 1750.43702382
-Suns Hawks 1587.94024979
-Suns Nets 2141.47388208
-Suns Pacers 1494.89393172
-Suns Nuggets 584.771819547
-Kings Knicks 2502.60053454
-Kings Lakers 361.731847239
-Kings Grizzlies 1746.96915859
-Kings Spurs 1455.45981069
-Kings 76ers 2453.92021898
-Kings Pistons 2023.84050871
-Kings Celtics 2625.10370345
-Kings Heat 2547.50253111
-Kings Magic 2393.57113138
-Kings Blazers 482.621299371
-Kings Warriors 65.4613423349
-Kings Bulls 1792.71442429
-Kings Wizards 2375.30267799
-Kings Jazz 534.352869659
-Kings Mavericks 1440.84579198
-Kings Timberwolves 1515.71893044
-Kings Clippers 361.731847239
-Kings Thunder 1341.98545203
-Kings Hornets 2241.26484611
-Kings Bucks 1774.0024317
-Kings Raptors 2196.54948543
-Kings Rockets 1609.55414442
-Kings Suns 634.563462735
-Kings Kings 5.89936971664e-05
-Kings Pelicans 1881.14581391
-Kings Cavaliers 2104.02070036
-Kings Hawks 2083.59431831
-Kings Nets 2502.60053454
-Kings Pacers 1883.48643831
-Kings Nuggets 886.700979895
-Pelicans Knicks 1172.43314498
-Pelicans Lakers 1670.16537814
-Pelicans Grizzlies 356.31
-Pelicans Spurs 510.483504042
-Pelicans 76ers 1086.55451224
-Pelicans Pistons 940.335948907
-Pelicans Celtics 1354.94742847
-Pelicans Heat 667.357388793
-Pelicans Magic 534.145265388
-Pelicans Blazers 2058.68257809
-Pelicans Warriors 1914.2477525
-Pelicans Bulls 830.929390298
-Pelicans Wizards 965.506089935
-Pelicans Jazz 1433.46164231
-Pelicans Mavericks 440.380460402
-Pelicans Timberwolves 1051.32887435
-Pelicans Clippers 1670.16537814
-Pelicans Thunder 570.809421459
-Pelicans Hornets 648.355608797
-Pelicans Bucks 910.6250897
-Pelicans Raptors 1112.67433562
-Pelicans Rockets 316.271581236
-Pelicans Suns 1313.01640163
-Pelicans Kings 1881.14581391
-Pelicans Pelicans 0.0
-Pelicans Cavaliers 925.968044308
-Pelicans Hawks 423.069287256
-Pelicans Nets 1172.43314498
-Pelicans Pacers 711.904425398
-Pelicans Nuggets 1082.34765178
-Cavaliers Knicks 399.256801039
-Cavaliers Lakers 2051.68621637
-Cavaliers Grizzlies 635.428771523
-Cavaliers Spurs 1264.35982612
-Cavaliers 76ers 352.604363055
-Cavaliers Pistons 94.6102375579
-Cavaliers Celtics 542.060519655
-Cavaliers Heat 1087.60480063
-Cavaliers Magic 894.827021817
-Cavaliers Blazers 2055.27649333
-Cavaliers Warriors 2159.05851686
-Cavaliers Bulls 311.438091047
-Cavaliers Wizards 300.378867069
-Cavaliers Jazz 1569.88641259
-Cavaliers Mavericks 1027.927756
-Cavaliers Timberwolves 632.671306712
-Cavaliers Clippers 2051.68621637
-Cavaliers Thunder 953.92574519
-Cavaliers Hornets 433.408618379
-Cavaliers Bucks 339.488765866
-Cavaliers Raptors 186.82007296
-Cavaliers Rockets 1117.64284356
-Cavaliers Suns 1750.43702382
-Cavaliers Kings 2104.02070036
-Cavaliers Pelicans 925.968044308
-Cavaliers Cavaliers 0.0
-Cavaliers Hawks 556.02580269
-Cavaliers Nets 399.256801039
-Cavaliers Pacers 268.083857191
-Cavaliers Nuggets 1230.94966766
-Hawks Knicks 751.288577468
-Hawks Lakers 1933.35893663
-Hawks Grizzlies 336.877685416
-Hawks Spurs 884.863964842
-Hawks 76ers 664.942874014
-Hawks Pistons 598.520814951
-Hawks Celtics 933.914939672
-Hawks Heat 604.61796304
-Hawks Magic 402.49009694
-Hawks Blazers 2167.93363072
-Hawks Warriors 2126.90149615
-Hawks Bulls 584.946209183
-Hawks Wizards 543.944204352
-Hawks Jazz 1581.07211049
-Hawks Mavericks 717.784740962
-Hawks Timberwolves 906.636600883
-Hawks Clippers 1933.35893663
-Hawks Thunder 751.441602335
-Hawks Hornets 226.966979391
-Hawks Bucks 668.536485493
-Hawks Raptors 735.392097342
-Hawks Rockets 699.731230146
-Hawks Suns 1587.94024979
-Hawks Kings 2083.59431831
-Hawks Pelicans 423.069287256
-Hawks Cavaliers 556.02580269
-Hawks Hawks 0.0
-Hawks Nets 751.288577468
-Hawks Pacers 427.138327344
-Hawks Nuggets 1211.7983351
-Nets Knicks 0
-Nets Lakers 2448.58890746
-Nets Grizzlies 958.798826744
-Nets Spurs 1589.36711293
-Nets 76ers 86.8277827439
-Nets Pistons 479.791938856
-Nets Celtics 182.628525032
-Nets Heat 1097.39356724
-Nets Magic 944.732706618
-Nets Blazers 2438.75489695
-Nets Warriors 2557.96015459
-Nets Bulls 710.581856052
-Nets Wizards 207.386695644
-Nets Jazz 1968.31504186
-Nets Mavericks 1373.01712294
-Nets Timberwolves 1013.82162442
-Nets Clippers 2448.58890746
-Nets Thunder 1325.83202954
-Nets Hornets 535.900871319
-Nets Bucks 731.460330709
-Nets Raptors 341.562155747
-Nets Rockets 1421.47100503
-Nets Suns 2141.47388208
-Nets Kings 2502.60053454
-Nets Pelicans 1172.43314498
-Nets Cavaliers 399.256801039
-Nets Hawks 751.288577468
-Nets Nets 0
-Nets Pacers 646.734650678
-Nets Nuggets 1630.00868004
-Pacers Knicks 646.734650678
-Pacers Lakers 1806.37329624
-Pacers Grizzlies 385.286857754
-Pacers Spurs 1002.6518062
-Pacers 76ers 583.327143862
-Pacers Pistons 242.248101168
-Pacers Celtics 803.981427184
-Pacers Heat 1025.48999156
-Pacers Magic 822.966136371
-Pacers Blazers 1880.23401715
-Pacers Warriors 1935.60202767
-Pacers Bulls 161.013857348
-Pacers Wizards 493.309654588
-Pacers Jazz 1353.14221355
-Pacers Mavericks 761.914174745
-Pacers Timberwolves 508.762370329
-Pacers Clippers 1806.37329624
-Pacers Thunder 686.683562883
-Pacers Hornets 427.78199478
-Pacers Bucks 242.599356438
-Pacers Raptors 440.310405726
-Pacers Rockets 865.453185017
-Pacers Suns 1494.89393172
-Pacers Kings 1883.48643831
-Pacers Pelicans 711.904425398
-Pacers Cavaliers 268.083857191
-Pacers Hawks 427.138327344
-Pacers Nets 646.734650678
-Pacers Pacers 5.89936971664e-05
-Pacers Nuggets 999.373792186
-Nuggets Knicks 1630.00868004
-Nuggets Lakers 830.390457657
-Nuggets Grizzlies 879.463493256
-Nuggets Spurs 805.117563198
-Nuggets 76ers 1576.13770207
-Nuggets Pistons 1156.85981084
-Nuggets Celtics 1764.61589089
-Nuggets Heat 1725.6387391
-Nuggets Magic 1552.69885623
-Nuggets Blazers 977.930761184
-Nuggets Warriors 937.048888788
-Nuggets Bulls 920.580353924
-Nuggets Wizards 1492.46486666
-Nuggets Jazz 369.276241575
-Nuggets Mavericks 666.142182167
-Nuggets Timberwolves 700.987084804
-Nuggets Clippers 830.390457657
-Nuggets Thunder 511.569604494
-Nuggets Hornets 1357.33649347
-Nuggets Bucks 914.417239709
-Nuggets Raptors 1342.55798445
-Nuggets Rockets 883.232021159
-Nuggets Suns 584.771819547
-Nuggets Kings 886.700979895
-Nuggets Pelicans 1082.34765178
-Nuggets Cavaliers 1230.94966766
-Nuggets Hawks 1211.7983351
-Nuggets Nets 1630.00868004
-Nuggets Pacers 999.373792186
-Nuggets Nuggets 5.89936971664
+# set TEAMS:=
+# 	Hawks Celtics Nets Hornets Bulls Cavaliers Mavericks Nuggets Pistons Warriors Rockets Pacers Clippers Lakers Grizzlies Heat Bucks Timberwolves Pelicans Knicks Thunder Magic Sixers Suns Blazers Kings Spurs Raptors Jazz Wizards;
+
+# set ATL := Celtics Nets Knicks Sixers Raptors;
+# set CENT;
+# set SE;
+# set NW;
+# set PAC;
+# set SW;
+
+# param: 		atlantic 	central 	southeast 	northwest	 pacific 	southwest :=
+# 	Hawks		0			0			1			0			 0			0
+# 	Celtics		1			0			0			0			 0			0
+# 	Nets		1			0			0			0			 0			0
+# 	Hornets		0			0			1			0			 0			0
+# 	Bulls		0			1			0			0			 0			0
+# 	Cavaliers	0			1			0			0			 0			0
+# 	Mavericks	0			0			0			0			 0			1
+# 	Nuggets 	0			0			0			1			 0			0
+# 	Pistons 	0			1			0			0			 0			0
+# 	Warriors 	0			0			0			0			 1			0
+# 	Rockets 	0			0			0			0			 0			1
+# 	Pacers 		0			1			0			0			 0			0
+# 	Clippers 	0			0			0			0			 1			0
+# 	Lakers 		0			0			0			0			 1			0
+# 	Grizzlies 	0			0			0			0			 0			1
+# 	Heat 		0			0			1			0			 0			0
+# 	Bucks 		0			1			0			0			 0			0
+# 	Timberwolves 0			0			0			1			 0			0
+# 	Pelicans 	0			0			0			0			 0			1
+# 	Knicks 		1			0			0			0			 0			0
+# 	Thunder 	0			0			0			1			 0			0
+# 	Magic 		0			0			1			0			 0			0
+# 	Sixers 		1			0			0			0			 0			0
+# 	Suns 		0			0			0			0			 1			0
+# 	Blazers 	0			0			0			1			 0			0
+# 	Kings 		0			0			0			0			 1			0
+# 	Spurs 		0			0			0			0			 0			1
+# 	Raptors 	1			0			0			0			 0			0
+# 	Jazz 		0			0			0			1			 0			0
+# 	Wizards		0			0			1			0			 0			0;
+
+# param tdistance :=
+# Knicks Knicks 0
+# Knicks Lakers 2448.58890746
+# Knicks Grizzlies 958.798826744
+# Knicks Spurs 1589.36711293
+# Knicks Sixers 86.8277827439
+# Knicks Pistons 479.791938856
+# Knicks Celtics 182.628525032
+# Knicks Heat 1097.39356724
+# Knicks Magic 944.732706618
+# Knicks Blazers 2438.75489695
+# Knicks Warriors 2557.96015459
+# Knicks Bulls 710.581856052
+# Knicks Wizards 207.386695644
+# Knicks Jazz 1968.31504186
+# Knicks Mavericks 1373.01712294
+# Knicks Timberwolves 1013.82162442
+# Knicks Clippers 2448.58890746
+# Knicks Thunder 1325.83202954
+# Knicks Hornets 535.900871319
+# Knicks Bucks 731.460330709
+# Knicks Raptors 341.562155747
+# Knicks Rockets 1421.47100503
+# Knicks Suns 2141.47388208
+# Knicks Kings 2502.60053454
+# Knicks Pelicans 1172.43314498
+# Knicks Cavaliers 399.256801039
+# Knicks Hawks 751.288577468
+# Knicks Nets 0
+# Knicks Pacers 646.734650678
+# Knicks Nuggets 1630.00868004 
+# Lakers Knicks 2448.58890746
+# Lakers Lakers 0.0
+# Lakers Grizzlies 1600.17138795 
+# Lakers Spurs 1199.92207692 
+# Lakers Sixers 2389.35609973 
+# Lakers Pistons 1982.05097077 
+# Lakers Celtics 2590.13885306 
+# Lakers Heat 2334.63610223 
+# Lakers Magic 2199.74995038 
+# Lakers Blazers 825.398379495 
+# Lakers Warriors 344.359673854 
+# Lakers Bulls 1744.50568053 
+# Lakers Wizards 2297.18746847 
+# Lakers Jazz 582.779852895 
+# Lakers Mavericks 1240.1698324 
+# Lakers Timberwolves 1524.98660742 
+# Lakers Clippers 0.0 
+# Lakers Thunder 1182.84505116 
+# Lakers Hornets 2116.08109039 
+# Lakers Bucks 1743.45773373 
+# Lakers Raptors 2171.4074383 
+# Lakers Rockets 1373.90498914 
+# Lakers Suns 357.665704839 
+# Lakers Kings 361.731847239 
+# Lakers Pelicans 1670.16537814 
+# Lakers Cavaliers 2051.68621637 
+# Lakers Hawks 1933.35893663 
+# Lakers Nets 2448.58890746 
+# Lakers Pacers 1806.37329624 
+# Lakers Nuggets 830.390457657
+# Grizzlies Knicks 958.798826744
+# Grizzlies Lakers 1600.17138795
+# Grizzlies Grizzlies 0.0
+# Grizzlies Spurs 633.78048623
+# Grizzlies Sixers 880.04613562
+# Grizzlies Pistons 626.500217188
+# Grizzlies Celtics 1134.02048582
+# Grizzlies Heat 871.343150318
+# Grizzlies Magic 684.057117184
+# Grizzlies Blazers 1845.31453983
+# Grizzlies Warriors 1790.04883661
+# Grizzlies Bulls 481.933546429
+# Grizzlies Wizards 765.800174687
+# Grizzlies Jazz 1248.29653524
+# Grizzlies Mavericks 417.005003969
+# Grizzlies Timberwolves 700.896339678
+# Grizzlies Clippers 1600.17138795
+# Grizzlies Thunder 417.359927294
+# Grizzlies Hornets 520.850964179
+# Grizzlies Bucks 558.627187945
+# Grizzlies Raptors 818.321840635
+# Grizzlies Rockets 482.525924737
+# Grizzlies Suns 1258.67609192
+# Grizzlies Kings 1746.96915859
+# Grizzlies Pelicans 356.31
+# Grizzlies Cavaliers 635.428771523
+# Grizzlies Hawks 336.877685416
+# Grizzlies Nets 958.798826744
+# Grizzlies Pacers 385.286857754
+# Grizzlies Nuggets 879.463493256
+# Spurs Knicks 1589.36711293
+# Spurs Lakers 1199.92207692
+# Spurs Grizzlies 633.78048623
+# Spurs Spurs 0.0
+# Spurs Sixers 1508.49854098
+# Spurs Pistons 1243.62234371
+# Spurs Celtics 1766.51314297
+# Spurs Heat 1148.86379195
+# Spurs Magic 1039.91566302
+# Spurs Blazers 1716.73462675
+# Spurs Warriors 1478.57135554
+# Spurs Bulls 1054.43500065
+# Spurs Wizards 1391.24507288
+# Spurs Jazz 1088.49524301
+# Spurs Mavericks 256.126465298
+# Spurs Timberwolves 1115.42317233
+# Spurs Clippers 1199.92207692
+# Spurs Thunder 420.508873674
+# Spurs Hornets 1107.90791143
+# Spurs Bucks 1111.80335381
+# Spurs Raptors 1442.78583245
+# Spurs Rockets 194.288943727
+# Spurs Suns 844.554366468
+# Spurs Kings 1455.45981069
+# Spurs Pelicans 510.483504042
+# Spurs Cavaliers 1264.35982612
+# Spurs Hawks 884.863964842
+# Spurs Nets 1589.36711293
+# Spurs Pacers 1002.6518062
+# Spurs Nuggets 805.117563198
+# Sixers Knicks 86.8277827439
+# Sixers Lakers 2389.35609973
+# Sixers Grizzlies 880.04613562
+# Sixers Spurs 1508.49854098
+# Sixers Sixers 0.0
+# Sixers Pistons 440.807737564
+# Sixers Celtics 269.13407807
+# Sixers Heat 1020.23557408
+# Sixers Magic 862.916375914
+# Sixers Blazers 2406.04959203
+# Sixers Warriors 2508.18699758
+# Sixers Bulls 661.92519531
+# Sixers Wizards 121.059668072
+# Sixers Jazz 1920.24800849
+# Sixers Mavericks 1295.68866428
+# Sixers Timberwolves 981.236485738
+# Sixers Clippers 2389.35609973
+# Sixers Thunder 1254.80465867
+# Sixers Hornets 449.083389814
+# Sixers Bucks 691.453998444
+# Sixers Raptors 337.426714213
+# Sixers Rockets 1338.66059935
+# Sixers Suns 2077.14073526
+# Sixers Kings 2453.92021898
+# Sixers Pelicans 1086.55451224
+# Sixers Cavaliers 352.604363055
+# Sixers Hawks 664.942874014
+# Sixers Nets 86.8277827439
+# Sixers Pacers 583.327143862
+# Sixers Nuggets 1576.13770207
+# Pistons Knicks 479.791938856
+# Pistons Lakers 1982.05097077
+# Pistons Grizzlies 626.500217188
+# Pistons Spurs 1243.62234371
+# Pistons Sixers 440.807737564
+# Pistons Pistons 0.0
+# Pistons Celtics 608.164305751
+# Pistons Heat 1155.1963478
+# Pistons Magic 958.637545334
+# Pistons Blazers 1965.25915867
+# Pistons Warriors 2079.76475911
+# Pistons Bulls 237.713446318
+# Pistons Wizards 394.768648892
+# Pistons Jazz 1489.48771692
+# Pistons Mavericks 999.901783985
+# Pistons Timberwolves 540.911149164
+# Pistons Clippers 1982.05097077
+# Pistons Thunder 910.662168994
+# Pistons Hornets 504.674783139
+# Pistons Bucks 251.850039764
+# Pistons Raptors 203.849444407
+# Pistons Rockets 1107.58479714
+# Pistons Suns 1688.3014161
+# Pistons Kings 2023.84050871
+# Pistons Pelicans 940.335948907
+# Pistons Cavaliers 94.6102375579
+# Pistons Hawks 598.520814951
+# Pistons Nets 479.791938856
+# Pistons Pacers 242.248101168
+# Pistons Nuggets 1156.85981084
+# Celtics Knicks 182.628525032
+# Celtics Lakers 2590.13885306
+# Celtics Grizzlies 1134.02048582
+# Celtics Spurs 1766.51314297
+# Celtics Sixers 269.13407807
+# Celtics Pistons 608.164305751
+# Celtics Celtics 0.0
+# Celtics Heat 1255.5208509
+# Celtics Magic 1113.25301048
+# Celtics Blazers 2531.54485097
+# Celtics Warriors 2682.32723782
+# Celtics Bulls 845.633759524
+# Celtics Wizards 389.990319488
+# Celtics Jazz 2091.33677753
+# Celtics Mavericks 1545.59582942
+# Celtics Timberwolves 1116.85690527
+# Celtics Clippers 2590.13885306
+# Celtics Thunder 1489.37664278
+# Celtics Hornets 717.567429419
+# Celtics Bucks 852.591061949
+# Celtics Raptors 429.395071079
+# Celtics Rockets 1601.1125647
+# Celtics Suns 2292.39119229
+# Celtics Kings 2625.10370345
+# Celtics Pelicans 1354.94742847
+# Celtics Cavaliers 542.060519655
+# Celtics Hawks 933.914939672
+# Celtics Nets 182.628525032
+# Celtics Pacers 803.981427184
+# Celtics Nuggets 1764.61589089
+# Heat Knicks 1097.39356724
+# Heat Lakers 2334.63610223
+# Heat Grizzlies 871.343150318
+# Heat Spurs 1148.86379195
+# Heat Sixers 1020.23557408
+# Heat Pistons 1155.1963478
+# Heat Celtics 1255.5208509
+# Heat Heat 0.0
+# Heat Magic 202.666416327
+# Heat Blazers 2702.59949988
+# Heat Warriors 2581.34551513
+# Heat Bulls 1185.77319278
+# Heat Wizards 925.573577278
+# Heat Jazz 2086.78601026
+# Heat Mavericks 1106.88886795
+# Heat Timberwolves 1510.7588465
+# Heat Clippers 2334.63610223
+# Heat Thunder 1219.58588143
+# Heat Hornets 654.306598111
+# Heat Bucks 1268.08395361
+# Heat Raptors 1236.0310945
+# Heat Rockets 963.497927841
+# Heat Suns 1977.0184541
+# Heat Kings 2547.50253111
+# Heat Pelicans 667.357388793
+# Heat Cavaliers 1087.60480063
+# Heat Hawks 604.61796304
+# Heat Nets 1097.39356724
+# Heat Pacers 1025.48999156
+# Heat Nuggets 1725.6387391
+# Magic Knicks 944.732706618
+# Magic Lakers 2199.74995038
+# Magic Grizzlies 684.057117184
+# Magic Spurs 1039.91566302
+# Magic Sixers 862.916375914
+# Magic Pistons 958.637545334
+# Magic Celtics 1113.25301048
+# Magic Heat 202.666416327
+# Magic Magic 5.89936971664e-05
+# Magic Blazers 2526.07840692
+# Magic Warriors 2430.57536443
+# Magic Bulls 983.153484583
+# Magic Wizards 758.755428151
+# Magic Jazz 1917.9449109
+# Magic Mavericks 960.765676397
+# Magic Timberwolves 1309.05891608
+# Magic Clippers 2199.74995038
+# Magic Thunder 1054.68501002
+# Magic Hornets 464.18757046
+# Magic Bucks 1065.56540754
+# Magic Raptors 1050.73468058
+# Magic Rockets 847.334379439
+# Magic Suns 1843.62716682
+# Magic Kings 2393.57113138
+# Magic Pelicans 534.145265388
+# Magic Cavaliers 894.827021817
+# Magic Hawks 402.49009694
+# Magic Nets 944.732706618
+# Magic Pacers 822.966136371
+# Magic Nuggets 1552.69885623
+# Blazers Knicks 2438.75489695
+# Blazers Lakers 825.398379495
+# Blazers Grizzlies 1845.31453983
+# Blazers Spurs 1716.73462675
+# Blazers Sixers 2406.04959203
+# Blazers Pistons 1965.25915867
+# Blazers Celtics 2531.54485097
+# Blazers Heat 2702.59949988
+# Blazers Magic 2526.07840692
+# Blazers Blazers 0.0
+# Blazers Warriors 530.907903487
+# Blazers Bulls 1756.84701846
+# Blazers Wizards 2348.76809823
+# Blazers Jazz 631.903927115
+# Blazers Mavericks 1631.6452825
+# Blazers Timberwolves 1425.37802653
+# Blazers Clippers 825.398379495
+# Blazers Thunder 1488.6725452
+# Blazers Hornets 2284.21852285
+# Blazers Bucks 1715.89944616
+# Blazers Raptors 2107.05513865
+# Blazers Rockets 1835.1027286
+# Blazers Suns 1003.43031721
+# Blazers Kings 482.621299371
+# Blazers Pelicans 2058.68257809
+# Blazers Cavaliers 2055.27649333
+# Blazers Hawks 2167.93363072
+# Blazers Nets 2438.75489695
+# Blazers Pacers 1880.23401715
+# Blazers Nuggets 977.930761184
+# Warriors Knicks 2557.96015459
+# Warriors Lakers 344.359673854
+# Warriors Grizzlies 1790.04883661
+# Warriors Spurs 1478.57135554
+# Warriors Sixers 2508.18699758
+# Warriors Pistons 2079.76475911
+# Warriors Celtics 2682.32723782
+# Warriors Heat 2581.34551513
+# Warriors Magic 2430.57536443
+# Warriors Blazers 530.907903487
+# Warriors Warriors 0.0
+# Warriors Bulls 1847.63691087
+# Warriors Wizards 2428.06465376
+# Warriors Jazz 591.001214436
+# Warriors Mavericks 1474.50898475
+# Warriors Timberwolves 1575.05300717
+# Warriors Clippers 344.359673854
+# Warriors Thunder 1381.91679064
+# Warriors Hornets 2288.25823238
+# Warriors Bucks 1830.54377125
+# Warriors Raptors 2254.18376009
+# Warriors Rockets 1637.28508247
+# Warriors Suns 646.409490461
+# Warriors Kings 65.4613423349
+# Warriors Pelicans 1914.2477525
+# Warriors Cavaliers 2159.05851686
+# Warriors Hawks 2126.90149615
+# Warriors Nets 2557.96015459
+# Warriors Pacers 1935.60202767
+# Warriors Nuggets 937.048888788
+# Bulls Knicks 710.581856052
+# Bulls Lakers 1744.50568053
+# Bulls Grizzlies 481.933546429
+# Bulls Spurs 1054.43500065
+# Bulls Sixers 661.92519531
+# Bulls Pistons 237.713446318
+# Bulls Celtics 845.633759524
+# Bulls Heat 1185.77319278
+# Bulls Magic 983.153484583
+# Bulls Blazers 1756.84701846
+# Bulls Warriors 1847.63691087
+# Bulls Bulls 0.0
+# Bulls Wizards 592.961535081
+# Bulls Jazz 1258.6940787
+# Bulls Mavericks 802.204018848
+# Bulls Timberwolves 356.049731456
+# Bulls Clippers 1744.50568053
+# Bulls Thunder 691.77192237
+# Bulls Hornets 583.392634348
+# Bulls Bucks 84.4130083274
+# Bulls Raptors 434.432427084
+# Bulls Rockets 940.169811685
+# Bulls Suns 1451.46938746
+# Bulls Kings 1792.71442429
+# Bulls Pelicans 830.929390298
+# Bulls Cavaliers 311.438091047
+# Bulls Hawks 584.946209183
+# Bulls Nets 710.581856052
+# Bulls Pacers 161.013857348
+# Bulls Nuggets 920.580353924 
+# Wizards Knicks 207.386695644 
+# Wizards Lakers 2297.18746847 
+# Wizards Grizzlies 765.800174687 
+# Wizards Spurs 1391.24507288 
+# Wizards Sixers 121.059668072 
+# Wizards Pistons 394.768648892 
+# Wizards Celtics 389.990319488 
+# Wizards Heat 925.573577278 
+# Wizards Magic 758.755428151 
+# Wizards Blazers 2348.76809823
+# Wizards Warriors 2428.06465376 
+# Wizards Bulls 592.961535081 
+# Wizards Wizards 0.0 
+# Wizards Jazz 1843.42094635 
+# Wizards Mavericks 1182.48369192 
+# Wizards Timberwolves 930.780826172 
+# Wizards Clippers 2297.18746847 
+# Wizards Thunder 1149.41783435 
+# Wizards Hornets 330.068348335 
+# Wizards Bucks 634.815713777 
+# Wizards Raptors 351.509270395 
+# Wizards Rockets 1219.59862495 
+# Wizards Suns 1978.88555421 
+# Wizards Kings 2375.30267799 
+# Wizards Pelicans 965.506089935 
+# Wizards Cavaliers 300.378867069 
+# Wizards Hawks 543.944204352 
+# Wizards Nets 207.386695644 
+# Wizards Pacers 493.309654588 
+# Wizards Nuggets 1492.46486666
+# Jazz Knicks 1968.31504186
+# Jazz Lakers 582.779852895
+# Jazz Grizzlies 1248.29653524
+# Jazz Spurs 1088.49524301
+# Jazz Sixers 1920.24800849
+# Jazz Pistons 1489.48771692
+# Jazz Celtics 2091.33677753
+# Jazz Heat 2086.78601026
+# Jazz Magic 1917.9449109
+# Jazz Blazers 631.903927115
+# Jazz Warriors 591.001214436
+# Jazz Bulls 1258.6940787
+# Jazz Wizards 1843.42094635
+# Jazz Jazz 0
+# Jazz Mavericks 1001.6864305
+# Jazz Timberwolves 986.251593316
+# Jazz Clippers 582.779852895
+# Jazz Thunder 867.356870054
+# Jazz Hornets 1723.97441954
+# Jazz Bucks 1239.76951102
+# Jazz Raptors 1663.21269071
+# Jazz Rockets 1203.20330373
+# Jazz Suns 506.840139089
+# Jazz Kings 534.352869659
+# Jazz Pelicans 1433.46164231
+# Jazz Cavaliers 1569.88641259
+# Jazz Hawks 1581.07211049
+# Jazz Nets 1968.31504186
+# Jazz Pacers 1353.14221355
+# Jazz Nuggets 369.276241575
+# Mavericks Knicks 1373.01712294
+# Mavericks Lakers 1240.1698324
+# Mavericks Grizzlies 417.005003969
+# Mavericks Spurs 256.126465298
+# Mavericks Sixers 1295.68866428
+# Mavericks Pistons 999.901783985
+# Mavericks Celtics 1545.59582942
+# Mavericks Heat 1106.88886795
+# Mavericks Magic 960.765676397
+# Mavericks Blazers 1631.6452825
+# Mavericks Warriors 1474.50898475
+# Mavericks Bulls 802.204018848
+# Mavericks Wizards 1182.48369192
+# Mavericks Jazz 1001.6864305
+# Mavericks Mavericks 0.0
+# Mavericks Timberwolves 864.408862222
+# Mavericks Clippers 1240.1698324
+# Mavericks Thunder 186.313660515
+# Mavericks Hornets 927.060445307
+# Mavericks Bucks 857.154809949
+# Mavericks Raptors 1201.59180865
+# Mavericks Rockets 226.235911829
+# Mavericks Suns 885.816217717
+# Mavericks Kings 1440.84579198
+# Mavericks Pelicans 440.380460402
+# Mavericks Cavaliers 1027.927756
+# Mavericks Hawks 717.784740962
+# Mavericks Nets 1373.01712294
+# Mavericks Pacers 761.914174745
+# Mavericks Nuggets 666.142182167
+# Timberwolves Knicks 1013.82162442
+# Timberwolves Lakers 1524.98660742
+# Timberwolves Grizzlies 700.896339678
+# Timberwolves Spurs 1115.42317233
+# Timberwolves Sixers 981.236485738
+# Timberwolves Pistons 540.911149164
+# Timberwolves Celtics 1116.85690527
+# Timberwolves Heat 1510.7588465
+# Timberwolves Magic 1309.05891608
+# Timberwolves Blazers 1425.37802653
+# Timberwolves Warriors 1575.05300717
+# Timberwolves Bulls 356.049731456
+# Timberwolves Wizards 930.780826172
+# Timberwolves Jazz 986.251593316
+# Timberwolves Mavericks 864.408862222
+# Timberwolves Timberwolves 0.0
+# Timberwolves Clippers 1524.98660742
+# Timberwolves Thunder 697.731462836
+# Timberwolves Hornets 936.39222304
+# Timberwolves Bucks 296.997622701
+# Timberwolves Raptors 687.830558691
+# Timberwolves Rockets 1059.40688734
+# Timberwolves Suns 1279.65602837
+# Timberwolves Kings 1515.71893044
+# Timberwolves Pelicans 1051.32887435
+# Timberwolves Cavaliers 632.671306712
+# Timberwolves Hawks 906.636600883
+# Timberwolves Nets 1013.82162442
+# Timberwolves Pacers 508.762370329
+# Timberwolves Nuggets 700.987084804 
+# Clippers Knicks 2448.58890746 
+# Clippers Lakers 0.0 
+# Clippers Grizzlies 1600.17138795 
+# Clippers Spurs 1199.92207692 
+# Clippers Sixers 2389.35609973 
+# Clippers Pistons 1982.05097077 
+# Clippers Celtics 2590.13885306 
+# Clippers Heat 2334.63610223 
+# Clippers Magic 2199.74995038 
+# Clippers Blazers 825.398379495 
+# Clippers Warriors 344.359673854 
+# Clippers Bulls 1744.50568053 
+# Clippers Wizards 2297.18746847 
+# Clippers Jazz 582.779852895 
+# Clippers Mavericks 1240.1698324 
+# Clippers Timberwolves 1524.98660742 
+# Clippers Clippers 0.0 
+# Clippers Thunder 1182.84505116 
+# Clippers Hornets 2116.08109039 
+# Clippers Bucks 1743.45773373 
+# Clippers Raptors 2171.4074383 
+# Clippers Rockets 1373.90498914 
+# Clippers Suns 357.665704839 
+# Clippers Kings 361.731847239 
+# Clippers Pelicans 1670.16537814 
+# Clippers Cavaliers 2051.68621637 
+# Clippers Hawks 1933.35893663 
+# Clippers Nets 2448.58890746 
+# Clippers Pacers 1806.37329624 
+# Clippers Nuggets 830.390457657
+# Thunder Knicks 1325.83202954
+# Thunder Lakers 1182.84505116
+# Thunder Grizzlies 417.359927294
+# Thunder Spurs 420.508873674
+# Thunder Sixers 1254.80465867
+# Thunder Pistons 910.662168994
+# Thunder Celtics 1489.37664278
+# Thunder Heat 1219.58588143
+# Thunder Magic 1054.68501002
+# Thunder Blazers 1488.6725452
+# Thunder Warriors 1381.91679064
+# Thunder Bulls 691.77192237
+# Thunder Wizards 1149.41783435
+# Thunder Jazz 867.356870054
+# Thunder Mavericks 186.313660515
+# Thunder Timberwolves 697.731462836
+# Thunder Clippers 1182.84505116
+# Thunder Thunder 0.0
+# Thunder Hornets 935.722469581
+# Thunder Bucks 733.631092552
+# Thunder Raptors 1114.49566017
+# Thunder Rockets 410.886386711
+# Thunder Suns 842.642449007
+# Thunder Kings 1341.98545203
+# Thunder Pelicans 570.809421459
+# Thunder Cavaliers 953.92574519
+# Thunder Hawks 751.441602335
+# Thunder Nets 1325.83202954
+# Thunder Pacers 686.683562883
+# Thunder Nuggets 511.569604494
+# Hornets Knicks 535.900871319
+# Hornets Lakers 2116.08109039
+# Hornets Grizzlies 520.850964179
+# Hornets Spurs 1107.90791143
+# Hornets Sixers 449.083389814
+# Hornets Pistons 504.674783139
+# Hornets Celtics 717.567429419
+# Hornets Heat 654.306598111
+# Hornets Magic 464.18757046
+# Hornets Blazers 2284.21852285
+# Hornets Warriors 2288.25823238
+# Hornets Bulls 583.392634348
+# Hornets Wizards 330.068348335
+# Hornets Jazz 1723.97441954
+# Hornets Mavericks 927.060445307
+# Hornets Timberwolves 936.39222304
+# Hornets Clippers 2116.08109039
+# Hornets Thunder 935.722469581
+# Hornets Hornets 0.0
+# Hornets Bucks 657.150544551
+# Hornets Raptors 586.942789728
+# Hornets Rockets 925.184140939
+# Hornets Suns 1778.3114586
+# Hornets Kings 2241.26484611
+# Hornets Pelicans 648.355608797
+# Hornets Cavaliers 433.408618379
+# Hornets Hawks 226.966979391
+# Hornets Nets 535.900871319
+# Hornets Pacers 427.78199478
+# Hornets Nuggets 1357.33649347
+# Bucks Knicks 731.460330709
+# Bucks Lakers 1743.45773373
+# Bucks Grizzlies 558.627187945
+# Bucks Spurs 1111.80335381
+# Bucks Sixers 691.453998444
+# Bucks Pistons 251.850039764
+# Bucks Celtics 852.591061949
+# Bucks Heat 1268.08395361
+# Bucks Magic 1065.56540754
+# Bucks Blazers 1715.89944616
+# Bucks Warriors 1830.54377125
+# Bucks Bulls 84.4130083274
+# Bucks Wizards 634.815713777
+# Bucks Jazz 1239.76951102
+# Bucks Mavericks 857.154809949
+# Bucks Timberwolves 296.997622701
+# Bucks Clippers 1743.45773373
+# Bucks Thunder 733.631092552
+# Bucks Hornets 657.150544551
+# Bucks Bucks 0.0
+# Bucks Raptors 428.144092428
+# Bucks Rockets 1006.57193675
+# Bucks Suns 1461.99034437
+# Bucks Kings 1774.0024317
+# Bucks Pelicans 910.6250897
+# Bucks Cavaliers 339.488765866
+# Bucks Hawks 668.536485493
+# Bucks Nets 731.460330709
+# Bucks Pacers 242.599356438
+# Bucks Nuggets 914.417239709
+# Raptors Knicks 341.562155747
+# Raptors Lakers 2171.4074383
+# Raptors Grizzlies 818.321840635
+# Raptors Spurs 1442.78583245
+# Raptors Sixers 337.426714213
+# Raptors Pistons 203.849444407
+# Raptors Celtics 429.395071079
+# Raptors Heat 1236.0310945
+# Raptors Magic 1050.73468058
+# Raptors Blazers 2107.05513865
+# Raptors Warriors 2254.18376009
+# Raptors Bulls 434.432427084
+# Raptors Wizards 351.509270395
+# Raptors Jazz 1663.21269071
+# Raptors Mavericks 1201.59180865
+# Raptors Timberwolves 687.830558691
+# Raptors Clippers 2171.4074383
+# Raptors Thunder 1114.49566017
+# Raptors Hornets 586.942789728
+# Raptors Bucks 428.144092428
+# Raptors Raptors 0.0
+# Raptors Rockets 1300.84295379
+# Raptors Suns 1884.97141713
+# Raptors Kings 2196.54948543
+# Raptors Pelicans 1112.67433562
+# Raptors Cavaliers 186.82007296
+# Raptors Hawks 735.392097342
+# Raptors Nets 341.562155747
+# Raptors Pacers 440.310405726
+# Raptors Nuggets 1342.55798445
+# Rockets Knicks 1421.47100503
+# Rockets Lakers 1373.90498914
+# Rockets Grizzlies 482.525924737
+# Rockets Spurs 194.288943727
+# Rockets Sixers 1338.66059935
+# Rockets Pistons 1107.58479714
+# Rockets Celtics 1601.1125647
+# Rockets Heat 963.497927841
+# Rockets Magic 847.334379439
+# Rockets Blazers 1835.1027286
+# Rockets Warriors 1637.28508247
+# Rockets Bulls 940.169811685
+# Rockets Wizards 1219.59862495
+# Rockets Jazz 1203.20330373
+# Rockets Mavericks 226.235911829
+# Rockets Timberwolves 1059.40688734
+# Rockets Clippers 1373.90498914
+# Rockets Thunder 410.886386711
+# Rockets Hornets 925.184140939
+# Rockets Bucks 1006.57193675
+# Rockets Raptors 1300.84295379
+# Rockets Rockets 0.0
+# Rockets Suns 1016.41303023
+# Rockets Kings 1609.55414442
+# Rockets Pelicans 316.271581236
+# Rockets Cavaliers 1117.64284356
+# Rockets Hawks 699.731230146
+# Rockets Nets 1421.47100503
+# Rockets Pacers 865.453185017
+# Rockets Nuggets 883.232021159
+# Suns Knicks 2141.47388208
+# Suns Lakers 357.665704839
+# Suns Grizzlies 1258.67609192
+# Suns Spurs 844.554366468
+# Suns Sixers 2077.14073526
+# Suns Pistons 1688.3014161
+# Suns Celtics 2292.39119229
+# Suns Heat 1977.0184541
+# Suns Magic 1843.62716682
+# Suns Blazers 1003.43031721
+# Suns Warriors 646.409490461
+# Suns Bulls 1451.46938746
+# Suns Wizards 1978.88555421
+# Suns Jazz 506.840139089
+# Suns Mavericks 885.816217717
+# Suns Timberwolves 1279.65602837
+# Suns Clippers 357.665704839
+# Suns Thunder 842.642449007
+# Suns Hornets 1778.3114586
+# Suns Bucks 1461.99034437
+# Suns Raptors 1884.97141713
+# Suns Rockets 1016.41303023
+# Suns Suns 0.0
+# Suns Kings 634.563462735
+# Suns Pelicans 1313.01640163
+# Suns Cavaliers 1750.43702382
+# Suns Hawks 1587.94024979
+# Suns Nets 2141.47388208
+# Suns Pacers 1494.89393172
+# Suns Nuggets 584.771819547
+# Kings Knicks 2502.60053454
+# Kings Lakers 361.731847239
+# Kings Grizzlies 1746.96915859
+# Kings Spurs 1455.45981069
+# Kings Sixers 2453.92021898
+# Kings Pistons 2023.84050871
+# Kings Celtics 2625.10370345
+# Kings Heat 2547.50253111
+# Kings Magic 2393.57113138
+# Kings Blazers 482.621299371
+# Kings Warriors 65.4613423349
+# Kings Bulls 1792.71442429
+# Kings Wizards 2375.30267799
+# Kings Jazz 534.352869659
+# Kings Mavericks 1440.84579198
+# Kings Timberwolves 1515.71893044
+# Kings Clippers 361.731847239
+# Kings Thunder 1341.98545203
+# Kings Hornets 2241.26484611
+# Kings Bucks 1774.0024317
+# Kings Raptors 2196.54948543
+# Kings Rockets 1609.55414442
+# Kings Suns 634.563462735
+# Kings Kings 5.89936971664e-05
+# Kings Pelicans 1881.14581391
+# Kings Cavaliers 2104.02070036
+# Kings Hawks 2083.59431831
+# Kings Nets 2502.60053454
+# Kings Pacers 1883.48643831
+# Kings Nuggets 886.700979895
+# Pelicans Knicks 1172.43314498
+# Pelicans Lakers 1670.16537814
+# Pelicans Grizzlies 356.31
+# Pelicans Spurs 510.483504042
+# Pelicans Sixers 1086.55451224
+# Pelicans Pistons 940.335948907
+# Pelicans Celtics 1354.94742847
+# Pelicans Heat 667.357388793
+# Pelicans Magic 534.145265388
+# Pelicans Blazers 2058.68257809
+# Pelicans Warriors 1914.2477525
+# Pelicans Bulls 830.929390298
+# Pelicans Wizards 965.506089935
+# Pelicans Jazz 1433.46164231
+# Pelicans Mavericks 440.380460402
+# Pelicans Timberwolves 1051.32887435
+# Pelicans Clippers 1670.16537814
+# Pelicans Thunder 570.809421459
+# Pelicans Hornets 648.355608797
+# Pelicans Bucks 910.6250897
+# Pelicans Raptors 1112.67433562
+# Pelicans Rockets 316.271581236
+# Pelicans Suns 1313.01640163
+# Pelicans Kings 1881.14581391
+# Pelicans Pelicans 0.0
+# Pelicans Cavaliers 925.968044308
+# Pelicans Hawks 423.069287256
+# Pelicans Nets 1172.43314498
+# Pelicans Pacers 711.904425398
+# Pelicans Nuggets 1082.34765178
+# Cavaliers Knicks 399.256801039
+# Cavaliers Lakers 2051.68621637
+# Cavaliers Grizzlies 635.428771523
+# Cavaliers Spurs 1264.35982612
+# Cavaliers Sixers 352.604363055
+# Cavaliers Pistons 94.6102375579
+# Cavaliers Celtics 542.060519655
+# Cavaliers Heat 1087.60480063
+# Cavaliers Magic 894.827021817
+# Cavaliers Blazers 2055.27649333
+# Cavaliers Warriors 2159.05851686
+# Cavaliers Bulls 311.438091047
+# Cavaliers Wizards 300.378867069
+# Cavaliers Jazz 1569.88641259
+# Cavaliers Mavericks 1027.927756
+# Cavaliers Timberwolves 632.671306712
+# Cavaliers Clippers 2051.68621637
+# Cavaliers Thunder 953.92574519
+# Cavaliers Hornets 433.408618379
+# Cavaliers Bucks 339.488765866
+# Cavaliers Raptors 186.82007296
+# Cavaliers Rockets 1117.64284356
+# Cavaliers Suns 1750.43702382
+# Cavaliers Kings 2104.02070036
+# Cavaliers Pelicans 925.968044308
+# Cavaliers Cavaliers 0.0
+# Cavaliers Hawks 556.02580269
+# Cavaliers Nets 399.256801039
+# Cavaliers Pacers 268.083857191
+# Cavaliers Nuggets 1230.94966766
+# Hawks Knicks 751.288577468
+# Hawks Lakers 1933.35893663
+# Hawks Grizzlies 336.877685416
+# Hawks Spurs 884.863964842
+# Hawks Sixers 664.942874014
+# Hawks Pistons 598.520814951
+# Hawks Celtics 933.914939672
+# Hawks Heat 604.61796304
+# Hawks Magic 402.49009694
+# Hawks Blazers 2167.93363072
+# Hawks Warriors 2126.90149615
+# Hawks Bulls 584.946209183
+# Hawks Wizards 543.944204352
+# Hawks Jazz 1581.07211049
+# Hawks Mavericks 717.784740962
+# Hawks Timberwolves 906.636600883
+# Hawks Clippers 1933.35893663
+# Hawks Thunder 751.441602335
+# Hawks Hornets 226.966979391
+# Hawks Bucks 668.536485493
+# Hawks Raptors 735.392097342
+# Hawks Rockets 699.731230146
+# Hawks Suns 1587.94024979
+# Hawks Kings 2083.59431831
+# Hawks Pelicans 423.069287256
+# Hawks Cavaliers 556.02580269
+# Hawks Hawks 0.0
+# Hawks Nets 751.288577468
+# Hawks Pacers 427.138327344
+# Hawks Nuggets 1211.7983351
+# Nets Knicks 0
+# Nets Lakers 2448.58890746
+# Nets Grizzlies 958.798826744
+# Nets Spurs 1589.36711293
+# Nets Sixers 86.8277827439
+# Nets Pistons 479.791938856
+# Nets Celtics 182.628525032
+# Nets Heat 1097.39356724
+# Nets Magic 944.732706618
+# Nets Blazers 2438.75489695
+# Nets Warriors 2557.96015459
+# Nets Bulls 710.581856052
+# Nets Wizards 207.386695644
+# Nets Jazz 1968.31504186
+# Nets Mavericks 1373.01712294
+# Nets Timberwolves 1013.82162442
+# Nets Clippers 2448.58890746
+# Nets Thunder 1325.83202954
+# Nets Hornets 535.900871319
+# Nets Bucks 731.460330709
+# Nets Raptors 341.562155747
+# Nets Rockets 1421.47100503
+# Nets Suns 2141.47388208
+# Nets Kings 2502.60053454
+# Nets Pelicans 1172.43314498
+# Nets Cavaliers 399.256801039
+# Nets Hawks 751.288577468
+# Nets Nets 0
+# Nets Pacers 646.734650678
+# Nets Nuggets 1630.00868004
+# Pacers Knicks 646.734650678
+# Pacers Lakers 1806.37329624
+# Pacers Grizzlies 385.286857754
+# Pacers Spurs 1002.6518062
+# Pacers Sixers 583.327143862
+# Pacers Pistons 242.248101168
+# Pacers Celtics 803.981427184
+# Pacers Heat 1025.48999156
+# Pacers Magic 822.966136371
+# Pacers Blazers 1880.23401715
+# Pacers Warriors 1935.60202767
+# Pacers Bulls 161.013857348
+# Pacers Wizards 493.309654588
+# Pacers Jazz 1353.14221355
+# Pacers Mavericks 761.914174745
+# Pacers Timberwolves 508.762370329
+# Pacers Clippers 1806.37329624
+# Pacers Thunder 686.683562883
+# Pacers Hornets 427.78199478
+# Pacers Bucks 242.599356438
+# Pacers Raptors 440.310405726
+# Pacers Rockets 865.453185017
+# Pacers Suns 1494.89393172
+# Pacers Kings 1883.48643831
+# Pacers Pelicans 711.904425398
+# Pacers Cavaliers 268.083857191
+# Pacers Hawks 427.138327344
+# Pacers Nets 646.734650678
+# Pacers Pacers 5.89936971664e-05
+# Pacers Nuggets 999.373792186
+# Nuggets Knicks 1630.00868004
+# Nuggets Lakers 830.390457657
+# Nuggets Grizzlies 879.463493256
+# Nuggets Spurs 805.117563198
+# Nuggets Sixers 1576.13770207
+# Nuggets Pistons 1156.85981084
+# Nuggets Celtics 1764.61589089
+# Nuggets Heat 1725.6387391
+# Nuggets Magic 1552.69885623
+# Nuggets Blazers 977.930761184
+# Nuggets Warriors 937.048888788
+# Nuggets Bulls 920.580353924
+# Nuggets Wizards 1492.46486666
+# Nuggets Jazz 369.276241575
+# Nuggets Mavericks 666.142182167
+# Nuggets Timberwolves 700.987084804
+# Nuggets Clippers 830.390457657
+# Nuggets Thunder 511.569604494
+# Nuggets Hornets 1357.33649347
+# Nuggets Bucks 914.417239709
+# Nuggets Raptors 1342.55798445
+# Nuggets Rockets 883.232021159
+# Nuggets Suns 584.771819547
+# Nuggets Kings 886.700979895
+# Nuggets Pelicans 1082.34765178
+# Nuggets Cavaliers 1230.94966766
+# Nuggets Hawks 1211.7983351
+# Nuggets Nets 1630.00868004
+# Nuggets Pacers 999.373792186
+# Nuggets Nuggets 5.89936971664;
