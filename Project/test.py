@@ -46,17 +46,9 @@ for team in goodSched.teams.values():
 	if len(team.schedule) != 82 or s1.numHomeGames(team) != 41:
 		print team, s1.numHomeGames(team), len(team.schedule)
 
-x = np.linspace(0, 2, 100)
+# for team1 in s1.teams:
+# 	for team2 in s1.teams:
+# 		dist = util.latLongDistance(s1.teams[team1].location, s1.teams[team2].location)
+# 		print team1, team2, dist
 
-plt.plot(x, x, label='linear')
-plt.plot(x, x**2, label='quadratic')
-plt.plot(x, x**3, label='cubic')
 
-plt.xlabel('x label')
-plt.ylabel('y label')
-
-plt.title("Simple Plot")
-
-plt.legend()
-
-plt.show()

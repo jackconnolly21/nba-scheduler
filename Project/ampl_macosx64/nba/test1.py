@@ -18,8 +18,8 @@ def main(argc, argv):
 
         # Read the model and data files.
         modelDirectory = argv[2] if argc == 3 else os.path.join('..', 'models')
-        ampl.read(os.path.join(modelDirectory, 'test1.mod'))
-        ampl.readData(os.path.join(modelDirectory, 'test1.dat'))
+        ampl.read(os.path.join(modelDirectory, 'ampl_macosx64/nba/test1.mod'))
+        ampl.readData(os.path.join(modelDirectory, 'ampl_macosx64/nba/test1.dat'))
 
         # Solve
         ampl.solve()
