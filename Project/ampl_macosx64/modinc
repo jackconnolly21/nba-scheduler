@@ -1,0 +1,3 @@
+option ampl_include '.\
+models\
+models/nlmodels';

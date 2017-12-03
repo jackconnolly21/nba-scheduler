@@ -1,0 +1,66 @@
+Solver "locsol" uses LocalSolver (see http://www.localsolver.com/)
+to find approximate local solutions to constraint-programming problems
+and to integer, mixed-integer, and linear programming problems.
+Normally locsol is invoked by AMPL's solve command, which gives the
+invocation
+
+     locsol stub -AMPL
+
+in which stub.nl is an AMPL generic output file (possibly written
+by "ampl -obstub" or "ampl -ogstub").  After solving the problem,
+locsol writes a stub.sol file for use by AMPL's solve and solution
+commands.  When you use AMPL, this all happens automatically if you
+give the AMPL commands
+
+     option solver locsol;
+     solve;
+
+You can control locsol by setting the environment variable locsol_options
+appropriately (either by using AMPL's option command, or by using the
+shell's set and export commands before you invoke ampl).  You can put
+one or more (white-space separated) phrases in $locsol_options.  To see
+the possibilities, invoke
+
+        locsol '-='
+
+----------
+INSTALLING
+==========
+
+On Linux systems, locsol32.so (for the 32-bit "locsol") or locsol64.so
+(for the 64-bit locsol) needs to appear in the current directory, in a
+directory named in $LD_LIBRARY_PATH, or in /usr/local/lib (32-bit) or
+/usr/local/lib64 (64-bit).  File "locsol" is a very short and
+human-readable shell script that sets LD_LIBRARY_PATH and invokes
+locsol32 or locsol64 (the real binary file).  As distributed, "locsol"
+assumes that locsol32 or locsol64 is in /usr/local/bin and that
+locsol32.so is in /usr/local/lib or that locsol64.so is in
+/usr/local/lib64.  You can easily change these assumptions by editing
+the locsol shell script.  This script needs to appear somewhere in
+your usual search $PATH.
+
+On MS Windows systems, locsol.exe and localsolver.dll must appear
+somewhere in your usual search $PATH (or in the current directory).
+
+
+-----------------------
+solve_result_num values
+=======================
+
+Here is a table of solve_result_num values that "locsol" can return
+to an AMPL session, along with an indication of the text that appears
+in the associated solve_message.
+
+        Value   Message
+
+          0     optimal solution (for an optimization problem) or
+                feasible solution (for a satisfaction problem)
+        100     feasible solution
+        200     infeasible problem
+        400     limit
+        600     interrupted
+
+*************************
+
+If you have questions about or find bugs with this stuff,
+please contact support@ampl.com.
