@@ -7,7 +7,7 @@ from optparse import OptionParser
 from math import e, log10
 import numpy as np
 import matplotlib.pyplot as plt
-
+from copy import deepcopy
 
 infinity = float('inf')
 
@@ -25,7 +25,7 @@ def gradientDescent(s, numIters=200, heuristic=False):
     s.trace = []
 
     # Perform gradientDescent until numIters iterations doesn't produce a cost decrease
-    while i < numIters:
+    while iterations/5. < numIters:
 
         # Perform random swap (random game to new random date)
         info = s.swap(heuristic)
@@ -56,12 +56,13 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
     # Initialize cost and time
     cost = s.costFn()
     t = 0
-    alpha1 = 50000./float(times)
+    # not in use
+    alpha1 = 1./float(times)
     # Define a schedule function, takes in temperature
     def schedule(t):
-        temp = times - alpha1*t
-        print t
-        print temp
+        temp = times - alpha*t
+        # print t
+        # print temp
         return temp
 
     iterations = 0
@@ -83,11 +84,11 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
         # If worse, accept w/ prob = exp(-deltaCost/temp)
         else:
             deltaCost = newCost - cost
-            constant = -(deltaCost*3)/temp
+            constant = -(deltaCost)/(temp*2.)
 
             if newCost < cost:
                 cost = newCost
-            elif util.flipCoin(e**constant):
+            elif util.flipCoin(10*e**constant):
                 cost = newCost
             else:
                 s.undoSwap(info)
@@ -140,7 +141,14 @@ if __name__ == '__main__':
             		break
         # Run chosen method
         if method == 'SA':
+            s1 = deepcopy(s)
             new = simulatedAnnealing(s, times=numIters)
+            plt.plot(s.trace, label="SA")
+            gradientDescent(s1, numIters)
+            plt.plot(s1.trace, label="GD")
+            plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
+                ncol=2, mode="expand", borderaxespad=0.)
+            plt.show()
         if method == 'GD':
             new = gradientDescent(s, numIters, options.heur)
 
@@ -161,3 +169,5 @@ if __name__ == '__main__':
     # Dump into a pickle file to analyze later
     bestSchFile = open(filename, 'wb')
     pickle.dump(bestSch, bestSchFile)
+
+  

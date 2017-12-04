@@ -4,8 +4,10 @@ from datetime import date
 import pickle
 import copy
 import random
-from math import e
+from math import e, log
 import os
+import numpy as np
+import matplotlib.pyplot as plt
 
 # i = 0
 # while True:
@@ -48,16 +50,20 @@ print stds
 #     print game
 # print "First Game:", randomGame
 
-# temp = 50000
-# while True:
-# 	if temp <= 0:
-# 		break
-# 	else:
-# 		deltaCost = 10000
-# 		constant = -(deltaCost*2)/temp
-# 		p = e**constant
-# 		temp -= 0.2
-# 		print p
+temp = 50000
+trace = []
+while True:
+	if temp <= 0:
+		break
+	else:
+		deltaCost = 300000
+		constant = -((deltaCost))/(temp*2.)
+		p = 10*e**constant
+		temp -= 0.2
+		trace.append(p)
+		print p
+plt.plot(trace)
+plt.show()
 
 
 # pickleFile = open("obj.txt", "w")
