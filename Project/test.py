@@ -2,6 +2,7 @@ import util
 from scheduler import Scheduler, Team, Game
 import numpy as np
 import matplotlib.pyplot as plt
+import pickle
 
 
 # s1 = Scheduler()
@@ -32,7 +33,7 @@ import matplotlib.pyplot as plt
 
 # print 
 j = 0
-while j < 2:
+for j in xrange(100):
 	i = 0
 	while True:
 		sched = Scheduler()
@@ -41,14 +42,14 @@ while j < 2:
 			goodSched = sched
 			break
 		i += 1
-	j += 1
 	numbtb = util.totalBackToBacks(goodSched.teams)
-    filename = 'vsched/' + str(numbtb) + '.txt'
-    # Dump into a pickle file to analyze later
-    bestSchFile = open(filename, 'wb')
-    pickle.dump(goodSched, bestSchFile)
+	filename = 'vsched/' + str(numbtb) + '.txt'
+	# Dump into a pickle file to analyze later
+	bestSchFile = open(filename, 'wb')
+	pickle.dump(goodSched, bestSchFile)
 
-    
+
+
 
 # for team in goodSched.teams.values():
 # 	if len(team.schedule) != 82 or s1.numHomeGames(team) != 41:
