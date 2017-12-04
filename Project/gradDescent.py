@@ -25,7 +25,7 @@ def gradientDescent(s, numIters=200, heuristic=False):
     s.trace = []
 
     # Perform gradientDescent until numIters iterations doesn't produce a cost decrease
-    while iterations*4. < numIters:
+    while iterations/2. < numIters:
 
         # Perform random swap (random game to new random date)
         info = s.swap(heuristic)
@@ -56,11 +56,11 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
     # Initialize cost and time
     cost = s.costFn()
     t = 0
-    alpha1 = 500./float(times)
+    alpha1 = 5000./float(times)
     iterations = 0
     # Define a schedule function, takes in temperature
     def schedule(t):
-        temp = 1000- alpha1*t
+        temp = 10000- alpha1*t
         return temp
 
     
@@ -129,7 +129,7 @@ if __name__ == '__main__':
     for i in xrange(numTimes):
         # Get a valid initialization
         if fileName != "":
-            s = pickle.load(open("pickles/" + fileName, 'rb'))
+            s = pickle.load(open(fileName, 'rb'))
         else:
             while True:
             	sc = Scheduler()
