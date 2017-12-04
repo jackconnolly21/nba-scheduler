@@ -277,7 +277,6 @@ class Scheduler:
                 nonDivOpps.append(confOpp)
         return nonDivOpps
 
-    # problem with this function
     def getCommonNonDivOpps(self, team):
         cndo = team.commonNonDivOpps
         nonDivOpps = self.getNonDivOpps(team)
@@ -315,29 +314,29 @@ class Scheduler:
 
 
 
-    # not being used
-    def getRareNonDivOppsHT(self, team):
-        rndo = team.rareNonDivOpps
-        if len(team.HA[0]) == 2 and len(team.schedule) > 82:
-            rand2 = random.choice(team.HA[1])
-            team.HA[1].remove(rand2)
-            rand2.HA[0].remove(team)
-            self.getRareNonDivOppsHT(team)
-        elif len(team.HA[0]) < 2:
-            frontier = []
-            for t in rndo:
-                if t not in team.HA[0]:
-                    frontier.append((t, len(t.HA[1])))
-            minlen = 100
-            minindex = -1
-            for f in xrange(len(frontier)):
-                if frontier[f][1] <= minlen:
-                    minlen = frontier[f][1]
-                    minindex = f
-            rand1 = frontier[minindex][0]
-            team.HA[0].append(rand1)
-            rand1.HA[1].append(team)
-            self.getRareNonDivOppsHT(team)
+    # # not being used
+    # def getRareNonDivOppsHT(self, team):
+    #     rndo = team.rareNonDivOpps
+    #     if len(team.HA[0]) == 2 and len(team.schedule) > 82:
+    #         rand2 = random.choice(team.HA[1])
+    #         team.HA[1].remove(rand2)
+    #         rand2.HA[0].remove(team)
+    #         self.getRareNonDivOppsHT(team)
+    #     elif len(team.HA[0]) < 2:
+    #         frontier = []
+    #         for t in rndo:
+    #             if t not in team.HA[0]:
+    #                 frontier.append((t, len(t.HA[1])))
+    #         minlen = 100
+    #         minindex = -1
+    #         for f in xrange(len(frontier)):
+    #             if frontier[f][1] <= minlen:
+    #                 minlen = frontier[f][1]
+    #                 minindex = f
+    #         rand1 = frontier[minindex][0]
+    #         team.HA[0].append(rand1)
+    #         rand1.HA[1].append(team)
+    #         self.getRareNonDivOppsHT(team)
 
 
     def initializeHA(self, team):
