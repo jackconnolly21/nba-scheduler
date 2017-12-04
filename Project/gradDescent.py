@@ -25,7 +25,7 @@ def gradientDescent(s, numIters=200, heuristic=False):
     s.trace = []
 
     # Perform gradientDescent until numIters iterations doesn't produce a cost decrease
-    while iterations/5. < numIters:
+    while iterations*4. < numIters:
 
         # Perform random swap (random game to new random date)
         info = s.swap(heuristic)
@@ -56,16 +56,14 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
     # Initialize cost and time
     cost = s.costFn()
     t = 0
-    # not in use
-    alpha1 = 1./float(times)
+    alpha1 = 500./float(times)
+    iterations = 0
     # Define a schedule function, takes in temperature
     def schedule(t):
-        temp = times - alpha*t
-        # print t
-        # print temp
+        temp = 1000- alpha1*t
         return temp
 
-    iterations = 0
+    
     # Run until temp <= 0
     # store trace for plotting
     s.trace = []
@@ -82,10 +80,10 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
             return min(cost, newCost)
         # Otherwise accept if better
         # If worse, accept w/ prob = exp(-deltaCost/temp)
+        
         else:
             deltaCost = newCost - cost
             constant = -(deltaCost)/(temp*2.)
-
             if newCost < cost:
                 cost = newCost
             elif util.flipCoin(10*e**constant):
