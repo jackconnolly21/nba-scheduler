@@ -119,7 +119,9 @@ def readCommands(argv):
 
 if __name__ == '__main__':
 
-    # Get the options and make variable with them
+    start = timer()
+
+    # Get the options and make variables with them
     options = readCommands(sys.argv[1:])
     method = options.method
     numIters = options.numIters
@@ -146,12 +148,14 @@ if __name__ == '__main__':
             new = simulatedAnnealing(s, times=numIters)
             plt.plot(s.trace, label="SA")
             gradientDescent(s1, numIters)
+            end = timer()
             plt.plot(s1.trace, label="GD")
             plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
                 ncol=2, mode="expand", borderaxespad=0.)
             plt.show()
         if method == 'GD':
             new = gradientDescent(s, numIters, options.heur, numSwaps)
+            end = timer()
 
         print "Ending Cost:", new
         print
@@ -162,6 +166,7 @@ if __name__ == '__main__':
             bestSch = s
 
     print "Best Cost:", bestCost
+    print "Total time:", end - start
 
     # Create a filename
     numbtb = util.totalBackToBacks(bestSch.teams)
