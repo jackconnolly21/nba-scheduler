@@ -90,13 +90,24 @@ class Scheduler:
         distSTD = util.standardDev(dists)
         return (btbSTD, distSTD)
 
-    def costFn(self, a=1, b=3000, c=10000, d=100):
+    def costFn(self, a=1, b=3000, c=10000, d=10):
         totalDistance = self.totalDistanceAll()
         totalBTB = util.totalBackToBacks(self.teams)
         totalTriples = self.totalTriples()
         btbSTD, distSTD = self.getStandardDevs()
         cost = a * totalDistance + b * totalBTB + c * (totalTriples**2) + d * (btbSTD * 4000 + distSTD)
         return cost
+
+    def multiSwap(self, numSwaps, heuristic):
+        infos = []
+        for i in xrange(numSwaps):
+            infos.append(self.swap(heuristic))
+        return infos
+
+    def undoMultiSwap(self, infos):
+        for i in xrange(len(infos) - 1, -1, -1):
+            self.undoSwap(infos[i])
+        return True
 
     """
         Move one game to another random date

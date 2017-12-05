@@ -29,6 +29,9 @@ def analyzePickle(fileName):
     print "Total Distance:", s.totalDistanceAll()
     print "Total Back To Backs:", util.totalBackToBacks(s.teams)
     print "Triples:", s.totalTriples()
+    print "Standard Deviations:"
+    print "     BTB:", s.getStandardDevs()[0]
+    print "     Distance:", s.getStandardDevs()[1]
 
     # Find most and least back to backs
     most = 0

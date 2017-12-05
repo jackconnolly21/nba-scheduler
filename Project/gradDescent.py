@@ -14,7 +14,7 @@ infinity = float('inf')
 """
     Perform greedy gradientDescent on the schedule
 """
-def gradientDescent(s, numIters=200, heuristic=False):
+def gradientDescent(s, numIters=200, heuristic=False, numSwaps=1):
     # Intiailize cost
     cost = s.costFn()
     # Track iterations and iterations without improvement (i)
@@ -28,7 +28,7 @@ def gradientDescent(s, numIters=200, heuristic=False):
     while iterations/2. < numIters:
 
         # Perform random swap (random game to new random date)
-        info = s.swap(heuristic)
+        infos = s.multiSwap(numSwaps, heuristic)
         # Cost after swap
         newCost = s.costFn()
         # Check if newCost is better, reset i=0 if so
@@ -37,7 +37,7 @@ def gradientDescent(s, numIters=200, heuristic=False):
             i = 0
             successes += 1
         else:
-            s.undoSwap(info)
+            s.undoMultiSwap(infos)
             i += 1
         iterations += 1
         s.trace.append(log10(cost))
@@ -63,7 +63,7 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
         temp = 10000- alpha1*t
         return temp
 
-    
+
     # Run until temp <= 0
     # store trace for plotting
     s.trace = []
@@ -80,7 +80,7 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
             return min(cost, newCost)
         # Otherwise accept if better
         # If worse, accept w/ prob = exp(-deltaCost/temp)
-        
+
         else:
             deltaCost = newCost - cost
             constant = -(deltaCost)/(temp*2.)
@@ -112,6 +112,8 @@ def readCommands(argv):
                     help="pickle FILE to run gradientDescent on", default="")
     parser.add_option("--heur", dest="heur", action="store_true",
                     help="use heuristic? Default to false", default=False)
+    parser.add_option("-s", "--numSwaps", dest="numSwaps", type="int",
+                    help="numSwaps per iteration", default=1)
     (options, args) = parser.parse_args(argv)
     return options
 
@@ -123,6 +125,7 @@ if __name__ == '__main__':
     numIters = options.numIters
     numTimes = options.numTimes
     fileName = options.fileName
+    numSwaps = options.numSwaps
 
     bestCost = infinity
     # Run chosen method numTimes number of times
@@ -148,7 +151,7 @@ if __name__ == '__main__':
                 ncol=2, mode="expand", borderaxespad=0.)
             plt.show()
         if method == 'GD':
-            new = gradientDescent(s, numIters, options.heur)
+            new = gradientDescent(s, numIters, options.heur, numSwaps)
 
         print "Ending Cost:", new
         print
@@ -167,5 +170,3 @@ if __name__ == '__main__':
     # Dump into a pickle file to analyze later
     bestSchFile = open(filename, 'wb')
     pickle.dump(bestSch, bestSchFile)
-
-  
