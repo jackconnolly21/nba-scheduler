@@ -14,7 +14,9 @@ infinity = float('inf')
 """
     Perform greedy gradientDescent on the schedule
 """
-def gradientDescent(s, numIters=200, heuristic=False, numSwaps=1):
+def gradientDescent(s, numIters=200, numSwaps=1):
+
+    rmTrips = s.removeTriples()
     # Intiailize cost
     cost = s.costFn()
     # Track iterations and iterations without improvement (i)
@@ -28,7 +30,7 @@ def gradientDescent(s, numIters=200, heuristic=False, numSwaps=1):
     while iterations/2. < numIters:
 
         # Perform random swap (random game to new random date)
-        infos = s.multiSwap(numSwaps, heuristic)
+        infos = s.multiSwap(numSwaps)
         # Cost after swap
         newCost = s.costFn()
         # Check if newCost is better, reset i=0 if so
@@ -40,7 +42,7 @@ def gradientDescent(s, numIters=200, heuristic=False, numSwaps=1):
             s.undoMultiSwap(infos)
             i += 1
         iterations += 1
-        s.trace.append(log10(cost))
+        s.trace.append(cost)
 
     # Return the cost of the new solution
     print "Iterations:", iterations
@@ -53,6 +55,7 @@ def gradientDescent(s, numIters=200, heuristic=False, numSwaps=1):
     worse solutions with probability exp(-deltaCost/temp)
 """
 def simulatedAnnealing(s, times=50000, alpha=0.2):
+    rmTrips = s.removeTriples()
     # Initialize cost and time
     cost = s.costFn()
     t = 0
@@ -83,14 +86,14 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
 
         else:
             deltaCost = newCost - cost
-            constant = -(deltaCost)/(temp*2.)
+            constant = -(deltaCost)/(temp)
             if newCost < cost:
                 cost = newCost
-            elif util.flipCoin(10*e**constant):
+            elif util.flipCoin(10*(e**constant)):
                 cost = newCost
             else:
                 s.undoSwap(info)
-            s.trace.append(log10(cost))
+            s.trace.append(cost)
             t += 1
         iterations += 1
 
@@ -110,8 +113,6 @@ def readCommands(argv):
                     default=1)
     parser.add_option("-f", "--fileName", dest="fileName",
                     help="pickle FILE to run gradientDescent on", default="")
-    parser.add_option("--heur", dest="heur", action="store_true",
-                    help="use heuristic? Default to false", default=False)
     parser.add_option("-s", "--numSwaps", dest="numSwaps", type="int",
                     help="numSwaps per iteration", default=1)
     (options, args) = parser.parse_args(argv)
@@ -154,7 +155,7 @@ if __name__ == '__main__':
                 ncol=2, mode="expand", borderaxespad=0.)
             plt.show()
         if method == 'GD':
-            new = gradientDescent(s, numIters, options.heur, numSwaps)
+            new = gradientDescent(s, numIters, numSwaps)
             end = timer()
 
         print "Ending Cost:", new

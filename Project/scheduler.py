@@ -73,16 +73,6 @@ class Scheduler:
                 return True
         return False
 
-    def mostBackToBacks(self):
-        most = 0
-        mostTeam = None
-        for team in self.teams.values():
-            btb = team.backToBacks()
-            if btb > most:
-                most = btb
-                mostTeam = team
-        return mostTeam
-
     def getStandardDevs(self):
         btbs = [team.backToBacks() for team in self.teams.values()]
         dists = [self.totalDistanceTeam(team) for team in self.teams.values()]
@@ -98,10 +88,10 @@ class Scheduler:
         cost = a * totalDistance + b * totalBTB + c * (totalTriples**2) + d * (btbSTD * 4000 + distSTD)
         return cost
 
-    def multiSwap(self, numSwaps, heuristic):
+    def multiSwap(self, numSwaps):
         infos = []
         for i in xrange(numSwaps):
-            infos.append(self.swap(heuristic))
+            infos.append(self.swap())
         return infos
 
     def undoMultiSwap(self, infos):
@@ -112,12 +102,9 @@ class Scheduler:
     """
         Move one game to another random date
     """
-    def swap(self, heur=False):
+    def swap(self):
         # Generate random team, game, newDate
-        if heur:
-            randomTeam = self.mostBackToBacks()
-        else:
-            randomTeam = random.choice(self.teams.values())
+        randomTeam = random.choice(self.teams.values())
         randomGame = random.choice(randomTeam.schedule)
         opponent = randomGame.opponent
         oldDate = randomGame.date
@@ -173,6 +160,22 @@ class Scheduler:
             if team.teamCalendar[previous2] and team.teamCalendar[previous]:
                 return False
         return True
+
+    def removeTriples(self):
+        trips = self.totalTriples()
+        iterations = 0
+        successes = 0
+        while trips > 0:
+            info = self.swap()
+            newTrips = self.totalTriples()
+            if newTrips < trips:
+                trips = newTrips
+                iterations += 1
+                successes += 1
+            else:
+                self.undoSwap(info)
+                iterations += 1
+        return (iterations, successes)
 
     """
         Create a random initial schedule satisfying constraints

@@ -35,10 +35,10 @@ import matplotlib.pyplot as plt
 # 	for i in xrange(len(sch) - 1):
 # 		if (sch[i].date - sch[i+1].date).days == 0 and sch[i].opponent.name == sch[i+1].opponent.name:
 # 			print "Duplicate!", team.name, sch[i].date, sch[i].opponent.name
-
-sched = pickle.load(open('pickles/321GD.txt', 'rb'))
-stds = sched.getStandardDevs()
-print stds
+#
+# sched = pickle.load(open('pickles/321GD.txt', 'rb'))
+# stds = sched.getStandardDevs()
+# print stds
 
 
 
@@ -50,15 +50,15 @@ print stds
 #     print game
 # print "First Game:", randomGame
 
-temp = 50000
+temp = 10000
 trace = []
 while True:
 	if temp <= 0:
 		break
 	else:
-		deltaCost = 300000
-		constant = -((deltaCost))/(temp*2.)
-		p = 10*e**constant
+		deltaCost = 50000
+		constant = -((deltaCost))/(temp)
+		p = 100*(e**constant)
 		temp -= 0.2
 		trace.append(p)
 		print p
