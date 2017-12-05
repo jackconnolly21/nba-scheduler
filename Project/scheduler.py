@@ -1,6 +1,6 @@
 # Main file for the CSP?
 import util
-from datetime import date
+from datetime import date, timedelta
 import random
 
 class Scheduler:
@@ -147,6 +147,22 @@ class Scheduler:
 
         return True
 
+    def tripcheck(self, team, date):
+        previous = date - timedelta(days=1)
+        previous2 = previous - timedelta(days=1)
+        nextday = date + timedelta(days=1)
+        nextday2 = nextday + timedelta(days=1)
+        if nextday in team.teamCalendar and nextday2 in team.teamCalendar:
+            if team.teamCalendar[nextday] and team.teamCalendar[nextday2]:
+                return False
+        if nextday in team.teamCalendar and previous in team.teamCalendar:
+            if team.teamCalendar[nextday] and team.teamCalendar[previous]:
+                return False
+        if previous in team.teamCalendar and previous2 in team.teamCalendar:
+            if team.teamCalendar[previous2] and team.teamCalendar[previous]:
+                return False
+        return True
+
     """
         Create a random initial schedule satisfying constraints
     """
@@ -173,7 +189,7 @@ class Scheduler:
                     while i < 2:
                         randomDate = random.choice(team.teamCalendar.keys())
                         # make sure game isn't already played on that date
-                        if not team.teamCalendar[randomDate] and not divOpp.teamCalendar[randomDate]:
+                        if not team.teamCalendar[randomDate] and not divOpp.teamCalendar[randomDate] and self.tripcheck(team, randomDate) and self.tripcheck(divOpp, randomDate):
                             # add game to schedule of both teams
                             team.schedule.append(Game(randomDate, divOpp, True))
                             divOpp.schedule.append(Game(randomDate, team, False))
@@ -190,7 +206,7 @@ class Scheduler:
                 while i < 1:
                     randomDate = random.choice(team.teamCalendar.keys())
                     # make sure game isn't already played on that date
-                    if not team.teamCalendar[randomDate] and not nonConfOpp.teamCalendar[randomDate]:
+                    if not team.teamCalendar[randomDate] and not nonConfOpp.teamCalendar[randomDate] and self.tripcheck(team, randomDate) and self.tripcheck(nonConfOpp, randomDate):
                         # add game to schedule of both teams
                         team.schedule.append(Game(randomDate, nonConfOpp, True))
                         nonConfOpp.schedule.append(Game(randomDate, team, False))
@@ -209,7 +225,7 @@ class Scheduler:
                 while i < 2:
                     randomDate = random.choice(team.teamCalendar.keys())
                     # make sure game isn't already played on that date
-                    if not team.teamCalendar[randomDate] and not commonNonDivOpp.teamCalendar[randomDate]:
+                    if not team.teamCalendar[randomDate] and not commonNonDivOpp.teamCalendar[randomDate] and self.tripcheck(team, randomDate) and self.tripcheck(commonNonDivOpp, randomDate):
                         # add game to schedule of both teams
                         team.schedule.append(Game(randomDate, commonNonDivOpp, True))
                         commonNonDivOpp.schedule.append(Game(randomDate, team, False))
@@ -226,7 +242,7 @@ class Scheduler:
                 while i < 1:
                     randomDate = random.choice(team.teamCalendar.keys())
                     # make sure game isn't already played on that date
-                    if not team.teamCalendar[randomDate] and not rareNonDivOpp.teamCalendar[randomDate]:
+                    if not team.teamCalendar[randomDate] and not rareNonDivOpp.teamCalendar[randomDate] and self.tripcheck(team, randomDate) and self.tripcheck(rareNonDivOpp, randomDate):
                         # add game to schedule of both teams
                         team.schedule.append(Game(randomDate, rareNonDivOpp, True))
                         rareNonDivOpp.schedule.append(Game(randomDate, team, False))
@@ -259,7 +275,7 @@ class Scheduler:
                 while i < 1:
                     randomDate = random.choice(team.teamCalendar.keys())
                     # make sure game isn't already played on that date
-                    if not team.teamCalendar[randomDate] and not h.teamCalendar[randomDate]:
+                    if not team.teamCalendar[randomDate] and not h.teamCalendar[randomDate] and self.tripcheck(team, randomDate) and self.tripcheck(h, randomDate):
                         # add game to schedule of both teams
                         team.schedule.append(Game(randomDate, h, True))
                         h.schedule.append(Game(randomDate, team, False))

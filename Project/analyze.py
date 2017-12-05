@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 def analyzePickle(fileName):
     # Try to open the pickle file passed in
     try:
-        f = 'pickles/' + fileName
+        f = fileName
         s = pickle.load(open(f, 'rb'))
     except IOError:
         print "Could not load file '" + fileName
