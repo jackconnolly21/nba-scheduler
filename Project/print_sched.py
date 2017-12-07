@@ -16,8 +16,9 @@ def print_sched(fileName):
         return 1
     for team in s.teams:
     	for game in s.teams[team].schedule:
-    		lst.append((game.date, team, game.opponent.name))
-    		lst.sort()
+            if game.isHome:
+        		lst.append((game.date, team, game.opponent.name))
+        		lst.sort()
     btbs = util.totalBackToBacks(s.teams)
     fileout = str(btbs) + '.txt'
     fout = open(fileout, 'w')

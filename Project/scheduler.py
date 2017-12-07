@@ -145,6 +145,7 @@ class Scheduler:
 
         return True
 
+    # checks if a date would result in a triple for a team
     def tripcheck(self, team, date):
         previous = date - timedelta(days=1)
         previous2 = previous - timedelta(days=1)

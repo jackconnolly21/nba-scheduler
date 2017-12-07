@@ -1,368 +1,184 @@
-2016-10-25,Atlanta Hawks,Memphis Grizzlies
-2016-10-25,Boston Celtics,Denver Nuggets
 2016-10-25,Brooklyn Nets,Milwaukee Bucks
 2016-10-25,Charlotte Hornets,Cleveland Cavaliers
 2016-10-25,Chicago Bulls,Dallas Mavericks
-2016-10-25,Cleveland Cavaliers,Charlotte Hornets
-2016-10-25,Dallas Mavericks,Chicago Bulls
 2016-10-25,Denver Nuggets,Boston Celtics
 2016-10-25,Detroit Pistons,Oklahoma City Thunder
 2016-10-25,Golden State Warriors,Sacramento Kings
-2016-10-25,Houston Rockets,Los Angeles Lakers
 2016-10-25,Indiana Pacers,Miami Heat
-2016-10-25,Los Angeles Clippers,New Orleans Pelicans
 2016-10-25,Los Angeles Lakers,Houston Rockets
 2016-10-25,Memphis Grizzlies,Atlanta Hawks
-2016-10-25,Miami Heat,Indiana Pacers
-2016-10-25,Milwaukee Bucks,Brooklyn Nets
 2016-10-25,Minnesota Timberwolves,New York Knicks
 2016-10-25,New Orleans Pelicans,Los Angeles Clippers
-2016-10-25,New York Knicks,Minnesota Timberwolves
-2016-10-25,Oklahoma City Thunder,Detroit Pistons
-2016-10-25,Orlando Magic,Portland Trail Blazers
-2016-10-25,Philadelphia 76ers,Phoenix Suns
 2016-10-25,Phoenix Suns,Philadelphia 76ers
 2016-10-25,Portland Trail Blazers,Orlando Magic
-2016-10-25,Sacramento Kings,Golden State Warriors
 2016-10-25,San Antonio Spurs,Toronto Raptors
-2016-10-25,Toronto Raptors,San Antonio Spurs
 2016-10-25,Utah Jazz,Washington Wizards
-2016-10-25,Washington Wizards,Utah Jazz
-2016-10-27,Boston Celtics,Utah Jazz
 2016-10-27,Brooklyn Nets,Charlotte Hornets
-2016-10-27,Charlotte Hornets,Brooklyn Nets
-2016-10-27,Chicago Bulls,Detroit Pistons
-2016-10-27,Cleveland Cavaliers,Indiana Pacers
-2016-10-27,Dallas Mavericks,Minnesota Timberwolves
-2016-10-27,Denver Nuggets,Portland Trail Blazers
 2016-10-27,Detroit Pistons,Chicago Bulls
 2016-10-27,Golden State Warriors,Phoenix Suns
-2016-10-27,Houston Rockets,Sacramento Kings
 2016-10-27,Indiana Pacers,Cleveland Cavaliers
-2016-10-27,Los Angeles Clippers,Memphis Grizzlies
 2016-10-27,Los Angeles Lakers,Miami Heat
 2016-10-27,Memphis Grizzlies,Los Angeles Clippers
-2016-10-27,Miami Heat,Los Angeles Lakers
 2016-10-27,Milwaukee Bucks,New Orleans Pelicans
 2016-10-27,Minnesota Timberwolves,Dallas Mavericks
-2016-10-27,New Orleans Pelicans,Milwaukee Bucks
 2016-10-27,New York Knicks,San Antonio Spurs
-2016-10-27,Orlando Magic,Philadelphia 76ers
 2016-10-27,Philadelphia 76ers,Orlando Magic
-2016-10-27,Phoenix Suns,Golden State Warriors
 2016-10-27,Portland Trail Blazers,Denver Nuggets
 2016-10-27,Sacramento Kings,Houston Rockets
-2016-10-27,San Antonio Spurs,New York Knicks
 2016-10-27,Utah Jazz,Boston Celtics
-2016-10-28,Atlanta Hawks,Portland Trail Blazers
-2016-10-28,Houston Rockets,Oklahoma City Thunder
 2016-10-28,Oklahoma City Thunder,Houston Rockets
 2016-10-28,Portland Trail Blazers,Atlanta Hawks
 2016-10-28,Toronto Raptors,Washington Wizards
-2016-10-28,Washington Wizards,Toronto Raptors
 2016-10-29,Atlanta Hawks,Miami Heat
-2016-10-29,Boston Celtics,Los Angeles Lakers
 2016-10-29,Brooklyn Nets,San Antonio Spurs
-2016-10-29,Charlotte Hornets,Golden State Warriors
 2016-10-29,Chicago Bulls,New Orleans Pelicans
 2016-10-29,Cleveland Cavaliers,Phoenix Suns
-2016-10-29,Denver Nuggets,Sacramento Kings
 2016-10-29,Detroit Pistons,Orlando Magic
 2016-10-29,Golden State Warriors,Charlotte Hornets
-2016-10-29,Indiana Pacers,Philadelphia 76ers
-2016-10-29,Los Angeles Clippers,Milwaukee Bucks
 2016-10-29,Los Angeles Lakers,Boston Celtics
-2016-10-29,Miami Heat,Atlanta Hawks
 2016-10-29,Milwaukee Bucks,Los Angeles Clippers
 2016-10-29,Minnesota Timberwolves,Utah Jazz
-2016-10-29,New Orleans Pelicans,Chicago Bulls
-2016-10-29,Orlando Magic,Detroit Pistons
 2016-10-29,Philadelphia 76ers,Indiana Pacers
-2016-10-29,Phoenix Suns,Cleveland Cavaliers
 2016-10-29,Sacramento Kings,Denver Nuggets
-2016-10-29,San Antonio Spurs,Brooklyn Nets
-2016-10-29,Utah Jazz,Minnesota Timberwolves
-2016-10-30,Brooklyn Nets,New York Knicks
-2016-10-30,Dallas Mavericks,Toronto Raptors
 2016-10-30,Detroit Pistons,Washington Wizards
 2016-10-30,Houston Rockets,Oklahoma City Thunder
 2016-10-30,Memphis Grizzlies,Philadelphia 76ers
 2016-10-30,New York Knicks,Brooklyn Nets
-2016-10-30,Oklahoma City Thunder,Houston Rockets
-2016-10-30,Philadelphia 76ers,Memphis Grizzlies
 2016-10-30,Toronto Raptors,Dallas Mavericks
-2016-10-30,Washington Wizards,Detroit Pistons
 2016-10-31,Atlanta Hawks,San Antonio Spurs
-2016-10-31,Boston Celtics,Orlando Magic
-2016-10-31,Charlotte Hornets,Portland Trail Blazers
-2016-10-31,Chicago Bulls,Los Angeles Clippers
-2016-10-31,Cleveland Cavaliers,Denver Nuggets
 2016-10-31,Denver Nuggets,Cleveland Cavaliers
 2016-10-31,Golden State Warriors,Los Angeles Lakers
 2016-10-31,Houston Rockets,Milwaukee Bucks
-2016-10-31,Indiana Pacers,Minnesota Timberwolves
 2016-10-31,Los Angeles Clippers,Chicago Bulls
-2016-10-31,Los Angeles Lakers,Golden State Warriors
-2016-10-31,Miami Heat,Sacramento Kings
-2016-10-31,Milwaukee Bucks,Houston Rockets
 2016-10-31,Minnesota Timberwolves,Indiana Pacers
 2016-10-31,New Orleans Pelicans,Utah Jazz
 2016-10-31,Orlando Magic,Boston Celtics
 2016-10-31,Portland Trail Blazers,Charlotte Hornets
 2016-10-31,Sacramento Kings,Miami Heat
-2016-10-31,San Antonio Spurs,Atlanta Hawks
-2016-10-31,Utah Jazz,New Orleans Pelicans
 2016-11-01,Brooklyn Nets,New York Knicks
 2016-11-01,Charlotte Hornets,Dallas Mavericks
-2016-11-01,Dallas Mavericks,Charlotte Hornets
 2016-11-01,Detroit Pistons,Philadelphia 76ers
-2016-11-01,Memphis Grizzlies,San Antonio Spurs
-2016-11-01,New York Knicks,Brooklyn Nets
-2016-11-01,Oklahoma City Thunder,Utah Jazz
-2016-11-01,Philadelphia 76ers,Detroit Pistons
-2016-11-01,Phoenix Suns,Toronto Raptors
 2016-11-01,San Antonio Spurs,Memphis Grizzlies
 2016-11-01,Toronto Raptors,Phoenix Suns
 2016-11-01,Utah Jazz,Oklahoma City Thunder
-2016-11-02,Atlanta Hawks,Houston Rockets
-2016-11-02,Boston Celtics,Washington Wizards
-2016-11-02,Cleveland Cavaliers,Los Angeles Clippers
 2016-11-02,Denver Nuggets,Minnesota Timberwolves
-2016-11-02,Golden State Warriors,Indiana Pacers
 2016-11-02,Houston Rockets,Atlanta Hawks
 2016-11-02,Indiana Pacers,Golden State Warriors
 2016-11-02,Los Angeles Clippers,Cleveland Cavaliers
-2016-11-02,Minnesota Timberwolves,Denver Nuggets
 2016-11-02,Orlando Magic,Sacramento Kings
-2016-11-02,Sacramento Kings,Orlando Magic
 2016-11-02,Washington Wizards,Boston Celtics
 2016-11-03,Brooklyn Nets,Memphis Grizzlies
 2016-11-03,Charlotte Hornets,Phoenix Suns
 2016-11-03,Chicago Bulls,New York Knicks
 2016-11-03,Cleveland Cavaliers,Dallas Mavericks
-2016-11-03,Dallas Mavericks,Cleveland Cavaliers
 2016-11-03,Detroit Pistons,Washington Wizards
 2016-11-03,Houston Rockets,Miami Heat
 2016-11-03,Los Angeles Lakers,Oklahoma City Thunder
-2016-11-03,Memphis Grizzlies,Brooklyn Nets
-2016-11-03,Miami Heat,Houston Rockets
-2016-11-03,Milwaukee Bucks,New Orleans Pelicans
 2016-11-03,New Orleans Pelicans,Milwaukee Bucks
-2016-11-03,New York Knicks,Chicago Bulls
-2016-11-03,Oklahoma City Thunder,Los Angeles Lakers
-2016-11-03,Phoenix Suns,Charlotte Hornets
 2016-11-03,Portland Trail Blazers,Toronto Raptors
 2016-11-03,San Antonio Spurs,Utah Jazz
-2016-11-03,Toronto Raptors,Portland Trail Blazers
-2016-11-03,Utah Jazz,San Antonio Spurs
-2016-11-03,Washington Wizards,Detroit Pistons
 2016-11-04,Atlanta Hawks,Sacramento Kings
-2016-11-04,Boston Celtics,Portland Trail Blazers
 2016-11-04,Los Angeles Clippers,Minnesota Timberwolves
-2016-11-04,Minnesota Timberwolves,Los Angeles Clippers
 2016-11-04,Orlando Magic,Philadelphia 76ers
-2016-11-04,Philadelphia 76ers,Orlando Magic
 2016-11-04,Portland Trail Blazers,Boston Celtics
-2016-11-04,Sacramento Kings,Atlanta Hawks
-2016-11-05,Boston Celtics,Charlotte Hornets
-2016-11-05,Brooklyn Nets,Milwaukee Bucks
 2016-11-05,Charlotte Hornets,Boston Celtics
-2016-11-05,Chicago Bulls,Washington Wizards
 2016-11-05,Dallas Mavericks,New York Knicks
 2016-11-05,Denver Nuggets,Indiana Pacers
 2016-11-05,Detroit Pistons,Golden State Warriors
-2016-11-05,Golden State Warriors,Detroit Pistons
-2016-11-05,Indiana Pacers,Denver Nuggets
 2016-11-05,Los Angeles Lakers,Toronto Raptors
 2016-11-05,Memphis Grizzlies,Utah Jazz
-2016-11-05,Miami Heat,San Antonio Spurs
 2016-11-05,Milwaukee Bucks,Brooklyn Nets
 2016-11-05,New Orleans Pelicans,Phoenix Suns
-2016-11-05,New York Knicks,Dallas Mavericks
-2016-11-05,Phoenix Suns,New Orleans Pelicans
 2016-11-05,San Antonio Spurs,Miami Heat
-2016-11-05,Toronto Raptors,Los Angeles Lakers
-2016-11-05,Utah Jazz,Memphis Grizzlies
 2016-11-05,Washington Wizards,Chicago Bulls
-2016-11-06,Atlanta Hawks,Milwaukee Bucks
-2016-11-06,Houston Rockets,Los Angeles Clippers
 2016-11-06,Los Angeles Clippers,Houston Rockets
 2016-11-06,Milwaukee Bucks,Atlanta Hawks
-2016-11-06,Minnesota Timberwolves,Orlando Magic
-2016-11-06,Oklahoma City Thunder,Portland Trail Blazers
 2016-11-06,Orlando Magic,Minnesota Timberwolves
 2016-11-06,Philadelphia 76ers,Sacramento Kings
 2016-11-06,Portland Trail Blazers,Oklahoma City Thunder
-2016-11-06,Sacramento Kings,Philadelphia 76ers
-2016-11-07,Boston Celtics,New York Knicks
 2016-11-07,Brooklyn Nets,Toronto Raptors
-2016-11-07,Charlotte Hornets,Dallas Mavericks
 2016-11-07,Chicago Bulls,Miami Heat
 2016-11-07,Cleveland Cavaliers,Golden State Warriors
 2016-11-07,Dallas Mavericks,Charlotte Hornets
-2016-11-07,Denver Nuggets,New Orleans Pelicans
-2016-11-07,Detroit Pistons,Philadelphia 76ers
-2016-11-07,Golden State Warriors,Cleveland Cavaliers
-2016-11-07,Indiana Pacers,San Antonio Spurs
 2016-11-07,Los Angeles Lakers,Phoenix Suns
-2016-11-07,Miami Heat,Chicago Bulls
 2016-11-07,New Orleans Pelicans,Denver Nuggets
 2016-11-07,New York Knicks,Boston Celtics
 2016-11-07,Philadelphia 76ers,Detroit Pistons
-2016-11-07,Phoenix Suns,Los Angeles Lakers
 2016-11-07,San Antonio Spurs,Indiana Pacers
-2016-11-07,Toronto Raptors,Brooklyn Nets
-2016-11-07,Utah Jazz,Washington Wizards
 2016-11-07,Washington Wizards,Utah Jazz
 2016-11-08,Atlanta Hawks,Oklahoma City Thunder
-2016-11-08,Houston Rockets,Orlando Magic
-2016-11-08,Los Angeles Clippers,San Antonio Spurs
 2016-11-08,Memphis Grizzlies,Portland Trail Blazers
 2016-11-08,Minnesota Timberwolves,Sacramento Kings
-2016-11-08,Oklahoma City Thunder,Atlanta Hawks
 2016-11-08,Orlando Magic,Houston Rockets
-2016-11-08,Portland Trail Blazers,Memphis Grizzlies
-2016-11-08,Sacramento Kings,Minnesota Timberwolves
 2016-11-08,San Antonio Spurs,Los Angeles Clippers
 2016-11-09,Brooklyn Nets,Utah Jazz
 2016-11-09,Chicago Bulls,Golden State Warriors
 2016-11-09,Cleveland Cavaliers,Miami Heat
-2016-11-09,Denver Nuggets,Phoenix Suns
-2016-11-09,Detroit Pistons,New Orleans Pelicans
-2016-11-09,Golden State Warriors,Chicago Bulls
 2016-11-09,Los Angeles Lakers,Memphis Grizzlies
-2016-11-09,Memphis Grizzlies,Los Angeles Lakers
-2016-11-09,Miami Heat,Cleveland Cavaliers
 2016-11-09,Milwaukee Bucks,Washington Wizards
 2016-11-09,New Orleans Pelicans,Detroit Pistons
-2016-11-09,New York Knicks,Philadelphia 76ers
 2016-11-09,Philadelphia 76ers,New York Knicks
 2016-11-09,Phoenix Suns,Denver Nuggets
-2016-11-09,Utah Jazz,Brooklyn Nets
-2016-11-09,Washington Wizards,Milwaukee Bucks
 2016-11-10,Atlanta Hawks,Orlando Magic
-2016-11-10,Boston Celtics,Oklahoma City Thunder
-2016-11-10,Charlotte Hornets,San Antonio Spurs
 2016-11-10,Dallas Mavericks,Los Angeles Clippers
-2016-11-10,Los Angeles Clippers,Dallas Mavericks
 2016-11-10,New York Knicks,Toronto Raptors
 2016-11-10,Oklahoma City Thunder,Boston Celtics
-2016-11-10,Orlando Magic,Atlanta Hawks
 2016-11-10,San Antonio Spurs,Charlotte Hornets
-2016-11-10,Toronto Raptors,New York Knicks
-2016-11-11,Brooklyn Nets,Philadelphia 76ers
 2016-11-11,Cleveland Cavaliers,Milwaukee Bucks
 2016-11-11,Denver Nuggets,Golden State Warriors
 2016-11-11,Detroit Pistons,Portland Trail Blazers
-2016-11-11,Golden State Warriors,Denver Nuggets
-2016-11-11,Houston Rockets,New Orleans Pelicans
-2016-11-11,Indiana Pacers,Memphis Grizzlies
-2016-11-11,Los Angeles Lakers,Oklahoma City Thunder
 2016-11-11,Memphis Grizzlies,Indiana Pacers
-2016-11-11,Miami Heat,Toronto Raptors
-2016-11-11,Milwaukee Bucks,Cleveland Cavaliers
 2016-11-11,Minnesota Timberwolves,Phoenix Suns
 2016-11-11,New Orleans Pelicans,Houston Rockets
 2016-11-11,Oklahoma City Thunder,Los Angeles Lakers
 2016-11-11,Philadelphia 76ers,Brooklyn Nets
-2016-11-11,Phoenix Suns,Minnesota Timberwolves
-2016-11-11,Portland Trail Blazers,Detroit Pistons
 2016-11-11,Sacramento Kings,Washington Wizards
 2016-11-11,Toronto Raptors,Miami Heat
-2016-11-11,Washington Wizards,Sacramento Kings
 2016-11-12,Atlanta Hawks,Charlotte Hornets
-2016-11-12,Boston Celtics,Chicago Bulls
-2016-11-12,Charlotte Hornets,Atlanta Hawks
 2016-11-12,Chicago Bulls,Boston Celtics
-2016-11-12,Dallas Mavericks,Philadelphia 76ers
-2016-11-12,Los Angeles Clippers,Memphis Grizzlies
 2016-11-12,Memphis Grizzlies,Los Angeles Clippers
 2016-11-12,Orlando Magic,San Antonio Spurs
 2016-11-12,Philadelphia 76ers,Dallas Mavericks
-2016-11-12,San Antonio Spurs,Orlando Magic
 2016-11-13,Brooklyn Nets,Miami Heat
 2016-11-13,Chicago Bulls,Toronto Raptors
 2016-11-13,Cleveland Cavaliers,Los Angeles Clippers
 2016-11-13,Denver Nuggets,Phoenix Suns
 2016-11-13,Indiana Pacers,Washington Wizards
-2016-11-13,Los Angeles Clippers,Cleveland Cavaliers
-2016-11-13,Los Angeles Lakers,New York Knicks
-2016-11-13,Miami Heat,Brooklyn Nets
 2016-11-13,Milwaukee Bucks,Utah Jazz
-2016-11-13,Minnesota Timberwolves,Oklahoma City Thunder
 2016-11-13,New York Knicks,Los Angeles Lakers
 2016-11-13,Oklahoma City Thunder,Minnesota Timberwolves
-2016-11-13,Phoenix Suns,Denver Nuggets
-2016-11-13,Toronto Raptors,Chicago Bulls
-2016-11-13,Utah Jazz,Milwaukee Bucks
-2016-11-13,Washington Wizards,Indiana Pacers
 2016-11-14,Atlanta Hawks,Charlotte Hornets
-2016-11-14,Boston Celtics,Detroit Pistons
-2016-11-14,Charlotte Hornets,Atlanta Hawks
-2016-11-14,Dallas Mavericks,Sacramento Kings
 2016-11-14,Detroit Pistons,Boston Celtics
 2016-11-14,Golden State Warriors,Memphis Grizzlies
 2016-11-14,Houston Rockets,New Orleans Pelicans
-2016-11-14,Memphis Grizzlies,Golden State Warriors
-2016-11-14,New Orleans Pelicans,Houston Rockets
-2016-11-14,Orlando Magic,Phoenix Suns
 2016-11-14,Phoenix Suns,Orlando Magic
 2016-11-14,Portland Trail Blazers,San Antonio Spurs
 2016-11-14,Sacramento Kings,Dallas Mavericks
-2016-11-14,San Antonio Spurs,Portland Trail Blazers
 2016-11-15,Atlanta Hawks,Toronto Raptors
-2016-11-15,Chicago Bulls,Cleveland Cavaliers
 2016-11-15,Cleveland Cavaliers,Chicago Bulls
-2016-11-15,Denver Nuggets,Washington Wizards
 2016-11-15,Indiana Pacers,Los Angeles Lakers
-2016-11-15,Los Angeles Clippers,New York Knicks
-2016-11-15,Los Angeles Lakers,Indiana Pacers
-2016-11-15,Miami Heat,Oklahoma City Thunder
-2016-11-15,Milwaukee Bucks,Philadelphia 76ers
 2016-11-15,New York Knicks,Los Angeles Clippers
 2016-11-15,Oklahoma City Thunder,Miami Heat
 2016-11-15,Philadelphia 76ers,Milwaukee Bucks
-2016-11-15,Toronto Raptors,Atlanta Hawks
 2016-11-15,Washington Wizards,Denver Nuggets
-2016-11-16,Brooklyn Nets,Memphis Grizzlies
 2016-11-16,Dallas Mavericks,Utah Jazz
 2016-11-16,Golden State Warriors,San Antonio Spurs
 2016-11-16,Houston Rockets,Minnesota Timberwolves
-2016-11-16,Los Angeles Lakers,Portland Trail Blazers
 2016-11-16,Memphis Grizzlies,Brooklyn Nets
 2016-11-16,Miami Heat,Sacramento Kings
-2016-11-16,Minnesota Timberwolves,Houston Rockets
-2016-11-16,New Orleans Pelicans,Phoenix Suns
 2016-11-16,Phoenix Suns,New Orleans Pelicans
 2016-11-16,Portland Trail Blazers,Los Angeles Lakers
-2016-11-16,Sacramento Kings,Miami Heat
-2016-11-16,San Antonio Spurs,Golden State Warriors
-2016-11-16,Utah Jazz,Dallas Mavericks
 2016-11-17,Atlanta Hawks,Chicago Bulls
 2016-11-17,Boston Celtics,Milwaukee Bucks
-2016-11-17,Charlotte Hornets,Oklahoma City Thunder
-2016-11-17,Chicago Bulls,Atlanta Hawks
 2016-11-17,Cleveland Cavaliers,New York Knicks
-2016-11-17,Denver Nuggets,Indiana Pacers
-2016-11-17,Detroit Pistons,Philadelphia 76ers
 2016-11-17,Indiana Pacers,Denver Nuggets
 2016-11-17,Los Angeles Clippers,Toronto Raptors
-2016-11-17,Memphis Grizzlies,Washington Wizards
-2016-11-17,Milwaukee Bucks,Boston Celtics
-2016-11-17,New York Knicks,Cleveland Cavaliers
 2016-11-17,Oklahoma City Thunder,Charlotte Hornets
 2016-11-17,Philadelphia 76ers,Detroit Pistons
-2016-11-17,Toronto Raptors,Los Angeles Clippers
 2016-11-17,Washington Wizards,Memphis Grizzlies
-2016-11-18,Brooklyn Nets,San Antonio Spurs
 2016-11-18,Dallas Mavericks,Los Angeles Lakers
 2016-11-18,Golden State Warriors,New Orleans Pelicans
-2016-11-18,Houston Rockets,Portland Trail Blazers
-2016-11-18,Los Angeles Lakers,Dallas Mavericks
 2016-11-18,Miami Heat,Phoenix Suns
-2016-11-18,New Orleans Pelicans,Golden State Warriors
-2016-11-18,Orlando Magic,Utah Jazz
-2016-11-18,Phoenix Suns,Miami Heat
 2016-11-18,Portland Trail Blazers,Houston Rockets
 2016-11-18,San Antonio Spurs,Brooklyn Nets
 2016-11-18,Utah Jazz,Orlando Magic
@@ -370,918 +186,458 @@
 2016-11-19,Boston Celtics,Philadelphia 76ers
 2016-11-19,Brooklyn Nets,Chicago Bulls
 2016-11-19,Charlotte Hornets,Oklahoma City Thunder
-2016-11-19,Chicago Bulls,Brooklyn Nets
 2016-11-19,Cleveland Cavaliers,Memphis Grizzlies
-2016-11-19,Denver Nuggets,Toronto Raptors
 2016-11-19,Detroit Pistons,Milwaukee Bucks
 2016-11-19,Los Angeles Clippers,Minnesota Timberwolves
-2016-11-19,Memphis Grizzlies,Cleveland Cavaliers
-2016-11-19,Milwaukee Bucks,Detroit Pistons
-2016-11-19,Minnesota Timberwolves,Los Angeles Clippers
-2016-11-19,New York Knicks,Atlanta Hawks
-2016-11-19,Oklahoma City Thunder,Charlotte Hornets
-2016-11-19,Philadelphia 76ers,Boston Celtics
-2016-11-19,Sacramento Kings,Washington Wizards
 2016-11-19,Toronto Raptors,Denver Nuggets
 2016-11-19,Washington Wizards,Sacramento Kings
 2016-11-20,Boston Celtics,Utah Jazz
 2016-11-20,Golden State Warriors,Los Angeles Lakers
 2016-11-20,Houston Rockets,New Orleans Pelicans
-2016-11-20,Indiana Pacers,Portland Trail Blazers
-2016-11-20,Los Angeles Lakers,Golden State Warriors
 2016-11-20,Miami Heat,Orlando Magic
-2016-11-20,New Orleans Pelicans,Houston Rockets
-2016-11-20,Orlando Magic,Miami Heat
 2016-11-20,Phoenix Suns,San Antonio Spurs
 2016-11-20,Portland Trail Blazers,Indiana Pacers
-2016-11-20,San Antonio Spurs,Phoenix Suns
-2016-11-20,Utah Jazz,Boston Celtics
 2016-11-21,Atlanta Hawks,New York Knicks
 2016-11-21,Brooklyn Nets,Orlando Magic
-2016-11-21,Charlotte Hornets,Los Angeles Clippers
-2016-11-21,Chicago Bulls,Toronto Raptors
-2016-11-21,Cleveland Cavaliers,Washington Wizards
 2016-11-21,Dallas Mavericks,San Antonio Spurs
-2016-11-21,Denver Nuggets,Milwaukee Bucks
 2016-11-21,Detroit Pistons,Philadelphia 76ers
 2016-11-21,Golden State Warriors,Minnesota Timberwolves
 2016-11-21,Los Angeles Clippers,Charlotte Hornets
 2016-11-21,Memphis Grizzlies,New Orleans Pelicans
 2016-11-21,Milwaukee Bucks,Denver Nuggets
-2016-11-21,Minnesota Timberwolves,Golden State Warriors
-2016-11-21,New Orleans Pelicans,Memphis Grizzlies
-2016-11-21,New York Knicks,Atlanta Hawks
 2016-11-21,Oklahoma City Thunder,Sacramento Kings
-2016-11-21,Orlando Magic,Brooklyn Nets
-2016-11-21,Philadelphia 76ers,Detroit Pistons
-2016-11-21,Sacramento Kings,Oklahoma City Thunder
-2016-11-21,San Antonio Spurs,Dallas Mavericks
 2016-11-21,Toronto Raptors,Chicago Bulls
 2016-11-21,Washington Wizards,Cleveland Cavaliers
 2016-11-22,Boston Celtics,Portland Trail Blazers
-2016-11-22,Houston Rockets,Los Angeles Clippers
 2016-11-22,Los Angeles Clippers,Houston Rockets
 2016-11-22,Miami Heat,Utah Jazz
-2016-11-22,Portland Trail Blazers,Boston Celtics
-2016-11-22,Utah Jazz,Miami Heat
 2016-11-23,Atlanta Hawks,Utah Jazz
-2016-11-23,Boston Celtics,New York Knicks
 2016-11-23,Brooklyn Nets,Portland Trail Blazers
-2016-11-23,Charlotte Hornets,Phoenix Suns
 2016-11-23,Chicago Bulls,Denver Nuggets
-2016-11-23,Cleveland Cavaliers,Milwaukee Bucks
 2016-11-23,Dallas Mavericks,Minnesota Timberwolves
-2016-11-23,Denver Nuggets,Chicago Bulls
-2016-11-23,Detroit Pistons,Toronto Raptors
-2016-11-23,Golden State Warriors,Los Angeles Lakers
-2016-11-23,Houston Rockets,Sacramento Kings
-2016-11-23,Indiana Pacers,New Orleans Pelicans
 2016-11-23,Los Angeles Lakers,Golden State Warriors
 2016-11-23,Memphis Grizzlies,Orlando Magic
 2016-11-23,Milwaukee Bucks,Cleveland Cavaliers
-2016-11-23,Minnesota Timberwolves,Dallas Mavericks
 2016-11-23,New Orleans Pelicans,Indiana Pacers
 2016-11-23,New York Knicks,Boston Celtics
-2016-11-23,Oklahoma City Thunder,San Antonio Spurs
-2016-11-23,Orlando Magic,Memphis Grizzlies
-2016-11-23,Philadelphia 76ers,Washington Wizards
 2016-11-23,Phoenix Suns,Charlotte Hornets
-2016-11-23,Portland Trail Blazers,Brooklyn Nets
 2016-11-23,Sacramento Kings,Houston Rockets
 2016-11-23,San Antonio Spurs,Oklahoma City Thunder
 2016-11-23,Toronto Raptors,Detroit Pistons
-2016-11-23,Utah Jazz,Atlanta Hawks
 2016-11-23,Washington Wizards,Philadelphia 76ers
 2016-11-25,Atlanta Hawks,Detroit Pistons
 2016-11-25,Boston Celtics,Indiana Pacers
 2016-11-25,Brooklyn Nets,Denver Nuggets
-2016-11-25,Charlotte Hornets,Miami Heat
-2016-11-25,Chicago Bulls,New York Knicks
-2016-11-25,Cleveland Cavaliers,Phoenix Suns
 2016-11-25,Dallas Mavericks,Toronto Raptors
-2016-11-25,Denver Nuggets,Brooklyn Nets
-2016-11-25,Detroit Pistons,Atlanta Hawks
 2016-11-25,Golden State Warriors,Orlando Magic
-2016-11-25,Houston Rockets,Utah Jazz
-2016-11-25,Indiana Pacers,Boston Celtics
-2016-11-25,Los Angeles Lakers,Sacramento Kings
 2016-11-25,Memphis Grizzlies,Oklahoma City Thunder
 2016-11-25,Miami Heat,Charlotte Hornets
 2016-11-25,Milwaukee Bucks,Philadelphia 76ers
-2016-11-25,Minnesota Timberwolves,San Antonio Spurs
 2016-11-25,New York Knicks,Chicago Bulls
-2016-11-25,Oklahoma City Thunder,Memphis Grizzlies
-2016-11-25,Orlando Magic,Golden State Warriors
-2016-11-25,Philadelphia 76ers,Milwaukee Bucks
 2016-11-25,Phoenix Suns,Cleveland Cavaliers
-2016-11-25,Portland Trail Blazers,Washington Wizards
 2016-11-25,Sacramento Kings,Los Angeles Lakers
 2016-11-25,San Antonio Spurs,Minnesota Timberwolves
-2016-11-25,Toronto Raptors,Dallas Mavericks
 2016-11-25,Utah Jazz,Houston Rockets
 2016-11-25,Washington Wizards,Portland Trail Blazers
-2016-11-26,Brooklyn Nets,Charlotte Hornets
 2016-11-26,Charlotte Hornets,Brooklyn Nets
 2016-11-26,New Orleans Pelicans,Toronto Raptors
-2016-11-26,Toronto Raptors,New Orleans Pelicans
 2016-11-27,Boston Celtics,Minnesota Timberwolves
-2016-11-27,Chicago Bulls,Milwaukee Bucks
-2016-11-27,Cleveland Cavaliers,Orlando Magic
 2016-11-27,Dallas Mavericks,Los Angeles Lakers
-2016-11-27,Golden State Warriors,Oklahoma City Thunder
 2016-11-27,Houston Rockets,Portland Trail Blazers
 2016-11-27,Indiana Pacers,Philadelphia 76ers
-2016-11-27,Los Angeles Clippers,San Antonio Spurs
-2016-11-27,Los Angeles Lakers,Dallas Mavericks
-2016-11-27,Memphis Grizzlies,New York Knicks
 2016-11-27,Milwaukee Bucks,Chicago Bulls
-2016-11-27,Minnesota Timberwolves,Boston Celtics
 2016-11-27,New York Knicks,Memphis Grizzlies
 2016-11-27,Oklahoma City Thunder,Golden State Warriors
 2016-11-27,Orlando Magic,Cleveland Cavaliers
-2016-11-27,Philadelphia 76ers,Indiana Pacers
 2016-11-27,Phoenix Suns,Utah Jazz
-2016-11-27,Portland Trail Blazers,Houston Rockets
 2016-11-27,San Antonio Spurs,Los Angeles Clippers
-2016-11-27,Utah Jazz,Phoenix Suns
-2016-11-28,Boston Celtics,Miami Heat
-2016-11-28,Brooklyn Nets,Denver Nuggets
 2016-11-28,Charlotte Hornets,Toronto Raptors
-2016-11-28,Chicago Bulls,Detroit Pistons
 2016-11-28,Denver Nuggets,Brooklyn Nets
 2016-11-28,Detroit Pistons,Chicago Bulls
 2016-11-28,Houston Rockets,Los Angeles Clippers
-2016-11-28,Los Angeles Clippers,Houston Rockets
 2016-11-28,Miami Heat,Boston Celtics
-2016-11-28,New York Knicks,Washington Wizards
 2016-11-28,Sacramento Kings,Utah Jazz
-2016-11-28,Toronto Raptors,Charlotte Hornets
-2016-11-28,Utah Jazz,Sacramento Kings
 2016-11-28,Washington Wizards,New York Knicks
 2016-11-29,Atlanta Hawks,Cleveland Cavaliers
 2016-11-29,Charlotte Hornets,Minnesota Timberwolves
-2016-11-29,Cleveland Cavaliers,Atlanta Hawks
 2016-11-29,Dallas Mavericks,San Antonio Spurs
-2016-11-29,Golden State Warriors,Philadelphia 76ers
 2016-11-29,Memphis Grizzlies,Phoenix Suns
-2016-11-29,Milwaukee Bucks,Orlando Magic
-2016-11-29,Minnesota Timberwolves,Charlotte Hornets
 2016-11-29,Oklahoma City Thunder,Portland Trail Blazers
 2016-11-29,Orlando Magic,Milwaukee Bucks
 2016-11-29,Philadelphia 76ers,Golden State Warriors
-2016-11-29,Phoenix Suns,Memphis Grizzlies
-2016-11-29,Portland Trail Blazers,Oklahoma City Thunder
-2016-11-29,San Antonio Spurs,Dallas Mavericks
-2016-11-30,Boston Celtics,New Orleans Pelicans
-2016-11-30,Brooklyn Nets,Miami Heat
 2016-11-30,Chicago Bulls,Toronto Raptors
 2016-11-30,Denver Nuggets,Utah Jazz
-2016-11-30,Detroit Pistons,New York Knicks
-2016-11-30,Houston Rockets,Indiana Pacers
 2016-11-30,Indiana Pacers,Houston Rockets
 2016-11-30,Los Angeles Clippers,Sacramento Kings
-2016-11-30,Los Angeles Lakers,San Antonio Spurs
 2016-11-30,Miami Heat,Brooklyn Nets
 2016-11-30,New Orleans Pelicans,Boston Celtics
 2016-11-30,New York Knicks,Detroit Pistons
-2016-11-30,Sacramento Kings,Los Angeles Clippers
 2016-11-30,San Antonio Spurs,Los Angeles Lakers
-2016-11-30,Toronto Raptors,Chicago Bulls
-2016-11-30,Utah Jazz,Denver Nuggets
-2016-12-01,Atlanta Hawks,Miami Heat
-2016-12-01,Charlotte Hornets,Philadelphia 76ers
 2016-12-01,Cleveland Cavaliers,Washington Wizards
 2016-12-01,Dallas Mavericks,Golden State Warriors
-2016-12-01,Golden State Warriors,Dallas Mavericks
 2016-12-01,Memphis Grizzlies,Oklahoma City Thunder
 2016-12-01,Miami Heat,Atlanta Hawks
 2016-12-01,Milwaukee Bucks,Phoenix Suns
 2016-12-01,Minnesota Timberwolves,Portland Trail Blazers
-2016-12-01,Oklahoma City Thunder,Memphis Grizzlies
 2016-12-01,Philadelphia 76ers,Charlotte Hornets
-2016-12-01,Phoenix Suns,Milwaukee Bucks
-2016-12-01,Portland Trail Blazers,Minnesota Timberwolves
-2016-12-01,Washington Wizards,Cleveland Cavaliers
-2016-12-02,Boston Celtics,Sacramento Kings
-2016-12-02,Brooklyn Nets,Indiana Pacers
 2016-12-02,Chicago Bulls,Phoenix Suns
 2016-12-02,Cleveland Cavaliers,Portland Trail Blazers
 2016-12-02,Denver Nuggets,Toronto Raptors
-2016-12-02,Detroit Pistons,Utah Jazz
-2016-12-02,Houston Rockets,San Antonio Spurs
 2016-12-02,Indiana Pacers,Brooklyn Nets
-2016-12-02,Los Angeles Clippers,Los Angeles Lakers
 2016-12-02,Los Angeles Lakers,Los Angeles Clippers
-2016-12-02,New Orleans Pelicans,Orlando Magic
 2016-12-02,New York Knicks,Philadelphia 76ers
 2016-12-02,Orlando Magic,New Orleans Pelicans
-2016-12-02,Philadelphia 76ers,New York Knicks
-2016-12-02,Phoenix Suns,Chicago Bulls
-2016-12-02,Portland Trail Blazers,Cleveland Cavaliers
 2016-12-02,Sacramento Kings,Boston Celtics
 2016-12-02,San Antonio Spurs,Houston Rockets
-2016-12-02,Toronto Raptors,Denver Nuggets
 2016-12-02,Utah Jazz,Detroit Pistons
-2016-12-03,Dallas Mavericks,Denver Nuggets
 2016-12-03,Denver Nuggets,Dallas Mavericks
-2016-12-03,Golden State Warriors,Memphis Grizzlies
 2016-12-03,Memphis Grizzlies,Golden State Warriors
 2016-12-03,Miami Heat,Milwaukee Bucks
-2016-12-03,Milwaukee Bucks,Miami Heat
-2016-12-03,Oklahoma City Thunder,Washington Wizards
 2016-12-03,Washington Wizards,Oklahoma City Thunder
 2016-12-04,Atlanta Hawks,Portland Trail Blazers
-2016-12-04,Boston Celtics,Golden State Warriors
 2016-12-04,Brooklyn Nets,Minnesota Timberwolves
 2016-12-04,Charlotte Hornets,Indiana Pacers
 2016-12-04,Chicago Bulls,Milwaukee Bucks
-2016-12-04,Cleveland Cavaliers,Toronto Raptors
-2016-12-04,Detroit Pistons,Los Angeles Clippers
 2016-12-04,Golden State Warriors,Boston Celtics
-2016-12-04,Indiana Pacers,Charlotte Hornets
 2016-12-04,Los Angeles Clippers,Detroit Pistons
-2016-12-04,Milwaukee Bucks,Chicago Bulls
-2016-12-04,Minnesota Timberwolves,Brooklyn Nets
 2016-12-04,New York Knicks,Phoenix Suns
-2016-12-04,Phoenix Suns,New York Knicks
-2016-12-04,Portland Trail Blazers,Atlanta Hawks
-2016-12-04,Sacramento Kings,Utah Jazz
 2016-12-04,Toronto Raptors,Cleveland Cavaliers
 2016-12-04,Utah Jazz,Sacramento Kings
-2016-12-05,Atlanta Hawks,Orlando Magic
-2016-12-05,Cleveland Cavaliers,Philadelphia 76ers
-2016-12-05,Dallas Mavericks,Los Angeles Clippers
 2016-12-05,Denver Nuggets,Houston Rockets
-2016-12-05,Houston Rockets,Denver Nuggets
 2016-12-05,Los Angeles Clippers,Dallas Mavericks
 2016-12-05,Los Angeles Lakers,Sacramento Kings
-2016-12-05,Memphis Grizzlies,Oklahoma City Thunder
 2016-12-05,Miami Heat,New Orleans Pelicans
-2016-12-05,New Orleans Pelicans,Miami Heat
 2016-12-05,Oklahoma City Thunder,Memphis Grizzlies
 2016-12-05,Orlando Magic,Atlanta Hawks
 2016-12-05,Philadelphia 76ers,Cleveland Cavaliers
-2016-12-05,Phoenix Suns,Washington Wizards
-2016-12-05,Sacramento Kings,Los Angeles Lakers
 2016-12-05,Washington Wizards,Phoenix Suns
-2016-12-06,Brooklyn Nets,Los Angeles Lakers
 2016-12-06,Charlotte Hornets,Chicago Bulls
-2016-12-06,Chicago Bulls,Charlotte Hornets
-2016-12-06,Detroit Pistons,Indiana Pacers
-2016-12-06,Golden State Warriors,Utah Jazz
 2016-12-06,Indiana Pacers,Detroit Pistons
 2016-12-06,Los Angeles Lakers,Brooklyn Nets
 2016-12-06,Milwaukee Bucks,Toronto Raptors
 2016-12-06,Minnesota Timberwolves,San Antonio Spurs
 2016-12-06,New York Knicks,Portland Trail Blazers
-2016-12-06,Portland Trail Blazers,New York Knicks
-2016-12-06,San Antonio Spurs,Minnesota Timberwolves
-2016-12-06,Toronto Raptors,Milwaukee Bucks
 2016-12-06,Utah Jazz,Golden State Warriors
 2016-12-07,Atlanta Hawks,Denver Nuggets
 2016-12-07,Boston Celtics,New Orleans Pelicans
-2016-12-07,Cleveland Cavaliers,Miami Heat
-2016-12-07,Denver Nuggets,Atlanta Hawks
 2016-12-07,Detroit Pistons,Memphis Grizzlies
 2016-12-07,Los Angeles Clippers,Philadelphia 76ers
-2016-12-07,Memphis Grizzlies,Detroit Pistons
 2016-12-07,Miami Heat,Cleveland Cavaliers
-2016-12-07,New Orleans Pelicans,Boston Celtics
-2016-12-07,Oklahoma City Thunder,Orlando Magic
 2016-12-07,Orlando Magic,Oklahoma City Thunder
-2016-12-07,Philadelphia 76ers,Los Angeles Clippers
 2016-12-07,Phoenix Suns,Sacramento Kings
-2016-12-07,Sacramento Kings,Phoenix Suns
 2016-12-08,Brooklyn Nets,Golden State Warriors
-2016-12-08,Chicago Bulls,Toronto Raptors
-2016-12-08,Dallas Mavericks,Los Angeles Lakers
-2016-12-08,Golden State Warriors,Brooklyn Nets
 2016-12-08,Houston Rockets,Utah Jazz
 2016-12-08,Los Angeles Lakers,Dallas Mavericks
 2016-12-08,Milwaukee Bucks,New York Knicks
-2016-12-08,Minnesota Timberwolves,Washington Wizards
-2016-12-08,New York Knicks,Milwaukee Bucks
-2016-12-08,Phoenix Suns,Portland Trail Blazers
 2016-12-08,Portland Trail Blazers,Phoenix Suns
 2016-12-08,Toronto Raptors,Chicago Bulls
-2016-12-08,Utah Jazz,Houston Rockets
 2016-12-08,Washington Wizards,Minnesota Timberwolves
 2016-12-09,Atlanta Hawks,Boston Celtics
-2016-12-09,Boston Celtics,Atlanta Hawks
 2016-12-09,Charlotte Hornets,Orlando Magic
-2016-12-09,Cleveland Cavaliers,Los Angeles Lakers
-2016-12-09,Denver Nuggets,Memphis Grizzlies
 2016-12-09,Detroit Pistons,Miami Heat
-2016-12-09,Golden State Warriors,Toronto Raptors
-2016-12-09,Indiana Pacers,Milwaukee Bucks
 2016-12-09,Los Angeles Clippers,Sacramento Kings
 2016-12-09,Los Angeles Lakers,Cleveland Cavaliers
 2016-12-09,Memphis Grizzlies,Denver Nuggets
-2016-12-09,Miami Heat,Detroit Pistons
 2016-12-09,Milwaukee Bucks,Indiana Pacers
-2016-12-09,Oklahoma City Thunder,Philadelphia 76ers
-2016-12-09,Orlando Magic,Charlotte Hornets
 2016-12-09,Philadelphia 76ers,Oklahoma City Thunder
-2016-12-09,Sacramento Kings,Los Angeles Clippers
 2016-12-09,Toronto Raptors,Golden State Warriors
-2016-12-10,Cleveland Cavaliers,Portland Trail Blazers
 2016-12-10,Dallas Mavericks,Phoenix Suns
 2016-12-10,Denver Nuggets,San Antonio Spurs
-2016-12-10,Houston Rockets,Memphis Grizzlies
 2016-12-10,Memphis Grizzlies,Houston Rockets
-2016-12-10,Minnesota Timberwolves,New Orleans Pelicans
 2016-12-10,New Orleans Pelicans,Minnesota Timberwolves
 2016-12-10,New York Knicks,Oklahoma City Thunder
-2016-12-10,Oklahoma City Thunder,New York Knicks
-2016-12-10,Phoenix Suns,Dallas Mavericks
 2016-12-10,Portland Trail Blazers,Cleveland Cavaliers
-2016-12-10,San Antonio Spurs,Denver Nuggets
 2016-12-11,Atlanta Hawks,Boston Celtics
-2016-12-11,Boston Celtics,Atlanta Hawks
 2016-12-11,Brooklyn Nets,Phoenix Suns
 2016-12-11,Charlotte Hornets,Miami Heat
 2016-12-11,Chicago Bulls,Utah Jazz
 2016-12-11,Detroit Pistons,Houston Rockets
-2016-12-11,Golden State Warriors,Sacramento Kings
-2016-12-11,Houston Rockets,Detroit Pistons
 2016-12-11,Indiana Pacers,Toronto Raptors
 2016-12-11,Los Angeles Clippers,Milwaukee Bucks
-2016-12-11,Los Angeles Lakers,Philadelphia 76ers
-2016-12-11,Miami Heat,Charlotte Hornets
-2016-12-11,Milwaukee Bucks,Los Angeles Clippers
 2016-12-11,Orlando Magic,Washington Wizards
 2016-12-11,Philadelphia 76ers,Los Angeles Lakers
-2016-12-11,Phoenix Suns,Brooklyn Nets
 2016-12-11,Sacramento Kings,Golden State Warriors
-2016-12-11,Toronto Raptors,Indiana Pacers
-2016-12-11,Utah Jazz,Chicago Bulls
-2016-12-11,Washington Wizards,Orlando Magic
-2016-12-12,Atlanta Hawks,Minnesota Timberwolves
 2016-12-12,Cleveland Cavaliers,New York Knicks
-2016-12-12,Dallas Mavericks,New Orleans Pelicans
 2016-12-12,Denver Nuggets,Oklahoma City Thunder
 2016-12-12,Minnesota Timberwolves,Atlanta Hawks
 2016-12-12,New Orleans Pelicans,Dallas Mavericks
-2016-12-12,New York Knicks,Cleveland Cavaliers
-2016-12-12,Oklahoma City Thunder,Denver Nuggets
 2016-12-13,Boston Celtics,Charlotte Hornets
-2016-12-13,Brooklyn Nets,Toronto Raptors
-2016-12-13,Charlotte Hornets,Boston Celtics
 2016-12-13,Chicago Bulls,Milwaukee Bucks
-2016-12-13,Dallas Mavericks,Indiana Pacers
 2016-12-13,Detroit Pistons,Phoenix Suns
 2016-12-13,Golden State Warriors,San Antonio Spurs
-2016-12-13,Houston Rockets,Portland Trail Blazers
 2016-12-13,Indiana Pacers,Dallas Mavericks
-2016-12-13,Los Angeles Clippers,Orlando Magic
-2016-12-13,Los Angeles Lakers,Washington Wizards
 2016-12-13,Memphis Grizzlies,Utah Jazz
 2016-12-13,Miami Heat,Philadelphia 76ers
-2016-12-13,Milwaukee Bucks,Chicago Bulls
 2016-12-13,Orlando Magic,Los Angeles Clippers
-2016-12-13,Philadelphia 76ers,Miami Heat
-2016-12-13,Phoenix Suns,Detroit Pistons
 2016-12-13,Portland Trail Blazers,Houston Rockets
-2016-12-13,San Antonio Spurs,Golden State Warriors
 2016-12-13,Toronto Raptors,Brooklyn Nets
-2016-12-13,Utah Jazz,Memphis Grizzlies
 2016-12-13,Washington Wizards,Los Angeles Lakers
-2016-12-14,Atlanta Hawks,Denver Nuggets
 2016-12-14,Charlotte Hornets,New York Knicks
-2016-12-14,Cleveland Cavaliers,New Orleans Pelicans
 2016-12-14,Denver Nuggets,Atlanta Hawks
 2016-12-14,Minnesota Timberwolves,Oklahoma City Thunder
 2016-12-14,New Orleans Pelicans,Cleveland Cavaliers
-2016-12-14,New York Knicks,Charlotte Hornets
-2016-12-14,Oklahoma City Thunder,Minnesota Timberwolves
 2016-12-14,Sacramento Kings,San Antonio Spurs
-2016-12-14,San Antonio Spurs,Sacramento Kings
 2016-12-15,Boston Celtics,Phoenix Suns
 2016-12-15,Brooklyn Nets,Houston Rockets
 2016-12-15,Cleveland Cavaliers,Detroit Pistons
-2016-12-15,Dallas Mavericks,Orlando Magic
-2016-12-15,Denver Nuggets,Philadelphia 76ers
-2016-12-15,Detroit Pistons,Cleveland Cavaliers
 2016-12-15,Golden State Warriors,Memphis Grizzlies
-2016-12-15,Houston Rockets,Brooklyn Nets
-2016-12-15,Indiana Pacers,Los Angeles Lakers
-2016-12-15,Los Angeles Clippers,Miami Heat
 2016-12-15,Los Angeles Lakers,Indiana Pacers
-2016-12-15,Memphis Grizzlies,Golden State Warriors
 2016-12-15,Miami Heat,Los Angeles Clippers
-2016-12-15,Milwaukee Bucks,Toronto Raptors
-2016-12-15,Oklahoma City Thunder,Portland Trail Blazers
 2016-12-15,Orlando Magic,Dallas Mavericks
 2016-12-15,Philadelphia 76ers,Denver Nuggets
-2016-12-15,Phoenix Suns,Boston Celtics
 2016-12-15,Portland Trail Blazers,Oklahoma City Thunder
 2016-12-15,Toronto Raptors,Milwaukee Bucks
-2016-12-16,Atlanta Hawks,Boston Celtics
 2016-12-16,Boston Celtics,Atlanta Hawks
 2016-12-16,Charlotte Hornets,Washington Wizards
-2016-12-16,Chicago Bulls,Miami Heat
 2016-12-16,Miami Heat,Chicago Bulls
-2016-12-16,Minnesota Timberwolves,New Orleans Pelicans
 2016-12-16,New Orleans Pelicans,Minnesota Timberwolves
 2016-12-16,New York Knicks,Sacramento Kings
-2016-12-16,Sacramento Kings,New York Knicks
 2016-12-16,San Antonio Spurs,Utah Jazz
-2016-12-16,Utah Jazz,San Antonio Spurs
-2016-12-16,Washington Wizards,Charlotte Hornets
 2016-12-17,Brooklyn Nets,Philadelphia 76ers
 2016-12-17,Dallas Mavericks,Phoenix Suns
-2016-12-17,Denver Nuggets,Minnesota Timberwolves
 2016-12-17,Detroit Pistons,Milwaukee Bucks
-2016-12-17,Golden State Warriors,Houston Rockets
 2016-12-17,Houston Rockets,Golden State Warriors
-2016-12-17,Indiana Pacers,Orlando Magic
 2016-12-17,Los Angeles Lakers,Portland Trail Blazers
 2016-12-17,Memphis Grizzlies,New York Knicks
-2016-12-17,Milwaukee Bucks,Detroit Pistons
 2016-12-17,Minnesota Timberwolves,Denver Nuggets
-2016-12-17,New York Knicks,Memphis Grizzlies
 2016-12-17,Orlando Magic,Indiana Pacers
-2016-12-17,Philadelphia 76ers,Brooklyn Nets
-2016-12-17,Phoenix Suns,Dallas Mavericks
-2016-12-17,Portland Trail Blazers,Los Angeles Lakers
 2016-12-18,Boston Celtics,Toronto Raptors
-2016-12-18,Charlotte Hornets,Cleveland Cavaliers
 2016-12-18,Cleveland Cavaliers,Charlotte Hornets
-2016-12-18,Indiana Pacers,Washington Wizards
-2016-12-18,Los Angeles Clippers,Utah Jazz
 2016-12-18,Miami Heat,Oklahoma City Thunder
-2016-12-18,Oklahoma City Thunder,Miami Heat
-2016-12-18,Toronto Raptors,Boston Celtics
 2016-12-18,Utah Jazz,Los Angeles Clippers
 2016-12-18,Washington Wizards,Indiana Pacers
-2016-12-19,Atlanta Hawks,Toronto Raptors
-2016-12-19,Brooklyn Nets,New York Knicks
-2016-12-19,Charlotte Hornets,Detroit Pistons
 2016-12-19,Chicago Bulls,Orlando Magic
 2016-12-19,Dallas Mavericks,Milwaukee Bucks
 2016-12-19,Denver Nuggets,Los Angeles Lakers
 2016-12-19,Detroit Pistons,Charlotte Hornets
 2016-12-19,Golden State Warriors,Los Angeles Clippers
 2016-12-19,Houston Rockets,Philadelphia 76ers
-2016-12-19,Los Angeles Clippers,Golden State Warriors
-2016-12-19,Los Angeles Lakers,Denver Nuggets
 2016-12-19,Memphis Grizzlies,Minnesota Timberwolves
-2016-12-19,Milwaukee Bucks,Dallas Mavericks
-2016-12-19,Minnesota Timberwolves,Memphis Grizzlies
 2016-12-19,New Orleans Pelicans,Portland Trail Blazers
 2016-12-19,New York Knicks,Brooklyn Nets
 2016-12-19,Oklahoma City Thunder,Sacramento Kings
-2016-12-19,Orlando Magic,Chicago Bulls
-2016-12-19,Philadelphia 76ers,Houston Rockets
-2016-12-19,Phoenix Suns,San Antonio Spurs
-2016-12-19,Portland Trail Blazers,New Orleans Pelicans
-2016-12-19,Sacramento Kings,Oklahoma City Thunder
 2016-12-19,San Antonio Spurs,Phoenix Suns
 2016-12-19,Toronto Raptors,Atlanta Hawks
 2016-12-20,Boston Celtics,Indiana Pacers
-2016-12-20,Indiana Pacers,Boston Celtics
-2016-12-20,Los Angeles Lakers,Utah Jazz
 2016-12-20,Utah Jazz,Los Angeles Lakers
-2016-12-21,Atlanta Hawks,Detroit Pistons
 2016-12-21,Brooklyn Nets,Charlotte Hornets
-2016-12-21,Charlotte Hornets,Brooklyn Nets
-2016-12-21,Chicago Bulls,Memphis Grizzlies
-2016-12-21,Cleveland Cavaliers,Golden State Warriors
-2016-12-21,Dallas Mavericks,Portland Trail Blazers
-2016-12-21,Denver Nuggets,Oklahoma City Thunder
 2016-12-21,Detroit Pistons,Atlanta Hawks
 2016-12-21,Golden State Warriors,Cleveland Cavaliers
-2016-12-21,Houston Rockets,Phoenix Suns
-2016-12-21,Indiana Pacers,New York Knicks
 2016-12-21,Los Angeles Clippers,San Antonio Spurs
 2016-12-21,Memphis Grizzlies,Chicago Bulls
 2016-12-21,Miami Heat,Minnesota Timberwolves
-2016-12-21,Milwaukee Bucks,Sacramento Kings
-2016-12-21,Minnesota Timberwolves,Miami Heat
-2016-12-21,New Orleans Pelicans,Washington Wizards
 2016-12-21,New York Knicks,Indiana Pacers
 2016-12-21,Oklahoma City Thunder,Denver Nuggets
-2016-12-21,Orlando Magic,Toronto Raptors
 2016-12-21,Phoenix Suns,Houston Rockets
 2016-12-21,Portland Trail Blazers,Dallas Mavericks
 2016-12-21,Sacramento Kings,Milwaukee Bucks
-2016-12-21,San Antonio Spurs,Los Angeles Clippers
 2016-12-21,Toronto Raptors,Orlando Magic
 2016-12-21,Washington Wizards,New Orleans Pelicans
-2016-12-22,Los Angeles Lakers,Utah Jazz
 2016-12-22,Utah Jazz,Los Angeles Lakers
-2016-12-23,Atlanta Hawks,Utah Jazz
-2016-12-23,Boston Celtics,Brooklyn Nets
 2016-12-23,Brooklyn Nets,Boston Celtics
-2016-12-23,Charlotte Hornets,Memphis Grizzlies
-2016-12-23,Chicago Bulls,Washington Wizards
 2016-12-23,Cleveland Cavaliers,Orlando Magic
-2016-12-23,Dallas Mavericks,Portland Trail Blazers
 2016-12-23,Denver Nuggets,Los Angeles Lakers
-2016-12-23,Detroit Pistons,Miami Heat
 2016-12-23,Golden State Warriors,Houston Rockets
-2016-12-23,Houston Rockets,Golden State Warriors
 2016-12-23,Indiana Pacers,Toronto Raptors
 2016-12-23,Los Angeles Clippers,San Antonio Spurs
-2016-12-23,Los Angeles Lakers,Denver Nuggets
 2016-12-23,Memphis Grizzlies,Charlotte Hornets
 2016-12-23,Miami Heat,Detroit Pistons
-2016-12-23,Milwaukee Bucks,Oklahoma City Thunder
-2016-12-23,Minnesota Timberwolves,New York Knicks
 2016-12-23,New Orleans Pelicans,Philadelphia 76ers
 2016-12-23,New York Knicks,Minnesota Timberwolves
 2016-12-23,Oklahoma City Thunder,Milwaukee Bucks
-2016-12-23,Orlando Magic,Cleveland Cavaliers
-2016-12-23,Philadelphia 76ers,New Orleans Pelicans
 2016-12-23,Phoenix Suns,Sacramento Kings
 2016-12-23,Portland Trail Blazers,Dallas Mavericks
-2016-12-23,Sacramento Kings,Phoenix Suns
-2016-12-23,San Antonio Spurs,Los Angeles Clippers
-2016-12-23,Toronto Raptors,Indiana Pacers
 2016-12-23,Utah Jazz,Atlanta Hawks
 2016-12-23,Washington Wizards,Chicago Bulls
-2016-12-25,Atlanta Hawks,Charlotte Hornets
 2016-12-25,Brooklyn Nets,Washington Wizards
 2016-12-25,Charlotte Hornets,Atlanta Hawks
 2016-12-25,Chicago Bulls,Sacramento Kings
-2016-12-25,Cleveland Cavaliers,Miami Heat
-2016-12-25,Dallas Mavericks,Phoenix Suns
 2016-12-25,Denver Nuggets,Detroit Pistons
-2016-12-25,Detroit Pistons,Denver Nuggets
 2016-12-25,Golden State Warriors,Toronto Raptors
-2016-12-25,Houston Rockets,Utah Jazz
-2016-12-25,Los Angeles Lakers,New Orleans Pelicans
 2016-12-25,Miami Heat,Cleveland Cavaliers
 2016-12-25,Milwaukee Bucks,Portland Trail Blazers
 2016-12-25,New Orleans Pelicans,Los Angeles Lakers
-2016-12-25,New York Knicks,Oklahoma City Thunder
 2016-12-25,Oklahoma City Thunder,New York Knicks
-2016-12-25,Philadelphia 76ers,San Antonio Spurs
 2016-12-25,Phoenix Suns,Dallas Mavericks
-2016-12-25,Portland Trail Blazers,Milwaukee Bucks
-2016-12-25,Sacramento Kings,Chicago Bulls
 2016-12-25,San Antonio Spurs,Philadelphia 76ers
-2016-12-25,Toronto Raptors,Golden State Warriors
 2016-12-25,Utah Jazz,Houston Rockets
-2016-12-25,Washington Wizards,Brooklyn Nets
-2016-12-26,Boston Celtics,Minnesota Timberwolves
 2016-12-26,Brooklyn Nets,Orlando Magic
-2016-12-26,Indiana Pacers,Los Angeles Clippers
 2016-12-26,Los Angeles Clippers,Indiana Pacers
 2016-12-26,Minnesota Timberwolves,Boston Celtics
-2016-12-26,Orlando Magic,Brooklyn Nets
-2016-12-27,Atlanta Hawks,New Orleans Pelicans
 2016-12-27,Charlotte Hornets,Milwaukee Bucks
-2016-12-27,Chicago Bulls,Los Angeles Lakers
-2016-12-27,Cleveland Cavaliers,Philadelphia 76ers
-2016-12-27,Dallas Mavericks,San Antonio Spurs
-2016-12-27,Denver Nuggets,Portland Trail Blazers
 2016-12-27,Golden State Warriors,Utah Jazz
-2016-12-27,Houston Rockets,Phoenix Suns
 2016-12-27,Los Angeles Lakers,Chicago Bulls
 2016-12-27,Memphis Grizzlies,Washington Wizards
-2016-12-27,Milwaukee Bucks,Charlotte Hornets
 2016-12-27,New Orleans Pelicans,Atlanta Hawks
 2016-12-27,Philadelphia 76ers,Cleveland Cavaliers
 2016-12-27,Phoenix Suns,Houston Rockets
 2016-12-27,Portland Trail Blazers,Denver Nuggets
 2016-12-27,San Antonio Spurs,Dallas Mavericks
-2016-12-27,Utah Jazz,Golden State Warriors
-2016-12-27,Washington Wizards,Memphis Grizzlies
 2016-12-28,Boston Celtics,Brooklyn Nets
-2016-12-28,Brooklyn Nets,Boston Celtics
 2016-12-28,Detroit Pistons,New York Knicks
 2016-12-28,Indiana Pacers,Oklahoma City Thunder
-2016-12-28,Los Angeles Clippers,Toronto Raptors
 2016-12-28,Miami Heat,Orlando Magic
 2016-12-28,Minnesota Timberwolves,Sacramento Kings
-2016-12-28,New York Knicks,Detroit Pistons
-2016-12-28,Oklahoma City Thunder,Indiana Pacers
-2016-12-28,Orlando Magic,Miami Heat
-2016-12-28,Sacramento Kings,Minnesota Timberwolves
 2016-12-28,Toronto Raptors,Los Angeles Clippers
-2016-12-29,Charlotte Hornets,Chicago Bulls
 2016-12-29,Chicago Bulls,Charlotte Hornets
 2016-12-29,Cleveland Cavaliers,Washington Wizards
-2016-12-29,Dallas Mavericks,Milwaukee Bucks
-2016-12-29,Houston Rockets,Minnesota Timberwolves
-2016-12-29,Memphis Grizzlies,Phoenix Suns
 2016-12-29,Milwaukee Bucks,Dallas Mavericks
 2016-12-29,Minnesota Timberwolves,Houston Rockets
 2016-12-29,New Orleans Pelicans,Orlando Magic
-2016-12-29,Orlando Magic,New Orleans Pelicans
 2016-12-29,Philadelphia 76ers,San Antonio Spurs
 2016-12-29,Phoenix Suns,Memphis Grizzlies
 2016-12-29,Portland Trail Blazers,Utah Jazz
-2016-12-29,San Antonio Spurs,Philadelphia 76ers
-2016-12-29,Utah Jazz,Portland Trail Blazers
-2016-12-29,Washington Wizards,Cleveland Cavaliers
-2016-12-30,Atlanta Hawks,Miami Heat
 2016-12-30,Boston Celtics,Toronto Raptors
 2016-12-30,Brooklyn Nets,Indiana Pacers
 2016-12-30,Cleveland Cavaliers,Sacramento Kings
-2016-12-30,Dallas Mavericks,Detroit Pistons
 2016-12-30,Denver Nuggets,New York Knicks
 2016-12-30,Detroit Pistons,Dallas Mavericks
-2016-12-30,Golden State Warriors,Los Angeles Clippers
-2016-12-30,Indiana Pacers,Brooklyn Nets
 2016-12-30,Los Angeles Clippers,Golden State Warriors
-2016-12-30,Los Angeles Lakers,Phoenix Suns
 2016-12-30,Miami Heat,Atlanta Hawks
-2016-12-30,New Orleans Pelicans,Oklahoma City Thunder
-2016-12-30,New York Knicks,Denver Nuggets
 2016-12-30,Oklahoma City Thunder,New Orleans Pelicans
 2016-12-30,Phoenix Suns,Los Angeles Lakers
-2016-12-30,Sacramento Kings,Cleveland Cavaliers
-2016-12-30,Toronto Raptors,Boston Celtics
 2016-12-31,Charlotte Hornets,Milwaukee Bucks
 2016-12-31,Chicago Bulls,San Antonio Spurs
-2016-12-31,Houston Rockets,Philadelphia 76ers
-2016-12-31,Memphis Grizzlies,Minnesota Timberwolves
-2016-12-31,Milwaukee Bucks,Charlotte Hornets
 2016-12-31,Minnesota Timberwolves,Memphis Grizzlies
-2016-12-31,Orlando Magic,Washington Wizards
 2016-12-31,Philadelphia 76ers,Houston Rockets
 2016-12-31,Portland Trail Blazers,Utah Jazz
-2016-12-31,San Antonio Spurs,Chicago Bulls
-2016-12-31,Utah Jazz,Portland Trail Blazers
 2016-12-31,Washington Wizards,Orlando Magic
 2017-01-01,Atlanta Hawks,New Orleans Pelicans
 2017-01-01,Boston Celtics,Detroit Pistons
-2017-01-01,Cleveland Cavaliers,Dallas Mavericks
 2017-01-01,Dallas Mavericks,Cleveland Cavaliers
-2017-01-01,Denver Nuggets,Golden State Warriors
-2017-01-01,Detroit Pistons,Boston Celtics
 2017-01-01,Golden State Warriors,Denver Nuggets
-2017-01-01,Los Angeles Clippers,Los Angeles Lakers
 2017-01-01,Los Angeles Lakers,Los Angeles Clippers
-2017-01-01,New Orleans Pelicans,Atlanta Hawks
-2017-01-01,New York Knicks,Washington Wizards
-2017-01-01,Oklahoma City Thunder,Phoenix Suns
 2017-01-01,Phoenix Suns,Oklahoma City Thunder
 2017-01-01,Sacramento Kings,San Antonio Spurs
-2017-01-01,San Antonio Spurs,Sacramento Kings
 2017-01-01,Washington Wizards,New York Knicks
-2017-01-02,Brooklyn Nets,Toronto Raptors
-2017-01-02,Chicago Bulls,Houston Rockets
 2017-01-02,Houston Rockets,Chicago Bulls
 2017-01-02,Indiana Pacers,Miami Heat
-2017-01-02,Miami Heat,Indiana Pacers
 2017-01-02,Milwaukee Bucks,Philadelphia 76ers
 2017-01-02,Minnesota Timberwolves,Utah Jazz
-2017-01-02,Philadelphia 76ers,Milwaukee Bucks
 2017-01-02,Toronto Raptors,Brooklyn Nets
-2017-01-02,Utah Jazz,Minnesota Timberwolves
 2017-01-03,Atlanta Hawks,Memphis Grizzlies
 2017-01-03,Boston Celtics,Cleveland Cavaliers
 2017-01-03,Charlotte Hornets,New Orleans Pelicans
-2017-01-03,Cleveland Cavaliers,Boston Celtics
-2017-01-03,Dallas Mavericks,Los Angeles Clippers
-2017-01-03,Denver Nuggets,Detroit Pistons
 2017-01-03,Detroit Pistons,Denver Nuggets
-2017-01-03,Golden State Warriors,Washington Wizards
 2017-01-03,Los Angeles Clippers,Dallas Mavericks
-2017-01-03,Los Angeles Lakers,Portland Trail Blazers
-2017-01-03,Memphis Grizzlies,Atlanta Hawks
-2017-01-03,New Orleans Pelicans,Charlotte Hornets
-2017-01-03,Orlando Magic,San Antonio Spurs
-2017-01-03,Phoenix Suns,Sacramento Kings
 2017-01-03,Portland Trail Blazers,Los Angeles Lakers
 2017-01-03,Sacramento Kings,Phoenix Suns
 2017-01-03,San Antonio Spurs,Orlando Magic
 2017-01-03,Washington Wizards,Golden State Warriors
 2017-01-04,Boston Celtics,Denver Nuggets
-2017-01-04,Brooklyn Nets,Detroit Pistons
-2017-01-04,Chicago Bulls,Dallas Mavericks
 2017-01-04,Dallas Mavericks,Chicago Bulls
-2017-01-04,Denver Nuggets,Boston Celtics
 2017-01-04,Detroit Pistons,Brooklyn Nets
 2017-01-04,Houston Rockets,Utah Jazz
 2017-01-04,Indiana Pacers,Philadelphia 76ers
-2017-01-04,Miami Heat,Milwaukee Bucks
 2017-01-04,Milwaukee Bucks,Miami Heat
 2017-01-04,Minnesota Timberwolves,Toronto Raptors
-2017-01-04,Oklahoma City Thunder,Sacramento Kings
-2017-01-04,Philadelphia 76ers,Indiana Pacers
 2017-01-04,Sacramento Kings,Oklahoma City Thunder
-2017-01-04,Toronto Raptors,Minnesota Timberwolves
-2017-01-04,Utah Jazz,Houston Rockets
 2017-01-05,Atlanta Hawks,Los Angeles Clippers
-2017-01-05,Charlotte Hornets,Toronto Raptors
-2017-01-05,Chicago Bulls,San Antonio Spurs
-2017-01-05,Cleveland Cavaliers,Orlando Magic
-2017-01-05,Golden State Warriors,New York Knicks
 2017-01-05,Houston Rockets,Portland Trail Blazers
-2017-01-05,Los Angeles Clippers,Atlanta Hawks
 2017-01-05,Los Angeles Lakers,Phoenix Suns
-2017-01-05,Memphis Grizzlies,New Orleans Pelicans
 2017-01-05,New Orleans Pelicans,Memphis Grizzlies
 2017-01-05,New York Knicks,Golden State Warriors
 2017-01-05,Orlando Magic,Cleveland Cavaliers
-2017-01-05,Philadelphia 76ers,Washington Wizards
-2017-01-05,Phoenix Suns,Los Angeles Lakers
-2017-01-05,Portland Trail Blazers,Houston Rockets
 2017-01-05,San Antonio Spurs,Chicago Bulls
 2017-01-05,Toronto Raptors,Charlotte Hornets
 2017-01-05,Washington Wizards,Philadelphia 76ers
 2017-01-06,Boston Celtics,Miami Heat
-2017-01-06,Brooklyn Nets,Detroit Pistons
-2017-01-06,Charlotte Hornets,Minnesota Timberwolves
 2017-01-06,Dallas Mavericks,Indiana Pacers
-2017-01-06,Denver Nuggets,Utah Jazz
 2017-01-06,Detroit Pistons,Brooklyn Nets
-2017-01-06,Indiana Pacers,Dallas Mavericks
-2017-01-06,Miami Heat,Boston Celtics
 2017-01-06,Minnesota Timberwolves,Charlotte Hornets
-2017-01-06,Oklahoma City Thunder,Sacramento Kings
 2017-01-06,Sacramento Kings,Oklahoma City Thunder
 2017-01-06,Utah Jazz,Denver Nuggets
 2017-01-07,Atlanta Hawks,Golden State Warriors
 2017-01-07,Chicago Bulls,Washington Wizards
-2017-01-07,Cleveland Cavaliers,San Antonio Spurs
-2017-01-07,Golden State Warriors,Atlanta Hawks
 2017-01-07,Houston Rockets,Los Angeles Clippers
-2017-01-07,Los Angeles Clippers,Houston Rockets
 2017-01-07,Memphis Grizzlies,Portland Trail Blazers
-2017-01-07,New Orleans Pelicans,Phoenix Suns
-2017-01-07,New York Knicks,Orlando Magic
 2017-01-07,Orlando Magic,New York Knicks
-2017-01-07,Philadelphia 76ers,Toronto Raptors
 2017-01-07,Phoenix Suns,New Orleans Pelicans
-2017-01-07,Portland Trail Blazers,Memphis Grizzlies
 2017-01-07,San Antonio Spurs,Cleveland Cavaliers
 2017-01-07,Toronto Raptors,Philadelphia 76ers
-2017-01-07,Washington Wizards,Chicago Bulls
 2017-01-08,Atlanta Hawks,Brooklyn Nets
-2017-01-08,Brooklyn Nets,Atlanta Hawks
-2017-01-08,Charlotte Hornets,Los Angeles Lakers
 2017-01-08,Dallas Mavericks,Denver Nuggets
-2017-01-08,Denver Nuggets,Dallas Mavericks
-2017-01-08,Detroit Pistons,Indiana Pacers
 2017-01-08,Indiana Pacers,Detroit Pistons
 2017-01-08,Los Angeles Lakers,Charlotte Hornets
-2017-01-08,Minnesota Timberwolves,Sacramento Kings
 2017-01-08,Sacramento Kings,Minnesota Timberwolves
-2017-01-09,Boston Celtics,Houston Rockets
-2017-01-09,Charlotte Hornets,Chicago Bulls
 2017-01-09,Chicago Bulls,Charlotte Hornets
-2017-01-09,Cleveland Cavaliers,Utah Jazz
 2017-01-09,Dallas Mavericks,Memphis Grizzlies
-2017-01-09,Golden State Warriors,Orlando Magic
 2017-01-09,Houston Rockets,Boston Celtics
 2017-01-09,Indiana Pacers,Los Angeles Clippers
-2017-01-09,Los Angeles Clippers,Indiana Pacers
-2017-01-09,Memphis Grizzlies,Dallas Mavericks
 2017-01-09,Miami Heat,Toronto Raptors
 2017-01-09,Milwaukee Bucks,Washington Wizards
-2017-01-09,Minnesota Timberwolves,Sacramento Kings
-2017-01-09,New Orleans Pelicans,Portland Trail Blazers
-2017-01-09,Oklahoma City Thunder,San Antonio Spurs
 2017-01-09,Orlando Magic,Golden State Warriors
 2017-01-09,Philadelphia 76ers,Phoenix Suns
-2017-01-09,Phoenix Suns,Philadelphia 76ers
 2017-01-09,Portland Trail Blazers,New Orleans Pelicans
 2017-01-09,Sacramento Kings,Minnesota Timberwolves
 2017-01-09,San Antonio Spurs,Oklahoma City Thunder
-2017-01-09,Toronto Raptors,Miami Heat
 2017-01-09,Utah Jazz,Cleveland Cavaliers
-2017-01-09,Washington Wizards,Milwaukee Bucks
-2017-01-10,Atlanta Hawks,New York Knicks
 2017-01-10,Brooklyn Nets,Detroit Pistons
-2017-01-10,Detroit Pistons,Brooklyn Nets
 2017-01-10,Los Angeles Lakers,New Orleans Pelicans
-2017-01-10,New Orleans Pelicans,Los Angeles Lakers
 2017-01-10,New York Knicks,Atlanta Hawks
 2017-01-10,Orlando Magic,Phoenix Suns
-2017-01-10,Phoenix Suns,Orlando Magic
 2017-01-11,Boston Celtics,Golden State Warriors
-2017-01-11,Charlotte Hornets,Philadelphia 76ers
 2017-01-11,Chicago Bulls,Washington Wizards
-2017-01-11,Cleveland Cavaliers,Sacramento Kings
-2017-01-11,Dallas Mavericks,Miami Heat
-2017-01-11,Denver Nuggets,Los Angeles Clippers
-2017-01-11,Golden State Warriors,Boston Celtics
 2017-01-11,Houston Rockets,San Antonio Spurs
-2017-01-11,Indiana Pacers,Toronto Raptors
 2017-01-11,Los Angeles Clippers,Denver Nuggets
 2017-01-11,Los Angeles Lakers,Memphis Grizzlies
-2017-01-11,Memphis Grizzlies,Los Angeles Lakers
 2017-01-11,Miami Heat,Dallas Mavericks
 2017-01-11,Milwaukee Bucks,Oklahoma City Thunder
-2017-01-11,Minnesota Timberwolves,Utah Jazz
-2017-01-11,Oklahoma City Thunder,Milwaukee Bucks
 2017-01-11,Philadelphia 76ers,Charlotte Hornets
 2017-01-11,Sacramento Kings,Cleveland Cavaliers
-2017-01-11,San Antonio Spurs,Houston Rockets
 2017-01-11,Toronto Raptors,Indiana Pacers
 2017-01-11,Utah Jazz,Minnesota Timberwolves
-2017-01-11,Washington Wizards,Chicago Bulls
 2017-01-12,Atlanta Hawks,Toronto Raptors
 2017-01-12,Brooklyn Nets,Detroit Pistons
-2017-01-12,Charlotte Hornets,Orlando Magic
-2017-01-12,Detroit Pistons,Brooklyn Nets
-2017-01-12,Minnesota Timberwolves,Phoenix Suns
-2017-01-12,New Orleans Pelicans,New York Knicks
 2017-01-12,New York Knicks,New Orleans Pelicans
 2017-01-12,Orlando Magic,Charlotte Hornets
 2017-01-12,Phoenix Suns,Minnesota Timberwolves
-2017-01-12,Toronto Raptors,Atlanta Hawks
 2017-01-13,Boston Celtics,Washington Wizards
-2017-01-13,Brooklyn Nets,Oklahoma City Thunder
 2017-01-13,Cleveland Cavaliers,New Orleans Pelicans
-2017-01-13,Dallas Mavericks,Sacramento Kings
 2017-01-13,Golden State Warriors,Utah Jazz
-2017-01-13,Indiana Pacers,Philadelphia 76ers
-2017-01-13,Los Angeles Clippers,Portland Trail Blazers
 2017-01-13,Los Angeles Lakers,Milwaukee Bucks
 2017-01-13,Miami Heat,San Antonio Spurs
-2017-01-13,Milwaukee Bucks,Los Angeles Lakers
-2017-01-13,New Orleans Pelicans,Cleveland Cavaliers
 2017-01-13,Oklahoma City Thunder,Brooklyn Nets
 2017-01-13,Philadelphia 76ers,Indiana Pacers
 2017-01-13,Portland Trail Blazers,Los Angeles Clippers
 2017-01-13,Sacramento Kings,Dallas Mavericks
-2017-01-13,San Antonio Spurs,Miami Heat
-2017-01-13,Utah Jazz,Golden State Warriors
-2017-01-13,Washington Wizards,Boston Celtics
 2017-01-14,Atlanta Hawks,Orlando Magic
 2017-01-14,Charlotte Hornets,Washington Wizards
-2017-01-14,Chicago Bulls,Sacramento Kings
 2017-01-14,Detroit Pistons,Indiana Pacers
 2017-01-14,Houston Rockets,Minnesota Timberwolves
-2017-01-14,Indiana Pacers,Detroit Pistons
-2017-01-14,Memphis Grizzlies,Utah Jazz
-2017-01-14,Minnesota Timberwolves,Houston Rockets
-2017-01-14,New York Knicks,Toronto Raptors
-2017-01-14,Orlando Magic,Atlanta Hawks
 2017-01-14,Sacramento Kings,Chicago Bulls
 2017-01-14,Toronto Raptors,New York Knicks
 2017-01-14,Utah Jazz,Memphis Grizzlies
-2017-01-14,Washington Wizards,Charlotte Hornets
 2017-01-15,Atlanta Hawks,Cleveland Cavaliers
-2017-01-15,Boston Celtics,Dallas Mavericks
-2017-01-15,Brooklyn Nets,Houston Rockets
-2017-01-15,Cleveland Cavaliers,Atlanta Hawks
 2017-01-15,Dallas Mavericks,Boston Celtics
-2017-01-15,Denver Nuggets,Los Angeles Lakers
 2017-01-15,Golden State Warriors,Milwaukee Bucks
 2017-01-15,Houston Rockets,Brooklyn Nets
-2017-01-15,Los Angeles Clippers,Philadelphia 76ers
 2017-01-15,Los Angeles Lakers,Denver Nuggets
-2017-01-15,Memphis Grizzlies,Portland Trail Blazers
-2017-01-15,Miami Heat,New Orleans Pelicans
-2017-01-15,Milwaukee Bucks,Golden State Warriors
 2017-01-15,New Orleans Pelicans,Miami Heat
 2017-01-15,Philadelphia 76ers,Los Angeles Clippers
-2017-01-15,Phoenix Suns,San Antonio Spurs
 2017-01-15,Portland Trail Blazers,Memphis Grizzlies
 2017-01-15,San Antonio Spurs,Phoenix Suns
 2017-01-16,Charlotte Hornets,Orlando Magic
 2017-01-16,Chicago Bulls,Indiana Pacers
-2017-01-16,Golden State Warriors,Sacramento Kings
-2017-01-16,Indiana Pacers,Chicago Bulls
-2017-01-16,Minnesota Timberwolves,Toronto Raptors
-2017-01-16,New York Knicks,Utah Jazz
-2017-01-16,Orlando Magic,Charlotte Hornets
 2017-01-16,Sacramento Kings,Golden State Warriors
 2017-01-16,Toronto Raptors,Minnesota Timberwolves
 2017-01-16,Utah Jazz,New York Knicks
-2017-01-17,Atlanta Hawks,Milwaukee Bucks
-2017-01-17,Boston Celtics,Miami Heat
 2017-01-17,Brooklyn Nets,Cleveland Cavaliers
-2017-01-17,Cleveland Cavaliers,Brooklyn Nets
 2017-01-17,Dallas Mavericks,New Orleans Pelicans
 2017-01-17,Denver Nuggets,Memphis Grizzlies
 2017-01-17,Detroit Pistons,San Antonio Spurs
 2017-01-17,Houston Rockets,Washington Wizards
-2017-01-17,Los Angeles Clippers,Oklahoma City Thunder
 2017-01-17,Los Angeles Lakers,Philadelphia 76ers
-2017-01-17,Memphis Grizzlies,Denver Nuggets
 2017-01-17,Miami Heat,Boston Celtics
 2017-01-17,Milwaukee Bucks,Atlanta Hawks
 2017-01-17,Minnesota Timberwolves,Portland Trail Blazers
-2017-01-17,New Orleans Pelicans,Dallas Mavericks
-2017-01-17,New York Knicks,Toronto Raptors
 2017-01-17,Oklahoma City Thunder,Los Angeles Clippers
-2017-01-17,Philadelphia 76ers,Los Angeles Lakers
-2017-01-17,Portland Trail Blazers,Minnesota Timberwolves
-2017-01-17,San Antonio Spurs,Detroit Pistons
 2017-01-17,Toronto Raptors,New York Knicks
-2017-01-17,Washington Wizards,Houston Rockets
-2017-01-18,Charlotte Hornets,Sacramento Kings
 2017-01-18,Chicago Bulls,Indiana Pacers
-2017-01-18,Golden State Warriors,Phoenix Suns
-2017-01-18,Indiana Pacers,Chicago Bulls
-2017-01-18,Philadelphia 76ers,Utah Jazz
 2017-01-18,Phoenix Suns,Golden State Warriors
 2017-01-18,Sacramento Kings,Charlotte Hornets
 2017-01-18,Utah Jazz,Philadelphia 76ers
 2017-01-19,Atlanta Hawks,Brooklyn Nets
-2017-01-19,Brooklyn Nets,Atlanta Hawks
-2017-01-19,Chicago Bulls,Milwaukee Bucks
-2017-01-19,Cleveland Cavaliers,New York Knicks
-2017-01-19,Dallas Mavericks,Phoenix Suns
-2017-01-19,Denver Nuggets,Los Angeles Lakers
 2017-01-19,Detroit Pistons,Orlando Magic
 2017-01-19,Houston Rockets,San Antonio Spurs
 2017-01-19,Los Angeles Clippers,Oklahoma City Thunder
@@ -1289,1172 +645,586 @@
 2017-01-19,Memphis Grizzlies,Toronto Raptors
 2017-01-19,Miami Heat,Washington Wizards
 2017-01-19,Milwaukee Bucks,Chicago Bulls
-2017-01-19,Minnesota Timberwolves,Utah Jazz
 2017-01-19,New Orleans Pelicans,Portland Trail Blazers
 2017-01-19,New York Knicks,Cleveland Cavaliers
-2017-01-19,Oklahoma City Thunder,Los Angeles Clippers
-2017-01-19,Orlando Magic,Detroit Pistons
 2017-01-19,Phoenix Suns,Dallas Mavericks
-2017-01-19,Portland Trail Blazers,New Orleans Pelicans
-2017-01-19,San Antonio Spurs,Houston Rockets
-2017-01-19,Toronto Raptors,Memphis Grizzlies
 2017-01-19,Utah Jazz,Minnesota Timberwolves
-2017-01-19,Washington Wizards,Miami Heat
-2017-01-20,Boston Celtics,Charlotte Hornets
 2017-01-20,Charlotte Hornets,Boston Celtics
 2017-01-20,Golden State Warriors,Philadelphia 76ers
-2017-01-20,Indiana Pacers,Sacramento Kings
-2017-01-20,Philadelphia 76ers,Golden State Warriors
 2017-01-20,Sacramento Kings,Indiana Pacers
-2017-01-21,Atlanta Hawks,San Antonio Spurs
-2017-01-21,Brooklyn Nets,Cleveland Cavaliers
 2017-01-21,Chicago Bulls,Oklahoma City Thunder
 2017-01-21,Cleveland Cavaliers,Brooklyn Nets
 2017-01-21,Dallas Mavericks,Portland Trail Blazers
-2017-01-21,Denver Nuggets,Phoenix Suns
-2017-01-21,Detroit Pistons,Washington Wizards
 2017-01-21,Houston Rockets,Memphis Grizzlies
 2017-01-21,Los Angeles Clippers,New Orleans Pelicans
 2017-01-21,Los Angeles Lakers,Minnesota Timberwolves
-2017-01-21,Memphis Grizzlies,Houston Rockets
-2017-01-21,Miami Heat,Utah Jazz
-2017-01-21,Minnesota Timberwolves,Los Angeles Lakers
-2017-01-21,New Orleans Pelicans,Los Angeles Clippers
 2017-01-21,New York Knicks,Orlando Magic
-2017-01-21,Oklahoma City Thunder,Chicago Bulls
-2017-01-21,Orlando Magic,New York Knicks
 2017-01-21,Phoenix Suns,Denver Nuggets
-2017-01-21,Portland Trail Blazers,Dallas Mavericks
 2017-01-21,San Antonio Spurs,Atlanta Hawks
 2017-01-21,Utah Jazz,Miami Heat
 2017-01-21,Washington Wizards,Detroit Pistons
-2017-01-22,Boston Celtics,Philadelphia 76ers
 2017-01-22,Indiana Pacers,Milwaukee Bucks
-2017-01-22,Milwaukee Bucks,Indiana Pacers
 2017-01-22,Philadelphia 76ers,Boston Celtics
 2017-01-22,Sacramento Kings,Toronto Raptors
-2017-01-22,Toronto Raptors,Sacramento Kings
-2017-01-23,Atlanta Hawks,Chicago Bulls
 2017-01-23,Boston Celtics,Brooklyn Nets
-2017-01-23,Brooklyn Nets,Boston Celtics
-2017-01-23,Charlotte Hornets,Houston Rockets
 2017-01-23,Chicago Bulls,Atlanta Hawks
 2017-01-23,Cleveland Cavaliers,Utah Jazz
 2017-01-23,Dallas Mavericks,Miami Heat
-2017-01-23,Denver Nuggets,New Orleans Pelicans
-2017-01-23,Detroit Pistons,San Antonio Spurs
 2017-01-23,Golden State Warriors,Phoenix Suns
 2017-01-23,Houston Rockets,Charlotte Hornets
 2017-01-23,Indiana Pacers,Orlando Magic
 2017-01-23,Los Angeles Clippers,Portland Trail Blazers
 2017-01-23,Los Angeles Lakers,Washington Wizards
-2017-01-23,Memphis Grizzlies,Oklahoma City Thunder
-2017-01-23,Miami Heat,Dallas Mavericks
 2017-01-23,New Orleans Pelicans,Denver Nuggets
-2017-01-23,New York Knicks,Sacramento Kings
 2017-01-23,Oklahoma City Thunder,Memphis Grizzlies
-2017-01-23,Orlando Magic,Indiana Pacers
-2017-01-23,Phoenix Suns,Golden State Warriors
-2017-01-23,Portland Trail Blazers,Los Angeles Clippers
 2017-01-23,Sacramento Kings,New York Knicks
 2017-01-23,San Antonio Spurs,Detroit Pistons
-2017-01-23,Utah Jazz,Cleveland Cavaliers
-2017-01-23,Washington Wizards,Los Angeles Lakers
-2017-01-24,Milwaukee Bucks,Philadelphia 76ers
 2017-01-24,Philadelphia 76ers,Milwaukee Bucks
 2017-01-24,Toronto Raptors,Utah Jazz
-2017-01-24,Utah Jazz,Toronto Raptors
 2017-01-25,Atlanta Hawks,Indiana Pacers
 2017-01-25,Boston Celtics,Oklahoma City Thunder
-2017-01-25,Brooklyn Nets,Charlotte Hornets
 2017-01-25,Charlotte Hornets,Brooklyn Nets
-2017-01-25,Denver Nuggets,Houston Rockets
-2017-01-25,Detroit Pistons,Portland Trail Blazers
 2017-01-25,Houston Rockets,Denver Nuggets
-2017-01-25,Indiana Pacers,Atlanta Hawks
 2017-01-25,Los Angeles Clippers,Phoenix Suns
 2017-01-25,Los Angeles Lakers,Minnesota Timberwolves
-2017-01-25,Memphis Grizzlies,San Antonio Spurs
-2017-01-25,Miami Heat,Washington Wizards
-2017-01-25,Milwaukee Bucks,New York Knicks
-2017-01-25,Minnesota Timberwolves,Los Angeles Lakers
 2017-01-25,New York Knicks,Milwaukee Bucks
-2017-01-25,Oklahoma City Thunder,Boston Celtics
-2017-01-25,Orlando Magic,Sacramento Kings
-2017-01-25,Phoenix Suns,Los Angeles Clippers
 2017-01-25,Portland Trail Blazers,Detroit Pistons
 2017-01-25,Sacramento Kings,Orlando Magic
 2017-01-25,San Antonio Spurs,Memphis Grizzlies
 2017-01-25,Washington Wizards,Miami Heat
-2017-01-26,Chicago Bulls,Utah Jazz
 2017-01-26,Cleveland Cavaliers,Philadelphia 76ers
-2017-01-26,Dallas Mavericks,Golden State Warriors
 2017-01-26,Golden State Warriors,Dallas Mavericks
-2017-01-26,New Orleans Pelicans,Portland Trail Blazers
-2017-01-26,Oklahoma City Thunder,Toronto Raptors
-2017-01-26,Philadelphia 76ers,Cleveland Cavaliers
 2017-01-26,Portland Trail Blazers,New Orleans Pelicans
 2017-01-26,Toronto Raptors,Oklahoma City Thunder
 2017-01-26,Utah Jazz,Chicago Bulls
-2017-01-27,Atlanta Hawks,Sacramento Kings
 2017-01-27,Brooklyn Nets,Milwaukee Bucks
-2017-01-27,Denver Nuggets,Los Angeles Clippers
 2017-01-27,Detroit Pistons,Miami Heat
 2017-01-27,Houston Rockets,Indiana Pacers
-2017-01-27,Indiana Pacers,Houston Rockets
 2017-01-27,Los Angeles Clippers,Denver Nuggets
-2017-01-27,Los Angeles Lakers,Memphis Grizzlies
 2017-01-27,Memphis Grizzlies,Los Angeles Lakers
-2017-01-27,Miami Heat,Detroit Pistons
-2017-01-27,Milwaukee Bucks,Brooklyn Nets
 2017-01-27,Orlando Magic,Toronto Raptors
 2017-01-27,Phoenix Suns,San Antonio Spurs
 2017-01-27,Sacramento Kings,Atlanta Hawks
-2017-01-27,San Antonio Spurs,Phoenix Suns
-2017-01-27,Toronto Raptors,Orlando Magic
-2017-01-28,Boston Celtics,Cleveland Cavaliers
 2017-01-28,Charlotte Hornets,Los Angeles Lakers
-2017-01-28,Chicago Bulls,Golden State Warriors
 2017-01-28,Cleveland Cavaliers,Boston Celtics
-2017-01-28,Dallas Mavericks,Oklahoma City Thunder
 2017-01-28,Golden State Warriors,Chicago Bulls
-2017-01-28,Los Angeles Lakers,Charlotte Hornets
-2017-01-28,Minnesota Timberwolves,Portland Trail Blazers
-2017-01-28,New Orleans Pelicans,Utah Jazz
 2017-01-28,New York Knicks,Washington Wizards
 2017-01-28,Oklahoma City Thunder,Dallas Mavericks
 2017-01-28,Portland Trail Blazers,Minnesota Timberwolves
 2017-01-28,Utah Jazz,New Orleans Pelicans
-2017-01-28,Washington Wizards,New York Knicks
 2017-01-29,Brooklyn Nets,Indiana Pacers
 2017-01-29,Chicago Bulls,Detroit Pistons
-2017-01-29,Denver Nuggets,Sacramento Kings
-2017-01-29,Detroit Pistons,Chicago Bulls
 2017-01-29,Houston Rockets,Toronto Raptors
-2017-01-29,Indiana Pacers,Brooklyn Nets
 2017-01-29,Memphis Grizzlies,Milwaukee Bucks
-2017-01-29,Miami Heat,Phoenix Suns
-2017-01-29,Milwaukee Bucks,Memphis Grizzlies
 2017-01-29,Phoenix Suns,Miami Heat
 2017-01-29,Sacramento Kings,Denver Nuggets
-2017-01-29,San Antonio Spurs,Utah Jazz
-2017-01-29,Toronto Raptors,Houston Rockets
 2017-01-29,Utah Jazz,San Antonio Spurs
 2017-01-30,Atlanta Hawks,Los Angeles Lakers
-2017-01-30,Boston Celtics,Indiana Pacers
 2017-01-30,Charlotte Hornets,Golden State Warriors
 2017-01-30,Cleveland Cavaliers,Philadelphia 76ers
 2017-01-30,Dallas Mavericks,Houston Rockets
-2017-01-30,Golden State Warriors,Charlotte Hornets
-2017-01-30,Houston Rockets,Dallas Mavericks
 2017-01-30,Indiana Pacers,Boston Celtics
 2017-01-30,Los Angeles Clippers,Washington Wizards
-2017-01-30,Los Angeles Lakers,Atlanta Hawks
-2017-01-30,New Orleans Pelicans,Oklahoma City Thunder
-2017-01-30,New York Knicks,Orlando Magic
 2017-01-30,Oklahoma City Thunder,New Orleans Pelicans
 2017-01-30,Orlando Magic,New York Knicks
-2017-01-30,Philadelphia 76ers,Cleveland Cavaliers
-2017-01-30,Portland Trail Blazers,Sacramento Kings
 2017-01-30,Sacramento Kings,Portland Trail Blazers
-2017-01-30,Washington Wizards,Los Angeles Clippers
 2017-01-31,Chicago Bulls,Detroit Pistons
-2017-01-31,Denver Nuggets,San Antonio Spurs
-2017-01-31,Detroit Pistons,Chicago Bulls
-2017-01-31,Golden State Warriors,Miami Heat
-2017-01-31,Memphis Grizzlies,Utah Jazz
 2017-01-31,Miami Heat,Golden State Warriors
 2017-01-31,Milwaukee Bucks,Minnesota Timberwolves
-2017-01-31,Minnesota Timberwolves,Milwaukee Bucks
 2017-01-31,San Antonio Spurs,Denver Nuggets
 2017-01-31,Utah Jazz,Memphis Grizzlies
 2017-02-01,Atlanta Hawks,Indiana Pacers
 2017-02-01,Boston Celtics,Detroit Pistons
-2017-02-01,Charlotte Hornets,New Orleans Pelicans
 2017-02-01,Cleveland Cavaliers,Oklahoma City Thunder
-2017-02-01,Dallas Mavericks,Houston Rockets
-2017-02-01,Detroit Pistons,Boston Celtics
 2017-02-01,Houston Rockets,Dallas Mavericks
-2017-02-01,Indiana Pacers,Atlanta Hawks
-2017-02-01,Los Angeles Clippers,Sacramento Kings
-2017-02-01,Los Angeles Lakers,Miami Heat
 2017-02-01,Miami Heat,Los Angeles Lakers
-2017-02-01,Milwaukee Bucks,Orlando Magic
 2017-02-01,New Orleans Pelicans,Charlotte Hornets
 2017-02-01,New York Knicks,Washington Wizards
-2017-02-01,Oklahoma City Thunder,Cleveland Cavaliers
 2017-02-01,Orlando Magic,Milwaukee Bucks
 2017-02-01,Philadelphia 76ers,Portland Trail Blazers
 2017-02-01,Phoenix Suns,Toronto Raptors
-2017-02-01,Portland Trail Blazers,Philadelphia 76ers
 2017-02-01,Sacramento Kings,Los Angeles Clippers
-2017-02-01,Toronto Raptors,Phoenix Suns
-2017-02-01,Washington Wizards,New York Knicks
-2017-02-02,Brooklyn Nets,Chicago Bulls
 2017-02-02,Chicago Bulls,Brooklyn Nets
 2017-02-02,Denver Nuggets,Los Angeles Clippers
-2017-02-02,Golden State Warriors,San Antonio Spurs
-2017-02-02,Los Angeles Clippers,Denver Nuggets
-2017-02-02,Memphis Grizzlies,Minnesota Timberwolves
 2017-02-02,Minnesota Timberwolves,Memphis Grizzlies
 2017-02-02,San Antonio Spurs,Golden State Warriors
-2017-02-03,Atlanta Hawks,Boston Celtics
 2017-02-03,Boston Celtics,Atlanta Hawks
 2017-02-03,Charlotte Hornets,Philadelphia 76ers
 2017-02-03,Chicago Bulls,Los Angeles Lakers
-2017-02-03,Cleveland Cavaliers,Houston Rockets
 2017-02-03,Detroit Pistons,Indiana Pacers
 2017-02-03,Houston Rockets,Cleveland Cavaliers
-2017-02-03,Indiana Pacers,Detroit Pistons
-2017-02-03,Los Angeles Lakers,Chicago Bulls
 2017-02-03,Miami Heat,Portland Trail Blazers
 2017-02-03,Milwaukee Bucks,Toronto Raptors
 2017-02-03,Minnesota Timberwolves,Washington Wizards
-2017-02-03,New Orleans Pelicans,Utah Jazz
 2017-02-03,Oklahoma City Thunder,Orlando Magic
-2017-02-03,Orlando Magic,Oklahoma City Thunder
-2017-02-03,Philadelphia 76ers,Charlotte Hornets
-2017-02-03,Phoenix Suns,Sacramento Kings
-2017-02-03,Portland Trail Blazers,Miami Heat
 2017-02-03,Sacramento Kings,Phoenix Suns
-2017-02-03,Toronto Raptors,Milwaukee Bucks
 2017-02-03,Utah Jazz,New Orleans Pelicans
-2017-02-03,Washington Wizards,Minnesota Timberwolves
 2017-02-04,Brooklyn Nets,New York Knicks
 2017-02-04,Dallas Mavericks,Los Angeles Clippers
 2017-02-04,Denver Nuggets,Golden State Warriors
-2017-02-04,Detroit Pistons,Memphis Grizzlies
-2017-02-04,Golden State Warriors,Denver Nuggets
-2017-02-04,Los Angeles Clippers,Dallas Mavericks
 2017-02-04,Memphis Grizzlies,Detroit Pistons
-2017-02-04,New York Knicks,Brooklyn Nets
-2017-02-04,Sacramento Kings,San Antonio Spurs
 2017-02-04,San Antonio Spurs,Sacramento Kings
-2017-02-05,Atlanta Hawks,Orlando Magic
 2017-02-05,Boston Celtics,Milwaukee Bucks
 2017-02-05,Charlotte Hornets,Portland Trail Blazers
 2017-02-05,Chicago Bulls,Los Angeles Clippers
 2017-02-05,Cleveland Cavaliers,Toronto Raptors
-2017-02-05,Houston Rockets,Miami Heat
 2017-02-05,Indiana Pacers,Washington Wizards
-2017-02-05,Los Angeles Clippers,Chicago Bulls
 2017-02-05,Miami Heat,Houston Rockets
-2017-02-05,Milwaukee Bucks,Boston Celtics
 2017-02-05,Minnesota Timberwolves,Oklahoma City Thunder
-2017-02-05,Oklahoma City Thunder,Minnesota Timberwolves
 2017-02-05,Orlando Magic,Atlanta Hawks
-2017-02-05,Phoenix Suns,Utah Jazz
-2017-02-05,Portland Trail Blazers,Charlotte Hornets
-2017-02-05,Toronto Raptors,Cleveland Cavaliers
 2017-02-05,Utah Jazz,Phoenix Suns
-2017-02-05,Washington Wizards,Indiana Pacers
-2017-02-06,Brooklyn Nets,Indiana Pacers
 2017-02-06,Dallas Mavericks,Sacramento Kings
-2017-02-06,Detroit Pistons,Los Angeles Lakers
-2017-02-06,Golden State Warriors,Milwaukee Bucks
 2017-02-06,Indiana Pacers,Brooklyn Nets
 2017-02-06,Los Angeles Lakers,Detroit Pistons
 2017-02-06,Memphis Grizzlies,San Antonio Spurs
 2017-02-06,Milwaukee Bucks,Golden State Warriors
 2017-02-06,Minnesota Timberwolves,New Orleans Pelicans
-2017-02-06,New Orleans Pelicans,Minnesota Timberwolves
 2017-02-06,New York Knicks,Philadelphia 76ers
-2017-02-06,Philadelphia 76ers,New York Knicks
-2017-02-06,Sacramento Kings,Dallas Mavericks
-2017-02-06,San Antonio Spurs,Memphis Grizzlies
-2017-02-07,Atlanta Hawks,Washington Wizards
 2017-02-07,Boston Celtics,New York Knicks
 2017-02-07,Charlotte Hornets,Denver Nuggets
-2017-02-07,Chicago Bulls,Portland Trail Blazers
 2017-02-07,Cleveland Cavaliers,Toronto Raptors
-2017-02-07,Denver Nuggets,Charlotte Hornets
 2017-02-07,Houston Rockets,Phoenix Suns
-2017-02-07,Los Angeles Clippers,Oklahoma City Thunder
-2017-02-07,Miami Heat,Orlando Magic
-2017-02-07,New York Knicks,Boston Celtics
 2017-02-07,Oklahoma City Thunder,Los Angeles Clippers
 2017-02-07,Orlando Magic,Miami Heat
-2017-02-07,Phoenix Suns,Houston Rockets
 2017-02-07,Portland Trail Blazers,Chicago Bulls
-2017-02-07,Toronto Raptors,Cleveland Cavaliers
 2017-02-07,Washington Wizards,Atlanta Hawks
-2017-02-08,Atlanta Hawks,Los Angeles Lakers
-2017-02-08,Brooklyn Nets,New Orleans Pelicans
-2017-02-08,Dallas Mavericks,Minnesota Timberwolves
-2017-02-08,Detroit Pistons,Orlando Magic
-2017-02-08,Golden State Warriors,Portland Trail Blazers
-2017-02-08,Indiana Pacers,Utah Jazz
 2017-02-08,Los Angeles Lakers,Atlanta Hawks
 2017-02-08,Memphis Grizzlies,San Antonio Spurs
 2017-02-08,Minnesota Timberwolves,Dallas Mavericks
 2017-02-08,New Orleans Pelicans,Brooklyn Nets
 2017-02-08,Orlando Magic,Detroit Pistons
 2017-02-08,Portland Trail Blazers,Golden State Warriors
-2017-02-08,San Antonio Spurs,Memphis Grizzlies
 2017-02-08,Utah Jazz,Indiana Pacers
-2017-02-09,Boston Celtics,Milwaukee Bucks
 2017-02-09,Charlotte Hornets,Los Angeles Clippers
 2017-02-09,Chicago Bulls,Miami Heat
-2017-02-09,Cleveland Cavaliers,Washington Wizards
 2017-02-09,Houston Rockets,Oklahoma City Thunder
-2017-02-09,Los Angeles Clippers,Charlotte Hornets
-2017-02-09,Miami Heat,Chicago Bulls
 2017-02-09,Milwaukee Bucks,Boston Celtics
 2017-02-09,New Orleans Pelicans,Sacramento Kings
-2017-02-09,New York Knicks,Philadelphia 76ers
-2017-02-09,Oklahoma City Thunder,Houston Rockets
 2017-02-09,Philadelphia 76ers,New York Knicks
-2017-02-09,Sacramento Kings,New Orleans Pelicans
 2017-02-09,Washington Wizards,Cleveland Cavaliers
-2017-02-10,Atlanta Hawks,Golden State Warriors
-2017-02-10,Brooklyn Nets,Orlando Magic
-2017-02-10,Dallas Mavericks,Washington Wizards
 2017-02-10,Denver Nuggets,Milwaukee Bucks
 2017-02-10,Golden State Warriors,Atlanta Hawks
 2017-02-10,Indiana Pacers,San Antonio Spurs
-2017-02-10,Los Angeles Clippers,Minnesota Timberwolves
-2017-02-10,Los Angeles Lakers,Phoenix Suns
 2017-02-10,Memphis Grizzlies,Miami Heat
-2017-02-10,Miami Heat,Memphis Grizzlies
-2017-02-10,Milwaukee Bucks,Denver Nuggets
 2017-02-10,Minnesota Timberwolves,Los Angeles Clippers
 2017-02-10,Oklahoma City Thunder,Toronto Raptors
 2017-02-10,Orlando Magic,Brooklyn Nets
 2017-02-10,Phoenix Suns,Los Angeles Lakers
-2017-02-10,Portland Trail Blazers,Utah Jazz
-2017-02-10,San Antonio Spurs,Indiana Pacers
-2017-02-10,Toronto Raptors,Oklahoma City Thunder
 2017-02-10,Utah Jazz,Portland Trail Blazers
 2017-02-10,Washington Wizards,Dallas Mavericks
 2017-02-11,Charlotte Hornets,New York Knicks
-2017-02-11,Chicago Bulls,Philadelphia 76ers
-2017-02-11,Detroit Pistons,Houston Rockets
 2017-02-11,Houston Rockets,Detroit Pistons
 2017-02-11,New Orleans Pelicans,Sacramento Kings
-2017-02-11,New York Knicks,Charlotte Hornets
 2017-02-11,Philadelphia 76ers,Chicago Bulls
-2017-02-11,Sacramento Kings,New Orleans Pelicans
 2017-02-12,Atlanta Hawks,Washington Wizards
-2017-02-12,Boston Celtics,Memphis Grizzlies
-2017-02-12,Brooklyn Nets,Cleveland Cavaliers
-2017-02-12,Chicago Bulls,Minnesota Timberwolves
 2017-02-12,Cleveland Cavaliers,Brooklyn Nets
 2017-02-12,Dallas Mavericks,Detroit Pistons
-2017-02-12,Detroit Pistons,Dallas Mavericks
 2017-02-12,Golden State Warriors,Oklahoma City Thunder
 2017-02-12,Indiana Pacers,Milwaukee Bucks
-2017-02-12,Los Angeles Clippers,Phoenix Suns
 2017-02-12,Los Angeles Lakers,San Antonio Spurs
 2017-02-12,Memphis Grizzlies,Boston Celtics
-2017-02-12,Miami Heat,Portland Trail Blazers
-2017-02-12,Milwaukee Bucks,Indiana Pacers
 2017-02-12,Minnesota Timberwolves,Chicago Bulls
-2017-02-12,Oklahoma City Thunder,Golden State Warriors
 2017-02-12,Orlando Magic,Philadelphia 76ers
-2017-02-12,Philadelphia 76ers,Orlando Magic
 2017-02-12,Phoenix Suns,Los Angeles Clippers
 2017-02-12,Portland Trail Blazers,Miami Heat
-2017-02-12,San Antonio Spurs,Los Angeles Lakers
-2017-02-12,Toronto Raptors,Utah Jazz
 2017-02-12,Utah Jazz,Toronto Raptors
-2017-02-12,Washington Wizards,Atlanta Hawks
-2017-02-13,Charlotte Hornets,New York Knicks
-2017-02-13,Denver Nuggets,Houston Rockets
 2017-02-13,Golden State Warriors,Sacramento Kings
 2017-02-13,Houston Rockets,Denver Nuggets
 2017-02-13,New York Knicks,Charlotte Hornets
-2017-02-13,Sacramento Kings,Golden State Warriors
 2017-02-14,Atlanta Hawks,Minnesota Timberwolves
-2017-02-14,Boston Celtics,Milwaukee Bucks
-2017-02-14,Brooklyn Nets,Portland Trail Blazers
 2017-02-14,Chicago Bulls,Cleveland Cavaliers
-2017-02-14,Cleveland Cavaliers,Chicago Bulls
 2017-02-14,Dallas Mavericks,Washington Wizards
-2017-02-14,Detroit Pistons,New York Knicks
-2017-02-14,Indiana Pacers,Phoenix Suns
-2017-02-14,Los Angeles Clippers,Sacramento Kings
 2017-02-14,Los Angeles Lakers,San Antonio Spurs
-2017-02-14,Memphis Grizzlies,Orlando Magic
-2017-02-14,Miami Heat,Philadelphia 76ers
 2017-02-14,Milwaukee Bucks,Boston Celtics
-2017-02-14,Minnesota Timberwolves,Atlanta Hawks
-2017-02-14,New Orleans Pelicans,Toronto Raptors
 2017-02-14,New York Knicks,Detroit Pistons
-2017-02-14,Oklahoma City Thunder,Utah Jazz
 2017-02-14,Orlando Magic,Memphis Grizzlies
 2017-02-14,Philadelphia 76ers,Miami Heat
 2017-02-14,Phoenix Suns,Indiana Pacers
 2017-02-14,Portland Trail Blazers,Brooklyn Nets
 2017-02-14,Sacramento Kings,Los Angeles Clippers
-2017-02-14,San Antonio Spurs,Los Angeles Lakers
 2017-02-14,Toronto Raptors,New Orleans Pelicans
 2017-02-14,Utah Jazz,Oklahoma City Thunder
-2017-02-14,Washington Wizards,Dallas Mavericks
-2017-02-15,Denver Nuggets,Golden State Warriors
 2017-02-15,Golden State Warriors,Denver Nuggets
 2017-02-16,Atlanta Hawks,Phoenix Suns
-2017-02-16,Boston Celtics,San Antonio Spurs
-2017-02-16,Brooklyn Nets,Chicago Bulls
-2017-02-16,Charlotte Hornets,Cleveland Cavaliers
 2017-02-16,Chicago Bulls,Brooklyn Nets
 2017-02-16,Cleveland Cavaliers,Charlotte Hornets
-2017-02-16,Dallas Mavericks,Oklahoma City Thunder
-2017-02-16,Denver Nuggets,New York Knicks
 2017-02-16,Detroit Pistons,Sacramento Kings
-2017-02-16,Houston Rockets,Milwaukee Bucks
 2017-02-16,Indiana Pacers,New Orleans Pelicans
 2017-02-16,Los Angeles Clippers,Los Angeles Lakers
-2017-02-16,Los Angeles Lakers,Los Angeles Clippers
 2017-02-16,Memphis Grizzlies,Minnesota Timberwolves
-2017-02-16,Miami Heat,Washington Wizards
 2017-02-16,Milwaukee Bucks,Houston Rockets
-2017-02-16,Minnesota Timberwolves,Memphis Grizzlies
-2017-02-16,New Orleans Pelicans,Indiana Pacers
 2017-02-16,New York Knicks,Denver Nuggets
 2017-02-16,Oklahoma City Thunder,Dallas Mavericks
 2017-02-16,Orlando Magic,Toronto Raptors
-2017-02-16,Phoenix Suns,Atlanta Hawks
-2017-02-16,Portland Trail Blazers,Utah Jazz
-2017-02-16,Sacramento Kings,Detroit Pistons
 2017-02-16,San Antonio Spurs,Boston Celtics
-2017-02-16,Toronto Raptors,Orlando Magic
 2017-02-16,Utah Jazz,Portland Trail Blazers
 2017-02-16,Washington Wizards,Miami Heat
-2017-02-23,Atlanta Hawks,Washington Wizards
 2017-02-23,Boston Celtics,Miami Heat
-2017-02-23,Brooklyn Nets,Phoenix Suns
-2017-02-23,Charlotte Hornets,Orlando Magic
 2017-02-23,Chicago Bulls,Cleveland Cavaliers
-2017-02-23,Cleveland Cavaliers,Chicago Bulls
-2017-02-23,Dallas Mavericks,San Antonio Spurs
 2017-02-23,Denver Nuggets,Los Angeles Clippers
 2017-02-23,Detroit Pistons,Minnesota Timberwolves
-2017-02-23,Golden State Warriors,Los Angeles Lakers
 2017-02-23,Houston Rockets,Memphis Grizzlies
 2017-02-23,Indiana Pacers,New York Knicks
-2017-02-23,Los Angeles Clippers,Denver Nuggets
 2017-02-23,Los Angeles Lakers,Golden State Warriors
-2017-02-23,Memphis Grizzlies,Houston Rockets
-2017-02-23,Miami Heat,Boston Celtics
-2017-02-23,Milwaukee Bucks,Utah Jazz
-2017-02-23,Minnesota Timberwolves,Detroit Pistons
 2017-02-23,New Orleans Pelicans,Oklahoma City Thunder
-2017-02-23,New York Knicks,Indiana Pacers
-2017-02-23,Oklahoma City Thunder,New Orleans Pelicans
 2017-02-23,Orlando Magic,Charlotte Hornets
 2017-02-23,Philadelphia 76ers,Toronto Raptors
 2017-02-23,Phoenix Suns,Brooklyn Nets
-2017-02-23,Portland Trail Blazers,Sacramento Kings
 2017-02-23,Sacramento Kings,Portland Trail Blazers
 2017-02-23,San Antonio Spurs,Dallas Mavericks
-2017-02-23,Toronto Raptors,Philadelphia 76ers
 2017-02-23,Utah Jazz,Milwaukee Bucks
 2017-02-23,Washington Wizards,Atlanta Hawks
-2017-02-25,Atlanta Hawks,Detroit Pistons
 2017-02-25,Boston Celtics,Orlando Magic
-2017-02-25,Brooklyn Nets,Sacramento Kings
-2017-02-25,Charlotte Hornets,Toronto Raptors
-2017-02-25,Chicago Bulls,Philadelphia 76ers
 2017-02-25,Cleveland Cavaliers,Miami Heat
 2017-02-25,Dallas Mavericks,Utah Jazz
 2017-02-25,Denver Nuggets,New Orleans Pelicans
 2017-02-25,Detroit Pistons,Atlanta Hawks
-2017-02-25,Golden State Warriors,Houston Rockets
 2017-02-25,Houston Rockets,Golden State Warriors
 2017-02-25,Indiana Pacers,Phoenix Suns
-2017-02-25,Los Angeles Clippers,Washington Wizards
 2017-02-25,Los Angeles Lakers,Oklahoma City Thunder
-2017-02-25,Miami Heat,Cleveland Cavaliers
-2017-02-25,Milwaukee Bucks,San Antonio Spurs
-2017-02-25,Minnesota Timberwolves,Portland Trail Blazers
-2017-02-25,New Orleans Pelicans,Denver Nuggets
-2017-02-25,Oklahoma City Thunder,Los Angeles Lakers
-2017-02-25,Orlando Magic,Boston Celtics
 2017-02-25,Philadelphia 76ers,Chicago Bulls
-2017-02-25,Phoenix Suns,Indiana Pacers
 2017-02-25,Portland Trail Blazers,Minnesota Timberwolves
 2017-02-25,Sacramento Kings,Brooklyn Nets
 2017-02-25,San Antonio Spurs,Milwaukee Bucks
 2017-02-25,Toronto Raptors,Charlotte Hornets
-2017-02-25,Utah Jazz,Dallas Mavericks
 2017-02-25,Washington Wizards,Los Angeles Clippers
-2017-02-26,Dallas Mavericks,New York Knicks
 2017-02-26,Denver Nuggets,Portland Trail Blazers
 2017-02-26,New York Knicks,Dallas Mavericks
-2017-02-26,Portland Trail Blazers,Denver Nuggets
-2017-02-27,Atlanta Hawks,New York Knicks
 2017-02-27,Boston Celtics,Los Angeles Clippers
-2017-02-27,Brooklyn Nets,Milwaukee Bucks
 2017-02-27,Charlotte Hornets,Miami Heat
-2017-02-27,Chicago Bulls,Orlando Magic
-2017-02-27,Cleveland Cavaliers,Oklahoma City Thunder
-2017-02-27,Houston Rockets,New Orleans Pelicans
 2017-02-27,Indiana Pacers,Minnesota Timberwolves
-2017-02-27,Los Angeles Clippers,Boston Celtics
 2017-02-27,Los Angeles Lakers,Utah Jazz
 2017-02-27,Memphis Grizzlies,Phoenix Suns
-2017-02-27,Miami Heat,Charlotte Hornets
 2017-02-27,Milwaukee Bucks,Brooklyn Nets
-2017-02-27,Minnesota Timberwolves,Indiana Pacers
 2017-02-27,New Orleans Pelicans,Houston Rockets
 2017-02-27,New York Knicks,Atlanta Hawks
 2017-02-27,Oklahoma City Thunder,Cleveland Cavaliers
 2017-02-27,Orlando Magic,Chicago Bulls
 2017-02-27,Philadelphia 76ers,Washington Wizards
-2017-02-27,Phoenix Suns,Memphis Grizzlies
-2017-02-27,Sacramento Kings,Toronto Raptors
 2017-02-27,Toronto Raptors,Sacramento Kings
-2017-02-27,Utah Jazz,Los Angeles Lakers
-2017-02-27,Washington Wizards,Philadelphia 76ers
 2017-02-28,Denver Nuggets,San Antonio Spurs
-2017-02-28,Golden State Warriors,Minnesota Timberwolves
 2017-02-28,Minnesota Timberwolves,Golden State Warriors
-2017-02-28,San Antonio Spurs,Denver Nuggets
-2017-03-01,Atlanta Hawks,Brooklyn Nets
 2017-03-01,Boston Celtics,Dallas Mavericks
 2017-03-01,Brooklyn Nets,Atlanta Hawks
 2017-03-01,Charlotte Hornets,Indiana Pacers
-2017-03-01,Chicago Bulls,Denver Nuggets
-2017-03-01,Cleveland Cavaliers,Detroit Pistons
-2017-03-01,Dallas Mavericks,Boston Celtics
 2017-03-01,Denver Nuggets,Chicago Bulls
 2017-03-01,Detroit Pistons,Cleveland Cavaliers
 2017-03-01,Golden State Warriors,New York Knicks
-2017-03-01,Houston Rockets,Los Angeles Lakers
-2017-03-01,Indiana Pacers,Charlotte Hornets
-2017-03-01,Los Angeles Clippers,Utah Jazz
 2017-03-01,Los Angeles Lakers,Houston Rockets
-2017-03-01,Memphis Grizzlies,Miami Heat
 2017-03-01,Miami Heat,Memphis Grizzlies
 2017-03-01,Milwaukee Bucks,Sacramento Kings
 2017-03-01,New Orleans Pelicans,Phoenix Suns
-2017-03-01,New York Knicks,Golden State Warriors
 2017-03-01,Oklahoma City Thunder,Philadelphia 76ers
 2017-03-01,Orlando Magic,Portland Trail Blazers
-2017-03-01,Philadelphia 76ers,Oklahoma City Thunder
-2017-03-01,Phoenix Suns,New Orleans Pelicans
-2017-03-01,Portland Trail Blazers,Orlando Magic
-2017-03-01,Sacramento Kings,Milwaukee Bucks
-2017-03-01,Toronto Raptors,Washington Wizards
 2017-03-01,Utah Jazz,Los Angeles Clippers
 2017-03-01,Washington Wizards,Toronto Raptors
 2017-03-03,Brooklyn Nets,Dallas Mavericks
 2017-03-03,Charlotte Hornets,Cleveland Cavaliers
 2017-03-03,Chicago Bulls,Orlando Magic
-2017-03-03,Cleveland Cavaliers,Charlotte Hornets
-2017-03-03,Dallas Mavericks,Brooklyn Nets
-2017-03-03,Denver Nuggets,Oklahoma City Thunder
-2017-03-03,Detroit Pistons,Golden State Warriors
 2017-03-03,Golden State Warriors,Detroit Pistons
 2017-03-03,Indiana Pacers,Portland Trail Blazers
 2017-03-03,Los Angeles Clippers,New York Knicks
 2017-03-03,Los Angeles Lakers,Utah Jazz
 2017-03-03,Memphis Grizzlies,Sacramento Kings
-2017-03-03,Miami Heat,Milwaukee Bucks
 2017-03-03,Milwaukee Bucks,Miami Heat
 2017-03-03,Minnesota Timberwolves,New Orleans Pelicans
-2017-03-03,New Orleans Pelicans,Minnesota Timberwolves
-2017-03-03,New York Knicks,Los Angeles Clippers
 2017-03-03,Oklahoma City Thunder,Denver Nuggets
-2017-03-03,Orlando Magic,Chicago Bulls
 2017-03-03,Philadelphia 76ers,Toronto Raptors
-2017-03-03,Portland Trail Blazers,Indiana Pacers
-2017-03-03,Sacramento Kings,Memphis Grizzlies
-2017-03-03,San Antonio Spurs,Washington Wizards
-2017-03-03,Toronto Raptors,Philadelphia 76ers
-2017-03-03,Utah Jazz,Los Angeles Lakers
 2017-03-03,Washington Wizards,San Antonio Spurs
 2017-03-04,Atlanta Hawks,Dallas Mavericks
 2017-03-04,Boston Celtics,New York Knicks
-2017-03-04,Dallas Mavericks,Atlanta Hawks
 2017-03-04,Houston Rockets,Phoenix Suns
-2017-03-04,New York Knicks,Boston Celtics
-2017-03-04,Phoenix Suns,Houston Rockets
-2017-03-05,Atlanta Hawks,Oklahoma City Thunder
 2017-03-05,Brooklyn Nets,Toronto Raptors
 2017-03-05,Charlotte Hornets,Memphis Grizzlies
 2017-03-05,Chicago Bulls,Philadelphia 76ers
 2017-03-05,Cleveland Cavaliers,Los Angeles Lakers
 2017-03-05,Denver Nuggets,Sacramento Kings
-2017-03-05,Detroit Pistons,Minnesota Timberwolves
 2017-03-05,Golden State Warriors,Los Angeles Clippers
-2017-03-05,Indiana Pacers,Milwaukee Bucks
-2017-03-05,Los Angeles Clippers,Golden State Warriors
-2017-03-05,Los Angeles Lakers,Cleveland Cavaliers
-2017-03-05,Memphis Grizzlies,Charlotte Hornets
 2017-03-05,Milwaukee Bucks,Indiana Pacers
 2017-03-05,Minnesota Timberwolves,Detroit Pistons
 2017-03-05,New Orleans Pelicans,Utah Jazz
 2017-03-05,Oklahoma City Thunder,Atlanta Hawks
 2017-03-05,Orlando Magic,Washington Wizards
-2017-03-05,Philadelphia 76ers,Chicago Bulls
-2017-03-05,Portland Trail Blazers,San Antonio Spurs
-2017-03-05,Sacramento Kings,Denver Nuggets
 2017-03-05,San Antonio Spurs,Portland Trail Blazers
-2017-03-05,Toronto Raptors,Brooklyn Nets
-2017-03-05,Utah Jazz,New Orleans Pelicans
-2017-03-05,Washington Wizards,Orlando Magic
 2017-03-06,Dallas Mavericks,Oklahoma City Thunder
 2017-03-06,Detroit Pistons,Toronto Raptors
 2017-03-06,Houston Rockets,Sacramento Kings
-2017-03-06,Miami Heat,New York Knicks
 2017-03-06,New York Knicks,Miami Heat
-2017-03-06,Oklahoma City Thunder,Dallas Mavericks
-2017-03-06,Sacramento Kings,Houston Rockets
-2017-03-06,Toronto Raptors,Detroit Pistons
-2017-03-07,Atlanta Hawks,Los Angeles Clippers
 2017-03-07,Boston Celtics,Memphis Grizzlies
 2017-03-07,Brooklyn Nets,New Orleans Pelicans
 2017-03-07,Charlotte Hornets,Philadelphia 76ers
 2017-03-07,Chicago Bulls,Minnesota Timberwolves
-2017-03-07,Cleveland Cavaliers,Milwaukee Bucks
 2017-03-07,Denver Nuggets,Washington Wizards
 2017-03-07,Golden State Warriors,Indiana Pacers
-2017-03-07,Indiana Pacers,Golden State Warriors
 2017-03-07,Los Angeles Clippers,Atlanta Hawks
-2017-03-07,Los Angeles Lakers,San Antonio Spurs
-2017-03-07,Memphis Grizzlies,Boston Celtics
 2017-03-07,Milwaukee Bucks,Cleveland Cavaliers
-2017-03-07,Minnesota Timberwolves,Chicago Bulls
-2017-03-07,New Orleans Pelicans,Brooklyn Nets
-2017-03-07,Philadelphia 76ers,Charlotte Hornets
-2017-03-07,Phoenix Suns,Utah Jazz
 2017-03-07,San Antonio Spurs,Los Angeles Lakers
 2017-03-07,Utah Jazz,Phoenix Suns
-2017-03-07,Washington Wizards,Denver Nuggets
 2017-03-08,Boston Celtics,Sacramento Kings
 2017-03-08,Dallas Mavericks,Portland Trail Blazers
 2017-03-08,Detroit Pistons,Toronto Raptors
 2017-03-08,Houston Rockets,Orlando Magic
-2017-03-08,Miami Heat,New York Knicks
 2017-03-08,New York Knicks,Miami Heat
-2017-03-08,Orlando Magic,Houston Rockets
-2017-03-08,Portland Trail Blazers,Dallas Mavericks
-2017-03-08,Sacramento Kings,Boston Celtics
-2017-03-08,Toronto Raptors,Detroit Pistons
 2017-03-09,Atlanta Hawks,Milwaukee Bucks
-2017-03-09,Cleveland Cavaliers,Minnesota Timberwolves
 2017-03-09,Denver Nuggets,Memphis Grizzlies
-2017-03-09,Golden State Warriors,Los Angeles Clippers
 2017-03-09,Los Angeles Clippers,Golden State Warriors
 2017-03-09,Los Angeles Lakers,Orlando Magic
-2017-03-09,Memphis Grizzlies,Denver Nuggets
-2017-03-09,Milwaukee Bucks,Atlanta Hawks
 2017-03-09,Minnesota Timberwolves,Cleveland Cavaliers
-2017-03-09,New Orleans Pelicans,Philadelphia 76ers
-2017-03-09,Orlando Magic,Los Angeles Lakers
 2017-03-09,Philadelphia 76ers,New Orleans Pelicans
 2017-03-09,Phoenix Suns,Washington Wizards
-2017-03-09,San Antonio Spurs,Utah Jazz
 2017-03-09,Utah Jazz,San Antonio Spurs
-2017-03-09,Washington Wizards,Phoenix Suns
 2017-03-10,Boston Celtics,Chicago Bulls
 2017-03-10,Brooklyn Nets,Washington Wizards
 2017-03-10,Charlotte Hornets,Sacramento Kings
-2017-03-10,Chicago Bulls,Boston Celtics
 2017-03-10,Houston Rockets,New York Knicks
-2017-03-10,Indiana Pacers,Oklahoma City Thunder
-2017-03-10,New York Knicks,Houston Rockets
 2017-03-10,Oklahoma City Thunder,Indiana Pacers
-2017-03-10,Portland Trail Blazers,San Antonio Spurs
-2017-03-10,Sacramento Kings,Charlotte Hornets
 2017-03-10,San Antonio Spurs,Portland Trail Blazers
-2017-03-10,Washington Wizards,Brooklyn Nets
 2017-03-11,Atlanta Hawks,Philadelphia 76ers
 2017-03-11,Brooklyn Nets,Miami Heat
-2017-03-11,Cleveland Cavaliers,Toronto Raptors
-2017-03-11,Dallas Mavericks,Golden State Warriors
-2017-03-11,Detroit Pistons,Milwaukee Bucks
 2017-03-11,Golden State Warriors,Dallas Mavericks
 2017-03-11,Memphis Grizzlies,New Orleans Pelicans
-2017-03-11,Miami Heat,Brooklyn Nets
 2017-03-11,Milwaukee Bucks,Detroit Pistons
 2017-03-11,Minnesota Timberwolves,Orlando Magic
-2017-03-11,New Orleans Pelicans,Memphis Grizzlies
-2017-03-11,Orlando Magic,Minnesota Timberwolves
-2017-03-11,Philadelphia 76ers,Atlanta Hawks
 2017-03-11,Toronto Raptors,Cleveland Cavaliers
-2017-03-12,Atlanta Hawks,Charlotte Hornets
-2017-03-12,Boston Celtics,Washington Wizards
 2017-03-12,Charlotte Hornets,Atlanta Hawks
-2017-03-12,Chicago Bulls,Indiana Pacers
 2017-03-12,Denver Nuggets,Utah Jazz
-2017-03-12,Houston Rockets,San Antonio Spurs
 2017-03-12,Indiana Pacers,Chicago Bulls
 2017-03-12,Los Angeles Clippers,Portland Trail Blazers
 2017-03-12,Los Angeles Lakers,New York Knicks
-2017-03-12,New York Knicks,Los Angeles Lakers
 2017-03-12,Oklahoma City Thunder,Phoenix Suns
-2017-03-12,Phoenix Suns,Oklahoma City Thunder
-2017-03-12,Portland Trail Blazers,Los Angeles Clippers
 2017-03-12,San Antonio Spurs,Houston Rockets
-2017-03-12,Utah Jazz,Denver Nuggets
 2017-03-12,Washington Wizards,Boston Celtics
 2017-03-13,Brooklyn Nets,Sacramento Kings
 2017-03-13,Detroit Pistons,New Orleans Pelicans
-2017-03-13,Indiana Pacers,Miami Heat
 2017-03-13,Los Angeles Clippers,Orlando Magic
 2017-03-13,Miami Heat,Indiana Pacers
-2017-03-13,New Orleans Pelicans,Detroit Pistons
-2017-03-13,Orlando Magic,Los Angeles Clippers
-2017-03-13,Philadelphia 76ers,Toronto Raptors
-2017-03-13,Sacramento Kings,Brooklyn Nets
 2017-03-13,Toronto Raptors,Philadelphia 76ers
 2017-03-14,Atlanta Hawks,Chicago Bulls
 2017-03-14,Boston Celtics,Philadelphia 76ers
-2017-03-14,Charlotte Hornets,New York Knicks
-2017-03-14,Chicago Bulls,Atlanta Hawks
 2017-03-14,Cleveland Cavaliers,Detroit Pistons
 2017-03-14,Dallas Mavericks,Memphis Grizzlies
 2017-03-14,Denver Nuggets,Minnesota Timberwolves
-2017-03-14,Detroit Pistons,Cleveland Cavaliers
 2017-03-14,Golden State Warriors,Houston Rockets
-2017-03-14,Houston Rockets,Golden State Warriors
 2017-03-14,Los Angeles Lakers,Portland Trail Blazers
-2017-03-14,Memphis Grizzlies,Dallas Mavericks
-2017-03-14,Milwaukee Bucks,Washington Wizards
-2017-03-14,Minnesota Timberwolves,Denver Nuggets
-2017-03-14,New Orleans Pelicans,San Antonio Spurs
 2017-03-14,New York Knicks,Charlotte Hornets
 2017-03-14,Oklahoma City Thunder,Utah Jazz
-2017-03-14,Philadelphia 76ers,Boston Celtics
-2017-03-14,Portland Trail Blazers,Los Angeles Lakers
 2017-03-14,San Antonio Spurs,New Orleans Pelicans
-2017-03-14,Utah Jazz,Oklahoma City Thunder
 2017-03-14,Washington Wizards,Milwaukee Bucks
 2017-03-15,Golden State Warriors,Portland Trail Blazers
-2017-03-15,Indiana Pacers,Washington Wizards
-2017-03-15,Los Angeles Clippers,Phoenix Suns
 2017-03-15,Los Angeles Lakers,Sacramento Kings
-2017-03-15,Miami Heat,Orlando Magic
 2017-03-15,Orlando Magic,Miami Heat
 2017-03-15,Phoenix Suns,Los Angeles Clippers
-2017-03-15,Portland Trail Blazers,Golden State Warriors
-2017-03-15,Sacramento Kings,Los Angeles Lakers
 2017-03-15,Washington Wizards,Indiana Pacers
 2017-03-16,Boston Celtics,Charlotte Hornets
 2017-03-16,Brooklyn Nets,Philadelphia 76ers
-2017-03-16,Charlotte Hornets,Boston Celtics
-2017-03-16,Chicago Bulls,Cleveland Cavaliers
 2017-03-16,Cleveland Cavaliers,Chicago Bulls
-2017-03-16,Dallas Mavericks,Memphis Grizzlies
-2017-03-16,Denver Nuggets,Minnesota Timberwolves
-2017-03-16,Detroit Pistons,Milwaukee Bucks
-2017-03-16,Houston Rockets,Toronto Raptors
 2017-03-16,Memphis Grizzlies,Dallas Mavericks
 2017-03-16,Milwaukee Bucks,Detroit Pistons
 2017-03-16,Minnesota Timberwolves,Denver Nuggets
-2017-03-16,New Orleans Pelicans,San Antonio Spurs
 2017-03-16,New York Knicks,Utah Jazz
-2017-03-16,Philadelphia 76ers,Brooklyn Nets
 2017-03-16,San Antonio Spurs,New Orleans Pelicans
 2017-03-16,Toronto Raptors,Houston Rockets
-2017-03-16,Utah Jazz,New York Knicks
 2017-03-17,Atlanta Hawks,Miami Heat
-2017-03-17,Chicago Bulls,Indiana Pacers
-2017-03-17,Golden State Warriors,Phoenix Suns
-2017-03-17,Houston Rockets,Washington Wizards
 2017-03-17,Indiana Pacers,Chicago Bulls
 2017-03-17,Los Angeles Clippers,Los Angeles Lakers
-2017-03-17,Los Angeles Lakers,Los Angeles Clippers
 2017-03-17,Memphis Grizzlies,Sacramento Kings
-2017-03-17,Miami Heat,Atlanta Hawks
 2017-03-17,Oklahoma City Thunder,Portland Trail Blazers
 2017-03-17,Orlando Magic,Utah Jazz
 2017-03-17,Phoenix Suns,Golden State Warriors
-2017-03-17,Portland Trail Blazers,Oklahoma City Thunder
-2017-03-17,Sacramento Kings,Memphis Grizzlies
-2017-03-17,Utah Jazz,Orlando Magic
 2017-03-17,Washington Wizards,Houston Rockets
 2017-03-18,Boston Celtics,San Antonio Spurs
-2017-03-18,Brooklyn Nets,Dallas Mavericks
-2017-03-18,Charlotte Hornets,Milwaukee Bucks
-2017-03-18,Cleveland Cavaliers,Detroit Pistons
 2017-03-18,Dallas Mavericks,Brooklyn Nets
 2017-03-18,Denver Nuggets,New Orleans Pelicans
 2017-03-18,Detroit Pistons,Cleveland Cavaliers
 2017-03-18,Milwaukee Bucks,Charlotte Hornets
-2017-03-18,Minnesota Timberwolves,Philadelphia 76ers
-2017-03-18,New Orleans Pelicans,Denver Nuggets
 2017-03-18,New York Knicks,Toronto Raptors
 2017-03-18,Philadelphia 76ers,Minnesota Timberwolves
-2017-03-18,San Antonio Spurs,Boston Celtics
-2017-03-18,Toronto Raptors,New York Knicks
 2017-03-19,Atlanta Hawks,Houston Rockets
-2017-03-19,Brooklyn Nets,Orlando Magic
 2017-03-19,Chicago Bulls,Portland Trail Blazers
-2017-03-19,Dallas Mavericks,Memphis Grizzlies
-2017-03-19,Houston Rockets,Atlanta Hawks
 2017-03-19,Indiana Pacers,Utah Jazz
 2017-03-19,Los Angeles Clippers,Miami Heat
-2017-03-19,Los Angeles Lakers,New Orleans Pelicans
 2017-03-19,Memphis Grizzlies,Dallas Mavericks
-2017-03-19,Miami Heat,Los Angeles Clippers
-2017-03-19,Minnesota Timberwolves,Phoenix Suns
 2017-03-19,New Orleans Pelicans,Los Angeles Lakers
 2017-03-19,Oklahoma City Thunder,Washington Wizards
 2017-03-19,Orlando Magic,Brooklyn Nets
 2017-03-19,Phoenix Suns,Minnesota Timberwolves
-2017-03-19,Portland Trail Blazers,Chicago Bulls
-2017-03-19,Utah Jazz,Indiana Pacers
-2017-03-19,Washington Wizards,Oklahoma City Thunder
-2017-03-20,Boston Celtics,Philadelphia 76ers
-2017-03-20,Charlotte Hornets,Detroit Pistons
 2017-03-20,Denver Nuggets,Sacramento Kings
 2017-03-20,Detroit Pistons,Charlotte Hornets
 2017-03-20,Golden State Warriors,Miami Heat
-2017-03-20,Miami Heat,Golden State Warriors
 2017-03-20,Philadelphia 76ers,Boston Celtics
-2017-03-20,Sacramento Kings,Denver Nuggets
-2017-03-21,Atlanta Hawks,Brooklyn Nets
 2017-03-21,Brooklyn Nets,Atlanta Hawks
 2017-03-21,Chicago Bulls,Memphis Grizzlies
 2017-03-21,Cleveland Cavaliers,Indiana Pacers
 2017-03-21,Dallas Mavericks,Houston Rockets
-2017-03-21,Houston Rockets,Dallas Mavericks
-2017-03-21,Indiana Pacers,Cleveland Cavaliers
-2017-03-21,Los Angeles Lakers,Orlando Magic
-2017-03-21,Memphis Grizzlies,Chicago Bulls
-2017-03-21,Milwaukee Bucks,Phoenix Suns
-2017-03-21,Minnesota Timberwolves,Oklahoma City Thunder
 2017-03-21,New Orleans Pelicans,New York Knicks
-2017-03-21,New York Knicks,New Orleans Pelicans
 2017-03-21,Oklahoma City Thunder,Minnesota Timberwolves
 2017-03-21,Orlando Magic,Los Angeles Lakers
 2017-03-21,Phoenix Suns,Milwaukee Bucks
-2017-03-21,Portland Trail Blazers,Toronto Raptors
 2017-03-21,San Antonio Spurs,Washington Wizards
 2017-03-21,Toronto Raptors,Portland Trail Blazers
-2017-03-21,Washington Wizards,San Antonio Spurs
 2017-03-22,Charlotte Hornets,Utah Jazz
 2017-03-22,Denver Nuggets,Portland Trail Blazers
-2017-03-22,Detroit Pistons,Miami Heat
 2017-03-22,Golden State Warriors,Washington Wizards
 2017-03-22,Miami Heat,Detroit Pistons
-2017-03-22,Philadelphia 76ers,Sacramento Kings
-2017-03-22,Portland Trail Blazers,Denver Nuggets
 2017-03-22,Sacramento Kings,Philadelphia 76ers
-2017-03-22,Utah Jazz,Charlotte Hornets
-2017-03-22,Washington Wizards,Golden State Warriors
-2017-03-23,Atlanta Hawks,Cleveland Cavaliers
-2017-03-23,Boston Celtics,Los Angeles Clippers
 2017-03-23,Brooklyn Nets,Oklahoma City Thunder
-2017-03-23,Chicago Bulls,Miami Heat
 2017-03-23,Cleveland Cavaliers,Atlanta Hawks
-2017-03-23,Dallas Mavericks,New Orleans Pelicans
 2017-03-23,Denver Nuggets,Phoenix Suns
 2017-03-23,Golden State Warriors,Minnesota Timberwolves
 2017-03-23,Los Angeles Clippers,Boston Celtics
-2017-03-23,Memphis Grizzlies,Milwaukee Bucks
 2017-03-23,Miami Heat,Chicago Bulls
 2017-03-23,Milwaukee Bucks,Memphis Grizzlies
-2017-03-23,Minnesota Timberwolves,Golden State Warriors
 2017-03-23,New Orleans Pelicans,Dallas Mavericks
-2017-03-23,New York Knicks,San Antonio Spurs
-2017-03-23,Oklahoma City Thunder,Brooklyn Nets
-2017-03-23,Orlando Magic,Toronto Raptors
-2017-03-23,Phoenix Suns,Denver Nuggets
 2017-03-23,San Antonio Spurs,New York Knicks
 2017-03-23,Toronto Raptors,Orlando Magic
-2017-03-24,Charlotte Hornets,Indiana Pacers
-2017-03-24,Dallas Mavericks,Houston Rockets
 2017-03-24,Houston Rockets,Dallas Mavericks
 2017-03-24,Indiana Pacers,Charlotte Hornets
-2017-03-24,Los Angeles Lakers,Sacramento Kings
-2017-03-24,Memphis Grizzlies,Portland Trail Blazers
 2017-03-24,Philadelphia 76ers,Utah Jazz
 2017-03-24,Portland Trail Blazers,Memphis Grizzlies
 2017-03-24,Sacramento Kings,Los Angeles Lakers
 2017-03-24,Toronto Raptors,Washington Wizards
-2017-03-24,Utah Jazz,Philadelphia 76ers
-2017-03-24,Washington Wizards,Toronto Raptors
-2017-03-25,Boston Celtics,Phoenix Suns
 2017-03-25,Denver Nuggets,Orlando Magic
-2017-03-25,Golden State Warriors,San Antonio Spurs
-2017-03-25,Miami Heat,Minnesota Timberwolves
 2017-03-25,Milwaukee Bucks,New York Knicks
 2017-03-25,Minnesota Timberwolves,Miami Heat
 2017-03-25,New Orleans Pelicans,Oklahoma City Thunder
-2017-03-25,New York Knicks,Milwaukee Bucks
-2017-03-25,Oklahoma City Thunder,New Orleans Pelicans
-2017-03-25,Orlando Magic,Denver Nuggets
 2017-03-25,Phoenix Suns,Boston Celtics
 2017-03-25,San Antonio Spurs,Golden State Warriors
-2017-03-26,Atlanta Hawks,Philadelphia 76ers
-2017-03-26,Boston Celtics,Toronto Raptors
 2017-03-26,Brooklyn Nets,Los Angeles Lakers
-2017-03-26,Charlotte Hornets,Utah Jazz
-2017-03-26,Chicago Bulls,Orlando Magic
 2017-03-26,Cleveland Cavaliers,Indiana Pacers
-2017-03-26,Detroit Pistons,Washington Wizards
-2017-03-26,Houston Rockets,Oklahoma City Thunder
-2017-03-26,Indiana Pacers,Cleveland Cavaliers
 2017-03-26,Los Angeles Clippers,Memphis Grizzlies
-2017-03-26,Los Angeles Lakers,Brooklyn Nets
-2017-03-26,Memphis Grizzlies,Los Angeles Clippers
 2017-03-26,Oklahoma City Thunder,Houston Rockets
 2017-03-26,Orlando Magic,Chicago Bulls
 2017-03-26,Philadelphia 76ers,Atlanta Hawks
-2017-03-26,Sacramento Kings,San Antonio Spurs
 2017-03-26,San Antonio Spurs,Sacramento Kings
 2017-03-26,Toronto Raptors,Boston Celtics
 2017-03-26,Utah Jazz,Charlotte Hornets
 2017-03-26,Washington Wizards,Detroit Pistons
-2017-03-27,Chicago Bulls,New Orleans Pelicans
 2017-03-27,Dallas Mavericks,Sacramento Kings
 2017-03-27,Denver Nuggets,Miami Heat
-2017-03-27,Miami Heat,Denver Nuggets
-2017-03-27,Milwaukee Bucks,Minnesota Timberwolves
 2017-03-27,Minnesota Timberwolves,Milwaukee Bucks
 2017-03-27,New Orleans Pelicans,Chicago Bulls
-2017-03-27,New York Knicks,Phoenix Suns
-2017-03-27,Philadelphia 76ers,Portland Trail Blazers
 2017-03-27,Phoenix Suns,New York Knicks
 2017-03-27,Portland Trail Blazers,Philadelphia 76ers
-2017-03-27,Sacramento Kings,Dallas Mavericks
-2017-03-28,Atlanta Hawks,Cleveland Cavaliers
-2017-03-28,Boston Celtics,Orlando Magic
 2017-03-28,Charlotte Hornets,Houston Rockets
 2017-03-28,Cleveland Cavaliers,Atlanta Hawks
 2017-03-28,Detroit Pistons,Los Angeles Clippers
-2017-03-28,Golden State Warriors,Oklahoma City Thunder
-2017-03-28,Houston Rockets,Charlotte Hornets
 2017-03-28,Indiana Pacers,Memphis Grizzlies
-2017-03-28,Los Angeles Clippers,Detroit Pistons
-2017-03-28,Los Angeles Lakers,Milwaukee Bucks
-2017-03-28,Memphis Grizzlies,Indiana Pacers
 2017-03-28,Milwaukee Bucks,Los Angeles Lakers
 2017-03-28,New Orleans Pelicans,Washington Wizards
 2017-03-28,Oklahoma City Thunder,Golden State Warriors
 2017-03-28,Orlando Magic,Boston Celtics
-2017-03-28,San Antonio Spurs,Toronto Raptors
 2017-03-28,Toronto Raptors,San Antonio Spurs
-2017-03-28,Washington Wizards,New Orleans Pelicans
-2017-03-29,Chicago Bulls,Phoenix Suns
 2017-03-29,Dallas Mavericks,Philadelphia 76ers
 2017-03-29,Denver Nuggets,Oklahoma City Thunder
-2017-03-29,Los Angeles Lakers,Minnesota Timberwolves
 2017-03-29,Minnesota Timberwolves,Los Angeles Lakers
-2017-03-29,New York Knicks,Portland Trail Blazers
-2017-03-29,Oklahoma City Thunder,Denver Nuggets
-2017-03-29,Philadelphia 76ers,Dallas Mavericks
 2017-03-29,Phoenix Suns,Chicago Bulls
 2017-03-29,Portland Trail Blazers,New York Knicks
 2017-03-29,Sacramento Kings,Utah Jazz
-2017-03-29,Utah Jazz,Sacramento Kings
 2017-03-30,Atlanta Hawks,Washington Wizards
-2017-03-30,Boston Celtics,Brooklyn Nets
 2017-03-30,Brooklyn Nets,Boston Celtics
-2017-03-30,Charlotte Hornets,Miami Heat
-2017-03-30,Cleveland Cavaliers,Memphis Grizzlies
-2017-03-30,Detroit Pistons,Toronto Raptors
-2017-03-30,Golden State Warriors,New Orleans Pelicans
 2017-03-30,Indiana Pacers,Orlando Magic
 2017-03-30,Memphis Grizzlies,Cleveland Cavaliers
 2017-03-30,Miami Heat,Charlotte Hornets
 2017-03-30,Milwaukee Bucks,San Antonio Spurs
 2017-03-30,New Orleans Pelicans,Golden State Warriors
-2017-03-30,Orlando Magic,Indiana Pacers
-2017-03-30,San Antonio Spurs,Milwaukee Bucks
 2017-03-30,Toronto Raptors,Detroit Pistons
-2017-03-30,Washington Wizards,Atlanta Hawks
 2017-03-31,Brooklyn Nets,Los Angeles Clippers
-2017-03-31,Chicago Bulls,Oklahoma City Thunder
-2017-03-31,Dallas Mavericks,Utah Jazz
 2017-03-31,Denver Nuggets,Philadelphia 76ers
-2017-03-31,Detroit Pistons,Sacramento Kings
 2017-03-31,Houston Rockets,Los Angeles Lakers
 2017-03-31,Indiana Pacers,New York Knicks
-2017-03-31,Los Angeles Clippers,Brooklyn Nets
-2017-03-31,Los Angeles Lakers,Houston Rockets
 2017-03-31,Minnesota Timberwolves,San Antonio Spurs
-2017-03-31,New York Knicks,Indiana Pacers
 2017-03-31,Oklahoma City Thunder,Chicago Bulls
-2017-03-31,Philadelphia 76ers,Denver Nuggets
 2017-03-31,Phoenix Suns,Portland Trail Blazers
-2017-03-31,Portland Trail Blazers,Phoenix Suns
 2017-03-31,Sacramento Kings,Detroit Pistons
-2017-03-31,San Antonio Spurs,Minnesota Timberwolves
 2017-03-31,Utah Jazz,Dallas Mavericks
 2017-04-01,Boston Celtics,Cleveland Cavaliers
-2017-04-01,Cleveland Cavaliers,Boston Celtics
-2017-04-01,Golden State Warriors,Memphis Grizzlies
 2017-04-01,Memphis Grizzlies,Golden State Warriors
 2017-04-01,Miami Heat,Washington Wizards
-2017-04-01,Washington Wizards,Miami Heat
-2017-04-02,Atlanta Hawks,Chicago Bulls
 2017-04-02,Boston Celtics,Houston Rockets
-2017-04-02,Brooklyn Nets,Philadelphia 76ers
-2017-04-02,Charlotte Hornets,Denver Nuggets
 2017-04-02,Chicago Bulls,Atlanta Hawks
-2017-04-02,Dallas Mavericks,Utah Jazz
 2017-04-02,Denver Nuggets,Charlotte Hornets
-2017-04-02,Detroit Pistons,Oklahoma City Thunder
-2017-04-02,Houston Rockets,Boston Celtics
-2017-04-02,Indiana Pacers,Miami Heat
-2017-04-02,Los Angeles Clippers,Minnesota Timberwolves
-2017-04-02,Los Angeles Lakers,Toronto Raptors
-2017-04-02,Memphis Grizzlies,Sacramento Kings
 2017-04-02,Miami Heat,Indiana Pacers
-2017-04-02,Milwaukee Bucks,New York Knicks
 2017-04-02,Minnesota Timberwolves,Los Angeles Clippers
 2017-04-02,New Orleans Pelicans,San Antonio Spurs
 2017-04-02,New York Knicks,Milwaukee Bucks
 2017-04-02,Oklahoma City Thunder,Detroit Pistons
-2017-04-02,Orlando Magic,Washington Wizards
 2017-04-02,Philadelphia 76ers,Brooklyn Nets
-2017-04-02,Phoenix Suns,Portland Trail Blazers
 2017-04-02,Portland Trail Blazers,Phoenix Suns
 2017-04-02,Sacramento Kings,Memphis Grizzlies
-2017-04-02,San Antonio Spurs,New Orleans Pelicans
 2017-04-02,Toronto Raptors,Los Angeles Lakers
 2017-04-02,Utah Jazz,Dallas Mavericks
 2017-04-02,Washington Wizards,Orlando Magic
-2017-04-04,Atlanta Hawks,Phoenix Suns
 2017-04-04,Boston Celtics,Orlando Magic
-2017-04-04,Brooklyn Nets,Los Angeles Clippers
 2017-04-04,Charlotte Hornets,Chicago Bulls
-2017-04-04,Chicago Bulls,Charlotte Hornets
 2017-04-04,Cleveland Cavaliers,Houston Rockets
 2017-04-04,Dallas Mavericks,Golden State Warriors
-2017-04-04,Denver Nuggets,Utah Jazz
 2017-04-04,Detroit Pistons,Los Angeles Lakers
-2017-04-04,Golden State Warriors,Dallas Mavericks
-2017-04-04,Houston Rockets,Cleveland Cavaliers
-2017-04-04,Indiana Pacers,Toronto Raptors
 2017-04-04,Los Angeles Clippers,Brooklyn Nets
-2017-04-04,Los Angeles Lakers,Detroit Pistons
-2017-04-04,Memphis Grizzlies,New Orleans Pelicans
 2017-04-04,Miami Heat,New York Knicks
-2017-04-04,Milwaukee Bucks,Washington Wizards
 2017-04-04,Minnesota Timberwolves,Philadelphia 76ers
 2017-04-04,New Orleans Pelicans,Memphis Grizzlies
-2017-04-04,New York Knicks,Miami Heat
 2017-04-04,Oklahoma City Thunder,San Antonio Spurs
-2017-04-04,Orlando Magic,Boston Celtics
-2017-04-04,Philadelphia 76ers,Minnesota Timberwolves
 2017-04-04,Phoenix Suns,Atlanta Hawks
-2017-04-04,San Antonio Spurs,Oklahoma City Thunder
 2017-04-04,Toronto Raptors,Indiana Pacers
 2017-04-04,Utah Jazz,Denver Nuggets
 2017-04-04,Washington Wizards,Milwaukee Bucks
 2017-04-05,Dallas Mavericks,Denver Nuggets
-2017-04-05,Denver Nuggets,Dallas Mavericks
 2017-04-05,Portland Trail Blazers,Sacramento Kings
-2017-04-05,Sacramento Kings,Portland Trail Blazers
-2017-04-06,Atlanta Hawks,Indiana Pacers
-2017-04-06,Boston Celtics,Chicago Bulls
-2017-04-06,Brooklyn Nets,Washington Wizards
 2017-04-06,Charlotte Hornets,Detroit Pistons
 2017-04-06,Chicago Bulls,Boston Celtics
 2017-04-06,Cleveland Cavaliers,Milwaukee Bucks
-2017-04-06,Detroit Pistons,Charlotte Hornets
-2017-04-06,Golden State Warriors,Minnesota Timberwolves
 2017-04-06,Indiana Pacers,Atlanta Hawks
 2017-04-06,Los Angeles Clippers,Utah Jazz
-2017-04-06,Memphis Grizzlies,Toronto Raptors
-2017-04-06,Milwaukee Bucks,Cleveland Cavaliers
 2017-04-06,Minnesota Timberwolves,Golden State Warriors
 2017-04-06,New Orleans Pelicans,San Antonio Spurs
-2017-04-06,Oklahoma City Thunder,Phoenix Suns
-2017-04-06,Orlando Magic,Philadelphia 76ers
 2017-04-06,Philadelphia 76ers,Orlando Magic
 2017-04-06,Phoenix Suns,Oklahoma City Thunder
-2017-04-06,San Antonio Spurs,New Orleans Pelicans
 2017-04-06,Toronto Raptors,Memphis Grizzlies
-2017-04-06,Utah Jazz,Los Angeles Clippers
 2017-04-06,Washington Wizards,Brooklyn Nets
 2017-04-07,Dallas Mavericks,New Orleans Pelicans
-2017-04-07,Denver Nuggets,Miami Heat
-2017-04-07,Houston Rockets,Memphis Grizzlies
 2017-04-07,Memphis Grizzlies,Houston Rockets
 2017-04-07,Miami Heat,Denver Nuggets
-2017-04-07,New Orleans Pelicans,Dallas Mavericks
 2017-04-07,New York Knicks,Orlando Magic
-2017-04-07,Orlando Magic,New York Knicks
 2017-04-07,Portland Trail Blazers,Sacramento Kings
-2017-04-07,Sacramento Kings,Portland Trail Blazers
-2017-04-08,Atlanta Hawks,Philadelphia 76ers
-2017-04-08,Boston Celtics,Indiana Pacers
-2017-04-08,Brooklyn Nets,Utah Jazz
-2017-04-08,Charlotte Hornets,Washington Wizards
 2017-04-08,Cleveland Cavaliers,San Antonio Spurs
-2017-04-08,Detroit Pistons,Phoenix Suns
-2017-04-08,Golden State Warriors,Portland Trail Blazers
 2017-04-08,Indiana Pacers,Boston Celtics
 2017-04-08,Los Angeles Clippers,Oklahoma City Thunder
-2017-04-08,Los Angeles Lakers,Minnesota Timberwolves
-2017-04-08,Milwaukee Bucks,Toronto Raptors
 2017-04-08,Minnesota Timberwolves,Los Angeles Lakers
-2017-04-08,Oklahoma City Thunder,Los Angeles Clippers
 2017-04-08,Philadelphia 76ers,Atlanta Hawks
 2017-04-08,Phoenix Suns,Detroit Pistons
 2017-04-08,Portland Trail Blazers,Golden State Warriors
-2017-04-08,San Antonio Spurs,Cleveland Cavaliers
 2017-04-08,Toronto Raptors,Milwaukee Bucks
 2017-04-08,Utah Jazz,Brooklyn Nets
 2017-04-08,Washington Wizards,Charlotte Hornets
 2017-04-09,Chicago Bulls,Houston Rockets
-2017-04-09,Cleveland Cavaliers,Indiana Pacers
-2017-04-09,Denver Nuggets,Orlando Magic
-2017-04-09,Houston Rockets,Chicago Bulls
 2017-04-09,Indiana Pacers,Cleveland Cavaliers
 2017-04-09,Miami Heat,New York Knicks
-2017-04-09,New Orleans Pelicans,Sacramento Kings
-2017-04-09,New York Knicks,Miami Heat
 2017-04-09,Orlando Magic,Denver Nuggets
 2017-04-09,Sacramento Kings,New Orleans Pelicans
 2017-04-10,Atlanta Hawks,Detroit Pistons
 2017-04-10,Boston Celtics,Los Angeles Lakers
-2017-04-10,Brooklyn Nets,Minnesota Timberwolves
-2017-04-10,Charlotte Hornets,Washington Wizards
 2017-04-10,Dallas Mavericks,Orlando Magic
-2017-04-10,Detroit Pistons,Atlanta Hawks
 2017-04-10,Golden State Warriors,New Orleans Pelicans
 2017-04-10,Los Angeles Clippers,Phoenix Suns
-2017-04-10,Los Angeles Lakers,Boston Celtics
-2017-04-10,Memphis Grizzlies,Philadelphia 76ers
 2017-04-10,Miami Heat,Toronto Raptors
-2017-04-10,Milwaukee Bucks,Portland Trail Blazers
 2017-04-10,Minnesota Timberwolves,Brooklyn Nets
-2017-04-10,New Orleans Pelicans,Golden State Warriors
 2017-04-10,Oklahoma City Thunder,Utah Jazz
-2017-04-10,Orlando Magic,Dallas Mavericks
 2017-04-10,Philadelphia 76ers,Memphis Grizzlies
-2017-04-10,Phoenix Suns,Los Angeles Clippers
 2017-04-10,Portland Trail Blazers,Milwaukee Bucks
-2017-04-10,Toronto Raptors,Miami Heat
-2017-04-10,Utah Jazz,Oklahoma City Thunder
 2017-04-10,Washington Wizards,Charlotte Hornets
 2017-04-11,Cleveland Cavaliers,Denver Nuggets
-2017-04-11,Denver Nuggets,Cleveland Cavaliers
-2017-04-11,Houston Rockets,New York Knicks
 2017-04-11,New York Knicks,Houston Rockets
-2017-04-12,Atlanta Hawks,Dallas Mavericks
-2017-04-12,Boston Celtics,Toronto Raptors
-2017-04-12,Brooklyn Nets,Golden State Warriors
 2017-04-12,Charlotte Hornets,San Antonio Spurs
-2017-04-12,Chicago Bulls,New York Knicks
 2017-04-12,Cleveland Cavaliers,Minnesota Timberwolves
 2017-04-12,Dallas Mavericks,Atlanta Hawks
 2017-04-12,Detroit Pistons,Utah Jazz
 2017-04-12,Golden State Warriors,Brooklyn Nets
 2017-04-12,Indiana Pacers,Sacramento Kings
 2017-04-12,Los Angeles Clippers,New Orleans Pelicans
-2017-04-12,Los Angeles Lakers,Oklahoma City Thunder
-2017-04-12,Memphis Grizzlies,Phoenix Suns
 2017-04-12,Miami Heat,Philadelphia 76ers
 2017-04-12,Milwaukee Bucks,Orlando Magic
-2017-04-12,Minnesota Timberwolves,Cleveland Cavaliers
-2017-04-12,New Orleans Pelicans,Los Angeles Clippers
 2017-04-12,New York Knicks,Chicago Bulls
 2017-04-12,Oklahoma City Thunder,Los Angeles Lakers
-2017-04-12,Orlando Magic,Milwaukee Bucks
-2017-04-12,Philadelphia 76ers,Miami Heat
 2017-04-12,Phoenix Suns,Memphis Grizzlies
 2017-04-12,Portland Trail Blazers,Washington Wizards
-2017-04-12,Sacramento Kings,Indiana Pacers
-2017-04-12,San Antonio Spurs,Charlotte Hornets
 2017-04-12,Toronto Raptors,Boston Celtics
-2017-04-12,Utah Jazz,Detroit Pistons
-2017-04-12,Washington Wizards,Portland Trail Blazers
