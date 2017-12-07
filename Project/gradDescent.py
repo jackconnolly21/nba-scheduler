@@ -130,7 +130,7 @@ if __name__ == '__main__':
     method = options.method
     numIters = options.numIters
     numTimes = options.numTimes
-    fileName = options.fileName
+    fileName = "pickles/" + options.fileName
     numSwaps = options.numSwaps
 
     bestCost = infinity
@@ -138,7 +138,10 @@ if __name__ == '__main__':
     for i in xrange(numTimes):
         # Get a valid initialization
         if fileName != "":
-            s = pickle.load(open(fileName, 'rb'))
+            try:
+                s = pickle.load(open(fileName, 'rb'))
+            except IOError:
+                print "Could not open file: " + fileName
         else:
             while True:
             	sc = Scheduler()
