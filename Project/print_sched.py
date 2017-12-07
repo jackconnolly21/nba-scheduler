@@ -18,10 +18,13 @@ def print_sched(fileName):
     	for game in s.teams[team].schedule:
     		lst.append((game.date, team, game.opponent.name))
     		lst.sort()
-    for val in lst:
-    	print val[0], val[1], val[2]
-
-
+    btbs = util.totalBackToBacks(s.teams)
+    fileout = str(btbs) + '.txt'
+    fout = open(fileout, 'w')
+    for game in lst:
+        info = [game[0], game[1], game[2]]
+        gameString = ",".join(str(i) for i in info) + "\n"
+    	fout.write(gameString)
 
 def readCommands(argv):
     # Allow fileNames to be passed in command line
