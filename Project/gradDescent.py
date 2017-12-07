@@ -12,9 +12,9 @@ from copy import deepcopy
 infinity = float('inf')
 
 """
-    Perform greedy gradientDescent on the schedule
+    Perform greedy hillClimbing on the schedule
 """
-def gradientDescent(s, numIters=200, numSwaps=1):
+def hillClimbing(s, numIters=200, numSwaps=1):
 
     rmTrips = s.removeTriples()
     print "Removed Triples: " + str(rmTrips[0]) + " iterations."
@@ -27,7 +27,7 @@ def gradientDescent(s, numIters=200, numSwaps=1):
     # store trace for plotting
     s.trace = []
 
-    # Perform gradientDescent until numIters iterations doesn't produce a cost decrease
+    # Perform hillClimbing until numIters iterations doesn't produce a cost decrease
     while iterations/2. < numIters:
 
         # Perform random swap (random game to new random date)
@@ -106,8 +106,8 @@ def readCommands(argv):
     parser = OptionParser()
     # Add some options for what we can pass in command line
     parser.add_option("-m", "--method", dest="method",
-                  help="use METHOD to conduct local search (GD or SA)",
-                  default="GD")
+                  help="use METHOD to conduct local search (HC or SA)",
+                  default="HC")
     parser.add_option("-n", "--numIters", dest="numIters",
                     help="specify the number of iterations to run for", type="int",
                     default=1000)
@@ -115,7 +115,7 @@ def readCommands(argv):
                     help="number of times to run algorithm", type="int",
                     default=1)
     parser.add_option("-f", "--fileName", dest="fileName",
-                    help="pickle FILE to run gradientDescent on", default="")
+                    help="pickle FILE to run hillClimbing on", default="")
     parser.add_option("-s", "--numSwaps", dest="numSwaps", type="int",
                     help="numSwaps per iteration", default=1)
     (options, args) = parser.parse_args(argv)
@@ -130,7 +130,7 @@ if __name__ == '__main__':
     method = options.method
     numIters = options.numIters
     numTimes = options.numTimes
-    fileName = "pickles/" + options.fileName
+    fileName = options.fileName
     numSwaps = options.numSwaps
 
     bestCost = infinity
@@ -139,9 +139,10 @@ if __name__ == '__main__':
         # Get a valid initialization
         if fileName != "":
             try:
-                s = pickle.load(open(fileName, 'rb'))
+                s = pickle.load(open("pickles/" + fileName, 'rb'))
             except IOError:
                 print "Could not open file: " + fileName
+
         else:
             while True:
             	sc = Scheduler()
@@ -151,18 +152,12 @@ if __name__ == '__main__':
             		break
         # Run chosen method
         if method == 'SA':
-            s1 = deepcopy(s)
             new = simulatedAnnealing(s, times=numIters)
-            plt.plot(s.trace, label="SA")
-            gradientDescent(s1, numIters)
             end = timer()
-            plt.plot(s1.trace, label="GD")
-            plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
-                ncol=2, mode="expand", borderaxespad=0.)
-            plt.show()
-        if method == 'GD':
-            new = gradientDescent(s, numIters, numSwaps)
+        elif method == 'HC':
+            new = hillClimbing(s, numIters, numSwaps)
             end = timer()
+
 
         print "Ending Cost:", new
         print

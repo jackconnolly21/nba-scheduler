@@ -1,5 +1,0 @@
-reset;
-model nba/test1.mod;
-data nba/test1.dat;
-option solver './cplex';
-solve;

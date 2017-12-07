@@ -7,46 +7,47 @@ from optparse import OptionParser
 import numpy as np
 import matplotlib.pyplot as plt
 
-def analyzePickle(fileName):
+def analyzePickles(fileNameList):
     # Try to open the pickle file passed in
-    try:
-        f = "pickles/" + fileName
-        s = pickle.load(open(f, 'rb'))
-    except IOError:
-        print "Could not load file '" + fileName
-        return 1
+    for fileName in fileNameList:
+        try:
+            f = "pickles/" + fileName
+            s = pickle.load(open(f, 'rb'))
+        except IOError:
+            print "Could not load file '" + fileName
+            return 1
 
-    print
-    print "File:", fileName
-    print "Cost:", s.costFn()
+        print
+        print "File:", fileName
+        print "Cost:", s.costFn()
 
-    # Just in case something messes up, print if any team
-    # has something other than 82 games in their schedule
-    for team in s.teams.values():
-        if len(team.schedule) != 82: print len(team.schedule)
+        # Just in case something messes up, print if any team
+        # has something other than 82 games in their schedule
+        for team in s.teams.values():
+            if len(team.schedule) != 82: print len(team.schedule)
 
-    # Print some info that the cost function considers
-    print "Total Distance:", s.totalDistanceAll()
-    print "Total Back To Backs:", util.totalBackToBacks(s.teams)
-    print "Triples:", s.totalTriples()
-    print "Standard Deviations:"
-    print "     BTB:", s.getStandardDevs()[0]
-    print "     Distance:", s.getStandardDevs()[1]
+        # Print some info that the cost function considers
+        print "Total Distance:", s.totalDistanceAll()
+        print "Total Back To Backs:", util.totalBackToBacks(s.teams)
+        print "Triples:", s.totalTriples()
+        print "Standard Deviations:"
+        print "     BTB:", s.getStandardDevs()[0]
+        print "     Distance:", s.getStandardDevs()[1]
 
-    # Find most and least back to backs
-    most = 0
-    least = 100
-    for team in s.teams.values():
-        most = max(most, team.backToBacks())
-        least = min(least, team.backToBacks())
-    print "Most Back to Backs:", most
-    print "Least Back to Backs:", least
+        # Find most and least back to backs
+        most = 0
+        least = 100
+        for team in s.teams.values():
+            most = max(most, team.backToBacks())
+            least = min(least, team.backToBacks())
+        print "Most Back to Backs:", most
+        print "Least Back to Backs:", least
 
-    try:
-        plt.plot(s.trace)
-        plt.show()
-    except AttributeError:
-        print "This schedule doesn't have a trace."
+        try:
+            plt.plot(s.trace, label=fileName)
+        except AttributeError:
+            print "This schedule doesn't have a trace."
+    plt.show()
 
 def readCommands(argv):
     # Allow fileNames to be passed in command line
@@ -72,5 +73,4 @@ if __name__ == '__main__':
         files = options.fileNames.split(',')
 
     # Analyze every file passed in
-    for f in files:
-        analyzePickle(f)
+    analyzePickles(files)
