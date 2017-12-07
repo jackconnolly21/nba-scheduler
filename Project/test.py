@@ -29,25 +29,16 @@ import pickle
 # print s1.numHomeGames(nets)
 # print len(nets.schedule)
 
-# print
 
-# print 
-j = 0
-for j in xrange(1):
-	i = 0
-	while True:
-		sched = Scheduler()
-		sched.randomStart()
-		if sched.isValidSchedule():
-			goodSched = sched
-			break
-		i += 1
-	numbtb = util.totalBackToBacks(goodSched.teams)
-
-	filename = 'vsched/' + "notrips" + '.txt'
-	# Dump into a pickle file to analyze later
-	bestSchFile = open(filename, 'wb')
-	pickle.dump(goodSched, bestSchFile)
+i = 0
+while True:
+	sched = Scheduler()
+	sched.randomStart()
+	if sched.isValidSchedule():
+		goodSched = sched
+		break
+	i += 1
+print i
 
 
 

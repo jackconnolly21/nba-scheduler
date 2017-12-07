@@ -182,20 +182,21 @@ class Scheduler:
     """
     def randomStart(self):
         """
-            Maybe keep track of a list of open dates for each team?
-            Also maybe keep track of a list of teams that we already assigned schedules to
-                --> So we don't assign more games to them
-                --> Like theoretically last team should have full schedule
-                    before we even assign it
+           This function creates random schedules. It generally creates a valid 
+           schedule every about 5 attempts and doesn't take too much time to run.
+           To guarantee the product of a valid schedule, it should be used in a while
+           loop with isValidSchedule function (see test.py for example).
         """
+        # iterate through all teams
         for team in self.teams.values():
 
+            # store which conference each team is in
             if team.conference == "Eastern":
                 otherConf = "Western"
             else:
                 otherConf = "Eastern"
 
-            # generates 8 home games
+            # generates 8 home games, 2 against each divisional opponent
             for divOpp in self.divisions[team.division]:
                 if team.name != divOpp.name:
                     # Randomly choose 2 open dates and assign home games
@@ -213,7 +214,7 @@ class Scheduler:
                             # increment i
                             i += 1
 
-            # generates 15 home games
+            # generates 15 home games, 1 against each non conference opponent
             for nonConfOpp in self.conferences[otherConf]:
                 # Randomly choose 1 open date and assign home game
                 i = 0
@@ -230,10 +231,9 @@ class Scheduler:
                         # increment i
                         i += 1
 
-
-            self.getCommonNonDivOpps(team)
-            # generates 12 home games
-            # this is working
+            # this function chooses which teams a team will play 4 games against
+            self.setCommonNonDivOpps(team)
+            # generates 12 home games, 2 against each commonNonDivOpp
             for commonNonDivOpp in team.commonNonDivOpps:
                 i = 0
                 while i < 2:
@@ -249,8 +249,9 @@ class Scheduler:
                         # increment i
                         i += 1
 
-            self.getRareNonDivOpps(team)
-
+            # stores the teams in the conference that aren't commonNonDivOpps
+            self.setRareNonDivOpps(team)
+            # generates 4 home games, 1 home against each rareNonDivOpp
             for rareNonDivOpp in team.rareNonDivOpps:
                 i = 0
                 while i < 1:
@@ -267,22 +268,22 @@ class Scheduler:
                         i += 1
 
 
-        # makes all teams have HA lists of rndo
+        # makes all teams have HA lists of rareNonDivOpps
         for team in self.teams.values():
             self.initializeHA(team)
-
+        # go through each team and make sure these games fit with previous set values
         for team in self.teams.values():
             self.makeHAConsistent(team)
-
+        # if HA values have been messed up try to fix them
         for team in self.teams.values():
             i = 0
-            # NEEDS TO PRINT IN TWICE TO BE CORRECT
             for tm2 in self.teams.values():
                 if team in tm2.HA[1]:
                     i += 1
             if i != 2:
                 self.makeHAConsistent(team)
 
+        # generates 2 home games, 1 each each team in team.HA[0]
         for team in self.teams.values():
             for h in team.HA[0]:
                 i = 0
@@ -307,15 +308,15 @@ class Scheduler:
                 nonDivOpps.append(confOpp)
         return nonDivOpps
 
-    def getCommonNonDivOpps(self, team):
+    def setCommonNonDivOpps(self, team):
         cndo = team.commonNonDivOpps
         nonDivOpps = self.getNonDivOpps(team)
         if len(cndo) > 6:
             rand = random.choice(cndo)
             cndo.remove(rand)
             rand.commonNonDivOpps.remove(team)
-            self.getCommonNonDivOpps(team)
-            self.getCommonNonDivOpps(rand)
+            self.setCommonNonDivOpps(team)
+            self.setCommonNonDivOpps(rand)
         elif len(cndo) < 6:
             frontier = []
             for t in nonDivOpps:
@@ -331,48 +332,25 @@ class Scheduler:
             rand1 = frontier[minindex][0]
             cndo.append(rand1)
             rand1.commonNonDivOpps.append(team)
-            self.getCommonNonDivOpps(team)
-            self.getCommonNonDivOpps(rand1)
+            self.setCommonNonDivOpps(team)
+            self.setCommonNonDivOpps(rand1)
 
-    def getRareNonDivOpps(self, team):
+    def setRareNonDivOpps(self, team):
         cndo = team.commonNonDivOpps
         rndo = team.rareNonDivOpps
         for rareNonDivOpp in self.getNonDivOpps(team):
             if rareNonDivOpp not in cndo:
                 rndo.append(rareNonDivOpp)
-                # rareNonDivOpp.rareNonDivOpps.append(team)
 
-
-
-    # # not being used
-    # def getRareNonDivOppsHT(self, team):
-    #     rndo = team.rareNonDivOpps
-    #     if len(team.HA[0]) == 2 and len(team.schedule) > 82:
-    #         rand2 = random.choice(team.HA[1])
-    #         team.HA[1].remove(rand2)
-    #         rand2.HA[0].remove(team)
-    #         self.getRareNonDivOppsHT(team)
-    #     elif len(team.HA[0]) < 2:
-    #         frontier = []
-    #         for t in rndo:
-    #             if t not in team.HA[0]:
-    #                 frontier.append((t, len(t.HA[1])))
-    #         minlen = 100
-    #         minindex = -1
-    #         for f in xrange(len(frontier)):
-    #             if frontier[f][1] <= minlen:
-    #                 minlen = frontier[f][1]
-    #                 minindex = f
-    #         rand1 = frontier[minindex][0]
-    #         team.HA[0].append(rand1)
-    #         rand1.HA[1].append(team)
-    #         self.getRareNonDivOppsHT(team)
-
-
+    # HA represents two groups of teams for each team
+    # HA[0] is the group of rareNonDivOpps that a team should play 2 home games against
+    # HA[1] is the group that a team should play 2 away games against, (and 1 home game)
     def initializeHA(self, team):
         team.HA[0] = random.sample(team.rareNonDivOpps, 2)
         team.HA[1] = [i for i in team.rareNonDivOpps if i not in team.HA[0]]
 
+    # function moves a team from HA[0] to HA[1] or vice versa, and balances the size
+    # of the lists
     def swapHA (self, tm1, tm2):
         # if tm2 is in tm1.HA[0] then tm1 needs to be in tm2.HA[1]
         while tm2 in tm1.HA[0] and tm1 not in tm2.HA[1]:
@@ -390,9 +368,7 @@ class Scheduler:
             tm2.HA[0].remove(r)
             tm2.HA[1].append(r)
 
-
-
-    # think this is making previous teams' HAs inconsistent
+    # if team1 is in HA[1] of team2, team1 must be in HA[0] of team2
     def makeHAConsistent(self, team):
         for tm2 in team.HA[0]:
             self.swapHA(team, tm2)
@@ -405,6 +381,7 @@ class Scheduler:
         if i != 2:
             print team.name
 
+    # checks that each team has 82 games and 41 home games
     def isValidSchedule(self):
         for team in self.teams.values():
             if len(team.schedule) != 82 or self.numHomeGames(team) != 41:
