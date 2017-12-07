@@ -17,6 +17,7 @@ infinity = float('inf')
 def gradientDescent(s, numIters=200, numSwaps=1):
 
     rmTrips = s.removeTriples()
+    print "Removed Triples: " + str(rmTrips[0]) + " iterations."
     # Intiailize cost
     cost = s.costFn()
     # Track iterations and iterations without improvement (i)
@@ -42,6 +43,7 @@ def gradientDescent(s, numIters=200, numSwaps=1):
             s.undoMultiSwap(infos)
             i += 1
         iterations += 1
+        if iterations % 100000 == 0: print iterations, cost
         s.trace.append(cost)
 
     # Return the cost of the new solution
@@ -56,6 +58,7 @@ def gradientDescent(s, numIters=200, numSwaps=1):
 """
 def simulatedAnnealing(s, times=50000, alpha=0.2):
     rmTrips = s.removeTriples()
+    print "Removed Triples: " + str(rmTrips[0]) + " iterations."
     # Initialize cost and time
     cost = s.costFn()
     t = 0
@@ -89,7 +92,7 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
             constant = -(deltaCost)/(temp)
             if newCost < cost:
                 cost = newCost
-            elif util.flipCoin(10*(e**constant)):
+            elif util.flipCoin(e**constant):
                 cost = newCost
             else:
                 s.undoSwap(info)
