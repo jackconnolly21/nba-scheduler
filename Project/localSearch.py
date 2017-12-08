@@ -30,9 +30,6 @@ def hillClimbing(s, numIters=50000, numSwaps=1):
     iterations = 0
     successes = 0
 
-    # store trace for plotting
-    s.trace = []
-
     # Perform hillClimbing until numIters iterations doesn't produce a cost decrease
     while iterations < numIters:
 
@@ -88,8 +85,6 @@ def simulatedAnnealing(s, times=50000):
         return temp
 
     # Run until temp <= 0
-    # store trace for plotting
-    s.trace = []
     while True:
         # Perform swap, update cost and temperature
         info = s.swap()
@@ -115,6 +110,7 @@ def simulatedAnnealing(s, times=50000):
                 cost = newCost
             else:
                 s.undoSwap(info)
+            # Store trace for plotting
             s.trace.append(cost)
             t += 1
 
