@@ -325,7 +325,8 @@ class Scheduler:
         # go through each team and make sure these games fit with previous set values
         for team in self.teams.values():
             self.makeHAConsistent(team)
-        # if HA values have been messed up try to fix them
+
+        # stay in the loop until all HA lists are consistent
         while True:
             j = 0
             for team in self.teams.values():
@@ -334,6 +335,7 @@ class Scheduler:
                     if team in tm2.HA[1]:
                         i += 1
                 if i != 2:
+                    # if HA values have been messed up try to fix them
                     self.makeHAConsistent(team)
                     j += 1
             if j == 0:
