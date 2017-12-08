@@ -276,13 +276,19 @@ class Scheduler:
         for team in self.teams.values():
             self.makeHAConsistent(team)
         # if HA values have been messed up try to fix them
-        for team in self.teams.values():
-            i = 0
-            for tm2 in self.teams.values():
-                if team in tm2.HA[1]:
-                    i += 1
-            if i != 2:
-                self.makeHAConsistent(team)
+        while True:
+            j = 0
+            for team in self.teams.values():
+                i = 0
+                for tm2 in self.teams.values():
+                    if team in tm2.HA[1]:
+                        i += 1
+                if i != 2:
+                    self.makeHAConsistent(team)
+                    j += 1
+            if j == 0:
+                break
+
 
         # generates 2 home games, 1 each each team in team.HA[0]
         for team in self.teams.values():
