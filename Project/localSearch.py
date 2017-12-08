@@ -165,12 +165,8 @@ if __name__ == '__main__':
                 print "Could not open file: " + fileName
 
         else:
-            while True:
-            	sc = Scheduler()
-            	sc.randomStart()
-            	if sc.isValidSchedule():
-            		s = sc
-            		break
+        	s = Scheduler()
+        	s.randomStart()
         # Run chosen method
         if method == 'SA':
             new = simulatedAnnealing(s, times=numIters)
