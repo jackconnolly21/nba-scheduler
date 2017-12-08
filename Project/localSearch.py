@@ -16,7 +16,7 @@ infinity = float('inf')
 """
     Perform greedy hillClimbing on the schedule
 """
-def hillClimbing(s, numIters=200, numSwaps=1):
+def hillClimbing(s, numIters=50000, numSwaps=1):
 
     # Remove all triples from the schedule (3 games in a row)
     rmTrips = s.removeTriples()
@@ -68,7 +68,7 @@ def hillClimbing(s, numIters=200, numSwaps=1):
     Perform simulatedAnnealing on the schedule, accepting
     worse solutions with probability exp(-deltaCost/temp)
 """
-def simulatedAnnealing(s, times=50000, alpha=0.2):
+def simulatedAnnealing(s, times=50000):
 
     # Remove triples from the schedule
     rmTrips = s.removeTriples()
@@ -77,14 +77,13 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
     # Initialize cost and time
     cost = s.costFn()
     t = 0
-    alpha1 = 5000./float(times)
+    alpha = 5000./float(times)
     iterations = 0
 
     # Define a schedule function, takes in temperature
     def schedule(t):
-        temp = 5000.- alpha1*t
+        temp = 5000.- alpha*t
         return temp
-
 
     # Run until temp <= 0
     # store trace for plotting
