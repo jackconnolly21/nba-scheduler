@@ -1,13 +1,12 @@
 import util
-import pickle
 import sys
+import pickle
+
+from math import e
 from scheduler import Team, Scheduler, Game
 from timeit import default_timer as timer
 from optparse import OptionParser
-from math import e, log10
-import numpy as np
-import matplotlib.pyplot as plt
-from copy import deepcopy
+
 
 infinity = float('inf')
 
@@ -138,7 +137,7 @@ def readCommands(argv):
     parser.add_option("-f", "--fileName", dest="fileName",
                     help="pickle FILE to run hillClimbing on", default="")
     parser.add_option("-s", "--numSwaps", dest="numSwaps", type="int",
-                    help="numSwaps per iteration", default=1)
+                    help="numSwaps per iteration, usually just 1", default=1)
     (options, args) = parser.parse_args(argv)
     return options
 
@@ -157,16 +156,17 @@ if __name__ == '__main__':
     bestCost = infinity
     # Run chosen method numTimes number of times
     for i in xrange(numTimes):
+
         # Get a valid initialization
         if fileName != "":
             try:
                 s = pickle.load(open("pickles/" + fileName, 'rb'))
             except IOError:
                 print "Could not open file: " + fileName
-
         else:
         	s = Scheduler()
         	s.randomStart()
+
         # Run chosen method
         if method == 'SA':
             new = simulatedAnnealing(s, times=numIters)

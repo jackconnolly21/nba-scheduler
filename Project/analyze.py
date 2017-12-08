@@ -7,6 +7,21 @@ from optparse import OptionParser
 import numpy as np
 import matplotlib.pyplot as plt
 
+"""
+    This python script is used to analyze a previously created pickle file
+
+    It reads in a saved pickle file of a Scheduler instance, and calculates
+    a variety of information about the schedule
+
+    Use like:
+        python analyze.py -f fileName
+
+    Where the actual file opened is "pickles/" + fileName
+
+    Can also pass in a list of files, which will all be analyzed separately and graphed together
+
+"""
+
 def analyzePickles(fileNameList):
     # Try to open the pickle file passed in
     for fileName in fileNameList:
