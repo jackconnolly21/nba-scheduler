@@ -108,12 +108,12 @@ class Scheduler:
         return (btbSTD, distSTD)
 
     # The cost function used for evaluating how "good" a schedule is
-    def costFn(self, a=1, b=3000, c=10000, d=10):
+    def costFn(self, a=1, b=3000, c=1000000, d=10):
         totalDistance = self.totalDistanceAll()
         totalBTB = util.totalBackToBacks(self.teams)
         totalTriples = self.totalTriples()
         btbSTD, distSTD = self.getStandardDevs()
-        cost = a * totalDistance + b * totalBTB + c * (totalTriples**2) + d * (btbSTD * 4000 + distSTD)
+        cost = a * totalDistance + b * totalBTB + c * totalTriples + d * (btbSTD * 4000 + distSTD)
         return cost
 
     # Extension of the swap function to perform multiple swaps at a time
