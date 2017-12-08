@@ -129,7 +129,7 @@ def readCommands(argv):
                   default="HC")
     parser.add_option("-n", "--numIters", dest="numIters",
                     help="specify the number of iterations to run for", type="int",
-                    default=1000)
+                    default=50000)
     parser.add_option("-t", "--numTimes", dest="numTimes",
                     help="number of times to run algorithm", type="int",
                     default=1)

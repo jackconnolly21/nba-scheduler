@@ -1,13 +1,7 @@
 import util
-from scheduler import Scheduler, Team, Game
-from datetime import date
+from scheduler import Scheduler
 from localSearch import hillClimbing, simulatedAnnealing
 import pickle
-import copy
-import random
-import csv
-from math import e, log, sqrt
-import os
 import numpy as np
 import matplotlib.pyplot as plt
 from copy import deepcopy
@@ -46,16 +40,12 @@ for i in xrange(len(HCtraces[0])):
 pickle.dump((hcAvg, hcStd), open("hc.txt", 'wb'))
 pickle.dump((saAvg, saStd), open("sa.txt", 'wb'))
 
-# hcAvg, hcStd = pickle.load(open("hc.txt", 'rb'))
-# saAvg, saStd = pickle.load(open("sa.txt", 'rb'))
-
 iterations = range(len(hcAvg))
 
 plt.figure()
 plt.errorbar(iterations, hcAvg, yerr=hcStd, ecolor='c', label="Hill Climbing")
 plt.errorbar(iterations, saAvg, yerr=saStd, ecolor='y', label="Simulated Annealing")
-# plt.plot(hcAvg, label="Hill Climbing")
-# plt.plot(saAvg, label="Simulated Annealing")
+
 plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
        ncol=2, mode="expand", borderaxespad=0.)
 plt.show()
