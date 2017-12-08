@@ -76,12 +76,12 @@ def simulatedAnnealing(s, times=50000):
     # Initialize cost and time
     cost = s.costFn()
     t = 0
-    alpha = 5000./float(times)
+    alpha = 10000./float(times)
     iterations = 0
 
     # Define a schedule function, takes in temperature
     def schedule(t):
-        temp = 5000.- alpha*t
+        temp = 10000.- alpha*t
         return temp
 
     # Run until temp <= 0

@@ -13,11 +13,11 @@ s.removeTriples()
 HCtraces = []
 SAtraces = []
 
-for i in xrange(20):
+for i in xrange(5):
     hcsch = deepcopy(s)
     sasch = deepcopy(s)
-    hcCost = hillClimbing(hcsch, 100000)
-    saCost = simulatedAnnealing(sasch, times=100000)
+    hcCost = hillClimbing(hcsch, 10000)
+    saCost = simulatedAnnealing(sasch, times=10000)
 
     HCtraces.append(hcsch.trace)
     SAtraces.append(sasch.trace)
@@ -37,8 +37,8 @@ for i in xrange(len(HCtraces[0])):
     hcStd.append(util.standardDev(hc))
     saStd.append(util.standardDev(sa))
 
-pickle.dump((hcAvg, hcStd), open("hc.txt", 'wb'))
-pickle.dump((saAvg, saStd), open("sa.txt", 'wb'))
+pickle.dump((hcAvg, hcStd), open("hc1.txt", 'wb'))
+pickle.dump((saAvg, saStd), open("sa1.txt", 'wb'))
 
 iterations = range(len(hcAvg))
 
