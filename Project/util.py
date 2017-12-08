@@ -7,13 +7,17 @@ import random
 import numpy as np
 
 """
+     Some helper functions that we created to use in other files
+"""
+
+def latLongDistance(t1, t2):
+"""
 t1 and t2 are (lat, lng) tuples for 2 teams
 
 Calculates closest distance over the Earth using
 spherical law of cosines as described here:
 https://www.movable-type.co.uk/scripts/latlong.html
 """
-def latLongDistance(t1, t2):
     earthRadius = 3959 # miles
     lat1, lng1 = t1 # lat, lng of first team
     lat2, lng2 = t2 # and of second team
@@ -30,6 +34,12 @@ def latLongDistance(t1, t2):
     return distance
 
 def readTeamsCSV(teamsCSV):
+"""
+Reads in a csv file of all the NBA teams
+
+:param teamsCSV: csv file to read from
+:return: list of teams, list of conferences, list of divisions
+ """
     teams = dict()
     conferences = {"Western": list(), "Eastern": list()}
     divisions = {"Atlantic": list(), "Central": list(),
@@ -50,11 +60,10 @@ def readTeamsCSV(teamsCSV):
 
     return (teams, conferences, divisions)
 
+def readScheduleCSV(scheduleCSV, teams):
 """
     Reads in a .csv file of the NBA schedule and puts into teams list
-    Not working because we need opponent to be a game object
 """
-def readScheduleCSV(scheduleCSV, teams):
     with open(scheduleCSV, 'rb') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         for row in reader:
@@ -70,6 +79,7 @@ def readScheduleCSV(scheduleCSV, teams):
 
     return True
 
+# Creates the calendar of a season (all possible dates)
 def getCalendarCSV(scheduleCSV):
     with open(scheduleCSV, 'rb') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
@@ -85,6 +95,8 @@ def getCalendarCSV(scheduleCSV):
 
     return calendar
 
+# Calculates the distances between every set of teams in the NBA
+# Returns a 2D array of these distances
 def calculateDistances(teams):
     distances = defaultdict(dict)
     for t1 in teams.keys():
@@ -95,16 +107,19 @@ def calculateDistances(teams):
                 distances[t1][t2] = latLongDistance(teams[t1].location, teams[t2].location)
     return distances
 
+# Calculates total back to backs for the league
 def totalBackToBacks(teams):
     btb = 0
     for team in teams.values():
         btb += team.backToBacks()
     return btb
 
+# Calculates the standard deviation of a list
 def standardDev(someList):
     nplist = np.array(someList)
     return np.std(nplist)
 
+# Returns true with probability p
 def flipCoin(p):
     r = random.random()
     return r < p

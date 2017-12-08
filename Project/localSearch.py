@@ -1,13 +1,12 @@
 import util
-import pickle
 import sys
+import pickle
+
+from math import e
 from scheduler import Team, Scheduler, Game
 from timeit import default_timer as timer
 from optparse import OptionParser
-from math import e, log10
-import numpy as np
-import matplotlib.pyplot as plt
-from copy import deepcopy
+
 
 infinity = float('inf')
 
@@ -19,14 +18,18 @@ infinity = float('inf')
 """
 def hillClimbing(s, numIters=200, numSwaps=1):
 
+    # Remove all triples from the schedule (3 games in a row)
     rmTrips = s.removeTriples()
     print "Removed Triples: " + str(rmTrips[0]) + " iterations."
+
     # Intiailize cost
     cost = s.costFn()
+
     # Track iterations and iterations without improvement (i)
     i = 0
     iterations = 0
     successes = 0
+
     # store trace for plotting
     s.trace = []
 
@@ -35,8 +38,10 @@ def hillClimbing(s, numIters=200, numSwaps=1):
 
         # Perform random swap (random game to new random date)
         infos = s.multiSwap(numSwaps)
+
         # Cost after swap
         newCost = s.costFn()
+
         # Check if newCost is better, reset i=0 if so
         if newCost < cost:
             cost = newCost
@@ -45,12 +50,15 @@ def hillClimbing(s, numIters=200, numSwaps=1):
         else:
             s.undoMultiSwap(infos)
             i += 1
+
         iterations += 1
         if iterations % 100000 == 0:
             print iterations, cost
+
+        # Add cost to trace to track progress
         s.trace.append(cost)
 
-    # Return the cost of the new solution
+    # Print some useful information
     print "Iterations:", iterations
     print "Back to Backs:", util.totalBackToBacks(s.teams)
     print "Successes Percentage:", successes/float(iterations)
@@ -61,13 +69,17 @@ def hillClimbing(s, numIters=200, numSwaps=1):
     worse solutions with probability exp(-deltaCost/temp)
 """
 def simulatedAnnealing(s, times=50000, alpha=0.2):
+
+    # Remove triples from the schedule
     rmTrips = s.removeTriples()
     print "Removed Triples: " + str(rmTrips[0]) + " iterations."
+
     # Initialize cost and time
     cost = s.costFn()
     t = 0
     alpha1 = 5000./float(times)
     iterations = 0
+
     # Define a schedule function, takes in temperature
     def schedule(t):
         temp = 10000- alpha1*t
@@ -88,12 +100,12 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
             print "Iterations:", iterations
             print "Back to Backs:", util.totalBackToBacks(s.teams)
             return min(cost, newCost)
+
         # Otherwise accept if better
         # If worse, accept w/ prob = exp(-deltaCost/temp)
-
         else:
             deltaCost = newCost - cost
-            constant = -(deltaCost)/(temp)
+            constant = -(deltaCost)/(temp**2)
             if newCost < cost:
                 cost = newCost
             elif util.flipCoin(e**constant):
@@ -102,11 +114,13 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
                 s.undoSwap(info)
             s.trace.append(cost)
             t += 1
+
+        # Track progress
         iterations += 1
         if iterations % 100000 == 0:
             print iterations, cost
 
-
+# Make testing easier --> gives us options so we don't have to change code
 def readCommands(argv):
     # Create OptionParser
     parser = OptionParser()
@@ -123,12 +137,12 @@ def readCommands(argv):
     parser.add_option("-f", "--fileName", dest="fileName",
                     help="pickle FILE to run hillClimbing on", default="")
     parser.add_option("-s", "--numSwaps", dest="numSwaps", type="int",
-                    help="numSwaps per iteration", default=1)
+                    help="numSwaps per iteration, usually just 1", default=1)
     (options, args) = parser.parse_args(argv)
     return options
 
 if __name__ == '__main__':
-
+    # Time the method
     start = timer()
 
     # Get the options and make variables with them
@@ -142,16 +156,17 @@ if __name__ == '__main__':
     bestCost = infinity
     # Run chosen method numTimes number of times
     for i in xrange(numTimes):
+
         # Get a valid initialization
         if fileName != "":
             try:
                 s = pickle.load(open("pickles/" + fileName, 'rb'))
             except IOError:
                 print "Could not open file: " + fileName
-
         else:
         	s = Scheduler()
         	s.randomStart()
+
         # Run chosen method
         if method == 'SA':
             new = simulatedAnnealing(s, times=numIters)
