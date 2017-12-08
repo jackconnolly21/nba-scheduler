@@ -183,10 +183,7 @@ class Scheduler:
     """
     def randomStart(self):
         """
-           This function creates random schedules. It generally creates a valid 
-           schedule every about 5 attempts and doesn't take too much time to run.
-           To guarantee the product of a valid schedule, it should be used in a while
-           loop with isValidSchedule function (see test.py for example).
+           This function creates random valid schedules. 
         """
         # iterate through all teams
         for team in self.teams.values():
