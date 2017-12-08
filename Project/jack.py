@@ -6,7 +6,7 @@ import pickle
 import copy
 import random
 import csv
-from math import e, log
+from math import e, log, sqrt
 import os
 import numpy as np
 import matplotlib.pyplot as plt
@@ -22,14 +22,16 @@ SAtraces = []
 for i in xrange(20):
     hcsch = deepcopy(s)
     sasch = deepcopy(s)
-    hcCost = hillClimbing(hcsch, 100)
-    saCost = simulatedAnnealing(sasch, times=100)
+    hcCost = hillClimbing(hcsch, 100000)
+    saCost = simulatedAnnealing(sasch, times=100000)
 
     HCtraces.append(hcsch.trace)
     SAtraces.append(sasch.trace)
 
 hcAvg = []
+hcStd = []
 saAvg = []
+saStd = []
 for i in xrange(len(HCtraces[0])):
     hc = []
     sa = []
@@ -38,12 +40,22 @@ for i in xrange(len(HCtraces[0])):
         sa.append(SAtraces[trial][i])
     hcAvg.append(sum(hc)/len(hc))
     saAvg.append(sum(sa)/len(sa))
+    hcStd.append(util.standardDev(hc))
+    saStd.append(util.standardDev(sa))
 
-pickle.dump(hcAvg, open("hc.txt", 'wb'))
-pickle.dump(saAvg, open("sa.txt", 'wb'))
+pickle.dump((hcAvg, hcStd), open("hc.txt", 'wb'))
+pickle.dump((saAvg, saStd), open("sa.txt", 'wb'))
 
-plt.plot(hcAvg, label="Hill Climbing")
-plt.plot(saAvg, label="Simulated Annealing")
+# hcAvg, hcStd = pickle.load(open("hc.txt", 'rb'))
+# saAvg, saStd = pickle.load(open("sa.txt", 'rb'))
+
+iterations = range(len(hcAvg))
+
+plt.figure()
+plt.errorbar(iterations, hcAvg, yerr=hcStd, ecolor='c', label="Hill Climbing")
+plt.errorbar(iterations, saAvg, yerr=saStd, ecolor='y', label="Simulated Annealing")
+# plt.plot(hcAvg, label="Hill Climbing")
+# plt.plot(saAvg, label="Simulated Annealing")
 plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
        ncol=2, mode="expand", borderaxespad=0.)
 plt.show()

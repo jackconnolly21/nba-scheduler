@@ -59,9 +59,11 @@ def hillClimbing(s, numIters=50000, numSwaps=1):
         s.trace.append(cost)
 
     # Print some useful information
-    print "Iterations:", iterations
-    print "Back to Backs:", util.totalBackToBacks(s.teams)
-    print "Successes Percentage:", successes/float(iterations)
+    print
+    print "Hill Climbing:"
+    print " Iterations:", iterations
+    print " Back to Backs:", util.totalBackToBacks(s.teams)
+    print " Successes Percentage:", successes/float(iterations)
     return cost
 
 """
@@ -96,15 +98,17 @@ def simulatedAnnealing(s, times=50000):
 
         # If temp <= 0, return bestCost
         if temp <= 0:
-            print "Iterations:", iterations
-            print "Back to Backs:", util.totalBackToBacks(s.teams)
+            print
+            print "Simulated Annealing:"
+            print " Iterations:", iterations
+            print " Back to Backs:", util.totalBackToBacks(s.teams)
             return min(cost, newCost)
 
         # Otherwise accept if better
         # If worse, accept w/ prob = exp(-deltaCost/temp)
         else:
             deltaCost = newCost - cost
-            constant = -(deltaCost)/(temp**2)
+            constant = -(deltaCost)/(temp)
             if newCost < cost:
                 cost = newCost
             elif util.flipCoin(e**constant):
