@@ -20,11 +20,11 @@ import random
 class Scheduler:
 
     def __init__(self, csvFile='data/teams.csv', testSchedule=False):
-    """
-        Create an object, storing all teams, distances
+        """
+            Create an object, storing all teams, distances
 
-        if testSchedule=true, load the actual 16-17 NBA schedule
-    """
+            if testSchedule=true, load the actual 16-17 NBA schedule
+        """
         self.teams, self.conferences, self.divisions = util.readTeamsCSV(csvFile)
         self.distances = util.calculateDistances(self.teams)
         if testSchedule:
@@ -34,13 +34,13 @@ class Scheduler:
     # Iterate over team.schedule and calculate total travel distance for one team
     # Have to account for if home/away and where going to next/from
     def totalDistanceTeam(self, team):
-    """
-     Iterate over team.schedule and calculate total travel distance for one team
-     Have to account for if home/away and where going to next/from
+        """
+         Iterate over team.schedule and calculate total travel distance for one team
+         Have to account for if home/away and where going to next/from
 
-     :param team: a team object to calculate distance for
-     :return: total distance for the team
-    """
+         :param team: a team object to calculate distance for
+         :return: total distance for the team
+        """
         total = 0
         sch = util.sortSchedule(team.schedule)
 
@@ -130,15 +130,15 @@ class Scheduler:
         return True
 
     def swap(self):
-    """
-        Move one game to another random date
+        """
+            Move one game to another random date
 
-        Selects a randomTeam, a random game from that team's schedule,
-        a random newDate that is open for both teams, and moves the
-        original game to that new date
+            Selects a randomTeam, a random game from that team's schedule,
+            a random newDate that is open for both teams, and moves the
+            original game to that new date
 
-        Updates both team object's data structures accordingly
-    """
+            Updates both team object's data structures accordingly
+        """
         # Generate random team, game, newDate
         randomTeam = random.choice(self.teams.values())
         randomGame = random.choice(randomTeam.schedule)
@@ -161,13 +161,13 @@ class Scheduler:
         return (oldDate, newDate, randomTeam.name, opponent.name, randomGame.isHome)
 
     def undoSwap(self, info):
-    """
-        Undo the swap done by swap()
+        """
+            Undo the swap done by swap()
 
-        :param info: a tuple of (oldDate, newDate, team1.name, team2.name, team1.isHome)
+            :param info: a tuple of (oldDate, newDate, team1.name, team2.name, team1.isHome)
 
-        Using the information passed in, puts game back to original date
-    """
+            Using the information passed in, puts game back to original date
+        """
 
         # Unpack info returned from swap
         oldDate, newDate, team1, team2, team1IsHome = info
@@ -187,9 +187,9 @@ class Scheduler:
 
     # checks if a date would result in a triple for a team
     def tripcheck(self, team, date):
-    """
-        Currently not used, but checks if a swap would cause a triple for a given team
-    """
+        """
+            Currently not used, but checks if a swap would cause a triple for a given team
+        """
         previous = date - timedelta(days=1)
         previous2 = previous - timedelta(days=1)
         nextday = date + timedelta(days=1)
@@ -206,11 +206,11 @@ class Scheduler:
         return True
 
     def removeTriples(self):
-    """
-        Essentially uses hillClimbing search to remove all triples from a schedule
-        We created a separate method for this in order to better visualize the rest
-        of the local search as plots
-    """
+        """
+            Essentially uses hillClimbing search to remove all triples from a schedule
+            We created a separate method for this in order to better visualize the rest
+            of the local search as plots
+        """
         trips = self.totalTriples()
         iterations = 0
         successes = 0
@@ -227,17 +227,17 @@ class Scheduler:
         return (iterations, successes)
 
     def randomStart(self):
-    """
-       This function creates random valid schedules, satisfying the hard constraints
-       of the NBA schedule
+        """
+           This function creates random valid schedules, satisfying the hard constraints
+           of the NBA schedule
 
-       Starts by creating games for all divisional opponents (2 home each)
-       Then creates games for all non-Conference opponents (1 home each)
-       Then finally creates games for the nonDivisional opponents (the hard part)
-            First: Creates games for the teams that play each other 4 times
-            Then: Creates games for the teams that play each other 3 times,
-                    making sure these are arc consistent and correct
-    """
+           Starts by creating games for all divisional opponents (2 home each)
+           Then creates games for all non-Conference opponents (1 home each)
+           Then finally creates games for the nonDivisional opponents (the hard part)
+                First: Creates games for the teams that play each other 4 times
+                Then: Creates games for the teams that play each other 3 times,
+                        making sure these are arc consistent and correct
+        """
         # iterate through all teams
         for team in self.teams.values():
 
@@ -449,9 +449,9 @@ class Scheduler:
 
 # Defining a team object
 class Team:
-"""
-    Defines the data structure for a team object
-"""
+    """
+        Defines the data structure for a team object
+    """
     def __init__(self, name, conference, division, location):
         self.name = name # Simple name of the team
         self.conference = conference # Eastern or Western
@@ -494,9 +494,9 @@ class Team:
 
 # Defines game object for schedule
 class Game:
-"""
-    Defines the common data structure for each game object
-"""
+    """
+        Defines the common data structure for each game object
+    """
     def __init__(self, date, opponent, isHome):
         self.date = date # Date time object
         self.opponent = opponent # object of opponent

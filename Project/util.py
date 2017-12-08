@@ -7,17 +7,17 @@ import random
 import numpy as np
 
 """
-     Some helper functions that we created to use in other files
+    Some helper functions that we created to use in other files
 """
 
 def latLongDistance(t1, t2):
-"""
-t1 and t2 are (lat, lng) tuples for 2 teams
+    """
+    t1 and t2 are (lat, lng) tuples for 2 teams
 
-Calculates closest distance over the Earth using
-spherical law of cosines as described here:
-https://www.movable-type.co.uk/scripts/latlong.html
-"""
+    Calculates closest distance over the Earth using
+    spherical law of cosines as described here:
+    https://www.movable-type.co.uk/scripts/latlong.html
+    """
     earthRadius = 3959 # miles
     lat1, lng1 = t1 # lat, lng of first team
     lat2, lng2 = t2 # and of second team
@@ -34,12 +34,12 @@ https://www.movable-type.co.uk/scripts/latlong.html
     return distance
 
 def readTeamsCSV(teamsCSV):
-"""
-Reads in a csv file of all the NBA teams
+    """
+    Reads in a csv file of all the NBA teams
 
-:param teamsCSV: csv file to read from
-:return: list of teams, list of conferences, list of divisions
- """
+    :param teamsCSV: csv file to read from
+    :return: list of teams, list of conferences, list of divisions
+     """
     teams = dict()
     conferences = {"Western": list(), "Eastern": list()}
     divisions = {"Atlantic": list(), "Central": list(),
@@ -61,9 +61,9 @@ Reads in a csv file of all the NBA teams
     return (teams, conferences, divisions)
 
 def readScheduleCSV(scheduleCSV, teams):
-"""
-    Reads in a .csv file of the NBA schedule and puts into teams list
-"""
+    """
+        Reads in a .csv file of the NBA schedule and puts into teams list
+    """
     with open(scheduleCSV, 'rb') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         for row in reader:
