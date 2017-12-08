@@ -1,6 +1,6 @@
 # nba-scheduler
 
-This system attempts to optimize the NBA schedule, minimizing back to backs and travel distance, while fulfilling the hard constraints of the NBA season. We have implemented hill climbing and simulated annealing algorithms to do so, which generally reduce the number of back to backs per team by almost 7 per season, while keep travel distance roughly the same. 
+This system attempts to optimize the NBA schedule, minimizing back to backs and travel distance, while fulfilling the hard constraints of the NBA season. We have implemented hill climbing and simulated annealing algorithms to do so, which generally reduce the number of back to backs per team by almost 7 per season, while keep travel distance roughly the same.
 
 To run our program, you may need to download a few Python packages (a full list is in requirements.txt), but they are all pretty standard, especially with Anaconda. You may need to install Pickle, which we used to store our scheduler objects before and after we ran local search on them. You can install all needed dependencies (most should already be installed), using the command:
 
@@ -36,4 +36,4 @@ The most useful flags will likely be -m, -n, and -f. Now that you know how to ge
 
 Now if you analyze more than one schedule at a time you can compare the costs of the schedules over time. This works best if the two schedules were formed after the same number of iterations of any algorithm. Here is an example of how to analyze multiple schedules at once:
 
-* `python analyze.py -f 301SA.txt,295HC.txt``
+* `python analyze.py -f 301SA.txt,295HC.txt`
