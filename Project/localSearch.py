@@ -34,7 +34,7 @@ def hillClimbing(s, numIters=200, numSwaps=1):
     s.trace = []
 
     # Perform hillClimbing until numIters iterations doesn't produce a cost decrease
-    while iterations/2. < numIters:
+    while iterations < numIters:
 
         # Perform random swap (random game to new random date)
         infos = s.multiSwap(numSwaps)
@@ -82,7 +82,7 @@ def simulatedAnnealing(s, times=50000, alpha=0.2):
 
     # Define a schedule function, takes in temperature
     def schedule(t):
-        temp = 10000- alpha1*t
+        temp = 5000.- alpha1*t
         return temp
 
 
